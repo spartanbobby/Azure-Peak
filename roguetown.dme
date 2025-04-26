@@ -1562,6 +1562,7 @@
 #include "code\modules\mob\living\carbon\human\npc\orc.dm"
 #include "code\modules\mob\living\carbon\human\npc\searaider.dm"
 #include "code\modules\mob\living\carbon\human\npc\skeleton.dm"
+#include "code\modules\mob\living\carbon\human\npc\woodelf_tribal.dm"
 #include "code\modules\mob\living\carbon\human\species_types\furry\akula.dm"
 #include "code\modules\mob\living\carbon\human\species_types\furry\anthromorph.dm"
 #include "code\modules\mob\living\carbon\human\species_types\furry\anthromorphsmall.dm"
