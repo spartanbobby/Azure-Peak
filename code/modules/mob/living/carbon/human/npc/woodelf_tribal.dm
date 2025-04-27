@@ -1,44 +1,46 @@
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc //A mix of rangers and blackoaks these are the natives of Azure who continue the struggle
+/mob/living/carbon/human/species/elf/wood/tribal_welf //A mix of rangers and blackoaks these are the natives of Azure who continue the struggle
 	aggressive=1
 	mode = AI_IDLE
 	faction = list("Feral Elf")
 	ambushable = FALSE
-	dodgetime = 30
+	dodgetime = 20
 	flee_in_pain = TRUE
 	stand_attempts = 6
 	possible_rmb_intents = list()
 	var/is_silent = TRUE /// Determines whether or not we will scream our funny lines at people.
+	cmode = 1
+	selected_default_language = /datum/language/elvish
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/ambush
+/mob/living/carbon/human/species/elf/wood/tribal_welf/ambush
 	aggressive=1
 	wander = TRUE
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/retaliate(mob/living/L)
+/mob/living/carbon/human/species/elf/wood/tribal_welf/retaliate(mob/living/L)
 	.=..()
 	if(target)
 		aggressive=1
 		wander = TRUE
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/should_target(mob/living/L)
+/mob/living/carbon/human/species/elf/wood/tribal_welf/should_target(mob/living/L)
 	if(L.stat != CONSCIOUS)
 		return FALSE
 	. = ..()
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/Initialize()
+/mob/living/carbon/human/species/elf/wood/tribal_welf/Initialize()
 	. = ..()
 	set_species(/datum/species/elf/wood)
 	addtimer(CALLBACK(src, PROC_REF(after_creation)), 1 SECONDS)
 	is_silent = TRUE
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/after_creation()
+/mob/living/carbon/human/species/elf/wood/tribal_welf/after_creation()
 	..()
 	job = "Feral Elf"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_AZURENATIVE, TRAIT_GENERIC)
-	equipOutfit(new /datum/outfit/job/roguetown/human/species/elf/wood/hostile_npc)
+	equipOutfit(new /datum/outfit/job/roguetown/human/species/elf/wood/tribal_welf)
 	gender = pick(MALE, FEMALE)
 	regenerate_icons()
 
@@ -86,7 +88,7 @@
 	update_hair()
 	update_body()
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/npc_idle()
+/mob/living/carbon/human/species/elf/wood/tribal_welf/npc_idle()
 	if(m_intent == MOVE_INTENT_SNEAK)
 		return
 	if(world.time < next_idle)
@@ -102,13 +104,13 @@
 	if(!wander && prob(10))
 		face_atom(get_step(src,pick(GLOB.cardinals)))
 
-/mob/living/carbon/human/species/elf/wood/hostile_npc/handle_combat()
+/mob/living/carbon/human/species/elf/wood/tribal_welf/handle_combat()
 	if(mode == AI_HUNT)
 		if(prob(5))
 			emote("whistle")
 	. = ..()
 
-/datum/outfit/job/roguetown/human/species/elf/wood/hostile_npc/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/human/species/elf/wood/tribal_welf/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	var/welf_random_cloak = rand(1,5)
 	var/welf_random_armor = rand(1,3)
@@ -126,19 +128,19 @@
 		if(6)
 			head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
 		if(10)
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm
+			head = /obj/item/clothing/head/roguetown/helmet/leather/saiga
 	switch(welf_random_cloak)
 		if(1,2)
-			cloak = /obj/item/clothing/cloak/forrestercloak
-		if(3)
 			cloak = /obj/item/clothing/cloak/raincloak/green
+		if(3)
+			cloak = /obj/item/clothing/cloak/half/brown
 	switch(welf_random_armor)
 		if(1)
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
 		if(2)
 			armor = /obj/item/clothing/suit/roguetown/armor/leather
 		if(3)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/trophyfur
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy
 	switch(welf_random_weapon)
 		if(1)
 			r_hand = /obj/item/rogueweapon/huntingknife
@@ -150,5 +152,5 @@
 	H.STAEND = rand(10,12)
 	H.STAPER = rand(16,18)
 	H.STAINT = rand(10,14)
-	ADD_TRAIT(src, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 

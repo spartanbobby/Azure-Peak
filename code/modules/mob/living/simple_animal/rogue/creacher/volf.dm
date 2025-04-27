@@ -164,4 +164,5 @@
 /datum/intent/simple/bite/volf
 	clickcd = WOLF_ATTACK_SPEED
 
-
+/mob/living/simple_animal/hostile/retaliate/rogue/wolf/tribal_welf_tamed
+	faction = list("Feral Elf")
