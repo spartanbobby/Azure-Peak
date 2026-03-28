@@ -66041,6 +66041,10 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
+"wXQ" = (
+/obj/structure/flora/roguegrass/pyroclasticflowers,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/bog/south)
 "wXT" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/carpet/royalblack,
@@ -193162,8 +193166,8 @@ lCD
 sxN
 sxN
 sxN
-sxN
-sxN
+wXQ
+wXQ
 lCD
 jYu
 jYu
@@ -194580,7 +194584,7 @@ sxN
 sxN
 sxN
 sxN
-sxN
+wXQ
 lCD
 lCD
 xcc
@@ -195051,7 +195055,7 @@ mAW
 mAW
 sxN
 sxN
-sxN
+wXQ
 lCD
 lCD
 eCO
@@ -195766,7 +195770,7 @@ aay
 aay
 aay
 lCD
-sxN
+wXQ
 lCD
 lCD
 lCD
@@ -196028,7 +196032,7 @@ sxN
 sxN
 sxN
 xot
-sxN
+wXQ
 qwK
 qwK
 fZN
@@ -196264,8 +196268,8 @@ sxN
 sxN
 sxN
 sxN
-sxN
-sxN
+wXQ
+wXQ
 sxN
 sxN
 sxN
@@ -196471,7 +196475,7 @@ lCD
 lCD
 xot
 sxN
-sxN
+wXQ
 lCD
 jYu
 wal
@@ -202104,7 +202108,7 @@ xKu
 xKu
 xKu
 lCD
-sxN
+wXQ
 xcc
 lCD
 aay
@@ -202339,7 +202343,7 @@ jYu
 eCO
 lCD
 lCD
-sxN
+wXQ
 xcc
 lCD
 lCD
@@ -206351,8 +206355,8 @@ sxN
 xot
 sxN
 sxN
-sxN
-sxN
+wXQ
+wXQ
 qwK
 qwK
 qwK
@@ -206585,7 +206589,7 @@ sxN
 sxN
 sxN
 sxN
-sxN
+wXQ
 qwK
 qwK
 qwK
@@ -206819,7 +206823,7 @@ xcc
 sxN
 sxN
 sxN
-sxN
+wXQ
 qwK
 qwK
 qwK
