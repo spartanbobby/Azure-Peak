@@ -333,7 +333,7 @@
 	icon_state = "koruu_glaive"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
-/obj/item/rogueweapon/koruu_kukri
+/obj/item/rogueweapon/koruu/kukri
 	name = "leachwhacker"
 	desc = "A curved blade proudly made of Azurean Origin. Forged for wading through the hellish Terrorbog, it is a symbol of Azurean Tenacity. \
 	It is said that the name is derived from old rituals of severing the leaves of a westleach bush while the iron is still hot to bless it. \
@@ -342,14 +342,14 @@
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	sheathe_icon = "koruu_kukri"
 
-/obj/item/rogueweapon/koruu_kukri/warden
+/obj/item/rogueweapon/koruu/kukri/warden
 	name = "warden's leachwhacker"
 	desc = "A curved blade proudly made of Azurean Origin. Forged for wading through the hellish Terrorbog, it is a symbol of Azurean Tenacity. \
 	It is said that the name is derived from old rituals of severing the leaves of a westleach bush while the iron is still hot to bless it. \
 	The bane of Maneaters, Brigands, and Invaders. An azure cloth could be seen wrapped around the handle."
 	icon_state = "koruu_kukri_warden"
 	icon = 'icons/obj/items/donor_weapons.dmi'
-	sheathe_icon = "kukri_warden_sheath"
+	sheathe_icon = "koruu_kukri_warden"
 
 //DAKKEN12
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull/dakken
@@ -403,6 +403,21 @@
 	icon_state = "drd_lsword"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
+/obj/item/caparison/drd
+	name = "\improper House Woerden caparison"
+	desc = "The livery of House Woerden: Pale blue, and white. A deer's head marks the flanks of the caparison."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	icon_state = "drd_caparison"
+	caparison_icon = 'icons/clothing/onmob/donor_caparisons.dmi'
+	caparison_state = "drd_caparison"
+	female_caparison_state = "drd_caparison-f"
+
+/obj/item/rogueweapon/drd/shield
+	name = "kite shield"
+	desc = "The heraldry of the near-fallen House Woerden: Argent and celestial-azure, per bend, in fess point a deer head erased affronty gray."
+	icon_state = "drd_shield"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
 //LMWEVIL
 /obj/item/clothing/mask/rogue/courtphysician/brassbeak
 	name = "\improper Society of the Brass Beak mask"
@@ -421,3 +436,37 @@
 	You can’t help but shake the feeling that the weapon itself resists being used."
 	icon_state = "eoranspike"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+//MAESUNE
+/obj/item/clothing/suit/roguetown/shirt/maesune
+	name = "mercantile union's garb"
+	desc = "Baubles, Trinkets, Merchandise galore! Come seek your finest wares, store them in your many pockets! Made for the finery of the naturalistic entrepreneurs! Mercantilism, ho!"
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	icon_state = "merchantgarb"
+	sleevetype = "merchantgarb"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/rogueweapon/maesune/sabre
+	name = "\improper Y Ceirw"
+	desc = "A masterfully forged sword, trimmed in gold, embedded with a gem in the guard. Built as a weapon against injustice. So we may carve out a better world. \
+	Borne upon the blade, a faded inscription reads, \"A Light Shineth In the Darkness\"."
+	icon_state = "maesune_sabre"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/maesune/shield
+	name = "\improper Fy Annwyl"
+	desc = "A balanced shield, trimmed in silver, and bearing the crest of a golden deer's head with gleaming gemstone eyes. A bulwark against the howling abyss. Endvring, so we may all live in a better world. \
+	Borne upon it, a freshly carved inscription reads, \"But The Darkness Comprehended It Not\"."
+	icon_state = "maesune_shield"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+//NEROCAVALIER
+/obj/item/rogueweapon/nerocavalier/flsword
+	name = "blacksteel longsword"
+	desc = "A sleek blade of a dark, and burnished hue. A handle carved from a rosawood branch. A pairing that should sing a melody sweeter than any harp as it parts the air.. and yet, beautiful it may be, it is not worthy of song."
+	icon_state = "flsword"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
