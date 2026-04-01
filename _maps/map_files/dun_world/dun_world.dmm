@@ -4830,6 +4830,10 @@
 	},
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
+"bPH" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods/southeast)
 "bPZ" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/transparent/openspace,
@@ -17898,6 +17902,10 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town/roofs/keep)
+"gtO" = (
+/obj/structure/roguemachine/mossmother/travel,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors/bog/south)
 "gtS" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/reagent_containers/glass/bottle/rogue/wine,
@@ -23071,6 +23079,10 @@
 /obj/structure/hotspring/border/two,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
+"ijh" = (
+/obj/structure/roguemachine/mossmother/travel,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "ijm" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -28995,6 +29007,10 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/AzureSand,
 /area/rogue/outdoors/beach)
+"knr" = (
+/obj/structure/roguemachine/mossmother/travel,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/bog/south)
 "knt" = (
 /obj/structure/chair/stool/rogue,
 /obj/effect/decal/edge_corner{
@@ -29720,6 +29736,13 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/rtfield)
+"kAa" = (
+/obj/structure/fluff/signage{
+	dir = 4;
+	name = "DUNGEON TOMB - NORTHEAST"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods/south)
 "kAd" = (
 /obj/structure/fluff/railing/corner,
 /obj/effect/decal/mossy{
@@ -37183,6 +37206,10 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/transparent/openspace,
 /area/rogue/under/town/basement/keep)
+"nfi" = (
+/obj/structure/roguemachine/mossmother/travel,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods/southeast)
 "nfj" = (
 /obj/effect/wisp/prestidigitation{
 	desc = "A small, fiery ball of light made up of mystical energy.";
@@ -45704,6 +45731,10 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/exposed/magiciantower)
+"pZP" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods/southeast)
 "qaa" = (
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 1
@@ -65874,6 +65905,10 @@
 	},
 /turf/open/floor/rogue/tile/brownbrick,
 /area/rogue/indoors/town/bath)
+"wTB" = (
+/obj/structure/roguemachine/mossmother/travel,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "wTM" = (
 /obj/structure/rogue/trophy/deer,
 /obj/structure/roguemachine/scomm/l{
@@ -157758,7 +157793,7 @@ seL
 sNZ
 sNZ
 sNZ
-sNZ
+wTB
 sNZ
 sNZ
 sNZ
@@ -165025,7 +165060,7 @@ jaH
 jaH
 jaH
 jaH
-jIb
+kAa
 apU
 rlV
 apU
@@ -180291,7 +180326,7 @@ lop
 lop
 lop
 lop
-rhP
+pZP
 xRY
 xRY
 xRY
@@ -181011,7 +181046,7 @@ jYX
 xRY
 xRY
 xRY
-xRY
+nfi
 xRY
 xRY
 xRY
@@ -181231,8 +181266,8 @@ lop
 lop
 crT
 lop
+bPH
 xRY
-jYX
 jYX
 xRY
 xRY
@@ -181469,7 +181504,7 @@ lop
 xRY
 xRY
 jYX
-xRY
+jYX
 xRY
 xRY
 jYX
@@ -195360,7 +195395,7 @@ lCD
 sxN
 xot
 sxN
-sxN
+knr
 sxN
 mAW
 sxN
@@ -209922,7 +209957,7 @@ gnM
 sxN
 sxN
 sxN
-gnM
+gtO
 gnM
 sxN
 sxN
@@ -260669,7 +260704,7 @@ aBB
 aBB
 aBB
 aBB
-fZN
+ijh
 fZN
 fZN
 oFI
