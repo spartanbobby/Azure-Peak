@@ -314,6 +314,8 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	fps = prefs.clientfps
+	preferred_ui_language = sanitize_preferred_ui_language(prefs.preferred_ui_language)
+	prefs.preferred_ui_language = preferred_ui_language
 
 	// Instantiate tgui panel
 	tgui_panel = new(src, "browseroutput")
@@ -915,6 +917,9 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 
 	var/dragged = L["drag"]
 	if(dragged && !L[dragged])
+		return
+
+	if(lmb_throttle(object, L))
 		return
 
 	if (object && object == middragatom && L["left"])
