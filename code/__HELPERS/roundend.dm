@@ -97,6 +97,7 @@
 	if(client)
 		client.verbs |= /client/proc/lobbyooc
 		client.verbs |= /client/proc/view_stats
+		client.update_browserpanel()
 		client.show_game_over()
 
 /mob/living/do_game_over()
@@ -152,6 +153,7 @@
 					to_chat(H, "\n<font color='purple'><b>[job.round_contrib_points]</b> ROUND CONTRIBUTOR POINTS AWARDED. Thank you for playing!</font>")
 					add_roundpoints(job.round_contrib_points, H.ckey)
 	add_roundplayed(key_list)
+
 	update_god_rankings()
 	
 	for(var/mob/M in GLOB.mob_list)

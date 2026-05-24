@@ -85,7 +85,26 @@
 			bomb_type = pick(bomb_type_list)
 			var/obj/item/B = new bomb_type(get_turf(H))
 			H.put_in_hands(B)
-	if(HAS_TRAIT(user, TRAIT_INQUISITION))	
+	if(user.mind?.has_drug_delivery) //for TRAIT_DRUG_SUPPLY. One delivery per day.
+		var/mob/living/carbon/human/H = user
+		H.mind.has_drug_delivery = FALSE
+		var/static/list/common_drug_list = list(
+			/obj/item/reagent_containers/powder/spice,
+			/obj/item/reagent_containers/powder/moondust,
+			/obj/item/reagent_containers/powder/starsugar
+		)
+		var/static/list/rare_drug_list = list(
+			/obj/item/reagent_containers/powder/moondust_purest,
+			/obj/item/reagent_containers/powder/herozium
+		)
+		var/drug_type
+		if(prob(20))
+			drug_type = pick(rare_drug_list)
+		else
+			drug_type = pick(common_drug_list)
+		var/obj/item/D = new drug_type(get_turf(H))
+		H.put_in_hands(D)
+	if(HAS_TRAIT(user, TRAIT_INQUISITION))
 		if(!coin_loaded && !inqcoins)
 			to_chat(user, span_notice("It needs a Marque."))
 			return
@@ -191,7 +210,7 @@
 						log_mail_send(user, sentfrom, send2place)
 						visible_message(span_warning("[user] sends something."))
 						playsound(loc, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
-						SStreasury.give_money_treasury(1, "Mail Income")
+						SStreasury.mint(SStreasury.discretionary_fund, 1, "Mail Income")
 						record_round_statistic(STATS_TAXES_COLLECTED, 1)
 						coin_loaded -= 1
 						if(coin_loaded <= 0)
@@ -215,7 +234,7 @@
 						log_mail_send(user, sentfrom, send2place)
 						visible_message(span_warning("[user] sends something."))
 						playsound(loc, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
-						SStreasury.give_money_treasury(1, "Mail Income")
+						SStreasury.mint(SStreasury.discretionary_fund, 1, "Mail Income")
 						record_round_statistic(STATS_TAXES_COLLECTED, 1)
 						coin_loaded -= 1
 						if(coin_loaded <= 0)

@@ -157,6 +157,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["buttons_locked"]		>> buttons_locked
 	S["windowflash"]		>> windowflashing
 	S["be_special"] 		>> be_special
+	S["no_storyteller_events"] >> no_storyteller_events
 	S["triumphs"]			>> triumphs
 	S["musicvol"]			>> musicvol
 	S["lobbymusicvol"]		>> lobbymusicvol
@@ -318,6 +319,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["buttons_locked"], buttons_locked)
 	WRITE_FILE(S["windowflash"], windowflashing)
 	WRITE_FILE(S["be_special"], be_special)
+	WRITE_FILE(S["no_storyteller_events"], no_storyteller_events)
 	WRITE_FILE(S["default_slot"], default_slot)
 	WRITE_FILE(S["toggles"], toggles)
 	WRITE_FILE(S["chat_toggles"], chat_toggles)
@@ -725,6 +727,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["preset_bounty_poster_key"] >> preset_bounty_poster_key
 	S["preset_bounty_severity_key"] >> preset_bounty_severity_key
 	S["preset_bounty_severity_b_key"] >> preset_bounty_severity_b_key
+	S["preset_bounty_severity_v_key"] >> preset_bounty_severity_v_key
 	S["preset_bounty_crime"] >> preset_bounty_crime
 
 	S["img_gallery"]	>> img_gallery
@@ -918,7 +921,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["selected_patron"]		, selected_patron.type)
 
 	// Organs
+	var/list/packed_hair = list()
+	for(var/datum/customizer_entry/entry as anything in customizer_entries)
+		if(!istype(entry, /datum/customizer_entry/hair))
+			continue
+		var/datum/customizer_entry/hair/hair_entry = entry
+		packed_hair += hair_entry
+		hair_pack(hair_entry)
 	WRITE_FILE(S["customizer_entries"] , customizer_entries)
+	for(var/datum/customizer_entry/hair/hair_entry as anything in packed_hair)
+		hair_unpack(hair_entry)
 	// Body markings
 	WRITE_FILE(S["body_markings"] , body_markings)
 	// Descriptor entries
@@ -936,6 +948,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["preset_bounty_poster_key"] , preset_bounty_poster_key)
 	WRITE_FILE(S["preset_bounty_severity_key"] , preset_bounty_severity_key)
 	WRITE_FILE(S["preset_bounty_severity_b_key"] , preset_bounty_severity_b_key)
+	WRITE_FILE(S["preset_bounty_severity_v_key"] , preset_bounty_severity_v_key)
 	WRITE_FILE(S["preset_bounty_crime"] , preset_bounty_crime)
 	WRITE_FILE(S["flavortext"] , html_decode(flavortext))
 	WRITE_FILE(S["ooc_notes"] , html_decode(ooc_notes))

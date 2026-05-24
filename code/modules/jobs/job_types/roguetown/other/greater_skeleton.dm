@@ -17,6 +17,7 @@
 	show_in_credits = FALSE
 	give_bank_account = FALSE
 	hidden_job = TRUE
+	vice_restrictions = list(/datum/charflaw/hunted)
 
 /datum/outfit/job/roguetown/greater_skeleton/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -86,7 +87,7 @@ NECRO SKELETONS
 		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/climbing = SKILL_LEVEL_APPRENTICE,
 	)
-	traits_applied = list(TRAIT_CRITICAL_WEAKNESS,  TRAIT_SILVER_WEAK) // You are disposable and SAD.
+	traits_applied = list(TRAIT_SILVER_WEAK) // Pre-Nerf for now, no more crit weakness. Until necromancer gets a buff, they're weak as-is.
 
 /datum/outfit/job/roguetown/greater_skeleton/necro/shambler/pre_equip(mob/living/carbon/human/H)
 	..()

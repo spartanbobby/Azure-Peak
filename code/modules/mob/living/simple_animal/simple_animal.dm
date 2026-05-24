@@ -45,6 +45,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/obj/item/handcuffed = null //Whether or not the mob is handcuffed
 	var/obj/item/legcuffed = null  //Same as handcuffs but for legs. Bear traps use this.
 
+	var/blood_color = BLOOD_COLOR_RED
+
 	///When someone interacts with the simple animal.
 	///Help-intent verb in present continuous tense.
 	var/response_help_continuous = "pokes"
@@ -207,6 +209,9 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		. += span_info("To dismount an incapacitated or tied up mob, all riders must dismount, first.")
 		if(ssaddle)
 			. += span_info("Use middle-mouse button on the mount to open its inventory.")
+
+/mob/living/simple_animal/get_blood_color()
+	return blood_color
 
 /mob/living/simple_animal/Initialize()
 	. = ..()
@@ -883,8 +888,9 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 
 	if(client.eye != src)
 		var/atom/A = client.eye
-		if(A.update_remote_sight(src)) //returns 1 if we override all other sight updates.
-			return
+		if(hascall(A, "update_remote_sight"))
+			if(A.update_remote_sight(src))
+				return
 	sync_lighting_plane_alpha()
 
 /mob/living/simple_animal/can_hold_items()
@@ -1190,12 +1196,19 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		SSidlenpcpool.idle_mobs_by_zlevel[old_z] -= src
 		toggle_ai(initial(AIStatus))
 
-/mob/living/simple_animal/Move()
-	if(binded)
-		return FALSE
-	. = ..()
-//	if(!stat)
-//		eat_plants()
+/mob/living/simple_animal/Move(NewLoc, Dir, step_x, step_y)
+    if(binded)
+        return FALSE
+    var/oldloc = loc
+    . = ..()
+    if(. && loc != oldloc)
+        if(client)
+            // Player
+            set_glide_size(DELAY_TO_GLIDE_SIZE(world.tick_lag))
+        else
+            // AI
+            set_glide_size(DELAY_TO_GLIDE_SIZE(move_to_delay))
+    return .
 
 /mob/living/simple_animal/proc/eat_plants()
 

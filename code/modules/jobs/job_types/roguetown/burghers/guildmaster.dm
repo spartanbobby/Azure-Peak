@@ -7,7 +7,7 @@
 	spawn_positions = 1
 	min_pq = 0
 
-	allowed_races = ACCEPTED_RACES
+	forbidden_races = list(RACES_DESPISED)
 
 	tutorial = "You are the leader of the Azure Peak Guild of Crafts. You represents the interests of all of the craftsmen underneath you - including the Tailor\
 	the Blacksmiths, the Artificers and the Architects. Other townspeople may look to you for guidance, but they are not under your control. You are an experienced smith and artificer, and can do their work easily. Protect the craftsmen's interests."
@@ -97,7 +97,7 @@
 	ADD_TRAIT(H, TRAIT_MASTER_CARPENTER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MASTER_MASON, TRAIT_GENERIC)
 	if(H.mind)
-		SStreasury.give_money_account(ECONOMIC_UPPER_CLASS, H, "Savings.")
+		SStreasury.grant_savings(ECONOMIC_UPPER_CLASS, H)
 
 /datum/outfit/job/roguetown/guildmaster/choose_loadout(mob/living/carbon/human/H)
 	. = ..()

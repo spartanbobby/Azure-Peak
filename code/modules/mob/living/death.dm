@@ -90,6 +90,8 @@ GLOBAL_LIST_EMPTY(last_words)
 
 /mob/living/death(gibbed, nocutscene = FALSE)
 	var/was_dead_before = stat == DEAD
+	if(blood_toll_bucket && !was_dead_before && !mind?.assigned_role && !client)
+		record_round_statistic(blood_toll_bucket)
 	set_stat(DEAD)
 	unset_machine()
 	timeofdeath = world.time
@@ -140,6 +142,7 @@ GLOBAL_LIST_EMPTY(last_words)
 //		addtimer(CALLBACK(client, PROC_REF(ghostize), 1, src), 150)
 		add_client_colour(/datum/client_colour/monochrome)
 		client.verbs.Add(GLOB.ghost_verbs)
+		client.update_browserpanel()
 		if(last_words)
 			GLOB.last_words |= last_words
 

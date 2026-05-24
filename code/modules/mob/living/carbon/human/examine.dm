@@ -97,11 +97,11 @@
 
 		if ((valid_headshot_link(src, displayed_headshot, TRUE)) && (user.client?.prefs.chatheadshot))
 			if(display_as_wanderer)
-				. = list(span_info("ø ------------ ø\n<img src=[displayed_headshot] width=100 height=100/>\nThis is <EM>[used_name]</EM>, the wandering [race_name]."))
+				. = list(span_info("ø ------------ ø\n[chat_headshot(displayed_headshot)]\nThis is <EM>[used_name]</EM>, the wandering [race_name]."))
 			else if(used_title)
-				. = list(span_info("ø ------------ ø\n<img src=[displayed_headshot] width=100 height=100/>\nThis is <EM>[used_name]</EM>, the [race_name] [used_title]."))
+				. = list(span_info("ø ------------ ø\n[chat_headshot(displayed_headshot)]\nThis is <EM>[used_name]</EM>, the [race_name] [used_title]."))
 			else
-				. = list(span_info("ø ------------ ø\n<img src=[displayed_headshot] width=100 height=100/>\nThis is the <EM>[used_name]</EM>, the [race_name]."))
+				. = list(span_info("ø ------------ ø\n[chat_headshot(displayed_headshot)]\nThis is the <EM>[used_name]</EM>, the [race_name]."))
 		else
 			if(display_as_wanderer)
 				. = list(span_info("ø ------------ ø\nThis is <EM>[used_name]</EM>, the wandering [race_name]."))
@@ -148,10 +148,10 @@
 			else
 				. += span_notice("Something about them seems... different.")
 
-		if((HAS_TRAIT(user, TRAIT_ANCIENT_HAG) || HAS_TRAIT(user, TRAIT_FEYTOUCHED)) && HAS_TRAIT(src, TRAIT_FEYTOUCHED))
+		if((HAS_TRAIT(user, TRAIT_ANCIENT_HAG) || HAS_TRAIT(user, TRAIT_FEYTOUCHED) || istype(user, /mob/living/simple_animal/pet/familiar/fae)) && HAS_TRAIT(src, TRAIT_FEYTOUCHED))
 			. += span_nicegreen("Someone touched by, or created by fey. Perhaps a vessel of the past, or a deeply affected puppet.")
 
-		if(HAS_TRAIT(user, TRAIT_FEYTOUCHED) && HAS_TRAIT(src, TRAIT_ANCIENT_HAG))
+		if((HAS_TRAIT(user, TRAIT_FEYTOUCHED) ||  istype(user, /mob/living/simple_animal/pet/familiar/fae)) && HAS_TRAIT(src, TRAIT_ANCIENT_HAG))
 			. += span_nicegreen("A true force of the fey, the mossmother speaks to this one closely.")
 
 		if(SSticker.rulermob == src)
@@ -164,6 +164,33 @@
 				. += span_notice("A fellow noble.")
 			else
 				. += span_notice("A noble!")
+
+		if(HAS_TRAIT(src, TRAIT_RESIDENT))
+			. += span_notice("A chartered resident of Azuria.")
+
+		if(HAS_TRAIT(src, TRAIT_DEBTOR))
+			// Defaulted-loan debtor: a serious civic brand. Authority roles see the full banner.
+			if(ishuman(user))
+				var/mob/living/carbon/human/viewer = user
+				if((viewer.job in GLOB.garrison_positions) || (viewer.job in GLOB.retinue_positions) || (viewer.job in GLOB.courtier_positions) || (viewer.job in GLOB.noble_positions))
+					. += span_userdanger("DEFAULT DEBTOR OF THE CROWN!")
+
+		if(HAS_TRAIT(src, TRAIT_ARREARS))
+			// Poll-tax arrears: a soft mark. Authority roles (garrison, retinue, courtier, noble)
+			// can read it off a subject, but only as a hint - the actual amount owed lives with
+			// the Steward, and enforcement is up to whoever spots it.
+			if(ishuman(user))
+				var/mob/living/carbon/human/viewer = user
+				if((viewer.job in GLOB.garrison_positions) || (viewer.job in GLOB.retinue_positions) || (viewer.job in GLOB.courtier_positions) || (viewer.job in GLOB.noble_positions))
+					. += span_smallred("Destitute..")
+
+		if(src.job in GLOB.church_positions)
+			. += span_notice("A member of the Church of Azuria.")
+		else if(HAS_TRAIT(src, TRAIT_DECLARED_BENEFACTOR))
+			. += span_notice("A benefactor of the Church of Azuria.")
+
+		if(src.job in GLOB.inquisition_positions)
+			. += span_notice("A member of the Holy Otavan Inquisition.")
 
 		if((HAS_TRAIT(user, TRAIT_BLACKOAK) && !(src.dna.species.name == "Elf" || src.dna.species.name == "Dark Elf" || src.dna.species.name == "Half-Elf")))
 			. += span_phobia("An invader...")
@@ -259,8 +286,10 @@
 				if(charflaws.len)
 					var/list/vice_desc = list()
 					for(var/datum/charflaw/cf in charflaws)
-						vice_desc.Add(cf.voyeur_descriptor)
-					. += span_voyeurvice("[m1][english_list(vice_desc)]...")
+						if(cf.voyeur_descriptor)
+							vice_desc.Add(cf.voyeur_descriptor)
+					if(length(vice_desc))
+						. += span_voyeurvice("[m1] [english_list(vice_desc)]...")
 
 			if(HAS_TRAIT(user, TRAIT_EMPATH) && HAS_TRAIT(src, TRAIT_PERMAMUTE))
 				. += span_notice("[m1] lacks a voice. [m1] is a mute!")
@@ -299,6 +328,10 @@
 				if (THEY_THEM, IT_ITS)
 					. += span_redtext("[m1] repulsive!")
 
+		var/datum/antagonist/vampire/vamp_inspect_vlord = src.mind?.has_antag_datum(/datum/antagonist/vampire/lord)
+		if(vamp_inspect_vlord && (!SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS)))
+			. += span_userdanger("A MONSTER!")
+
 		var/datum/antagonist/vampire/vamp_inspect = src.mind?.has_antag_datum(/datum/antagonist/vampire)
 		if(vamp_inspect && (!SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS)))
 			. += span_redtext("[m3] strange glowying eyes and fangs!")
@@ -325,9 +358,7 @@
 		if(item)
 			. += span_notice("You get the feeling [src]'s most valuable possession is \a [item].")
 		var/mammonsonperson = get_mammons_in_atom(src)
-		var/mammonsinbank = SStreasury.bank_accounts[src]
-		if(isnull(mammonsinbank))
-			mammonsinbank = 0
+		var/mammonsinbank = SStreasury.get_balance(src)
 		var/totalvalue = mammonsonperson + mammonsinbank
 		if(totalvalue && HAS_TRAIT(user, TRAIT_GILDED_SIGHT))
 			. += span_notice("They carry [mammonsonperson] mammons, with [mammonsinbank] stored away, totaling [totalvalue].")
@@ -782,6 +813,10 @@
 				if(91.01 to INFINITY)
 					msg += "[m1] a shitfaced, slobbering wreck."
 
+			//Deadened
+			if(HAS_TRAIT(user, TRAIT_EMPATH) && HAS_TRAIT(src, TRAIT_DETACHED))
+				msg += "[m1] completely hollow inside, radiating a deep, tragic silence."
+
 			//Stress
 			var/stress = get_stress_amount()
 			if(HAS_TRAIT(user, TRAIT_EMPATH))
@@ -970,7 +1005,10 @@
 						if(I.associated_skill)
 							src_skill = I.associated_skill
 					var/skilldiff = user.get_skill_level(user_skill) - get_skill_level(src_skill)
-					. += "<font size = 3><i>[skilldiff_report(skilldiff)] in my wielded skill than they are in theirs.</i></font>"
+					if(!skilldiff)
+						. += "<font size = 3><i>[skilldiff_report(skilldiff)] in our wielded skills.</i></font>"
+					else
+						. += "<font size = 3><i>[skilldiff_report(skilldiff)] in my wielded skill than they are in theirs.</i></font>"
 
 	var/showassess = FALSE
 	if(ishuman(user))
@@ -1064,6 +1102,15 @@
 	if(HAS_TRAIT(examiner, TRAIT_HERETIC_SEER))
 		seer = TRUE
 
+	if(HAS_TRAIT(src, TRAIT_DUSTRUNNER))
+		var/mob/living/living_examiner = examiner
+		if(HAS_TRAIT(examiner, TRAIT_DUSTRUNNER))
+			heretic_text += "Fellow runner. The dust moves."
+		else if(living_examiner?.patron?.type == /datum/patron/inhumen/matthios)
+			heretic_text += "A Guild runner, by the look of them."
+		else if(examiner.job in GLOB.bathhouse_positions)
+			heretic_text += "One of the Guild's runners. I know the signs."
+
 	if(HAS_TRAIT(src, TRAIT_FREEMAN))
 		if(seer)
 			heretic_text += "Matthiosian."
@@ -1150,10 +1197,6 @@
 				villain_text = span_userdanger("BANDIT!")
 		if(mind.special_role == "Deadite")
 			villain_text = span_userdanger("DEADITE!")
-		if(mind.special_role == "Vampire Lord")
-			var/datum/antagonist/vampire/VD = mind.has_antag_datum(/datum/antagonist/vampire)
-			if(!SEND_SIGNAL(VD.owner, COMSIG_DISGUISE_STATUS))
-				villain_text += span_userdanger("A MONSTER!")
 		if(mind.assigned_role == "Lunatic")
 			villain_text += span_userdanger("LUNATIC!")
 

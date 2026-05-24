@@ -2,11 +2,13 @@
 	name = "Treasure Hunter"
 	tutorial = "You are a treasure hunter trained in hunting for valuables. Discern what is treasure or not, your fortune could be hidden anywhere."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_ALL_KINDS
+	
 	outfit = /datum/outfit/job/roguetown/adventurer/rogue
 	cmode_music = 'sound/music/cmode/adventurer/combat_outlander3.ogg'
 	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_SEEPRICES, TRAIT_GRAVEROBBER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT, CTAG_LICKER_WRETCH)
+	townie_contract_gate_exempt = TRUE
+	townie_contract_gate_hide_in_list = TRUE
 	class_select_category = CLASS_CAT_ROGUE
 	subclass_stats = list(
 		STATKEY_STR = -1,
@@ -171,10 +173,10 @@
 	I.grant_inspiration(H, bard_tier = BARD_T2)
 	if(H.mind)
 		H.mind.AddSpell(new /datum/action/cooldown/spell/projectile/vicious_mockery)
-		var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman", "Psyaltery", "Flute")
-		var/weapon_choice = tgui_input_list(H, "Choose your instrument.", "TAKE UP ARMS", weapons)
+		var/instruments = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman", "Psyaltery", "Flute", "Drum", "Shamisen")
+		var/instrument_choice = tgui_input_list(H, "Choose your instrument.", "TAKE UP ARMS", instruments)
 		H.set_blindness(0)
-		switch(weapon_choice)
+		switch(instrument_choice)
 			if("Harp")
 				backr = /obj/item/rogue/instrument/harp
 			if("Lute")
@@ -193,6 +195,10 @@
 				backr = /obj/item/rogue/instrument/psyaltery
 			if("Flute")
 				backr = /obj/item/rogue/instrument/flute
+			if("Drum")
+				backr = /obj/item/rogue/instrument/drum
+			if("Shamisen")
+				backr = /obj/item/rogue/instrument/shamisen
 
 /datum/advclass/rogue/swashbuckler
 	name = "Swashbuckler"

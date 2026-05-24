@@ -9,6 +9,7 @@ LICH SKELETONS
 	tutorial = "You are bygone. Your will belongs to your master. Fulfil and kill."
 
 	outfit = /datum/outfit/job/roguetown/greater_skeleton/lich
+	vice_restrictions = list(/datum/charflaw/hunted)
 
 /datum/outfit/job/roguetown/greater_skeleton/lich
 	belt = /obj/item/storage/belt/rogue/leather/black
@@ -18,6 +19,7 @@ LICH SKELETONS
 /datum/outfit/job/roguetown/greater_skeleton/lich/pre_equip(mob/living/carbon/human/H)
 	..()
 	REMOVE_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LICHLAIR, TRAIT_GENERIC) //Ability to leave/enter the lich's lair without being softlocked inside.
 
 // Melee goon w/ javelins. All-rounder.
 /datum/advclass/greater_skeleton/lich/legionnaire
