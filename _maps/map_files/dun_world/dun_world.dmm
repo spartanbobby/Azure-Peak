@@ -3559,6 +3559,7 @@
 /obj/structure/bed/rogue{
 	dir = 1
 	},
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town/garrison)
 "aLN" = (
@@ -8310,6 +8311,10 @@
 /obj/structure/bars/tough,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
+"bKO" = (
+/obj/structure/table/wood/long_table/right,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/garrison)
 "bKR" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/his_vault/one)
@@ -8659,6 +8664,7 @@
 /area/rogue/under/cave/scarymaze)
 "bNL" = (
 /obj/structure/bed/rogue,
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town/garrison)
 "bNP" = (
@@ -16831,6 +16837,7 @@
 "dtO" = (
 /obj/structure/chair/wood/rogue/chair3,
 /obj/machinery/light/rogue/candle/l,
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/garrison)
 "dtV" = (
@@ -20943,6 +20950,11 @@
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/beach/forest/hamlet)
+"ekv" = (
+/obj/structure/chair/stool/rogue,
+/obj/effect/landmark/start/guardsman,
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/town/garrison)
 "ekE" = (
 /obj/structure/meathook,
 /obj/effect/decal/cleanable/blood,
@@ -58664,6 +58676,7 @@
 /area/rogue/under/cave/his_vault)
 "lDE" = (
 /obj/structure/chair/bench/couch/r,
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/garrison)
 "lDG" = (
@@ -67789,6 +67802,7 @@
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
 	},
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/garrison)
 "nwy" = (
@@ -69848,6 +69862,7 @@
 /obj/structure/bed/rogue{
 	dir = 8
 	},
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/garrison)
 "nTo" = (
@@ -78097,6 +78112,7 @@
 /area/rogue/outdoors/beach/north)
 "pyV" = (
 /obj/structure/chair/stool/rogue,
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/manor)
 "pyW" = (
@@ -96947,6 +96963,11 @@
 /obj/item/alch/rosa,
 /turf/open/floor/rogue/tile/brick,
 /area/rogue/indoors/town/bath)
+"tll" = (
+/obj/structure/chair/stool/rogue,
+/obj/effect/landmark/start/guardsman,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/garrison)
 "tlm" = (
 /obj/structure/fluff/statue/knight/r,
 /obj/effect/decal/cobbleedge{
@@ -106346,6 +106367,7 @@
 /area/rogue/indoors/inq/basement)
 "veh" = (
 /obj/structure/bed/rogue,
+/obj/effect/landmark/start/guardsman,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/garrison)
 "vek" = (
@@ -109147,6 +109169,10 @@
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/wood,
 /area/rogue/under/underdark/south)
+"vGF" = (
+/obj/structure/table/wood/long_table,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/garrison)
 "vGG" = (
 /obj/structure/stairs{
 	dir = 1
@@ -177677,7 +177703,7 @@ iWa
 iWa
 iWa
 iWa
-iWa
+vGF
 jWw
 ehs
 ehs
@@ -178129,7 +178155,7 @@ gYA
 iWa
 iWa
 iWa
-iWa
+bKO
 jWw
 ehs
 ehs
@@ -293389,7 +293415,7 @@ dtO
 vQI
 tGl
 tbx
-usR
+tll
 iWa
 iVE
 kdL
@@ -408198,7 +408224,7 @@ kSN
 iBb
 iRS
 bKz
-bKz
+ekv
 siN
 oOf
 tGl
@@ -410002,7 +410028,7 @@ tGl
 xIr
 xWx
 pgy
-bKz
+ekv
 bKz
 iCo
 jvA
