@@ -73591,6 +73591,10 @@
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/under/cave/scarymaze)
+"oFF" = (
+/obj/structure/curtain/blue,
+/turf/closed/wall/mineral/rogue/wooddark/window,
+/area/rogue/indoors/town/manor)
 "oFI" = (
 /obj/structure/floordoor/gatehatch/outer{
 	redstone_id = "swamp_psy_dungeon"
@@ -293514,7 +293518,7 @@ tGl
 tbx
 tll
 iWa
-iVE
+fev
 kdL
 kLe
 kLe
@@ -293966,7 +293970,7 @@ tGl
 ygW
 iWa
 iWa
-iVE
+fev
 kdL
 kLe
 kLe
@@ -294418,7 +294422,7 @@ bPo
 hMu
 iWa
 iWa
-iVE
+fev
 kdL
 kLe
 kLe
@@ -296226,7 +296230,7 @@ iSB
 rQM
 neM
 iWa
-iVE
+fev
 kdL
 kLe
 kLe
@@ -296678,7 +296682,7 @@ iWa
 iWa
 iWa
 usR
-iVE
+fev
 kdL
 kLe
 kLe
@@ -297130,7 +297134,7 @@ iWa
 iWa
 usR
 sEI
-iVE
+fev
 kdL
 kLe
 kLe
@@ -301650,7 +301654,7 @@ xZf
 xZf
 xZf
 uzJ
-oIN
+oFF
 kdL
 kLe
 kLe
@@ -302102,7 +302106,7 @@ crE
 xZf
 xZf
 kxg
-oIN
+oFF
 kdL
 kLe
 kLe
