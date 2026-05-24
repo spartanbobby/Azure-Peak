@@ -112801,6 +112801,7 @@
 /area/rogue/outdoors/mountains)
 "wsL" = (
 /obj/structure/bars/steel,
+/obj/structure/curtain/blue,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/garrison)
 "wsR" = (
