@@ -1,0 +1,4 @@
+author: "Baneuus"
+delete-after: True
+changes:
+  - bugfix: "Gnoll / Werewolf claws now do have special once again."
