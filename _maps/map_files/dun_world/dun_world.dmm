@@ -46662,7 +46662,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border/west,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/garrison)
 "jqt" = (
 /obj/structure/rack/rogue/shelf,
@@ -63148,7 +63148,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border/east,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/garrison)
 "mwy" = (
 /turf/open/water/river/flow,
@@ -76668,12 +76668,6 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors/town/garrison)
-"pgC" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/indoors/town/garrison)
 "pgF" = (
 /obj/structure/table/wood/large_table/middle_west,
@@ -407545,7 +407539,7 @@ tGl
 dLp
 fGs
 eux
-pgC
+tGl
 gfg
 oWg
 jWw
