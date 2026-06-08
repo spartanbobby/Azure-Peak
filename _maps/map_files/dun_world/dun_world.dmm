@@ -10702,6 +10702,10 @@
 /area/rogue/indoors/shelter)
 "ckP" = (
 /obj/structure/table/wood/long_table/right,
+/obj/machinery/light/rogue/torchholder{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/garrison)
 "ckQ" = (
@@ -22696,6 +22700,10 @@
 	},
 /turf/open/water/bath,
 /area/rogue/indoors/town/bath)
+"eFy" = (
+/obj/structure/fluff/railing/border/east,
+/turf/open/floor/rogue/metal,
+/area/rogue/under/town/sewer)
 "eFA" = (
 /obj/structure/rack/rogue/shelf/biggest{
 	pixel_x = 3;
@@ -32281,6 +32289,19 @@
 "gAt" = (
 /turf/open/water/swamp,
 /area/rogue/indoors/cave)
+"gAy" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	pixel_y = 6;
+	pixel_x = 0
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/indoors/town/garrison)
 "gAA" = (
 /obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/dirt,
@@ -39010,7 +39031,14 @@
 /area/rogue/indoors/shelter/woods)
 "hTe" = (
 /obj/structure/fluff/railing/corner/south_west,
-/turf/open/floor/rogue/cobble,
+/obj/effect/decal/cobbleedge{
+	dir = 5
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/town/garrison)
 "hTi" = (
 /obj/structure/table/wood/poor,
@@ -95251,6 +95279,8 @@
 /area/rogue/outdoors/town)
 "sRs" = (
 /obj/structure/table/wood/long_table,
+/obj/item/paper/scroll,
+/obj/item/natural/feather,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/garrison)
 "sRt" = (
@@ -174754,12 +174784,12 @@ tGl
 mpa
 oDz
 tGl
-mTl
-mTl
+eFy
+eFy
 tGl
 tGl
-mTl
-mTl
+eFy
+eFy
 tGl
 hrE
 hrE
@@ -177472,7 +177502,7 @@ iWa
 iWa
 iWa
 fva
-iWa
+gAy
 hTe
 oAE
 iWa
