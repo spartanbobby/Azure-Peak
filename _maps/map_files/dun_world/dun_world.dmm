@@ -408,6 +408,11 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/shelter)
+"aeg" = (
+/obj/effect/landmark/start/guardsman,
+/obj/structure/bed/rogue,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/garrison)
 "aeh" = (
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/dwarfin)
@@ -15638,6 +15643,15 @@
 /obj/structure/flora/roguegrass/maneater/real,
 /turf/open/water/swamp,
 /area/rogue/outdoors/mountains/decap)
+"dkF" = (
+/obj/structure/closet/crate/chest,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/clothing/cloak/tabard/stabard/guardhood,
+/obj/item/clothing/cloak/tabard/stabard/surcoat/guard,
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/garrison)
 "dkG" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat/gethsmane,
 /turf/open/floor/rogue/metal{
@@ -32553,6 +32567,9 @@
 /obj/structure/chair/bench/church,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/underdark/south)
+"gDL" = (
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/garrison)
 "gDM" = (
 /obj/effect/decal/cleanable/blood,
 /mob/living/carbon/human/species/human/northern/bog_deserters,
@@ -526037,9 +526054,9 @@ rmK
 tGl
 gAs
 tGl
-xpG
-iCo
-xpG
+aeg
+gDL
+jEO
 tGl
 jan
 teI
@@ -526489,9 +526506,9 @@ vmi
 rmK
 tGl
 tGl
-jEO
-mJt
-jEO
+tGl
+dkF
+xpG
 tGl
 iWa
 izK
