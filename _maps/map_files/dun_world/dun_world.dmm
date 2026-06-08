@@ -40990,19 +40990,9 @@
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
 "ilv" = (
-/obj/structure/closet/crate/chest{
-	name = "Evidence Storage"
-	},
 /obj/machinery/light/rogue/torchholder/r,
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	pixel_y = 6;
-	pixel_x = 0
-	},
-/obj/effect/decal/cobbleedge{
-	dir = 5
-	},
-/turf/open/floor/rogue/cobble/mossy,
+/obj/structure/roguemachine/bounty,
+/turf/open/floor/rogue/metal,
 /area/rogue/indoors/town/garrison)
 "ilx" = (
 /obj/structure/closet/crate/chest,
@@ -51124,20 +51114,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "khi" = (
-/obj/structure/fermentation_keg/water,
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-e";
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-w";
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/turf/open/floor/rogue/cobble/mossy,
+/obj/structure/fluff/walldeco/customflag,
+/turf/closed/wall/mineral/rogue/stone,
 /area/rogue/indoors/town/garrison)
 "khk" = (
 /turf/closed/wall/mineral/rogue/stone/red_moss,
@@ -66147,6 +66125,10 @@
 /obj/structure/bookcase,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/shelter)
+"nei" = (
+/obj/structure/fermentation_keg/water,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/garrison)
 "nej" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/transparent/openspace,
@@ -109748,16 +109730,8 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/his_vault/four)
 "vJO" = (
-/obj/structure/closet/crate/chest{
-	name = "Evidence Storage"
-	},
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-e";
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/turf/open/floor/rogue/cobble/mossy,
+/obj/structure/chair/arrestchair,
+/turf/open/floor/rogue/metal,
 /area/rogue/indoors/town/garrison)
 "vJP" = (
 /obj/effect/decal/cobbleedge{
@@ -178406,7 +178380,7 @@ iad
 vJO
 khi
 ilv
-iWa
+nei
 iWa
 iWa
 ckP
