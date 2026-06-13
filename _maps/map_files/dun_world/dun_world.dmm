@@ -122709,7 +122709,8 @@
 /area/rogue/under/cave/taricheamanor)
 "yjB" = (
 /obj/structure/bars/passage/shutter/bookcase{
-	redstone_id = "secret_inq_torture_area"
+	redstone_id = "secret_inq_torture_area";
+	max_integrity = 15000
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
