@@ -81141,13 +81141,6 @@
 /obj/item/candle/candlestick/gold/single/lit,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
-"pZm" = (
-/obj/structure/mineral_door/bars{
-	locked = 1;
-	lockid = "inquisition"
-	},
-/turf/open/floor/rogue/grass,
-/area/rogue/indoors/inq)
 "pZn" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 1
@@ -365146,7 +365139,7 @@ ryV
 qev
 unD
 unD
-pZm
+jqZ
 dTp
 jqZ
 faT
