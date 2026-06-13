@@ -764,6 +764,12 @@
 	icon_state = "brownkey"
 	lockid = "inquisition"
 
+/obj/item/roguekey/absolverskey
+	name = "Psydonic Chapel key"
+	desc = "This key opens the doors to the Psydonic Chapel."
+	icon_state = "brownkey"
+	lockid = "Absolvers"
+
 //////////////////////////
 // VAMPIRE / ANTAGONIST //
 //////////////////////////
