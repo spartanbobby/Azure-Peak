@@ -18199,6 +18199,14 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/tavern)
+"dKW" = (
+/obj/structure/mineral_door/wood/donjon{
+	dir = 8;
+	locked = 1;
+	lockid = "walls"
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "dKZ" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4
@@ -49594,6 +49602,16 @@
 	desc = "clear, lightly foamy water, perfect for dipping into after a long day."
 	},
 /area/rogue/indoors/inq/basement)
+"jRB" = (
+/obj/structure/bars/passage{
+	density = 0;
+	icon_state = "passage1";
+	redstone_id = "Western_Path_town_1"
+	},
+/turf/open/floor/rogue/metal{
+	icon_state = "plating2"
+	},
+/area/rogue/outdoors/town)
 "jRD" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/naturalstone,
@@ -77029,6 +77047,14 @@
 /obj/effect/landmark/chimeric_calyx_spawner/fifteen,
 /turf/open/floor/rogue/blocks/green,
 /area/rogue/under/town/sewer)
+"phV" = (
+/obj/structure/lever/wall{
+	pixel_x = -16;
+	redstone_id = "Western_Path_town_1";
+	dir = 8
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "phW" = (
 /obj/structure/curtain/green,
 /turf/open/floor/rogue/concrete,
@@ -255698,7 +255724,7 @@ pWT
 pWp
 fpx
 fpx
-fpx
+exD
 exD
 exD
 exD
@@ -256148,11 +256174,11 @@ phl
 phl
 phl
 phl
-fpx
-fpx
+phl
 exD
 exD
 exD
+phl
 phl
 phl
 phl
@@ -256599,12 +256625,12 @@ pqo
 phl
 phl
 phl
+phV
 phl
-fpx
-exD
-exD
-exD
-exD
+jRB
+jRB
+jRB
+phl
 phl
 phl
 phl
@@ -257051,12 +257077,12 @@ gyu
 phl
 phl
 phl
+dKW
 phl
 exD
 exD
 exD
-exD
-fpx
+phl
 phl
 phl
 phl
