@@ -1873,6 +1873,14 @@
 /obj/effect/spawner/trap,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/taricheamanor)
+"atG" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/fluff/railing/border/north,
+/obj/machinery/light/rogue/candle/blue,
+/turf/open/floor/rogue/churchrough,
+/area/rogue/indoors/inq/basement)
 "atH" = (
 /obj/item/natural/rock/salt,
 /turf/open/water/swamp/deep,
@@ -18188,6 +18196,11 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/outdoors/town)
+"dKO" = (
+/obj/structure/bookcase/random,
+/obj/machinery/light/rogue/candle/blue,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors/inq/basement)
 "dKR" = (
 /obj/effect/spawner/roguemap/stump,
 /obj/structure/fluff/railing/fence{
@@ -79244,6 +79257,16 @@
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/mountains/decap/stepbelow)
+"pFp" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/fluff/railing/border,
+/obj/machinery/light/rogue/candle/blue{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/indoors/inq/basement)
 "pFq" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/carpet/royalblack,
@@ -248505,10 +248528,10 @@ dEP
 uZW
 uZW
 uZW
-aba
+atG
 lKy
 lKy
-qRO
+pFp
 uZW
 uZW
 uZW
@@ -250765,7 +250788,7 @@ ogs
 ogs
 uZW
 uZW
-njf
+dKO
 njf
 njf
 njf
