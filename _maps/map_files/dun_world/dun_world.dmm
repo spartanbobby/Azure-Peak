@@ -17616,6 +17616,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/manor)
+"dEP" = (
+/obj/structure/flora/hotspring_rocks/small,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "dES" = (
 /obj/structure/mineral_door/wood/donjon{
 	dir = 4;
@@ -45022,6 +45026,14 @@
 "iZp" = (
 /turf/closed/wall/mineral/rogue/pipe/line,
 /area/rogue/under/town/sewer)
+"iZt" = (
+/obj/machinery/light/rogue/torchholder/c,
+/obj/structure/flora/hotspring_rocks/small/three{
+	pixel_x = 7;
+	pixel_y = 15
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "iZu" = (
 /obj/structure/stairs{
 	dir = 8
@@ -46578,6 +46590,13 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/exposed/magiciantower)
+"jou" = (
+/obj/structure/flora/hotspring_rocks/small/three{
+	pixel_x = 10;
+	pixel_y = -5
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "joB" = (
 /obj/structure/table/wood,
 /obj/item/book/rogue/abyssor,
@@ -58040,6 +58059,13 @@
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/indoors/cave)
+"lvb" = (
+/obj/structure/flora/hotspring_rocks/small/two{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "lvi" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
@@ -58280,6 +58306,10 @@
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/cave/underhamlet)
+"lxq" = (
+/obj/structure/flora/hotspring_rocks/small/two,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "lxr" = (
 /obj/machinery/light/rogue/candle/floorcandle,
 /obj/structure/fluff/walldeco/stone/stone4{
@@ -65592,6 +65622,13 @@
 /obj/structure/roguetent,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
+"mWX" = (
+/obj/structure/flora/hotspring_rocks/small{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "mWY" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/spawner/lootdrop/general_loot_hi,
@@ -89258,6 +89295,10 @@
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/outdoors/town)
+"rEu" = (
+/obj/structure/flora/hotspring_rocks/small/five,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "rEw" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/indoors/town/magician)
@@ -105196,6 +105237,10 @@
 /area/rogue/under/cave/dukecourt)
 "uMh" = (
 /obj/structure/fluff/railing/corner/north_east,
+/obj/structure/flora/hotspring_rocks/small/three{
+	pixel_x = 6;
+	pixel_y = -16
+	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
 "uMm" = (
@@ -118222,6 +118267,10 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
+"xrf" = (
+/obj/structure/flora/hotspring_rocks/small/two,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "xrh" = (
 /turf/open/water/ocean/deep,
 /area/rogue/under/cavewet/bogcaves/north)
@@ -247553,7 +247602,7 @@ ykC
 eiC
 toJ
 toJ
-toJ
+lxq
 ogs
 uZW
 uZW
@@ -248458,7 +248507,7 @@ ogs
 ixP
 toJ
 toJ
-toJ
+dEP
 uZW
 uZW
 uZW
@@ -354220,7 +354269,7 @@ cxA
 cxA
 cxA
 rep
-fjV
+iZt
 fZN
 fZN
 fSC
@@ -354673,7 +354722,7 @@ cxA
 rep
 fZN
 fZN
-fZN
+xrf
 fSC
 cxA
 cxA
@@ -356015,7 +356064,7 @@ qwK
 tNl
 tNl
 tNl
-fZN
+vtg
 cxA
 cxA
 cxA
@@ -356026,7 +356075,7 @@ cxA
 cxA
 cxA
 cxA
-fZN
+mWX
 fZN
 cxA
 cxA
@@ -356921,7 +356970,7 @@ tNl
 tNl
 fZN
 fZN
-fZN
+mWX
 uZW
 cTh
 pUw
@@ -357823,7 +357872,7 @@ qwK
 tNl
 tNl
 tNl
-fZN
+rEu
 fZN
 fZN
 kUa
@@ -358729,7 +358778,7 @@ tNl
 tNl
 tNl
 fZN
-fZN
+vtg
 uZW
 amd
 sWX
@@ -359180,7 +359229,7 @@ tNl
 tNl
 tNl
 tNl
-fZN
+xrf
 uZW
 uZW
 iWf
@@ -362804,11 +362853,11 @@ cxA
 cxA
 rep
 gPz
-fZN
+mWX
 lhl
 fZN
 fZN
-fZN
+lvb
 boQ
 xGS
 aBB
@@ -363254,7 +363303,7 @@ cxA
 cxA
 cxA
 cxA
-fZN
+rEu
 fZN
 fZN
 fZN
@@ -364160,7 +364209,7 @@ cxA
 rep
 uxZ
 fZN
-fZN
+jou
 uiI
 ggL
 tFy
