@@ -123446,6 +123446,11 @@
 /area/rogue/under/town/basement)
 "yfZ" = (
 /obj/structure/rack/rogue/shelf/biggest,
+/obj/item/clothing/cloak/tabard/toga,
+/obj/item/clothing/cloak/tabard/toga,
+/obj/item/clothing/cloak/tabard/toga,
+/obj/item/clothing/cloak/tabard/toga,
+/obj/item/clothing/cloak/tabard/toga,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq/basement)
 "ygd" = (
