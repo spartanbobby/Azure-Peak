@@ -17931,6 +17931,10 @@
 "dFI" = (
 /obj/structure/curtain/red,
 /obj/structure/table/wood/long_table/mid/alt,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/inq/office)
 "dFJ" = (
@@ -23739,6 +23743,9 @@
 "eNq" = (
 /obj/structure/curtain/red,
 /obj/structure/fluff/railing/border/east,
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/inq)
 "eNr" = (
@@ -50610,6 +50617,10 @@
 /area/rogue/indoors/town/tavern)
 "jXK" = (
 /obj/structure/curtain/red,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 8
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/inq/office)
 "jXO" = (
@@ -51923,6 +51934,10 @@
 "kkw" = (
 /obj/structure/curtain/red,
 /obj/structure/table/wood/long_table/right,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/inq/office)
 "kky" = (
@@ -78330,6 +78345,10 @@
 /area/rogue/under/cave/spider)
 "poQ" = (
 /obj/structure/curtain/red,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 8
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/inq)
 "poR" = (
@@ -89881,6 +89900,10 @@
 "rDw" = (
 /obj/structure/curtain/red,
 /obj/structure/table/wood/long_table,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/inq/office)
 "rDz" = (
@@ -104446,6 +104469,13 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/mole,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
+"uvV" = (
+/obj/structure/curtain/red,
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/inq)
 "uvX" = (
 /obj/structure/mineral_door/wood/donjon/stone/highsecurity{
 	name = "Cathedral Cellarage";
@@ -360367,7 +360397,7 @@ vcY
 tdQ
 kaq
 nCR
-poQ
+uvV
 ctG
 crD
 ctG
