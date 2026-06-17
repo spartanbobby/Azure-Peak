@@ -58377,10 +58377,7 @@
 /area/rogue/indoors/town/physician)
 "lsC" = (
 /obj/item/rogueweapon/stoneaxe/battle,
-/obj/structure/closet/crate/chest{
-	locked = 1;
-	lockid = "inquisition"
-	},
+/obj/structure/closet/crate/chest/inqcrate,
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
 	dir = 1
@@ -59785,7 +59782,7 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/underdark/north)
 "lGh" = (
-/obj/structure/closet/crate/chest,
+/obj/structure/closet/crate/chest/inqcrate,
 /obj/item/inqarticles/indexer,
 /obj/item/inqarticles/indexer,
 /obj/machinery/light/rogue/candle/blue/r,
@@ -98257,7 +98254,7 @@
 /turf/open/floor/rogue/tile/checkeralt,
 /area/rogue/indoors/town/steward)
 "til" = (
-/obj/structure/closet/crate/chest,
+/obj/structure/closet/crate/chest/inqcrate,
 /obj/item/paper/scroll,
 /obj/item/paper/scroll,
 /obj/item/paper/scroll,
@@ -109904,7 +109901,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "vuk" = (
-/obj/structure/closet/crate/chest,
+/obj/structure/closet/crate/chest/inqcrate,
 /obj/item/paper/inqslip/accusation,
 /obj/item/paper/inqslip/accusation,
 /obj/item/paper/inqslip/confession,
