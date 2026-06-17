@@ -76755,7 +76755,7 @@
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
 	lockid = "inquisition";
-	name = "Meeting room"
+	name = "Balcony"
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/office)
@@ -82873,6 +82873,14 @@
 /obj/machinery/light/rogue/candle,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
+"qjn" = (
+/obj/structure/mineral_door/wood/donjon/stone{
+	locked = 1;
+	lockid = "inquisition";
+	name = "Washroom"
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/inq/basement)
 "qju" = (
 /obj/structure/closet/crate/chest/old_crate,
 /turf/open/floor/rogue/woodturned,
@@ -242601,7 +242609,7 @@ sIY
 evK
 evK
 uaP
-fEh
+qTg
 hHd
 hHd
 hHd
@@ -243053,7 +243061,7 @@ sIY
 evK
 evK
 nkd
-fEh
+qTg
 hHd
 hHd
 hHd
@@ -249824,7 +249832,7 @@ uZW
 uZW
 uZW
 uZW
-qTg
+qjn
 uZW
 uZW
 uZW
