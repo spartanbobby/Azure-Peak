@@ -8216,7 +8216,7 @@
 	lockid = "inquisition";
 	name = "Secure Storage"
 	},
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "bIX" = (
 /obj/effect/decal/cobbleedge{
@@ -23370,7 +23370,7 @@
 	lockid = "inquisition";
 	name = "Door"
 	},
-/turf/open/floor/rogue/hexstone,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "eIn" = (
 /obj/structure/spider/stickyweb,
@@ -37313,7 +37313,7 @@
 	},
 /obj/structure/fluff/railing/border/north,
 /obj/machinery/light/rogue/candle/blue,
-/turf/open/floor/rogue/churchrough,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "hwS" = (
 /obj/structure/fluff/railing/fence{
@@ -41081,7 +41081,7 @@
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 4
 	},
-/turf/open/floor/rogue/blocks,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "ihk" = (
 /obj/structure/table/wood/poor,
@@ -58503,7 +58503,7 @@
 /obj/structure/stairs{
 	dir = 4
 	},
-/turf/open/floor/rogue/churchrough,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "ltL" = (
 /turf/closed/wall/mineral/rogue/tent{
@@ -62909,10 +62909,6 @@
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/inq)
-"mkb" = (
-/obj/structure/bars,
-/turf/open/floor/rogue/churchrough,
-/area/rogue/indoors/inq/basement)
 "mke" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -66071,7 +66067,7 @@
 	dir = 8;
 	pixel_x = -4
 	},
-/turf/open/floor/rogue/churchrough,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "mUi" = (
 /obj/effect/decal/edge{
@@ -71593,7 +71589,11 @@
 	},
 /area/rogue/under/cave/dukecourt)
 "nZj" = (
-/turf/open/floor/rogue/naturalstone,
+/obj/structure/mineral_door/wood/donjon/stone{
+	locked = 1;
+	lockid = "inquisition"
+	},
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "nZm" = (
 /obj/machinery/light/rogue/firebowl,
@@ -80691,7 +80691,7 @@
 /obj/machinery/light/rogue/candle/blue{
 	pixel_y = -32
 	},
-/turf/open/floor/rogue/churchrough,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "pLB" = (
 /mob/living/carbon/human/species/goblin/npc/ambush/cave,
@@ -106853,7 +106853,7 @@
 	lockid = "inquisition";
 	name = "Door"
 	},
-/turf/open/floor/rogue/hexstone,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "uQP" = (
 /obj/structure/flora/roguegrass,
@@ -114639,7 +114639,7 @@
 	lockid = "inquisition";
 	name = "Library"
 	},
-/turf/open/floor/rogue/churchrough,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
 "wqg" = (
 /obj/structure/flora/roguegrass,
@@ -247705,7 +247705,7 @@ ogs
 ogs
 uZW
 uZW
-mkb
+iWf
 gix
 cNf
 iWf
