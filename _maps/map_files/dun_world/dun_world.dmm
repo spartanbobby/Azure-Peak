@@ -105034,6 +105034,10 @@
 /obj/structure/fluff/walldeco/wallshield,
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/indoors/town)
+"uyF" = (
+/obj/machinery/tanningrack,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/inq)
 "uyI" = (
 /obj/structure/chair/bench/couchablack/r,
 /turf/open/floor/rogue/herringbone,
@@ -360714,7 +360718,7 @@ tdQ
 kaq
 nCR
 uvV
-ctG
+uyF
 crD
 ctG
 ctG
