@@ -14262,6 +14262,9 @@
 	color = "#3f3f3f";
 	dir = 8
 	},
+/obj/effect/landmark/start/orthodoxist{
+	dir = 4
+	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
 "cTF" = (
@@ -32543,6 +32546,14 @@
 "gyR" = (
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town/bath)
+"gyT" = (
+/obj/structure/mineral_door/wood/donjon/stone{
+	locked = 1;
+	lockid = "OEB1";
+	name = "Orthodoxist's Chambers I"
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/inq/basement)
 "gyU" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/metal/barograte,
@@ -35440,6 +35451,14 @@
 	smooth = 0
 	},
 /area/rogue/outdoors/town)
+"hfx" = (
+/obj/structure/mineral_door/wood/donjon/stone{
+	locked = 1;
+	lockid = "OEB2";
+	name = "Orthodoxist's Chambers II"
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/inq/basement)
 "hfy" = (
 /obj/structure/table/wood/poor,
 /obj/item/candle/yellow{
@@ -42423,11 +42442,6 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/chapel)
-"iuv" = (
-/obj/structure/chair/stool/rogue,
-/obj/effect/landmark/start/orthodoxist,
-/turf/open/floor/rogue/herringbone,
-/area/rogue/indoors/inq/basement)
 "iux" = (
 /obj/machinery/light/rogue/campfire,
 /turf/open/floor/rogue/cobble/mossy,
@@ -58478,6 +58492,7 @@
 /obj/item/clothing/neck/roguetown/psicross,
 /obj/item/needle,
 /obj/item/natural/bundle/cloth/bandage/full,
+/obj/item/storage/keyring,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/inq/basement)
 "luV" = (
@@ -81224,6 +81239,8 @@
 /obj/item/natural/bundle/cloth/bandage/full,
 /obj/item/needle,
 /obj/item/clothing/neck/roguetown/psicross,
+/obj/item/dildo/silver,
+/obj/item/storage/keyring,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/inq/basement)
 "pTK" = (
@@ -89606,8 +89623,9 @@
 	color = "#3f3f3f";
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/psybanner/red{
-	pixel_x = 32
+/obj/structure/roguemachine/vendor/inq_keys{
+	pixel_x = 32;
+	density = 0
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
@@ -95757,6 +95775,9 @@
 /obj/structure/fluff/walldeco/psybanner/red{
 	pixel_x = -32
 	},
+/obj/effect/landmark/start/orthodoxist{
+	dir = 4
+	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
 "sLM" = (
@@ -98380,6 +98401,7 @@
 /obj/structure/fluff/walldeco/rpainting/crown{
 	pixel_x = 32
 	},
+/obj/item/storage/keyring,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/inq/basement)
 "tlI" = (
@@ -99493,7 +99515,6 @@
 /obj/structure/bed/rogue/inn{
 	dir = 1
 	},
-/obj/effect/landmark/start/orthodoxist,
 /obj/item/bedsheet/rogue/pelt{
 	dir = 1
 	},
@@ -104817,8 +104838,8 @@
 "uzc" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
-	name = "Orthodoxist's Chambers"
+	lockid = "OEB3";
+	name = "Orthodoxist's Chambers III"
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq/basement)
@@ -111280,6 +111301,9 @@
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
 	dir = 8
+	},
+/obj/effect/landmark/start/orthodoxist{
+	dir = 4
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/inq/basement)
@@ -244690,7 +244714,7 @@ evK
 uZW
 vef
 iCU
-iuv
+cjI
 uZW
 kOv
 mIM
@@ -246045,7 +246069,7 @@ sIY
 evK
 uZW
 uZW
-uzc
+hfx
 uZW
 uZW
 uZW
@@ -247853,7 +247877,7 @@ evK
 evK
 uZW
 uZW
-uzc
+gyT
 uZW
 uZW
 uZW
@@ -248306,7 +248330,7 @@ evK
 plh
 lte
 hHd
-iuv
+cjI
 uZW
 vOH
 hHd
