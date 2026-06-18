@@ -2373,7 +2373,7 @@
 /obj/item/rogueweapon/huntingknife/chefknife/cleaver,
 /obj/item/rogueweapon/huntingknife/chefknife,
 /obj/structure/table/wood/poor,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/inq)
 "azG" = (
 /obj/structure/stairs/stone{
@@ -2854,7 +2854,7 @@
 /obj/structure/stairs{
 	dir = 4
 	},
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "aFe" = (
 /obj/structure/stairs{
@@ -4700,7 +4700,7 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "aYi" = (
 /obj/machinery/light/rogue/candle,
@@ -18840,7 +18840,7 @@
 /obj/item/reagent_containers/glass/cup/wooden{
 	pixel_y = 9
 	},
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "dOB" = (
 /obj/structure/fluff/railing/corner,
@@ -53906,7 +53906,7 @@
 "kCS" = (
 /obj/structure/fermentation_keg/water,
 /obj/machinery/light/rogue/torchholder/r,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "kCT" = (
 /obj/machinery/light/rogue/campfire/fireplace,
@@ -74767,7 +74767,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /obj/item/reagent_containers/food/snacks/grown/cabbage/rogue,
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "oFt" = (
 /obj/item/natural/rock{
@@ -84462,7 +84462,7 @@
 	pixel_x = 11;
 	pixel_y = -4
 	},
-/turf/open/floor/rogue/tile,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/inq)
 "qxL" = (
 /obj/machinery/light/rogue/torchholder/r,
@@ -88202,6 +88202,9 @@
 /obj/structure/flora/roguegrass/bush/wall,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/woods/north)
+"ril" = (
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/inq)
 "rio" = (
 /obj/structure/chair/bench/couch,
 /turf/open/floor/rogue/tile/harem,
@@ -94204,7 +94207,7 @@
 /obj/structure/roguemachine/withdraw{
 	pixel_y = -32
 	},
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "ssZ" = (
 /obj/structure/stairs{
@@ -95925,7 +95928,7 @@
 /obj/machinery/light/rogue/oven/south,
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "sKt" = (
 /obj/structure/stairs{
@@ -102398,6 +102401,13 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/inq/office)
+"tXi" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/fluff/railing/border/north,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/inq)
 "tXl" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/double_pelt,
@@ -103984,7 +103994,7 @@
 "ung" = (
 /obj/item/kitchen/rollingpin,
 /obj/structure/table/wood/poor,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/inq)
 "uni" = (
 /obj/structure/fluff/railing/border,
@@ -112878,6 +112888,9 @@
 "vYg" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/southwest)
+"vYm" = (
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/inq)
 "vYr" = (
 /obj/structure/flora/roguetree/stump/burnt,
 /turf/open/floor/rogue/dirt,
@@ -120197,6 +120210,13 @@
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/rogue/church,
 /area/rogue/under/cave/scarymaze)
+"xvE" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/fluff/railing/border,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/inq)
 "xvG" = (
 /obj/structure/table/wood/long_table,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/food,
@@ -121391,7 +121411,7 @@
 /obj/item/cooking/platter,
 /obj/item/reagent_containers/glass/bucket/pot,
 /obj/machinery/light/rogue/torchholder/l,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
 "xIz" = (
 /obj/structure/bed/rogue/inn/wool,
@@ -360722,9 +360742,9 @@ ctG
 tuS
 msH
 dxE
-dxE
-dxE
-dxE
+vYm
+vYm
+vYm
 dxE
 dis
 vSQ
@@ -361174,9 +361194,9 @@ ahQ
 fCb
 uWh
 dxE
-dxE
-dxE
-dxE
+vYm
+vYm
+vYm
 dxE
 dis
 cjs
@@ -361619,9 +361639,9 @@ pGB
 cnZ
 dTp
 dTp
-tqC
+tXi
 aEZ
-sVM
+xvE
 dOx
 dTp
 wNl
@@ -362071,9 +362091,9 @@ pGB
 pGB
 dTp
 xIj
-dxE
-dxE
-dxE
+ril
+ril
+ril
 aYa
 dTp
 dTp
@@ -362523,9 +362543,9 @@ pGB
 pGB
 dTp
 sKr
-dxE
-dxE
-dxE
+vYm
+vYm
+vYm
 ssV
 dTp
 dTp
