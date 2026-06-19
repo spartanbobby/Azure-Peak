@@ -20560,8 +20560,12 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/southwest)
 "efP" = (
-/obj/structure/bookcase/random,
 /obj/machinery/light/rogue/candle/blue,
+/obj/structure/rack/rogue/shelf/big,
+/obj/item/natural/bundle/cloth{
+	pixel_x = 1;
+	pixel_y = 11
+	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/inq/basement)
 "efT" = (
@@ -25393,6 +25397,18 @@
 /obj/structure/closet/crate/chest/lootbox,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/beach/north)
+"fdr" = (
+/obj/structure/rack/rogue/shelf/big,
+/obj/item/paint_palette/filled{
+	pixel_x = 3;
+	pixel_y = 14
+	},
+/obj/item/paint_brush{
+	pixel_x = -5;
+	pixel_y = 15
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors/inq/basement)
 "fdu" = (
 /obj/structure/bookcase/random/archive,
 /obj/machinery/light/rogue/candle{
@@ -25573,6 +25589,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/garrison)
+"ffg" = (
+/obj/structure/easel,
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/basement)
 "ffh" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/edge{
@@ -26583,6 +26603,12 @@
 /obj/effect/decal/mossy,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap/banditcamp)
+"fpe" = (
+/obj/structure/closet/crate/chest/neu,
+/obj/item/canvas,
+/obj/item/canvas,
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/basement)
 "fpg" = (
 /turf/open/water/river/flow/north,
 /area/rogue/under/cavewet/bogcaves/south)
@@ -43287,6 +43313,9 @@
 /area/rogue/indoors/town/magician)
 "iCU" = (
 /obj/machinery/light/rogue/candle/l,
+/obj/structure/mannequin/male{
+	dir = 4
+	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/inq/basement)
 "iDd" = (
@@ -46443,6 +46472,12 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/under/underdark/south)
+"jiF" = (
+/obj/structure/mannequin/male{
+	dir = 4
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors/inq/basement)
 "jiL" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/grass,
@@ -58912,6 +58947,12 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/magician)
+"lxn" = (
+/obj/structure/mannequin/male{
+	dir = 8
+	},
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/basement)
 "lxo" = (
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/grass,
@@ -88779,6 +88820,10 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield)
+"rnY" = (
+/obj/structure/mannequin/male/female,
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/basement)
 "rob" = (
 /obj/effect/decal/carpet/kover_black{
 	dir = 4;
@@ -245481,7 +245526,7 @@ msR
 msR
 nsz
 uZW
-msR
+rnY
 msR
 msR
 uZW
@@ -246841,7 +246886,7 @@ cTC
 mYE
 uZW
 gWq
-hHd
+jiF
 hHd
 wFx
 uZW
@@ -249545,7 +249590,7 @@ rVX
 vLu
 rVX
 uZW
-msR
+lxn
 txl
 tlH
 uZW
@@ -252247,9 +252292,9 @@ ogs
 uZW
 uZW
 efP
-vHE
-vHE
-vHE
+hHd
+hHd
+hHd
 uZW
 uZW
 gtV
@@ -252698,11 +252743,11 @@ bhJ
 ogs
 ogs
 uZW
-uZW
-uZW
-uZW
-uZW
-uZW
+fdr
+msR
+msR
+msR
+vHE
 uZW
 uZW
 ihj
@@ -253149,12 +253194,12 @@ bhJ
 bhJ
 bhJ
 ogs
-ogs
-ogs
-ogs
-ogs
-ogs
 uZW
+uZW
+fpe
+ffg
+msR
+vHE
 uZW
 uZW
 xzD
@@ -253600,14 +253645,14 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
 ogs
 ogs
-ogs
-ogs
-ogs
-ogs
+uZW
+uZW
+uZW
+uZW
+uZW
+uZW
 uZW
 uZW
 uZW
@@ -254052,11 +254097,11 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
+ogs
+ogs
+ogs
+ogs
+ogs
 ogs
 ogs
 ogs
