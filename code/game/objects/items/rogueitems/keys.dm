@@ -780,7 +780,7 @@
 	name = "Otavan Embassy Bedroom II key"
 	desc = "This key opens the doors to bedroom one."
 	icon_state = "brownkey"
-	lockid = "OEB3"
+	lockid = "OEB2"
 
 /obj/item/roguekey/ortho_three
 	name = "Otavan Embassy Bedroom III key"
