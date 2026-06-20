@@ -109028,7 +109028,6 @@
 /area/rogue/under/cave/scarymaze)
 "viu" = (
 /obj/structure/mineral_door/wood/donjon/stone{
-	locked = 1;
 	lockid = "Absolvers";
 	name = "Psydonic Chapel"
 	},
