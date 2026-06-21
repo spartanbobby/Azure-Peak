@@ -260,7 +260,7 @@
 			H.set_patron(/datum/patron/old_god)
 			to_chat(H, span_warning("You were being initiated as a Pontifex, training in body and will. When a Djinn attack razed your school, you survived where others fell. Shunned for your survival and left without a master, you wandered the deserts with unfinished discipline."))
 			r_hand = /obj/item/rogueweapon/katar
-			armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/monke
+			armor = /obj/item/clothing/suit/roguetown/armor/manual/sewable/padded/monke
 			backpack_contents += list(/obj/item/chalk = 1)
 			backpack_contents += list(/obj/item/book/spellbook = 1)
 
@@ -706,7 +706,7 @@
 				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC) //Lite!Barbarian.
 				head = /obj/item/clothing/head/roguetown/helmet/bronzegladiator
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/cloth/gladiator
-				armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/gladiator
+				armor = /obj/item/clothing/suit/roguetown/armor/manual/sewable/padded/gladiator
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
 				shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
