@@ -6209,6 +6209,9 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors)
+"bnE" = (
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/chapel)
 "bnG" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -6864,8 +6867,12 @@
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /obj/item/reagent_containers/food/snacks/butter,
 /obj/item/reagent_containers/food/snacks/rogue/meat/sausage,
-/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /obj/item/reagent_containers/food/snacks/grown/cabbage/rogue,
+/obj/item/reagent_containers/food/snacks/fish/salmon,
+/obj/item/reagent_containers/food/snacks/fish/salmon,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/grown/potato/rogue,
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq)
@@ -34453,6 +34460,12 @@
 	color = "#3b444b"
 	},
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
+"gTG" = (
+/obj/structure/closet/crate/chest/inqcrate,
+/obj/item/reagent_containers/food/snacks/rogue/cheddar/aged,
+/obj/item/reagent_containers/food/snacks/rogue/cheddar/aged,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors/inq)
 "gTN" = (
 /obj/machinery/light/rogue/torchholder/r,
 /obj/structure/bed/rogue/shit,
@@ -35622,6 +35635,12 @@
 	smooth = 0
 	},
 /area/rogue/outdoors/town)
+"hfx" = (
+/obj/structure/chair/bench/church/r{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/chapel)
 "hfy" = (
 /obj/structure/table/wood/poor,
 /obj/item/candle/yellow{
@@ -54170,7 +54189,7 @@
 	},
 /obj/structure/roguemachine/scomm/r{
 	pixel_x = -32;
-	scom_tag = "Inquisition - Dungeon"
+	scom_tag = "Inquisition"
 	},
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -55209,6 +55228,7 @@
 /obj/item/clothing/head/roguetown/roguehood/psydon,
 /obj/item/clothing/mask/rogue/facemask/psydonmask,
 /obj/item/clothing/cloak/tabard/psydontabard,
+/obj/machinery/light/rogue/candle/l,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/inq/basement)
 "kOx" = (
@@ -62274,6 +62294,12 @@
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/town/manor)
+"mcd" = (
+/obj/structure/chair/bench/church{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/chapel)
 "mce" = (
 /obj/structure/fluff/railing/border/east,
 /obj/structure/stairs/stone{
@@ -89219,6 +89245,9 @@
 /obj/effect/decal/edge{
 	color = "#3f3f3f"
 	},
+/obj/structure/roguemachine/mail{
+	mailtag = "Inquisition"
+	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/inq/basement)
 "rnI" = (
@@ -90914,7 +90943,7 @@
 "rGI" = (
 /obj/structure/table/wood/long_table,
 /obj/item/book/rogue/bibble/psy,
-/turf/open/floor/rogue/ruinedwood/spiral,
+/turf/open/floor/carpet/red,
 /area/rogue/indoors/inq/chapel)
 "rGN" = (
 /obj/structure/fluff/railing/corner/south_east,
@@ -101700,6 +101729,12 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
+"tLT" = (
+/obj/machinery/light/rogue/candle/blue{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/indoors/inq/basement)
 "tLY" = (
 /obj/structure/lever/wall{
 	redstone_id = "castle_cutoff_east";
@@ -120216,6 +120251,10 @@
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/rogue/indoors/town/tavern)
+"xty" = (
+/obj/structure/table/wood/long_table/right,
+/turf/open/floor/carpet/red,
+/area/rogue/indoors/inq/chapel)
 "xtF" = (
 /obj/structure/bars/cemetery{
 	max_integrity = 1500;
@@ -246499,7 +246538,7 @@ uZW
 bJJ
 qYw
 qYw
-evK
+tLT
 uZW
 uZW
 cWx
@@ -248307,7 +248346,7 @@ uZW
 uZW
 evK
 evK
-evK
+tLT
 uZW
 uZW
 ofO
@@ -252369,7 +252408,7 @@ uZW
 bRl
 hHd
 hHd
-hHd
+iHt
 uZW
 uZW
 bnd
@@ -359498,7 +359537,7 @@ vHD
 aWJ
 oNh
 dTp
-qjG
+khU
 qjG
 qjG
 qjG
@@ -359951,7 +359990,7 @@ qXm
 dQJ
 dTp
 tfX
-khU
+gTG
 naH
 qjG
 vou
@@ -367184,11 +367223,11 @@ mEl
 lEu
 clk
 qhN
-xdL
-xdL
-xdL
-pup
-qhN
+hfx
+hfx
+hfx
+xty
+bnE
 qhN
 kHQ
 qhD
@@ -367636,11 +367675,11 @@ nyN
 mDQ
 clk
 qhN
-qhN
-qhN
-qhN
-qhN
-qhN
+bnE
+bnE
+bnE
+bnE
+bnE
 qhN
 viu
 cVA
@@ -368088,11 +368127,11 @@ mpy
 lEu
 clk
 qhN
-rpb
-rpb
-rpb
+mcd
+mcd
+mcd
 rGI
-qhN
+bnE
 qhN
 kHQ
 fQt
