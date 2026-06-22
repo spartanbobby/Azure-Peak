@@ -703,6 +703,14 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/town/basement/keep)
+"ahq" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border/west,
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/mountains)
 "ahw" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/rogue/grass,
@@ -15468,6 +15476,11 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/garrison)
+"dfO" = (
+/obj/structure/fluff/railing/corner,
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave)
 "dfQ" = (
 /obj/machinery/light/rogue/candle,
 /obj/structure/chair/wood/rogue/chair5,
@@ -65362,6 +65375,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border/east,
+/obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
 "mFN" = (
@@ -84839,6 +84853,7 @@
 /area/rogue/outdoors/bog/north)
 "qvj" = (
 /obj/structure/flora/hotspring_rocks/small,
+/obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
 "qvr" = (
@@ -113712,6 +113727,11 @@
 /obj/item/roguecoin/copper/pile,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
+"wdg" = (
+/obj/structure/fluff/railing/corner/north_east,
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/transparent/openspace,
+/area/rogue/outdoors/mountains)
 "wdj" = (
 /obj/structure/chair/bench/couch/r,
 /turf/open/floor/carpet/red,
@@ -249361,7 +249381,7 @@ qHj
 ogs
 ogs
 ugM
-eiC
+dfO
 toJ
 toJ
 ogs
@@ -364620,7 +364640,7 @@ hLh
 fZN
 fZN
 wCm
-boQ
+ahq
 xGS
 aBB
 cxA
@@ -365073,7 +365093,7 @@ fZN
 fZN
 fZN
 hUS
-opk
+wdg
 aBB
 cxA
 mGv
