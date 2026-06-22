@@ -9990,6 +9990,9 @@
 /area/rogue/outdoors/beach)
 "cbj" = (
 /obj/structure/handcart,
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/inq)
 "cbk" = (
@@ -34981,6 +34984,15 @@
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/under/cave/scarymaze)
+"gYd" = (
+/obj/structure/closet/dirthole/closed/loot,
+/obj/structure/gravemarker,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/inq)
 "gYe" = (
 /obj/structure/bars/pipe{
 	dir = 1
@@ -35197,6 +35209,12 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/church,
 /area/rogue/under/cave/orcdungeon)
+"hai" = (
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/inq)
 "hak" = (
 /obj/structure/table/wood/poor/alt,
 /obj/item/millstone,
@@ -47373,13 +47391,6 @@
 	},
 /turf/open/floor/rogue/church,
 /area/rogue/under/cave/scarymaze)
-"jqZ" = (
-/obj/structure/mineral_door/bars{
-	locked = 1;
-	lockid = "inquisition"
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/indoors/inq)
 "jrc" = (
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/physician)
@@ -48919,6 +48930,13 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/cave/his_vault)
+"jFa" = (
+/obj/structure/fluff/psycross/psycrucifix/stone,
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/inq)
 "jFb" = (
 /obj/structure/fluff/railing/wood,
 /obj/effect/decal/cleanable/blood/old,
@@ -56948,6 +56966,13 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/under/town/basement)
+"leB" = (
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/inq/embassy)
 "leD" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/tile,
@@ -65389,6 +65414,10 @@
 "mGi" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/machinery/light/rogue/torchholder/c,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
 /turf/open/floor/rogue/grassyel,
 /area/rogue/indoors/inq/embassy)
 "mGs" = (
@@ -93292,6 +93321,14 @@
 "seg" = (
 /turf/closed/wall/mineral/rogue/wood,
 /area/rogue/under/cave)
+"sek" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors/inq)
 "sel" = (
 /turf/open/floor/rogue/rooftop/green,
 /area/rogue/outdoors/rtfield)
@@ -102147,6 +102184,9 @@
 /obj/item/natural/stone,
 /obj/item/natural/stone,
 /obj/item/natural/stone,
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/inq)
 "tPN" = (
@@ -104469,7 +104509,7 @@
 /area/rogue/under/cave/licharena)
 "unD" = (
 /obj/structure/bars/cemetery,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/concrete,
 /area/rogue/indoors/inq)
 "unE" = (
 /turf/open/floor/rogue/dirt/road,
@@ -114399,6 +114439,13 @@
 /obj/effect/spawner/trap,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/cave)
+"wkB" = (
+/obj/structure/flora/roguetree/stump,
+/obj/effect/decal/edge{
+	color = "#3f3f3f"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/rtfield)
 "wkF" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/mudcrab,
 /turf/open/floor/rogue/dirt/road,
@@ -122045,6 +122092,14 @@
 /obj/machinery/light/rogue/campfire/fireplace,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/abandonedhotsprings)
+"xMN" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq/embassy)
 "xMR" = (
 /obj/item/chair/rogue/fancy,
 /obj/effect/decal/cleanable/blood/old,
@@ -366853,7 +366908,7 @@ jex
 aZg
 aZg
 tgp
-dTp
+lZw
 tgp
 aZg
 aZg
@@ -369559,9 +369614,9 @@ uqz
 tfu
 fLc
 fLc
-qpu
+jFa
 unD
-bvy
+etS
 gCh
 tIz
 cVA
@@ -370011,9 +370066,9 @@ htC
 pGB
 uqz
 uqz
-pGB
+hai
 unD
-nRR
+xMN
 bvy
 cVA
 cVA
@@ -370463,9 +370518,9 @@ uqz
 pGB
 uqz
 uqz
-pGB
+hai
 unD
-cVA
+leB
 cVA
 cVA
 cVA
@@ -370915,9 +370970,9 @@ pGB
 pGB
 pGB
 pGB
-pGB
-jqZ
-cVA
+hai
+tgp
+leB
 cVA
 cVA
 bvy
@@ -371367,9 +371422,9 @@ uqz
 pGB
 htC
 uqz
-pGB
+hai
 unD
-cVA
+leB
 cVA
 fwt
 gCh
@@ -371819,9 +371874,9 @@ uqz
 pGB
 uqz
 htC
-pGB
+hai
 unD
-cVA
+leB
 nRR
 bvy
 uqX
@@ -372259,9 +372314,9 @@ fgt
 vwC
 vwC
 hjw
-bsL
+bse
 kIn
-tfu
+sek
 pGB
 pGB
 pGB
@@ -372273,7 +372328,7 @@ uqz
 uqz
 cbj
 unD
-bvy
+etS
 uqX
 uqX
 uqX
@@ -372711,9 +372766,9 @@ fgt
 vwC
 vwC
 vwC
-auy
+wkB
 unD
-iJC
+gYd
 htC
 iJC
 iJC
@@ -372725,7 +372780,7 @@ iJC
 iJC
 tPI
 unD
-gCh
+heU
 lnF
 njb
 njb
