@@ -6342,6 +6342,12 @@
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/shelter/bog/bogmanfort)
+"boL" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 4
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq/embassy)
 "boM" = (
 /obj/structure/fluff/railing/corner,
 /obj/structure/fluff/railing/corner/south_west,
@@ -8964,11 +8970,6 @@
 /obj/structure/stairs,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town)
-"bPv" = (
-/obj/structure/fluff/railing/border/east,
-/obj/structure/flora/roguegrass,
-/turf/open/floor/rogue/grass,
-/area/rogue/indoors/inq/embassy)
 "bPy" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1
@@ -11632,6 +11633,7 @@
 /area/rogue/indoors/town)
 "crg" = (
 /obj/structure/fluff/railing/border,
+/obj/item/roguecoin/copper,
 /turf/open/water/pond,
 /area/rogue/indoors/inq/embassy)
 "crh" = (
@@ -21652,6 +21654,11 @@
 /obj/structure/fluff/railing/wood/north,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/chapel)
+"epY" = (
+/obj/structure/fluff/railing/border/east,
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq/embassy)
 "eqb" = (
 /obj/structure/rack/rogue/shelf/big{
 	icon_state = "shelf_biggest";
@@ -23940,6 +23947,13 @@
 	},
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town/magician)
+"eOG" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border/east,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "eOH" = (
 /obj/structure/bars/passage/steel{
 	max_integrity = 9000;
@@ -40910,6 +40924,15 @@
 /obj/structure/ladder,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/shelter/bog/skeletonfort)
+"ieL" = (
+/obj/structure/flora/roguegrass/bush,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 4
+	},
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq)
 "ieM" = (
 /obj/structure/roguewindow/openclose{
 	dir = 1
@@ -41786,6 +41809,7 @@
 /area/rogue/indoors/town)
 "inr" = (
 /obj/structure/fluff/railing/corner/north_east,
+/obj/item/roguecoin/copper,
 /turf/open/water/pond,
 /area/rogue/indoors/inq/embassy)
 "inD" = (
@@ -41906,6 +41930,10 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains)
+"ioN" = (
+/obj/structure/fluff/railing/border/east,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/inq/embassy)
 "ioO" = (
 /obj/effect/decal/mossy{
 	dir = 4;
@@ -42634,6 +42662,13 @@
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
+"ivC" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border/west,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/inq/embassy)
 "ivE" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -55444,6 +55479,7 @@
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
 "kQD" = (
 /obj/structure/fluff/railing/border/west,
+/obj/item/roguecoin/copper,
 /turf/open/water/pond,
 /area/rogue/indoors/inq/embassy)
 "kQN" = (
@@ -61130,6 +61166,13 @@
 /obj/effect/spawner/lootdrop/cheap_jewelry_spawner,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/abandonedhotsprings)
+"lPA" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border/west,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "lPC" = (
 /obj/structure/fluff/walldeco/chains{
 	icon_state = "chains6"
@@ -65343,6 +65386,11 @@
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/licharena)
+"mGi" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/indoors/inq/embassy)
 "mGs" = (
 /obj/structure/flora/roguegrass,
 /obj/item/natural/stone{
@@ -82412,6 +82460,13 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
+"pXf" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border/east,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/inq/embassy)
 "pXg" = (
 /turf/open/floor/rogue/greenstone,
 /area/rogue/outdoors/mountains/decap/gunduzirak/bossarena)
@@ -85384,6 +85439,12 @@
 /obj/structure/table/wood/large_table/north_east,
 /turf/open/floor/rogue/tile,
 /area/rogue/under/cave/dukecourt)
+"qBn" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq/embassy)
 "qBq" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/table/wood/poor/alt,
@@ -85795,7 +85856,6 @@
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
 "qFe" = (
-/obj/structure/fluff/railing/border/east,
 /obj/structure/fluff/walldeco/psybanner/red,
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/outdoors/town)
@@ -89365,6 +89425,10 @@
 /obj/structure/ladder,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter)
+"rpp" = (
+/obj/structure/fluff/railing/border/west,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/inq/embassy)
 "rpx" = (
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
@@ -90004,6 +90068,14 @@
 /obj/item/clothing/ring/silver,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/manor)
+"rwG" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/obj/effect/decal/edge{
+	color = "#3f3f3f";
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq)
 "rwL" = (
 /obj/structure/bars/passage/steel{
 	redstone_id = "duke"
@@ -93926,11 +93998,6 @@
 "smL" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/indoors/town/dwarfin)
-"smN" = (
-/obj/structure/fluff/railing/border/west,
-/obj/structure/fluff/walldeco/psybanner/red,
-/turf/closed/wall/mineral/rogue/stonebrick,
-/area/rogue/outdoors/town)
 "smQ" = (
 /obj/machinery/light/rogue/smelter,
 /turf/open/floor/rogue/concrete,
@@ -99632,6 +99699,7 @@
 /area/rogue/outdoors/mountains)
 "trB" = (
 /obj/structure/fluff/railing/border/east,
+/obj/item/roguecoin/silver,
 /turf/open/water/pond,
 /area/rogue/indoors/inq/embassy)
 "trE" = (
@@ -102972,6 +103040,10 @@
 /obj/item/natural/bone,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/taricheamanor)
+"tYu" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/inq)
 "tYx" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/swamp,
@@ -112821,7 +112893,7 @@
 /area/rogue/indoors)
 "vUT" = (
 /obj/structure/fluff/psycross/psycrucifix/stone,
-/turf/open/transparent/openspace,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town/roofs)
 "vUV" = (
 /obj/effect/decal/edge{
@@ -251982,8 +252054,8 @@ qHj
 qHj
 ogs
 ogs
-ybP
-exD
+lPA
+xeQ
 exD
 exD
 fpx
@@ -252886,8 +252958,8 @@ qHj
 qHj
 qHj
 ogs
-ybP
-exD
+eOG
+miq
 exD
 exD
 exD
@@ -253338,7 +253410,7 @@ qHj
 qHj
 qHj
 ogs
-smN
+qFe
 kZF
 fpx
 exD
@@ -360889,7 +360961,7 @@ fVo
 bsL
 sKS
 aZg
-kyR
+rwG
 euk
 rfC
 nCR
@@ -364961,7 +365033,7 @@ mDB
 nET
 nET
 uqv
-oNh
+tYu
 oNh
 aWJ
 pGB
@@ -366325,7 +366397,7 @@ pQR
 pQR
 nET
 jex
-ksC
+ieL
 ksC
 jzW
 mbk
@@ -366790,9 +366862,9 @@ jfx
 bvy
 nRR
 fwt
-bPv
+gCh
 vUT
-bGf
+iGn
 bGf
 bGf
 bGf
@@ -367242,9 +367314,9 @@ esX
 cVA
 cVA
 cVA
-umP
-wTC
-bGf
+ivC
+rpp
+vVI
 bGf
 bGf
 bGf
@@ -368146,9 +368218,9 @@ cVA
 cVA
 cVA
 cVA
-umP
-wTC
-bGf
+pXf
+ioN
+iGn
 bGf
 bGf
 bGf
@@ -368598,9 +368670,9 @@ cVA
 gCh
 nRR
 fSx
-icP
+bvy
 vUT
-bGf
+vVI
 bGf
 bGf
 bGf
@@ -369037,16 +369109,16 @@ pQR
 pQR
 nET
 jex
-lnF
+mGi
 uqX
 bvy
-gCh
+nRR
 cVA
 cVA
 cVA
 cVA
-bvy
-fwt
+boL
+boL
 bvy
 fSx
 ltV
@@ -369484,7 +369556,7 @@ krq
 nET
 uqv
 uqz
-qpu
+tfu
 fLc
 fLc
 qpu
@@ -369496,7 +369568,7 @@ cVA
 cVA
 cVA
 tyh
-rlA
+epY
 rlA
 rlA
 die
@@ -369941,7 +370013,7 @@ uqz
 uqz
 pGB
 unD
-gCh
+nRR
 bvy
 cVA
 cVA
@@ -370398,7 +370470,7 @@ cVA
 cVA
 cVA
 cVA
-bvy
+qBn
 smT
 crg
 gJK
@@ -370836,7 +370908,7 @@ mDB
 nET
 nET
 uqv
-pGB
+tfu
 pGB
 pGB
 pGB
@@ -370850,7 +370922,7 @@ cVA
 cVA
 bvy
 cEn
-gCh
+qBn
 nFT
 bDQ
 kQD
@@ -371750,7 +371822,7 @@ htC
 pGB
 unD
 cVA
-bvy
+nRR
 bvy
 uqX
 fSx
@@ -372189,7 +372261,7 @@ vwC
 hjw
 bsL
 kIn
-pGB
+tfu
 pGB
 pGB
 pGB
@@ -372648,7 +372720,7 @@ iJC
 qpu
 iJC
 iJC
-qpu
+tfu
 iJC
 iJC
 tPI
