@@ -558,3 +558,14 @@
 	name = "Donator Kit - Shoulderless Haubergeon"
 	path = /obj/item/enchantingkit/ollanius_maille
 	ckeywhitelist = list("ollanius")
+
+/datum/loadout_item/donator/jade_guitar
+	name = "Donator Item - Gilbranzed Guitar"
+	path = /obj/item/rogue/instrument/guitar/jade_guitar
+	ckeywhitelist = list("jademanique")
+
+/datum/loadout_item/donator/olygsword
+    name = "Donator Kit - Gre'as'anto d'Shar"
+    path = /obj/item/enchantingkit/olygsword
+    ckeywhitelist = list("olympus7")
+	
