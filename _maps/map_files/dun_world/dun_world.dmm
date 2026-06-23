@@ -25230,7 +25230,9 @@
 /obj/effect/decal/edge{
 	color = "#3f3f3f"
 	},
-/obj/structure/mannequin/male/decorative/training_dummy_style,
+/obj/structure/mannequin/male/decorative/training_dummy_style{
+	desc = "A display stand showcasing the armour of past Psydonic heroes, this one features a hauberk and bucket helm reminiscent of knights of the thirteenth century. No amount of effort will allow the pieces of equipment to be taken from their mantle."
+	},
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk,
 /obj/item/clothing/head/roguetown/helmet/heavy/psybucket,
 /obj/machinery/light/rogue/candle/blue,
@@ -28396,6 +28398,19 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/physician)
+"fGL" = (
+/obj/item/rogueweapon/shield/heater{
+	pixel_y = 1;
+	anchored = 1;
+	name = "display shield"
+	},
+/obj/item/rogueweapon/sword/long{
+	pixel_y = -15;
+	anchored = 1;
+	name = "display longsword"
+	},
+/turf/closed/wall/mineral/rogue/craftstone,
+/area/rogue/indoors/inq/basement)
 "fGM" = (
 /obj/structure/bars/passage{
 	max_integrity = 9000;
@@ -245515,7 +245530,7 @@ iBy
 uZW
 uZW
 uZW
-uZW
+fGL
 evK
 evK
 evK
@@ -247775,7 +247790,7 @@ dBi
 qwz
 ktq
 uZW
-uZW
+fGL
 evK
 evK
 evK
