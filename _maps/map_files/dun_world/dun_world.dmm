@@ -9996,13 +9996,6 @@
 /obj/structure/ritualcircle/abyssor,
 /turf/open/floor/rogue/AzureSand,
 /area/rogue/outdoors/beach)
-"cbj" = (
-/obj/structure/handcart,
-/obj/effect/decal/edge{
-	color = "#3f3f3f"
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/indoors/inq)
 "cbk" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/floor/rogue/naturalstone,
@@ -94173,6 +94166,12 @@
 "slU" = (
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/orcdungeon)
+"slV" = (
+/obj/structure/handcart{
+	dir = 4
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/inq)
 "sma" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
@@ -372549,8 +372548,8 @@ uqz
 uqz
 pGB
 uqz
-uqz
-cbj
+slV
+hai
 unD
 etS
 uqX
