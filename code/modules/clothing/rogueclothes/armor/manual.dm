@@ -31,13 +31,16 @@
 		return
 	qdel(src)
 
-/obj/item/clothing/suit/roguetown/armor/manual/proc/armour_regen(var/repair_percent = 0.4 * max_integrity)
+/obj/item/clothing/suit/roguetown/armor/manual/proc/armour_regen(var/repair_percent = 0.35 * max_integrity)
     if(obj_integrity >= max_integrity)
         to_chat(loc, span_notice(repairmsg_end))
     to_chat(loc, span_notice(repairmsg_continue))
     obj_integrity = min(obj_integrity + repair_percent, max_integrity)
     if(obj_broken)
         obj_fix(full_repair = FALSE)
+
+//35% repair per proc, procs taking ~10-11s for sewing, pushup set, or meditation emote. Thus ~30-33s to fullrepair.
+
 
 
 /*
@@ -62,7 +65,7 @@
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //Identical to a glued-on hardened leather coat, with bonus arm-hand-foot coverage.
 
 /*
- * MEDITATION ARMOUR
+ * MEDITATION ARMOUR - Currently no trigger for the repair proc, thus unused and should not be used.
  */
 
 /obj/item/clothing/suit/roguetown/armor/manual/meditation
@@ -130,7 +133,7 @@
 	if(!repair_check(user, I))
 		return FALSE
 
-	if(!do_after(user, 5 SECONDS, target = src))
+	if(!do_after(user, 10 SECONDS, target = src))
 		return FALSE
 
 	armour_regen()
