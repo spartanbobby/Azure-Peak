@@ -875,7 +875,6 @@ LICH SKELETONS
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/unholyblast)
 	H.mind.AddSpell(new /datum/action/cooldown/spell/raise_deadite) //SPREAD THE... ROT? turn-people-into-zombies spell. No skeleton mitosis please.
 	//Our Utility Spells
-	H.mind.AddSpell(new /datum/action/cooldown/spell/convert_heretic) //SPREAD THE WORD
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	//No bone chill, Zizo miracle heals (50) damage on undead. They do not need it.
 
