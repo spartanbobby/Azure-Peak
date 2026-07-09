@@ -802,7 +802,7 @@ LICH SKELETONS
 /datum/advclass/greater_skeleton/lich/sectarian
 	name = "Ancient Sectarian"
 	tutorial = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man.' - Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. No matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision become reality."
-	outfit = /datum/outfit/job/roguetown/greater_skeleton/lich/occultist
+	outfit = /datum/outfit/job/roguetown/greater_skeleton/lich/sectarian
 	maximum_possible_slots = 3 //don't want too many healers for skeletons in a round but we want leniency for when they die and get replaced
 
 	category_tags = list(CTAG_LSKELETON)
