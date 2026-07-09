@@ -798,15 +798,15 @@ LICH SKELETONS
 //Can parry somewhat okay in melee, but they're too weak to really /hurt/ someone badly via that. Generally though you're going to taken out by mages/archers pretty decently, this is intended.
 
 //Most importantly, unlike other lich skeletons, these ones really stand out amongst the many. You know who to target on-sight pretty much.
-/datum/advclass/greater_skeleton/lich/occultist
-	name = "Ancient Occultist"
+/datum/advclass/greater_skeleton/lich/sectarian
+	name = "Ancient Sectarian"
 	tutorial = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man.' - Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. No matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision become reality."
 	outfit = /datum/outfit/job/roguetown/greater_skeleton/lich/occultist
 	maximum_possible_slots = 3 //don't want too many healers for skeletons in a round but we want leniency for when they die and get replaced
 
 	category_tags = list(CTAG_LSKELETON)
 
-/datum/outfit/job/roguetown/greater_skeleton/lich/occultist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/greater_skeleton/lich/sectarian/pre_equip(mob/living/carbon/human/H)
 	..()
 
 	H.STASTR = 8
