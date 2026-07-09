@@ -404,7 +404,7 @@ LICH SKELETONS
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/lich
 	pants = /obj/item/clothing/under/roguetown/trou/artipants/lich
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket/lich
-	gloves = /obj/item/clothing/gloves/roguetown/angle
+	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/lich
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	belt = /obj/item/storage/belt/rogue/leather //regular looks nicer
@@ -800,7 +800,7 @@ LICH SKELETONS
 //Most importantly, unlike other lich skeletons, these ones really stand out amongst the many. You know who to target on-sight pretty much.
 /datum/advclass/greater_skeleton/lich/occultist
 	name = "Ancient Occultist"
-	tutorial = "Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. O' no matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision be reality. In her name."
+	tutorial = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man.' - Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. No matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision become reality."
 	outfit = /datum/outfit/job/roguetown/greater_skeleton/lich/occultist
 	maximum_possible_slots = 3 //don't want too many healers in a round but we want leniency for when they die and get replaced
 
@@ -856,7 +856,7 @@ LICH SKELETONS
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted/lich
 	id = /obj/item/clothing/neck/roguetown/psicross/inhumen/paalloy //UP THE Z
-	belt = /obj/item/storage/belt/rogue/leather/rope/upgraded
+	belt = /obj/item/storage/belt/rogue/leather/rope/upgraded/dark
 
 	//Legs are intended to have no armor, this is their weak-spot. Cut them down and smash their ribs in/cut their head off.
 
@@ -955,6 +955,11 @@ LICH SKELETONS
 	color = "#d6bbbb"
 
 //Do not make this craftable, please. Role Specific. ^
+
+/obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/lich
+	name = "decrepit forge gauntlets"
+	desc = "A shirt of rugged silks and leather from beyond your lyfetime, donned as a grasp 'pon the one thing that oft' outlasts through aeon the most; \"Artifice, Progress, Construction\"."
+	color = "#d6bbbb"
 
 /obj/item/clothing/head/roguetown/roguehood/shalal/hijab/lich
 	name = "decrepit hijab"
