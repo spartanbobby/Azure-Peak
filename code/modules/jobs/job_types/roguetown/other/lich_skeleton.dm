@@ -959,7 +959,7 @@ LICH SKELETONS
 /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/lich
 	name = "decrepit forge gauntlets"
 	desc = "A shirt of rugged silks and leather from beyond your lyfetime, donned as a grasp 'pon the one thing that oft' outlasts through aeon the most; \"Artifice, Progress, Construction\"."
-	color = "#d6bbbb"
+	//no color changes, it already looks good
 
 /obj/item/clothing/head/roguetown/roguehood/shalal/hijab/lich
 	name = "decrepit hijab"
