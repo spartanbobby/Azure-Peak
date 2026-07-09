@@ -802,7 +802,7 @@ LICH SKELETONS
 	name = "Ancient Occultist"
 	tutorial = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man.' - Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. No matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision become reality."
 	outfit = /datum/outfit/job/roguetown/greater_skeleton/lich/occultist
-	maximum_possible_slots = 3 //don't want too many healers in a round but we want leniency for when they die and get replaced
+	maximum_possible_slots = 3 //don't want too many healers for skeletons in a round but we want leniency for when they die and get replaced
 
 	category_tags = list(CTAG_LSKELETON)
 
@@ -829,13 +829,13 @@ LICH SKELETONS
 
 	H.adjust_skillrank(/datum/skill/combat/staves, 4, TRUE) //Intended choice of parrying off blows, won't last amazingly long though
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE) //Your worship is not peaceful
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE) //Clergy can read, you sort of fill that niché
+	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
 
-	//You're a true devout, a disiple, here's your sovl patron boons
+	//You're a true devout, a disiple, here's your "sovl" patron boons (basically you /have/ artifice potental)
 	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/smelting, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/engineering, 2, TRUE)
@@ -858,14 +858,14 @@ LICH SKELETONS
 	id = /obj/item/clothing/neck/roguetown/psicross/inhumen/paalloy //UP THE Z
 	belt = /obj/item/storage/belt/rogue/leather/rope/upgraded/dark
 
-	//Legs are intended to have no armor, this is their weak-spot. Cut them down and smash their ribs in/cut their head off.
+	//Legs are intended to have no armor once the undervestaments go, this is their weak-spot. Cut them down and smash their ribs in/cut their head off/burn them to death.
 
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	backr = /obj/item/rogueweapon/woodstaff/quarterstaff/iron //replace w/ gilbranze once ancient ver added (its literally +3 force w/ steel grade staff vs iron anyway)
 
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/aalloy = 1, //Hilarious
-		/obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy = 3 //SPREAD HER INFLUENCE. ZIZO. ZIZO. ZIZO.
+		/obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy = 4 //SPREAD HER INFLUENCE. ZIZO. ZIZO. ZIZO. (or just wear them all to aurafarm on the Psydonites, IDK)
 	)
 
 	H.adjust_blindness(-3)
@@ -876,6 +876,7 @@ LICH SKELETONS
 	//Our Utility Spells
 	H.mind.AddSpell(new /datum/action/cooldown/spell/convert_heretic) //SPREAD THE WORD
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
+	//No bone chill, Zizo miracle heals (50) damage on undead. They do not need it.
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_MAJOR, devotion_limit = CLERIC_REQ_1, start_maxed = TRUE)	//Major acolyte-level regeneration, capped to T1 since Zizo miracles don't work w/ lich's skeleton spam
