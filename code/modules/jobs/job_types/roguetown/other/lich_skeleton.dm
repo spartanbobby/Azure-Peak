@@ -796,6 +796,8 @@ LICH SKELETONS
 //Cleric skeleton, specialises in ranged casting + lesser magic utility use. They're also able to herald the darkness and snuff out lights.
 //They're quite a potent healer but they struggle with light armor and most of their body being covered by /very/ obvious heretical robes.
 //Can parry somewhat okay in melee, but they're too weak to really /hurt/ someone badly via that. Generally though you're going to taken out by mages/archers pretty decently, this is intended.
+
+//Most importantly, unlike other lich skeletons, these ones really stand out amongst the many. You know who to target on-sight pretty much.
 /datum/advclass/greater_skeleton/lich/occultist
 	name = "Ancient Occultist"
 	tutorial = "Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. O' no matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision be reality. In her name."
@@ -856,6 +858,8 @@ LICH SKELETONS
 	id = /obj/item/clothing/neck/roguetown/psicross/inhumen/paalloy //UP THE Z
 	belt = /obj/item/storage/belt/rogue/leather/rope/upgraded
 
+	//Legs are intended to have no armor, this is their weak-spot. Cut them down and smash their ribs in/cut their head off.
+
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	backr = /obj/item/rogueweapon/woodstaff/quarterstaff/iron //replace w/ gilbranze once ancient ver added (its literally +3 force w/ steel grade staff vs iron anyway)
 
@@ -868,7 +872,7 @@ LICH SKELETONS
 
 	//Our offensive kit
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/unholyblast)
-	H.mind.AddSpell(new /datum/action/cooldown/spell/raise_deadite) //SPREAD THE... ROT? yeah this is the turn-people-into-zombies spell. No skeleton mitosis please.
+	H.mind.AddSpell(new /datum/action/cooldown/spell/raise_deadite) //SPREAD THE... ROT? turn-people-into-zombies spell. No skeleton mitosis please.
 	//Our Utility Spells
 	H.mind.AddSpell(new /datum/action/cooldown/spell/convert_heretic) //SPREAD THE WORD
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
@@ -891,7 +895,7 @@ LICH SKELETONS
 /////////////////////////////
 // UNIQUE ITEMS!           //
 /////////////////////////////
-/obj/item/clothing/suit/roguetown/armor/vestments_padded/lich //Zizo acolyte esc-robes
+/obj/item/clothing/suit/roguetown/armor/vestments_padded/lich //Zizo acolyte esc-robes, armor is meant to be the same as padded vestaments
 	name = "decrepit unholy undervestaments"
 	desc = "Roughspan fabrics, silks and burlap from beyond your lyfetyme, wrapped and coiled around the waist uncomfortably tight.</br>Its adorned with inverted psycrosses in the stitchwork, a sworn unbreakable promise against the orders that bind this world to stagnation.</br></br>‎<font color='FF0000'>..Just looking at the fabric makes you feel like you're being watched..</font>"
 	icon_state = "monkvestments" //placeholdery as fuck
@@ -901,7 +905,9 @@ LICH SKELETONS
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/vestments_padded/lich/get_examine_highlight_status() //Literally worn by oath-sworn enemies to the Ten and Psydon, there's no subtle-part about this.
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ICON)
+	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_CLOTHING)
+
+//Do not make this craftable, please. Role Specific. ^
 
 /obj/item/clothing/wrists/roguetown/bracers/cloth/lich
 	name = "decrepit padded wrappings"
@@ -913,9 +919,9 @@ LICH SKELETONS
 
 /obj/item/clothing/head/roguetown/roguehood/lichoccultist
 	name = "decrepit unholy hood"
-	desc = "A padded hood of roughspun fabrics, silks and worn leather from beyond your lyfetime, splinted across creating a cocooon to shroud the face. It bares the sigil of the inverted Psycross upon its crest in defiance to the world.</br></br>‎<font color='FF0000'>..Should you stare too long into it, you could almost glimpse something staring back with eternal malice..</font>"
+	desc = "A padded and reinforced hood of roughspun fabrics, silks and worn leather from beyond your lyfetime, splinted across creating a cocooon to shroud the face. It bares the sigil of the inverted Psycross upon its crest in defiance to the world.</br></br>‎<font color='FF0000'>..Should you stare too long into it, you could almost glimpse something staring back with eternal malice..</font>"
 	color = CLOTHING_BLACK
-	max_integrity = ARMOR_INT_HELMET_LEATHER
+	max_integrity = ARMOR_INT_HELMET_HARDLEATHER //to encourage keeping it
 	armor = ARMOR_LEATHER
 	icon_state = "monkhood" //placeholdery as fuck
 	item_state = "monkhood"
@@ -923,24 +929,32 @@ LICH SKELETONS
 	hidesnoutADJ = FALSE
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR	//Does not hide face.
 	salvage_result = /obj/item/natural/cloth
-	salvage_amount = 1
+	salvage_amount = 2 //Padded clothing
 
 /obj/item/clothing/head/roguetown/roguehood/lichoccultist/get_examine_highlight_status() //Literally worn by oath-sworn enemies to the Ten and Psydon, there's no subtle-part about this.
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ICON)
+	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_CLOTHING)
+
+//Do not make this craftable, please. Role Specific. ^
 
 /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket/lich
 	name = "decrepit sapper jacket"
 	desc = "A jacket of rugged leather with some scraps of fur and roughspun fabrics from beyond your lyfetime, donned by those who are condemned to toil forevermore."
 	color = "#d6bbbb"
 
+//Do not make this craftable, please. Role Specific. ^
+
 /obj/item/clothing/under/roguetown/trou/artipants/lich
 	name = "decrepit sapper trousers"
 	desc = "A set of trousers of leathers and roughspun fabric from beyond your lyfetime, donned by those who are condemned to toil forevermore."
+
+//Do not make this craftable, please. Role Specific. ^
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/lich
 	name = "decrepit sapper shirt"
 	desc = "A shirt of roughspun fabrics and leather from beyond your lyfetime, donned by those who are condemned to toil forevermore."
 	color = "#d6bbbb"
+
+//Do not make this craftable, please. Role Specific. ^
 
 /obj/item/clothing/head/roguetown/roguehood/shalal/hijab/lich
 	name = "decrepit hijab"
