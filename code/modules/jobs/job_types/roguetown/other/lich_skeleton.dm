@@ -798,6 +798,7 @@ LICH SKELETONS
 //Can parry somewhat okay in melee, but they're too weak to really /hurt/ someone badly via that. Generally though you're going to taken out by mages/archers pretty decently, this is intended.
 
 //Most importantly, unlike other lich skeletons, these ones really stand out amongst the many. You know who to target on-sight pretty much.
+//Yes the name is a bitter irony because Sectarian means a closed-minded us vs them, mindset. Aka limited or bigoted, but this fits the "slaughter the living so they may walk with her" mindset of skeletons
 /datum/advclass/greater_skeleton/lich/sectarian
 	name = "Ancient Sectarian"
 	tutorial = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man.' - Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. No matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision become reality."
