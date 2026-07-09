@@ -834,7 +834,7 @@ LICH SKELETONS
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/magic/holy, 3, TRUE)
 
 	//You're a true devout, a disiple, here's your "sovl" patron boons (basically you /have/ artifice potental)
 	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
