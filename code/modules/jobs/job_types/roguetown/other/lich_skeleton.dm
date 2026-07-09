@@ -880,9 +880,6 @@ LICH SKELETONS
 
 	H.mind.RemoveSpell(/datum/action/cooldown/spell/miracle/bloodmiracle) //We don't have blood, QOL since we can't use this.
 
-	// Hack for re-ordering
-	H.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/suicidebomb/lesser)
-	H.mind.AddSpell(/obj/effect/proc_holder/spell/self/suicidebomb/lesser)
 	// Reorder undead eyes action to the end
 	var/obj/item/organ/eyes/existing_eyes = H.getorganslot(ORGAN_SLOT_EYES)
 	if(existing_eyes)
@@ -922,6 +919,9 @@ LICH SKELETONS
 	armor = ARMOR_LEATHER
 	icon_state = "monkhood" //placeholdery as fuck
 	item_state = "monkhood"
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
+	hidesnoutADJ = FALSE
+	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR	//Does not hide face.
 	salvage_result = /obj/item/natural/cloth
 	salvage_amount = 1
 
