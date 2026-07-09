@@ -905,6 +905,7 @@ LICH SKELETONS
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	resistance_flags = FIRE_PROOF //All you get in exchange for herecy-marked gear
 
 /obj/item/clothing/suit/roguetown/armor/vestments_padded/lich/get_examine_highlight_status() //Literally worn by oath-sworn enemies to the Ten and Psydon, there's no subtle-part about this.
 	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_CLOTHING)
@@ -932,6 +933,7 @@ LICH SKELETONS
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR	//Does not hide face.
 	salvage_result = /obj/item/natural/cloth
 	salvage_amount = 2 //Padded clothing
+	resistance_flags = FIRE_PROOF //All you get in exchange for herecy-marked gear
 
 /obj/item/clothing/head/roguetown/roguehood/lichoccultist/get_examine_highlight_status() //Literally worn by oath-sworn enemies to the Ten and Psydon, there's no subtle-part about this.
 	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_CLOTHING)
