@@ -824,7 +824,7 @@ LICH SKELETONS
 	ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC) //Flavor, nothing to do w/ zurch, it solely prevents heretics converting them + worse spire if you somehow get an abyssal dream shard (unstable one you throw)
 
 	H.mind.setup_mage_aspects(list("mastery" = FALSE, "major" = 0, "minor" = 1, "utilities" = 4))
-	//Your "rituos", notably weaker than adv missionary as your tradeoff is being actually undead and untirable + puglist build even if journeyman. Your minor aspect is a cantrip more than anything.
+	//Your "rituos", notably weaker than adv missionary as your tradeoff is being actually undead and untirable. Your minor aspect is a cantrip more than anything.
 	//No free ward, never. period. Do not, I will find you. They will spend their singular minor aspect if they want one.
 
 
