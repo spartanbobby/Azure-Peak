@@ -497,7 +497,7 @@ LICH SKELETONS
 
 	backpack_contents = list(
 		/obj/item/natural/cloth = 1, //For your helm
-		/obj/item/storage/belt/rogue/pouch/coins/aalloy = 1 //Hilarious
+		/obj/item/storage/belt/rogue/pouch/coins/aalloy/mid = 1 //Hilarious
 	)
 
 	H.adjust_blindness(-3)
@@ -855,17 +855,17 @@ LICH SKELETONS
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/cloth/lich
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
-	gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted/lich
+	gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted/lich //Second weak spot, hands.
 	id = /obj/item/clothing/neck/roguetown/psicross/inhumen/paalloy //UP THE Z
 	belt = /obj/item/storage/belt/rogue/leather/rope/upgraded/dark
 
 	//Legs are intended to have no armor once the undervestaments go, this is their weak-spot. Cut them down and smash their ribs in/cut their head off/burn them to death.
 
-	backl = /obj/item/storage/backpack/rogue/satchel/black
+	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/rogueweapon/woodstaff/quarterstaff/iron //replace w/ gilbranze once ancient ver added (its literally +3 force w/ steel grade staff vs iron anyway)
 
 	backpack_contents = list(
-		/obj/item/storage/belt/rogue/pouch/coins/aalloy = 1, //Hilarious
+		/obj/item/storage/belt/rogue/pouch/coins/aalloy/mid = 1, //Hilarious
 		/obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy = 4 //SPREAD HER INFLUENCE. ZIZO. ZIZO. ZIZO. (or just wear them all to aurafarm on the Psydonites, IDK)
 	)
 
@@ -873,7 +873,7 @@ LICH SKELETONS
 
 	//Our offensive kit
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/unholyblast)
-	H.mind.AddSpell(new /datum/action/cooldown/spell/raise_deadite) //SPREAD THE... ROT? turn-people-into-zombies spell. No skeleton mitosis please.
+	H.mind.AddSpell(new /datum/action/cooldown/spell/raise_deadite) //SPREAD THE... ROT? turn-player-corpses-into-player-zombies spell. No skeleton mitosis please.
 	//Our Utility Spells
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	//No bone chill, Zizo miracle heals (50) damage on undead. They do not need it.
@@ -885,7 +885,7 @@ LICH SKELETONS
 
 	H.mind.RemoveSpell(/datum/action/cooldown/spell/miracle/bloodmiracle) //We don't have blood, QOL since we can't use this.
 
-	// Reorder undead eyes action to the end
+	// Reorder undead eyes action to the end, hacky but makes it easier to focus.
 	var/obj/item/organ/eyes/existing_eyes = H.getorganslot(ORGAN_SLOT_EYES)
 	if(existing_eyes)
 		existing_eyes.Remove(H, TRUE)
