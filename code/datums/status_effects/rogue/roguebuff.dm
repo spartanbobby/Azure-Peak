@@ -918,7 +918,7 @@
 	return TRUE
 
 /datum/status_effect/buff/psyhealing/tick()
-	if(HAS_TRAIT(owner, TRAIT_NOHEAL) || HAS_TRAIT(owner, TRAIT_IRONMAN)) 
+	if(HAS_TRAIT(owner, TRAIT_NOHEAL) || HAS_TRAIT(owner, TRAIT_IRONMAN))
 		return
 	if(HAS_TRAIT(owner, TRAIT_HALFHEAL))
 		healing_on_tick /= 2
@@ -966,7 +966,7 @@
 	name = "Processing: Refined"
 	desc = "I am currently processing refined minerals, greatly regenerating my shell's integrity."
 	icon_state = "buff"
-	
+
 /atom/movable/screen/alert/status_effect/buff/gemmuncher
 	name = "Processing: Gem"
 	desc = "I am currently processing an arcyne conduit, efficiently regenerating my shell's integrity and reinvigorating my core."
@@ -2177,9 +2177,8 @@
 /datum/status_effect/buff/ravox_vow
 	id = "ravox_vow"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/ravox_vow
-	effectedstats = list(STATKEY_STR = 1, STATKEY_WIL = 1)
 	status_type = STATUS_EFFECT_UNIQUE
-	duration = -1
+	duration = 15 MINUTES
 	tick_interval = -1
 
 /datum/status_effect/buff/ravox_vow/proc/on_life()
@@ -2243,7 +2242,7 @@
 /datum/status_effect/joybringer
 	id = "joybringer"
 	var/outline_colour = "#a529e8"
-	duration = -1
+	duration = 10 MINUTES
 	tick_interval = -1
 	examine_text = span_love("SUBJECTPRONOUN is bathed in Baotha's blessings!")
 	alert_type = null
@@ -2451,7 +2450,7 @@
 	id = "Stagehand"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/stagehands_silence
 	duration = 20 MINUTES
-	// this was supposed to only apply if you had less than 12 speed but it broke whenever other spd mods applied. 
+	// this was supposed to only apply if you had less than 12 speed but it broke whenever other spd mods applied.
 	// i couldnt fix it, unfortunately.
 	// IF people use it to game just fucking remove it we cant have shiut in thjis codebase anymore
 	effectedstats = list(STATKEY_SPD = 1)
@@ -2466,7 +2465,7 @@
 	to_chat(owner, span_warning("My footsteps feel lighter and quieter. What is that droning sound in my head...?"))
 	// inspired by matthiosmuffle
 	ADD_TRAIT(owner, TRAIT_SILENT_FOOTSTEPS, "xylixboon")
-	ADD_TRAIT(owner, TRAIT_LIGHT_STEP, "xylixboon") 
+	ADD_TRAIT(owner, TRAIT_LIGHT_STEP, "xylixboon")
 
 
 /datum/status_effect/buff/stagehands_silence/on_remove()
@@ -2504,7 +2503,7 @@
 	var/gave_buff = FALSE
 
 /atom/movable/screen/alert/status_effect/buff/hermes_trismegistus
-	name = "Hermetick Blessing" // yes, hermetick. with a k. 
+	name = "Hermetick Blessing" // yes, hermetick. with a k.
 	desc = "Looking at HERMES has given me a blessing of the Stars... written words begin to make more sense." // dont ask how this works its magic biyatch
 
 /datum/status_effect/buff/hermes_trismegistus/on_apply()
@@ -2570,7 +2569,7 @@
 /datum/status_effect/plaguebringer
 	id = "plaguebringer"
 	var/outline_colour = "#2C4628"
-	duration = -1
+	duration = 10 MINUTES
 	tick_interval = -1
 	examine_text = span_good("SUBJECTPRONOUN is emanating Rot!")
 	alert_type = null
@@ -2591,6 +2590,7 @@
 
 	owner.overlays_standing[PLAGUEBRINGER_FILTER] = effect
 	owner.apply_overlay(PLAGUEBRINGER_FILTER)
+	ADD_TRAIT(owner, TRAIT_CRITICAL_WEAKNESS, TRAIT_RITUAL)
 
 	RegisterSignal(owner, COMSIG_LIVING_LIFE, PROC_REF(on_life))
 
@@ -2599,6 +2599,8 @@
 
 	owner.remove_filter(PLAGUEBRINGER_FILTER)
 	owner.remove_overlay(PLAGUEBRINGER_FILTER)
+
+	REMOVE_TRAIT(owner, TRAIT_CRITICAL_WEAKNESS, TRAIT_RITUAL)
 
 	UnregisterSignal(owner, COMSIG_LIVING_LIFE)
 
@@ -2700,7 +2702,7 @@
 /datum/status_effect/eoranaura
 	id = "eoranaura"
 	var/outline_colour = "#EEBBBB"
-	duration = -1
+	duration = 10 MINUTES
 	tick_interval = -1
 	examine_text = span_good("SUBJECTPRONOUN is bathed in Eora's Light!")
 	alert_type = null
@@ -2721,6 +2723,7 @@
 
 	owner.overlays_standing[EORANAURA_FILTER] = effect
 	owner.apply_overlay(EORANAURA_FILTER)
+	ADD_TRAIT(owner, TRAIT_CRITICAL_WEAKNESS, TRAIT_RITUAL)
 
 	RegisterSignal(owner, COMSIG_LIVING_LIFE, PROC_REF(on_life))
 
@@ -2729,6 +2732,7 @@
 
 	owner.remove_filter(EORANAURA_FILTER)
 	owner.remove_overlay(EORANAURA_FILTER)
+	REMOVE_TRAIT(owner, TRAIT_CRITICAL_WEAKNESS, TRAIT_RITUAL)
 
 	UnregisterSignal(owner, COMSIG_LIVING_LIFE)
 
