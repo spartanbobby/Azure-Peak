@@ -524,7 +524,7 @@ LICH SKELETONS
 
 	H.energy = H.max_energy
 
-//Stronger sidegrade of the Bulwark. Fully armored juggetnaut with high Intelligence and Perception for baiting and riposting, but extremely low Speed and complete inability to sprint at all. Crack open the armor, overwhelm and they're dead meat.
+//Stronger sidegrade of the Bulwark. Fully armored juggetnaut with high Intelligence, Strength and Perception for overwhelming, fienting and resisting fients, but extremely low Speed and complete inability to sprint at all. Crack open the armor, overwhelm and they're dead meat.
 //They lack the easily ability to escape fights including no climbing skill, they're tough and will tire you very fast. They have good armor off-the-bat. They're sturdy and difficult to tire but archers/mages/swarms of people will hardcounter them in open ground.
 /datum/advclass/greater_skeleton/lich/bulwarkrare
 	name = "Venerated Death Knight"
@@ -606,7 +606,7 @@ LICH SKELETONS
 			cloak = /obj/item/clothing/cloak/tabard/toga/lich
 
 	if(H.mind) //2 slot, irreplacable skeletons.
-		H.mind.AddSpell(new /datum/action/cooldown/spell/mending) //Gets replaced w/weaker version w/rituos armor, balances out.
+		H.mind.AddSpell(new /datum/action/cooldown/spell/mending) //Gets replaced w/weaker version w/ritual armor. it balances out.
 		H.mind.AddSpell(new /datum/action/cooldown/spell/bonemend)
 
 	H.energy = H.max_energy
@@ -798,7 +798,7 @@ LICH SKELETONS
 //Can parry somewhat okay in melee, but they're too weak to really /hurt/ someone badly via that. Generally though you're going to taken out by mages/archers pretty decently, this is intended.
 
 //Most importantly, unlike other lich skeletons, these ones really stand out amongst the many. You know who to target on-sight pretty much.
-//Yes the name is a bitter irony because Sectarian means a closed-minded us vs them, mindset. Aka limited or bigoted, but this fits the "slaughter the living so they may walk with her" mindset of skeletons
+//Yes the name is a bitter irony because Sectarian means a closed-minded us vs them, mindset. Aka limited or bigoted, but this fits the "slaughter the living so they may walk with her" mindset of skeletons.
 /datum/advclass/greater_skeleton/lich/sectarian
 	name = "Ancient Zizite Sectarian"
 	tutorial = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man.' - Amongst the many fallen, few not only take their place not only in reverence but through faith and channeling divinity. No matter how far you've fallen, your faith will be that which shall peirce the heavens - Let Progress be your chariot, let her will be your guide and let your master's vision become reality."
@@ -821,7 +821,7 @@ LICH SKELETONS
 
 	ADD_TRAIT(H, TRAIT_ARCYNE, TRAIT_GENERIC) //"we have rituos at home"
 	ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC) //Sovl Bonus from heretic
-	ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC) //Flavor, nothing to do w/ zurch, it solely prevents heretics converting them + worse spire if you somehow get an abyssal dream shard (unstable one you throw)
+	ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC) //Flavor, nothing to do w/ zurch, it solely means worse spire if you somehow get an abyssal dream shard (unstable one you throw)
 
 	H.mind.setup_mage_aspects(list("mastery" = FALSE, "major" = 0, "minor" = 1, "utilities" = 4))
 	//Your "rituos", notably weaker than adv missionary as your tradeoff is being actually undead and untirable. Your minor aspect is a cantrip more than anything.
@@ -847,7 +847,7 @@ LICH SKELETONS
 	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/sewing, 2, TRUE)
 
-	head = /obj/item/clothing/head/roguetown/roguehood/lichoccultist
+	head = /obj/item/clothing/head/roguetown/roguehood/lich_sectarian
 	mask = /obj/item/clothing/mask/rogue/facemask/steel/paalloy //Face protection
 	shirt = /obj/item/clothing/suit/roguetown/armor/vestments_padded/lich //Extra obvious herecy + better goes with the fit
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
@@ -880,7 +880,7 @@ LICH SKELETONS
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_MAJOR, devotion_limit = CLERIC_REQ_1, start_maxed = TRUE)	//Major acolyte-level regeneration, capped to T1 since Zizo miracles don't work w/ lich's skeleton spam
-	//up this if the miracle set is less about summonspam and knockdowns in future, please. They're meant to be a templar level caster vs heretic wretch.
+	//up this if the miracle set is less about summonspam and knockdowns in future, please. They're meant to be a templar level caster vs heretic wretch. So T2 casters. No revival miracles.
 	//Starts w/1000 devotion, capped out. Cooldowns still balance this out. On-par w/zeretic spellblade devotion wise + ability (Outside of light snuff).
 
 	H.mind.RemoveSpell(/datum/action/cooldown/spell/miracle/bloodmiracle) //We don't have blood, QOL since we can't use this.
@@ -919,7 +919,7 @@ LICH SKELETONS
 /obj/item/clothing/gloves/roguetown/bandages/weighted/lich
 	color = "#5c5a55"
 
-/obj/item/clothing/head/roguetown/roguehood/lichoccultist
+/obj/item/clothing/head/roguetown/roguehood/lich_sectarian
 	name = "decrepit unholy hood"
 	desc = "A padded and reinforced hood of roughspun fabrics, silks and worn leather from beyond your lyfetime, splinted across creating a cocooon to shroud the face. It bares the sigil of the inverted Psycross upon its crest in defiance to the world.</br></br>‎<font color='FF0000'>..Should you stare too long into it, you could almost glimpse something staring back with eternal malice..</font>"
 	color = CLOTHING_BLACK
