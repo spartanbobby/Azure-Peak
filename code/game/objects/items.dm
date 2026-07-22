@@ -1475,8 +1475,8 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	if (obj_broken)
 		to_chat(user, span_warning("It's completely broken."))
 		return FALSE
-	if (istype(src, /obj/item/contraption))
-		var/obj/item/contraption/i = src
+	if (istype(src, /obj/item/rogueweapon/contraption/pick))
+		var/obj/item/rogueweapon/contraption/pick/i = src
 		if (i.current_charge <= 0)
 			to_chat(user, span_warning("Not charged."))
 			return FALSE
