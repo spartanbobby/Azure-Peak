@@ -99,6 +99,7 @@
 	chisel_prefix = "bs"
 
 // Single attackby proc handles combining ANY chisel with ANY valid striking tool
+// This is where you add more chisels if you've got sprites for them.. Though in the future, auto-generating the icons might be wiser.
 /obj/item/rogueweapon/chisel/attackby(obj/item/W, mob/living/user, params)
 	if(already_assembled)
 		return ..()
