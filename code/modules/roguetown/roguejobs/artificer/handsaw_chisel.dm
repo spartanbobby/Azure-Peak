@@ -110,7 +110,8 @@
 		/obj/item/rogueweapon/hammer/iron     = "h",
 		/obj/item/rogueweapon/hammer/wood     = "m",
 		/obj/item/rogueweapon/hammer/blacksteel = "bh",
-		/obj/item/rogueweapon/hammer/bronze   = "bronzeh"
+		/obj/item/rogueweapon/hammer/bronze   = "bronzeh",
+		/obj/item/rogueweapon/hammer/paalloy   = "a"
 	)
 
 	var/tool_suffix = null
