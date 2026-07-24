@@ -348,9 +348,9 @@
 				beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			if("Halberd + Crossbow")
 				r_hand = /obj/item/rogueweapon/halberd
+				l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 				backl = /obj/item/rogueweapon/scabbard/gwstrap
 				beltr = /obj/item/quiver/bolt/standard
-				beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 			if("Grand Mace + Longbow")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow
 				beltr = /obj/item/quiver/arrows
