@@ -106,7 +106,7 @@
 
 	H.adjust_blindness(-3)
 	if(H.mind)
-		var/weapons = list("Claymore","Great Mace","Battle Axe","Poleaxe","Estoc","Stecher","Lucerne", "Partizan")
+		var/weapons = list("Claymore","Great Mace","Battle Axe","Poleaxe","Estoc","Halberd","Stecher","Lucerne", "Partizan")
 		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		H.set_blindness(0)
 		switch(weapon_choice)
@@ -331,7 +331,7 @@
 			"Grand Mace + Longbow",
 			"Sabre + Recurve Bow",
 			"Lance + Kite Shield",
-			"Halberd + Recurve Bow"
+			"Halberd + Crossbow"
 		)
 		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		H.set_blindness(0)
