@@ -919,3 +919,13 @@
 		/obj/item/rogueweapon/sword/rapier
 	)
 	result_item = /obj/item/rogueweapon/sword/rapier/athena
+
+//ShiroseSchnee
+/obj/item/enchantingkit/night_cloak
+	name = "'Longest Night Cloak' morphing elixr"
+	target_items = list(
+		/obj/item/rogueweapon/shield/heater		= /obj/item/rogueweapon/shield/heater/shiroseschnee,
+		/obj/item/rogueweapon/shield/tower/holysee		=/obj/item/rogueweapon/shield/tower/holysee/shiroseschnee
+		)
+	result_item = null
+	exact_type = TRUE

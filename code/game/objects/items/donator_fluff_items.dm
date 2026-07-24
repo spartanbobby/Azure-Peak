@@ -2120,6 +2120,42 @@ As Excaliber."
 	worn_offsets = list("x" = 0, "y" = 14)
 	color = null
 
+/obj/item/rogueweapon/shield/heater/shiroseschnee
+	name = "Longest Night Cloak"
+	desc = "A heavily padded and lined cloak, capable of deflecting blows and protecting the wielder from stray projectiles when wrapped thickly around the arm. \
+	The Longest Night sect is a relatively new and underground order, primarily consisting of noccites, It's of their belief that all are born with a \
+	 certain spark of divinity deeply rooted within lux, and that that spark is what allows us to perceive absolute truths and decipher the archenemy's falsehoods.\
+	 </br> Inside the cloak, woven words preach, </br>\
+	'Upon the lux embedded deep within me, I vow to see that which is real and nothing but.'"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+	experimental_onback = FALSE
+	experimental_inhand = FALSE
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "night_cloak"
+	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
+	item_state = "night_cloak"
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_BACK_L
+	grid_height = 32
+	grid_width = 32
+
+/obj/item/rogueweapon/shield/tower/holysee/shiroseschnee
+	name = "Longest Night Cloak"
+	desc = "A heavily padded and lined cloak, capable of deflecting blows and protecting the wielder from stray projectiles when wrapped thickly around the arm. \
+	The Longest Night sect is a relatively new and underground order, primarily consisting of noccites, It's of their belief that all are born with a \
+	 certain spark of divinity deeply rooted within lux, and that that spark is what allows us to perceive absolute truths and decipher the archenemy's falsehoods.\
+	 </br> Inside the cloak, woven words preach, </br>\
+	'Upon the lux embedded deep within me, I vow to see that which is real and nothing but.'"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+	experimental_inhand = FALSE
+	experimental_onback = FALSE
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "night_cloak"
+	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
+	item_state = "night_cloak"
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_BACK_L
+
 // MORTOSASYE
 /obj/item/rogueweapon/woodstaff/implement/grand/morto
 	base_implement_name = null

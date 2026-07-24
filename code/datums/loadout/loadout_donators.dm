@@ -782,3 +782,8 @@
 	name = "Donator Kit - Solace"
 	path = /obj/item/enchantingkit/weapon/athena_solace
 	ckeywhitelist = list("athena14")
+
+/datum/loadout_item/donator/longest_night
+	name = "Donator Item - Longest Night Cloak"
+	path = /obj/item/enchantingkit/night_cloak
+	ckeywhitelist = list("shiroseschnee")
