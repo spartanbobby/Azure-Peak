@@ -47,4 +47,4 @@
 	name = "A Tutorialeer's Handbook"
 	path = /obj/item/recipe_book/survival
 	sort_category = "Misc"
-	cost = 1
+	cost = 0
