@@ -188,7 +188,7 @@
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/howl)
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/self/claws)
 	W.RemoveSpell(new /obj/effect/proc_holder/spell/targeted/woundlick)
-	W.RemoveSpell(new /datum/action/cooldown/spell/repulse/werewolf)
+	W.mind.RemoveSpell(new /datum/action/cooldown/spell/repulse/werewolf)
 	W.regenerate_icons()
 
 	to_chat(W, span_userdanger("I return to my facade."))
