@@ -40,7 +40,7 @@
 							if(I.sharpness)
 								if((I.blade_int / I.max_blade_int) <= SHARPNESS_TIER2_THRESHOLD) // Our sharpness is 'chunked' (<20%), so we do not pen at all.
 									pen_info = 0
-						if(peninfo)
+						if(pen_info)
 							blocked = block_damage * (1 - (PEN_PASSTHROUGH_MINIMUM + (pen_info * PEN_PASSTHROUGH_RATIO)))
 					if(penetrated_text)
 						to_chat(src, span_danger("[penetrated_text]"))
