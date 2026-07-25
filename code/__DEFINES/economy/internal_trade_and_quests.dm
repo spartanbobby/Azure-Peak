@@ -36,7 +36,7 @@
 #define STANDING_ORDER_DURATION 2
 #define URGENT_ORDER_DURATION 1
 
-// Order SIZE is not scaled but 
+// Order SIZE is not scaled but
 #define STANDING_ORDERS_BASE_PER_DAY 4
 #define STANDING_ORDERS_PER_ACTIVE_PLAYER 0.05
 #define STANDING_ORDERS_MAX_PER_DAY 13
@@ -62,7 +62,7 @@
 
 
 
-// Trade Escalation slope is the rate at which prices increase / decrease as it is oversold / overbought. Import / Export spread is an enforced differences between Buy / Sell price. By design, goods price is global for AP's internal regions, representing supply and demand and also preventing any same day arbitrage profit which does not generate meaningful gameplay but just reward you for reading and clicking the same damn buttons. 
+// Trade Escalation slope is the rate at which prices increase / decrease as it is oversold / overbought. Import / Export spread is an enforced differences between Buy / Sell price. By design, goods price is global for AP's internal regions, representing supply and demand and also preventing any same day arbitrage profit which does not generate meaningful gameplay but just reward you for reading and clicking the same damn buttons.
 #define TRADE_ESCALATION_SLOPE 1.0
 #define IMPORT_EXPORT_SPREAD 0.25
 
