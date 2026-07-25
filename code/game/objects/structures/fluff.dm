@@ -1569,10 +1569,12 @@
 	stake = null
 	qdel(src)
 
-/obj/structure/fluff/headstake/Destroy()
-	victim?.forceMove(drop_location())
+/obj/structure/fluff/headstake/deconstruct()
+	victim.forceMove(drop_location())
 	victim = null
-	return
+	stake.forceMove(drop_location())
+	stake = null
+	qdel(src)
 
 /obj/structure/bars/passage/shutter/bookcase
 	name = "Empty Bookcase"
