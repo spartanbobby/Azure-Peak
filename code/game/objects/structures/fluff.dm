@@ -1572,7 +1572,7 @@
 /obj/structure/fluff/headstake/Destroy()
 	victim?.forceMove(drop_location())
 	victim = null
-	return ..
+	return
 
 /obj/structure/bars/passage/shutter/bookcase
 	name = "Empty Bookcase"
