@@ -858,8 +858,9 @@ LICH SKELETONS
 	gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted/lich //Second weak spot, hands.
 	id = /obj/item/clothing/neck/roguetown/psicross/inhumen/paalloy //UP THE Z
 	belt = /obj/item/storage/belt/rogue/leather/rope/upgraded/dark
+	pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
 
-	//Legs are intended to have no armor once the undervestaments go, this is their weak-spot. Cut them down and smash their ribs in/cut their head off/burn them to death.
+	//Legs are intended to have have weaker armor, this is their weak-spot. Cut them down and smash their ribs in/cut their head off/burn them to death.
 
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/rogueweapon/woodstaff/quarterstaff/iron //replace w/ gilbranze once ancient ver added (its literally +3 force w/ steel grade staff vs iron anyway)
