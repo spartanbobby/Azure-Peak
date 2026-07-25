@@ -16,7 +16,8 @@ SUBSYSTEM_DEF(crediticons)
 	while (currentrun.len)
 		var/queued_ckey = currentrun[currentrun.len]
 		currentrun.len--
-		var/mob/living/carbon/human/actor = GLOB.directory[queued_ckey]?.mob
+		var/client/queued_client = GLOB.directory[queued_ckey]
+		var/mob/living/carbon/human/actor = queued_client?.mob
 		if(!istype(actor) || QDELETED(actor))
 			if (MC_TICK_CHECK)
 				return
