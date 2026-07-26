@@ -785,5 +785,5 @@
 
 /datum/loadout_item/donator/longest_night
 	name = "Donator Item - Longest Night Cloak"
-	path = /obj/item/enchantingkit/night_cloak
+	path = /obj/item/clothing/cloak/longest_night
 	ckeywhitelist = list("shiroseschnee")

@@ -2120,33 +2120,13 @@ As Excaliber."
 	worn_offsets = list("x" = 0, "y" = 14)
 	color = null
 
-/obj/item/rogueweapon/shield/heater/shiroseschnee
+/obj/item/clothing/cloak/longest_night
 	name = "Longest Night Cloak"
-	desc = "A heavily padded and lined cloak, capable of deflecting blows and protecting the wielder from stray projectiles when wrapped thickly around the arm. \
-	The Longest Night sect is a relatively new and underground order, primarily consisting of noccites, It's of their belief that all are born with a \
-	 certain spark of divinity deeply rooted within lux, and that that spark is what allows us to perceive absolute truths and decipher the archenemy's falsehoods.\
-	 </br> Inside the cloak, woven words preach, </br>\
-	'Upon the lux embedded deep within me, I vow to see that which is real and nothing but.'"
-	icon = 'icons/obj/items/donor_weapons.dmi'
-	experimental_onback = FALSE
-	experimental_inhand = FALSE
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	icon_state = "night_cloak"
-	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
-	item_state = "night_cloak"
-	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_BACK_L
-	grid_height = 32
-	grid_width = 32
-
-/obj/item/rogueweapon/shield/tower/holysee/shiroseschnee
-	name = "Longest Night Cloak"
-	desc = "A heavily padded and lined cloak, capable of deflecting blows and protecting the wielder from stray projectiles when wrapped thickly around the arm. \
-	The Longest Night sect is a relatively new and underground order, primarily consisting of noccites, It's of their belief that all are born with a \
-	 certain spark of divinity deeply rooted within lux, and that that spark is what allows us to perceive absolute truths and decipher the archenemy's falsehoods.\
-	 </br> Inside the cloak, woven words preach, </br>\
-	'Upon the lux embedded deep within me, I vow to see that which is real and nothing but.'"
-	icon = 'icons/obj/items/donor_weapons.dmi'
+	desc = "A silver lined cloak, capable of quickly being wrapped around the arm for comfort. \
+	The Longest Night sect is an underground 'association', primarily consisting of noccites. Though no place of meeting is held and members often don't see eachother, \
+	members identify eachother with unique keyphrases to identify who might be a member or associate. Few know of them, fewer of their secrets.\ Inside the cloak, woven words preach, </br>\
+	</br>‎<font color='c4c9d2'>Are those within the cave to be faulted, when all they know of reality are the shadows it casts on the wall?'</br>'Fault or not, it falls upon us to lead them out of that wretched cave.'</font>"
+	icon = 'icons/clothing/donor_clothes.dmi'
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
