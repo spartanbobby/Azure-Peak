@@ -61,6 +61,7 @@
 		qdel(M)
 
 /obj/item/reagent_containers/food/snacks/rogue/pieslice
+	dish_type = DISH_PIE
 	list_reagents = list(/datum/reagent/consumable/nutriment = NUTRITION_HALF_MEAL)
 	tastes = list("pie" = 1)
 	name = "pie slice"
@@ -192,6 +193,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/pieslice/pumpkin
 	cuisine = CUISINE_NORTH_IMPERIAL
+	dish_type = DISH_VEGETABLE|DISH_PIE
 	name = "pumpkin pie slice"
 	desc = "A delicious slice of homemade pie, made with pumpkin and cheese."
 	icon_state = "pumpkinslice"

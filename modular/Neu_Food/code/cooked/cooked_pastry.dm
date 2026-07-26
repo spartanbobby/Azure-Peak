@@ -177,6 +177,7 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/rogue/cookieslice
+	dish_type = DISH_PASTRY
 	name = "cookie"
 	desc = "Crispy, moist, sweet and savory; a sliver of ontological goodness, cradled in the palm of your hand."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -253,6 +254,7 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/rogue/cookiesliced
+	dish_type = DISH_PASTRY
 	name = "dragéelie"
 	desc = "Crispy, moist, sweet and savory.. and in this case, oozing with sweetened lifeblood; a sliver of ontological goodness, cradled in the palm of your hand."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -329,6 +331,7 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/rogue/cookieslicec
+	dish_type = DISH_PASTRY
 	name = "caramelie"
 	desc = "Crispy, moist, sweet and savory.. and a bit stickier than usual; a sliver of ontological goodness, cradled in the palm of your hand."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -405,6 +408,7 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/rogue/cookieslicer
+	dish_type = DISH_PASTRY
 	name = "raelseini"
 	desc = "Crispy, moist, sweet and savory.. and the dreams of a warmer tomorrow; a sliver of ontological goodness, cradled in the palm of your hand."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -540,6 +544,8 @@
 	update_icon()
 
 /obj/item/reagent_containers/food/snacks/rogue/pumpkinloafslice
+	cuisine = CUISINE_NORTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "pumpkin loaf slice"
 	desc = "Soft and chewy. It's surprisingly light despite its origin."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -750,6 +756,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/strudelslice
 	cuisine = CUISINE_NORTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "strudel slice"
 	desc = "A slice of tasty apple goodness - just looking at it makes your mouth wet."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -900,6 +907,8 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/rogue/bookbread_slice
+	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced bookbread"
 	desc = "About the same size and taste as an encyclopedia."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -916,6 +925,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/bookbread_slice_jamtallowed
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "slice of jamtallowed bookbread"
 	desc = "'Don't think that I'd forget, or I'd regret, the special love I had for you - my baby blue!'"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -932,6 +942,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/bookbread_slice_marmaladed
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "slice of marmaladed bookbread"
 	desc = "'I always keep a marmalade sandwich under my sallet, just in case!'"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -990,6 +1001,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/pearbookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced pear bookbread"
 	desc = "Evokes the sweetness of younger, simpler times, and simpler books."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1048,6 +1060,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/plumbookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced plum bookbread"
 	desc = "A subtle flavor, best for enjoying subtler books. Mysteries prefered."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1106,6 +1119,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/lemonbookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced lemon bookbread"
 	desc = "Sweet but a little sour, like a good Xylixian comedy."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1164,6 +1178,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/tangerinebookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced tangerine bookbread"
 	desc = "Fills one with heroic vigor and hopeful enthusiasm, similar to historic-fantasies of old."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1222,6 +1237,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/blackberrybookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced blackberry bookbread"
 	desc = "It evokes a feeling of contrasting fascination and dread, not unlike novels that may foretell a doom similar to what befell this very berry."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1280,6 +1296,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/raspberrybookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced raspberry bookbread"
 	desc = "Has a taste that puts one in the mood for a good romance novel. For obvious reasons, this flavor isnt very popular with mages."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1338,6 +1355,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/jackberrybookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced jacksberried bookbread"
 	desc = "Has an earthy taste that reminds the eater of growth cycles and rainfall percentages. Like a delicious almanac."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1356,6 +1374,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/poisonberrybookbread
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "jacksberried bookbread"
 	desc = "As Nocsmas gained broader appeal, more and more commonfolk with poor access to books instead chose to simply forego their exchanging, focusing instead on the preparation of food."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1395,6 +1414,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/poisonberrybookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced jacksberried bookbread"
 	desc = "Has an earthy taste that reminds the eater of growth cycles and rainfall percentages. Like a delicious almanac."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'
@@ -1453,6 +1473,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/chocolatebookbread_slice
 	cuisine = CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_PASTRY
 	name = "sliced chocolate bookbread"
 	desc = "As thick and rich as a child's bedtyme story."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_pastry.dmi'

@@ -295,6 +295,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/crossbun_jamtallowed
 	cuisine = CUISINE_NORTH_IMPERIAL
+	dish_type = DISH_BREAD
 	name = "jamtallowed crossbun"
 	desc = "So sinfully delicious!"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
@@ -309,6 +310,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/crossbun_marmaladed
 	cuisine = CUISINE_NORTH_IMPERIAL
+	dish_type = DISH_BREAD
 	name = "marmaladed crossbun"
 	desc = "A particularly favorite treat amonst the papacies of Grenzelhoft and Etruscea, especially during the \
 	holidaes that pay reverance to Astrata. The marmalade is said to represent the Sun's blessed light and warming \
@@ -431,6 +433,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/raisinbreadslice
 	cuisine = CUISINE_RANESHENI
+	dish_type = DISH_BREAD
 	name = "raisin loaf slice"
 	desc = "Soft and chewy. Nourishing and filling. Simple and decent."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
@@ -487,6 +490,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/applebreadslice
 	cuisine = CUISINE_NORTH_IMPERIAL|CUISINE_SOUTH_IMPERIAL
+	dish_type = DISH_BREAD
 	name = "apple loaf slice"
 	desc = "Soft and chewy. Nourishing and filling. Simple yet decadant. Certainly a step up from raisins, that's for sure."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
@@ -524,6 +528,7 @@
 	eat_effect = /datum/status_effect/buff/snackbuff
 
 /obj/item/reagent_containers/food/snacks/rogue/tomatoplate_slice
+	cuisine = CUISINE_SOUTH_IMPERIAL|CUISINE_ETRUSCAN
 	name = "slice of tomatoplate"
 	desc = "The ultimate definition of being 'more than the sum of its parts'."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
@@ -562,6 +567,7 @@
 	eat_effect = /datum/status_effect/buff/snackbuff
 
 /obj/item/reagent_containers/food/snacks/rogue/meattomatoplate_slice
+	cuisine = CUISINE_SOUTH_IMPERIAL|CUISINE_ETRUSCAN
 	name = "slice of sausaged tomatoplate"
 	desc = "What do you mean this is a Baothan's favorite kind of slice?"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
@@ -600,6 +606,7 @@
 	eat_effect = /datum/status_effect/buff/snackbuff
 
 /obj/item/reagent_containers/food/snacks/rogue/fishtomatoplate_slice
+	cuisine = CUISINE_SOUTH_IMPERIAL|CUISINE_ETRUSCAN
 	name = "slice of fished tomatoplate"
 	desc = "Excuse me, sire, but I specifically asked for no anchovies or zardines!"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
@@ -1076,6 +1083,8 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/rogue/challah_slice
+	cuisine = CUISINE_RANESHENI
+	dish_type = DISH_BREAD
 	name = "sliced challah"
 	desc = "Some would dip the slice into salt to complete the bread at this point, but it is what it is."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
