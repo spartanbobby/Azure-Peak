@@ -337,6 +337,8 @@
 	rotprocess = SHELFLIFE_EXTREME
 
 /obj/item/reagent_containers/food/snacks/rogue/psycrossbun_jamtallowed
+	cuisine = CUISINE_OTAVAIS
+	dish_type = DISH_BREAD
 	name = "jamtallowed psycrossbun"
 	desc = "A particularly favorite treat amonst the papacies of Otava and Rockhill, especially during the \
 	holidaes that pay reverance to Psydon's sacrifice. The jamtallow is said to represent the Weeping God's \
@@ -352,6 +354,8 @@
 	foodtype = GRAIN | FRUIT
 
 /obj/item/reagent_containers/food/snacks/rogue/psycrossbun_marmaladed
+	cuisine = CUISINE_OTAVAIS
+	dish_type = DISH_BREAD
 	name = "marmaladed psycrossbun"
 	desc = "Wait, isn't it meant to be the other way around? Ah, well!"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
