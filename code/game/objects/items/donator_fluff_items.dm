@@ -2123,9 +2123,9 @@ As Excaliber."
 /obj/item/clothing/cloak/longest_night
 	name = "Longest Night Cloak"
 	desc = "A silver lined cloak, capable of quickly being wrapped around the arm for comfort. \
-	The Longest Night sect is an underground 'association', primarily consisting of noccites. Though no place of meeting is held and members often don't see eachother, \
-	members identify eachother with unique keyphrases to identify who might be a member or associate. Few know of them, fewer of their secrets.\ Inside the cloak, woven words preach, </br>\
-	</br>‎<font color='c4c9d2'>Are those within the cave to be faulted, when all they know of reality are the shadows it casts on the wall?'</br>'Fault or not, it falls upon us to lead them out of that wretched cave.'</font>"
+	The Longest Night sect is an underground 'association,' those involved are often those who wish to be the least, and those who wish to be a part will never be. \
+	Few know of the sect, fewer of their secrets.\ </br>Inside the cloak, woven words preach,\ </br>‎<font color='c4c9d2'>Are those within the cave to be faulted, when all they know of reality are the shadows it casts on the wall?\
+	 </br>Fault or not, it falls upon us to lead them out of that wretched cave.</font>"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
