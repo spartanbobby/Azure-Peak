@@ -73,7 +73,7 @@
 				if(HAS_TRAIT(H, TRAIT_PSYDONIAN_GRIT))
 					armor = /obj/item/clothing/suit/roguetown/armor/manual/sewable/padded/monke // ape out, brothers. +25 durability over other monks.
 				else
-					armor = /obj/item/clothing/suit/roguetown/armor/manual/sewable/padded/monk // 25 less than gladiator's skin.
+					armor = /obj/item/clothing/suit/roguetown/armor/manual/emote/prayer/monk // repaired by praying; 25 less than gladiator's skin.
 
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
