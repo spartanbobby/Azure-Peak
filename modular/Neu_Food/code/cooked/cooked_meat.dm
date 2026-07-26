@@ -17,6 +17,7 @@
 
 /* .............   Roast Pork   ................ */
 /obj/item/reagent_containers/food/snacks/rogue/meat/fatty/roast
+	cuisine = CUISINE_NORTHERN|CUISINE_SOUTHEASTERN
 	eat_effect = null
 	name = "roast pork"
 	desc = "A hunk of pigflesh, roasted to a perfect crispy texture"
