@@ -297,6 +297,7 @@
 	tastes = list("crispy and slimy insectoid" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/meat/spider/surprise/cooked
+	cuisine = CUISINE_NORTHERN
 	name = "spider surprise"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_meat.dmi'
 	icon_state = "spider_surprise_cooked"

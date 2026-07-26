@@ -307,6 +307,7 @@
 	cooked_type = /obj/item/reagent_containers/food/snacks/sugarstatue/tree
 
 /obj/item/reagent_containers/food/snacks/sugarstatue
+	cuisine = CUISINE_ETRUSCAN
 	dish_type = DISH_SWEET
 	name = "sugarglass statue"
 	desc = "A decorative piece of sugarglass, meticulously fashioned to mimic a statue. Deliciously regal!"
