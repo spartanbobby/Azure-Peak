@@ -2129,6 +2129,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	experimental_inhand = FALSE
 	experimental_onback = FALSE
+	alternate_worn_layer = 16
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	icon_state = "night_cloak"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
