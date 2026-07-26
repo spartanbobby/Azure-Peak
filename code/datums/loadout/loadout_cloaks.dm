@@ -198,3 +198,8 @@
 	name = "Wicker Cloak"
 	path = /obj/item/clothing/cloak/wickercloak
 	sort_category = "Cloaks"
+
+/datum/loadout_item/sash
+	name = "sash"
+	path = /obj/item/clothing/cloak/sash
+	sort_category = "Cloaks"
