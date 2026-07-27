@@ -59,7 +59,7 @@
 	data["compact"] = withdraw_tab.compact ? TRUE : FALSE
 	data["categories"] = categories
 	data["category"] = withdraw_tab.current_category
-	data["food_stipend"] = (ishuman(user) && HAS_TRAIT(user, TRAIT_FOOD_STIPEND)) ? TRUE : FALSE
+	data["food_stipend"] = (ishuman(user) && HAS_TRAIT(user, TRAIT_ROYAL_SUBSIDY)) ? TRUE : FALSE
 	var/treasury_balance = SStreasury.discretionary_fund?.balance || 0
 	data["treasury_floor"] = SStreasury.stockpile_purchase_floor
 	data["below_floor"] = treasury_balance < SStreasury.stockpile_purchase_floor
@@ -306,6 +306,8 @@
 			if(amt)
 				SStreasury.economic_output += true_value
 				var/bounty_msg = "+[amt] from [R.name] bounty"
+				if(HAS_TRAIT(H, TRAIT_ROYAL_SUBSIDY))
+					bounty_msg = "[R.name]"
 				if(crown_delta != 0)
 					var/seller_delta = amt - quality_baseline
 					var/seller_sign = seller_delta > 0 ? "+" : ""
