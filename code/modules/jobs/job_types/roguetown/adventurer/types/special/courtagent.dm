@@ -67,11 +67,13 @@
 	if(!prefs.job_subprefs || !islist(prefs.job_subprefs))
 		prefs.job_subprefs = list()
 	if(!prefs.job_subprefs[title])
-		prefs.job_subprefs[title] = list("codename" = null, "hand_file_notes" = null)
+		prefs.job_subprefs[title] = list("codename" = null, "hand_file_notes" = null, "favorite_advclass" = null)
 	var/list/subprefs = prefs.job_subprefs[title]
+	var/datum/advclass/favorite = subprefs["favorite_advclass"]
+	var/favorite_name = favorite ? favorite::name : "Choose"
 	var/HTML = {"
 		You can define a codename and the contents of the Hand's file on you here. Keep codenames sensible, please.<br/>
-		In addition to what you write here, the Hand's file will contain your name, descriptors, species, subclass, and (if you don't have the Guarded virtue) patron.<br/><br/>
+		In addition to what you write here, the Hand's file will contain your name, descriptors, species, and subclass.<br/><br/>
 		The Hand file is an IC document, but should be used like OOC notes to provide RP hooks specific to the Hand. Some suggestions:<br/>
 		<ul>
 			<li>- How you ended up in the Hand's employ/what leverage they have over you. Are you a criminal serving an unorthodox sentence? A debtor? An old friend?</li>
@@ -80,7 +82,9 @@
 		</ul><br/>
 		<b>Codename:</b> <a href="?src=[REF(src)];codename=1">[subprefs["codename"]?subprefs["codename"]:"Unset"]</a><br/>
 		<b>Hand Notes:</b> <a href="?src=[REF(src)];hand_file_notes=1">Edit</a> <a href="?src=[REF(src)];markdownhelp=1">\[?\]</a><br/>
-		[subprefs["hand_file_notes_raw"]?parsemarkdown("---\n[subprefs["hand_file_notes_raw"]]\n---",usr):""]<br/>
+		[subprefs["hand_file_notes_raw"]?parsemarkdown("---[subprefs["hand_file_notes_raw"]]\n---",usr):""]
+		<i>You can choose a favorite subclass here. You'll automatically select this subclass on roundstart if possible.</i><br/>
+		<b>Selected class:</b> <a href="?src=[REF(src)];class=1">[favorite_name]</a>
 		<center><a href="?src=[REF(src)];subprefsexit=1">EXIT</a>\t\t<a href="?src=[REF(src)];subprefsreset=1">RESET</a></center>
 	"}
 	var/datum/browser/popup = new(user, "[JOB_SUBPREFS_WINDOW_ID]", "<div align='center'>[title] Preferences</div>", 600, 900)
