@@ -319,7 +319,7 @@
 					<h2 style='margin: 4px; padding:0px;'>Agent File: [current_agent]</h2><hr>
 			<b>Agent Name:</b> [current_agent]<br/>[codename ? "<b>Codename:</b> [codename]<br/>":""][(descriptor_name!= " ") ? "<b>Appearance:</b> [descriptor_name]<br/>" : ""]<b>Profession:</b> [agent.get_role_title()]
 			<hr/>
-			[hand_notes_html]
+			[hand_notes_html?hand_notes_html:"Agent displays no further qualities of note."]
 			<hr/>
 			<a href='?src=[REF(src)];back=1' style='position:absolute;left:15px;bottom:15px'>Back</a><a href='?src=[REF(src)];close=1' style='position:absolute;right:15px;bottom:15px'>Close</a></body></html>"}
 

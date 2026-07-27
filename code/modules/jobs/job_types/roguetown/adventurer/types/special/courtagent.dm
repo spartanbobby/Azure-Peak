@@ -98,6 +98,14 @@
 			if(H.mind)
 				H.mind.special_role = "Court Agent" //For obfuscating them in the Actors list: _job.dm L:216
 				add_verb(H, /datum/job/roguetown/adventurer/courtagent/proc/remember_employer)
+				var/list/agent_prefs = H.mind.job_subprefs["Court Agent"]
+				if(!agent_prefs)
+					agent_prefs = list("codename" = null, "hand_file_notes" = null, "hand_file_notes_raw" = null)
+					H.mind.job_subprefs["Court Agent"] = agent_prefs
+				if(!agent_prefs["hand_file_notes"]) // someone forgot to set their prefs, whuh oh!
+					to_chat(H, span_notice("Set your class preferences for Court Agent to disable this popup!"))
+					agent_prefs["hand_file_notes"] = parsemarkdown(tgui_input_text(H, "What does your file say?", "THY DEEDS ARE KNOWN", multiline = TRUE, encode = FALSE))
+					agent_prefs["codename"] = tgui_input_text(H, "Do you have a codename?", "CODENAME", null, MAX_NAME_LEN)
 			addtimer(CALLBACK(src, PROC_REF(know_employer), H), 1 MINUTES) // give roundstart a bit to settle
 			addtimer(CALLBACK(src, PROC_REF(give_zadcage), H), 1 MINUTES) // this needs to happen after equipment ideally
 			..()
