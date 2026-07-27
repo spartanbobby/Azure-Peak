@@ -151,19 +151,21 @@
 #define BB_MUG_TARGET_ITEM "mug_rootbeer"
 
 #define ARCHER_NPC_EQUIPMENT_CACHE_TIME (40 SECONDS)
-#define ARCHER_NPC_MIN_RANGE            4 
-#define ARCHER_NPC_KITE_FLOOR           1   
+#define ARCHER_NPC_MIN_RANGE            4
+#define ARCHER_NPC_KITE_FLOOR           1
 #define ARCHER_NPC_KITE_RANGE           3
 #define ARCHER_NPC_SHOOT_RANGE          6
-#define ARCHER_NPC_ROF_PENALTY          1.3
-#define ARCHER_NPC_BASE_SPREAD          25 
+// We want to somewhat simulate an actual draw. A Nock Time has no slowdown and simulate mouse
+// travelling to click on the Quiver, the min aim time simulate the process of holding the bow and
+// then actually aiming at the target and is added to the draw time, and the draw time is the
+// actual mechanical limiter
+#define ARCHER_NPC_NOCK_TIME            (1.5 SECONDS)
+#define ARCHER_NPC_MIN_AIM_TIME         (0.4 SECONDS)
+#define ARCHER_NPC_BASE_SPREAD          25
 #define ARCHER_NPC_RETREAT_PROJECT      4
 #define ARCHER_NPC_REPOSITION_TIME      (0.6 SECONDS) // how long a post-shot random juke commits before the straight retreat resumes
 #define ARCHER_NPC_ARROW_SEARCH_RANGE   9
 #define ARCHER_NPC_SIMULATED_CHARGETIME 1.5 SECONDS // fallback bow charge time
-#define ARCHER_NPC_MIN_CROSSBOW_CHARGETIME  3 SECONDS // crossbows are slower to fire
-#define ARCHER_NPC_MIN_BOW_CHARGETIME        2.0 SECONDS
-#define ARCHER_NPC_MIN_SLING_CHARGETIME     2.0 SECONDS
 #define ARCHER_NPC_SPREAD_PER_POINT     7     // spread per PER point below 15
 #define ARCHER_NPC_ARC_SPREAD_PENALTY   20    // extra spread when arcing over allies
 
