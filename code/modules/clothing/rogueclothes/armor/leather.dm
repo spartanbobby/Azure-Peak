@@ -233,9 +233,10 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter/loadout
 	name = "aesthetic fencing jacket"
-	max_integrity = ARMOR_INT_CHEST_CIVILIAN
-	armor = ARMOR_CLOTHING
-	armor_class = ARMOR_CLASS_NONE
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter/loadout/Initialize()
+	. = ..()
+	loadoutize()
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/shepherd
 	name = "shepherd's vest"
@@ -300,6 +301,8 @@
 	sleevetype = null
 	sleeved = null
 	armor_class = ARMOR_CLASS_NONE
+	grid_height = 64
+	grid_height = 64
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
 	name = "sea jacket"
