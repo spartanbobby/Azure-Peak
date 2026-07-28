@@ -304,10 +304,13 @@
 			if(sound == TRUE)
 				playsound(loc, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 			if(amt)
+				if(HAS_TRAIT(H, TRAIT_ROYAL_SUBSIDY))
+					SStreasury.log_fund_entry(new /datum/treasury_entry(null, SStreasury.discretionary_fund, SStreasury.discretionary_fund, 0, "Subsidy Deposit: [R.name] by [H.real_name]"))
+					record_round_statistic(STATS_DIRECT_TREASURY_TRANSFERS, amt)
+					send_ooc_note("<b>MEISTER:</b> Subsidy claims [amt]m from the [R.name]. Thank you for your diligent service.", name = H.real_name)
+					return
 				SStreasury.economic_output += true_value
 				var/bounty_msg = "+[amt] from [R.name] bounty"
-				if(HAS_TRAIT(H, TRAIT_ROYAL_SUBSIDY))
-					bounty_msg = "[R.name]"
 				if(crown_delta != 0)
 					var/seller_delta = amt - quality_baseline
 					var/seller_sign = seller_delta > 0 ? "+" : ""
