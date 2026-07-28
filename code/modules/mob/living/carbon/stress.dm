@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(stress_messages, world.file2list("strings/rt/stress_messages.tx
 	event.stacks++
 
 	if(event.stressadd <= -2)
-		for(var/mob/living/carbon/human/L in viewers(4,src))
+		for(var/mob/living/carbon/human/L in viewers(2,src))
 			if(L != src && L.has_flaw(/datum/charflaw/addiction/voyeur))
 				L.sate_addiction(/datum/charflaw/addiction/voyeur)
 	return event
