@@ -312,6 +312,12 @@
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
+/datum/sprite_accessory/snout/vskunk
+	name = "Skunk"
+	icon_state = "vskunk"
+	color_keys = 3
+	color_key_names = list("Snout", "Stripe", "Nose")
+
 /******************************************
 **************** Snouts *******************
 *************but higher up*****************/
@@ -514,3 +520,9 @@
 	icon_state = "masked"
 	color_key_name = "Veil"
 	relevant_layers = list(BODY_ADJ_LAYER, BODY_FRONT_LAYER)
+
+/datum/sprite_accessory/snout/vskunk
+	name = "Skunk"
+	icon_state = "vskunk"
+	color_keys = 3
+	color_key_names = list("Snout", "Stripe", "Nose")
