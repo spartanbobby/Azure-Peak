@@ -1612,8 +1612,8 @@ var/global/list/da_bubbles = list('sound/foley/bubb (1).ogg','sound/foley/bubb (
 	. = ..()
 	if(obj_broken || active_item)
 		return
-	if((slot == SLOT_NECK || slot == SLOT_RING) && HAS_TRAIT(user, TRAIT_FREEMAN))
-		if(!stolen_fyre)
+	if((slot == SLOT_NECK || slot == SLOT_RING) && user.patron && (user.patron.type in ALL_INHUMEN_PATRONS))
+		if(!stolen_fyre && HAS_TRAIT(user, TRAIT_FREEMAN))
 			user.change_stat(STATKEY_LCK, 1, "matthios_boldness")
 		active_item = TRUE
 		if(!user.has_language(/datum/language/thievescant))
@@ -1628,7 +1628,7 @@ var/global/list/da_bubbles = list('sound/foley/bubb (1).ogg','sound/foley/bubb (
 	if(!active_item)
 		return
 	active_item = FALSE
-	if(!stolen_fyre)
+	if(!stolen_fyre && HAS_TRAIT(user, TRAIT_FREEMAN))
 		user.change_stat(STATKEY_LCK, 0, "matthios_boldness")
 	if(grant_chant)
 		to_chat(user, span_info("The knowledge fades from my mind."))
