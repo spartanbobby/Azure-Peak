@@ -160,7 +160,7 @@
 		if(do_after(user, 50 - user.STASPD*2, target = O))
 			thing.polished = 1
 			uses--
-			if((thing.color == null) || (thing.color == "#ffffff") || (thing.color == CLOTHING_WHITE))
+			if((thing.color == null) || (thing.color == "#ffffff"))
 				thing.remove_atom_colour(FIXED_COLOUR_PRIORITY)
 				thing.add_atom_colour("#635e65", FIXED_COLOUR_PRIORITY)
 			thing.RegisterSignal(thing, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(remove_polish))
