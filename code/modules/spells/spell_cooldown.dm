@@ -1207,16 +1207,16 @@
 	if(!owner)
 		return
 
-	var/cost_mult = (was_fully_charged ? CANCEL_PENALTY_COST_CHARGED : CANCEL_PENALTY_COST_PARTIAL) * cancel_penalty_mult
-	invoke_resource_cost(primary_resource_type, primary_resource_cost * cost_mult)
-	invoke_resource_cost(secondary_resource_type, secondary_resource_cost * cost_mult)
-
 	var/penalty_cooldown = min(round(get_adjusted_cooldown() * CANCEL_PENALTY_COOLDOWN * cancel_penalty_mult), CANCEL_PENALTY_COOLDOWN_MAX)
 	if(penalty_cooldown > 0)
 		StartCooldown(penalty_cooldown)
 
 	owner.balloon_alert(owner, was_fully_charged ? "Canceled! Full cost applied!" : "Canceled! Partial cost applied!")
-	return TRUE
+
+	// Last, because a drain that caps the stamina bar emotes and sleeps.
+	var/cost_mult = (was_fully_charged ? CANCEL_PENALTY_COST_CHARGED : CANCEL_PENALTY_COST_PARTIAL) * cancel_penalty_mult
+	invoke_resource_cost(primary_resource_type, primary_resource_cost * cost_mult)
+	invoke_resource_cost(secondary_resource_type, secondary_resource_cost * cost_mult)
 
 /// Cancel casting and all its effects.
 /// [voluntary] must only be TRUE when the caster themselves backed out.
@@ -1234,8 +1234,11 @@
 	end_charging() // end_charging() handles MOUSEDOWN re-registrations
 	reset_spell_cooldown()
 
-	if(penalise)
-		return apply_cancel_penalty(was_fully_charged)
+	if(!penalise)
+		return FALSE
+	// Async so the stamina drain (which can emote) leaves the SIGNAL_HANDLER call stack.
+	INVOKE_ASYNC(src, PROC_REF(apply_cancel_penalty), was_fully_charged)
+	return TRUE
 
 /// Checks if the current OWNER of the spell is in a valid state to say the spell's invocation
 /datum/action/cooldown/spell/proc/can_invoke(feedback = TRUE)
@@ -1718,9 +1721,9 @@
 			owner.balloon_alert(owner, "Spell ready — middle-click target!")
 		return
 
-	var/penalised = FALSE
-	if(!success && is_cancel_penalized() && past_cancel_commitment())
-		penalised = apply_cancel_penalty(fully_charged)
+	var/penalised = !success && is_cancel_penalized() && past_cancel_commitment()
+	if(penalised)
+		INVOKE_ASYNC(src, PROC_REF(apply_cancel_penalty), fully_charged)
 
 	if(!on_end_charge(success, quiet = penalised)) // Give them another try — end_charging() already re-registered MOUSEDOWN
 		return
