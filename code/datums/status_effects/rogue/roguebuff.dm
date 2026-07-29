@@ -1222,7 +1222,7 @@
 /datum/status_effect/buff/guidinglight // Hey did u follow us from ritualcircles? Cool, okay this stuff is pretty simple yeah? Most ritual circles use some sort of status effects to get their effects ez.
 	id = "guidinglight"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/guidinglight
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 	status_type = STATUS_EFFECT_REFRESH
 	effectedstats = list(STATKEY_PER = 2) // This is for basic stat effects, I would consider these a 'little topping' and not what you should rlly aim for for rituals. Ideally we have cool flavor boons, rather than combat stims.
 	examine_text = "SUBJECTPRONOUN walks with Her Light!"
@@ -1270,7 +1270,7 @@
 	id = "Moonsight"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/moonlightdance
 	effectedstats = list(STATKEY_INT = 2)
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/moonlightdance
 	name = "Moonlight Dance"
@@ -1343,7 +1343,7 @@
 /datum/status_effect/buff/undermaidenbargain
 	id = "undermaidenbargain"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/undermaidenbargain
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 
 /datum/status_effect/buff/undermaidenbargain/on_apply()
 	. = ..()
@@ -1419,7 +1419,7 @@
 /datum/status_effect/buff/lesserwolf
 	id = "lesserwolf"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/lesserwolf
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 
 /datum/status_effect/buff/lesserwolf/on_apply()
 	. = ..()
@@ -1441,7 +1441,7 @@
 /datum/status_effect/buff/malumritual
 	id = "malumritual"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/malumritual
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 
 /datum/status_effect/buff/malumritual/on_apply()
 	. = ..()
@@ -1472,7 +1472,7 @@
 /datum/status_effect/buff/pacify
 	id = "pacify"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/pacify
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 
 /datum/status_effect/buff/pacify/on_apply()
 	. = ..()
@@ -2178,7 +2178,7 @@
 	id = "ravox_vow"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/ravox_vow
 	status_type = STATUS_EFFECT_UNIQUE
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 	tick_interval = -1
 
 /datum/status_effect/buff/ravox_vow/proc/on_life()
@@ -2242,7 +2242,7 @@
 /datum/status_effect/joybringer
 	id = "joybringer"
 	var/outline_colour = "#a529e8"
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 	tick_interval = -1
 	examine_text = span_love("SUBJECTPRONOUN is bathed in Baotha's blessings!")
 	alert_type = null
@@ -2449,7 +2449,7 @@
 /datum/status_effect/buff/stagehands_silence
 	id = "Stagehand"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/stagehands_silence
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 	// this was supposed to only apply if you had less than 12 speed but it broke whenever other spd mods applied.
 	// i couldnt fix it, unfortunately.
 	// IF people use it to game just fucking remove it we cant have shiut in thjis codebase anymore
@@ -2569,7 +2569,7 @@
 /datum/status_effect/plaguebringer
 	id = "plaguebringer"
 	var/outline_colour = "#2C4628"
-	duration = 15 MINUTES
+	duration = 20 MINUTES
 	tick_interval = -1
 	examine_text = span_good("SUBJECTPRONOUN is emanating Rot!")
 	alert_type = null
