@@ -762,6 +762,7 @@
 
 /obj/item/clothing/mask/rogue/spectacles/iron
 	name = "iron spectacles"
+	desc = "Iron-framed spectacles built to weather rough treatment. They sit firm upon the face, no matter how heated the exchange."
 	icon_state = "igoggles"
 	break_sound = "glassbreak"
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
@@ -774,6 +775,7 @@
 
 /obj/item/clothing/mask/rogue/spectacles/bronze
 	name = "bronze spectacles"
+	desc = "Bronze frames holding thick glass lenses. Favored by those who would rather trust tempered metal than delicate craft."
 	icon_state = "bgoggles"
 	break_sound = "glassbreak"
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
@@ -783,6 +785,7 @@
 
 /obj/item/clothing/mask/rogue/spectacles/steel
 	name = "steel spectacles"
+	desc = "Steel spectacles wrought with a artificier's pragmatism. Clear sight is worth little if the frame shatters at the first strike."
 	icon_state = "sgoggles"
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 40 // slightly more durable for the cqc nerds (stills 1 hit to break)
@@ -793,6 +796,7 @@
 
 /obj/item/clothing/mask/rogue/spectacles/duelist
 	name = "iron duelist goggles"
+	desc = "A rigid pair of protective goggles made for fencing bouts, shielding the eyes without concealing the face."
 	icon_state = "iduelist"
 	break_sound = "garrote_snap"
 	blocksound = PLATEHIT
@@ -809,11 +813,13 @@
 
 /obj/item/clothing/mask/rogue/spectacles/duelist/steel
 	name = "steel duelist goggles"
+	desc = "Steel duelist goggles forged for the most punishing exchanges. They guard the eyes while leaving pride and identity uncovered."
 	icon_state = "sduelist"
 	max_integrity = 150
 
 /obj/item/clothing/mask/rogue/spectacles/duelist/bronze
 	name = "bronze duelist goggles"
+	desc = "Bronze duelist goggles offering modest protection without obscuring one's features. Every victory deserves a witness."
 	icon_state = "bduelist"
 	max_integrity = 125
 
