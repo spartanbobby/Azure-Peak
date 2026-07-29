@@ -14,8 +14,6 @@
 		if(!("[turf.z]" in GLOB.weatherproof_z_levels))
 			if(SSmapping.level_has_any_trait(turf.z, list(ZTRAIT_IGNORE_WEATHER_TRAIT)))
 				GLOB.weatherproof_z_levels |= "[turf.z]"
-		if("[turf.z]" in GLOB.weatherproof_z_levels)
-			SSmatthios_mobs.register_mob(src)
 	update_a_intents()
 	swap_rmb_intent(num=1)
 	if(unique_name)
@@ -55,6 +53,11 @@
 	if(craftingthing)
 		QDEL_NULL(craftingthing)
 	QDEL_LIST(simple_wounds)
+	if(simple_embedded_objects)
+		for(var/obj/item/embedded as anything in simple_embedded_objects)
+			embedded.is_embedded = FALSE
+			embedded.embedded_host = null
+		simple_embedded_objects = null
 	return ..()
 
 /mob/living/onZImpact(turf/T, levels)
@@ -2042,6 +2045,18 @@
 		else
 			clear_fullscreen("remote_view", 0)
 
+GLOBAL_LIST_INIT(sight_trait_signals, build_sight_trait_signals())
+
+/proc/build_sight_trait_signals()
+	. = list()
+	for(var/trait in list(TRAIT_DARKVISION, TRAIT_NITEVISION, TRAIT_NOCSHADES, TRAIT_GILDED_SIGHT, TRAIT_THERMAL_VISION, TRAIT_XRAY_VISION, TRAIT_ZIZOSIGHT))
+		. += SIGNAL_ADDTRAIT(trait)
+		. += SIGNAL_REMOVETRAIT(trait)
+
+/mob/living/proc/on_sight_trait_change(datum/source)
+	SIGNAL_HANDLER
+	update_sight()
+
 /mob/living/update_mouse_pointer()
 	if(!client)
 		return
@@ -2516,6 +2531,8 @@
 
 /mob/living/proc/stop_looking()
 	if(!client)
+		return
+	if(!client.pixel_x && !client.pixel_y && client.perspective == MOB_PERSPECTIVE && client.eye == client.mob)
 		return
 	animate(client, pixel_x = 0, pixel_y = 0, 2, easing = SINE_EASING)
 	if(client)
