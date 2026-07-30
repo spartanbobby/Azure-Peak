@@ -72,6 +72,12 @@
 	new /obj/effect/temp_visual/spell_impact(target_turf, spell_color, spell_impact_intensity)
 	new /obj/effect/temp_visual/dragonfire(target_turf)
 
+	target_turf.fire_act()
+	for(var/atom/A in target_turf)
+		if(ismob(A))
+			continue
+		A.fire_act()
+
 	for(var/mob/living/L in target_turf)
 		if(L == caster)
 			continue
