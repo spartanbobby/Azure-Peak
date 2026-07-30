@@ -8,7 +8,6 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	has_item_quality = TRUE
 	name = "crossbow"
-	flags_ai_inventory = AI_ITEM_GUN
 	desc = "A deadly weapon that shoots a bolt with terrific power. Unlike the common bow, \
 	it uses a sophisticated mechanism to renock - and retain - its half-length bolts; a \
 	matter that relies more on raw strength than dexterity to master. </br>A favorite \

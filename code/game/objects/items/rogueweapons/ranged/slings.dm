@@ -76,7 +76,6 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/sling
 	name = "sling"
-	flags_ai_inventory = AI_ITEM_GUN
 	desc = "Twisted fibers manifest into a strung pouch capable of hurling stones afar."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "sling"
