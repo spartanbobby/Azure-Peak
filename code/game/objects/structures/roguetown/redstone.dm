@@ -339,8 +339,8 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 */
 
 /obj/structure/pressure_plate/once
-	name = "pressure plate"
-	desc = "Be careful. Stepping on this could either mean a bomb exploding or a door closing on you."
+	name = "rusty pressure plate"
+	desc = "Be careful. Stepping on this could either mean a bomb exploding or a door closing on you. Luckily, it seems to have only one last wheeze before it's stuck."
 	var/triggered = FALSE
 
 /obj/structure/pressure_plate/once/Crossed(atom/movable/AM)
