@@ -9,7 +9,7 @@
 					/datum/action/cooldown/spell/miracle/heal							= CLERIC_T1,
 					/datum/action/cooldown/spell/miracle/bloodmiracle					= CLERIC_T1,
 					/datum/action/cooldown/spell/projectile/zizo/profane				= CLERIC_T1,
-					/datum/action/cooldown/spell/raise_undead_formation/zizo	 		= CLERIC_T2,
+					/datum/action/cooldown/spell/conjure_summon/zizo/skeleton_swarm		= CLERIC_T2,
 					/datum/action/cooldown/spell/zizo/bone_cataclysm					= CLERIC_T2,
 					/datum/action/cooldown/spell/tame_undead/zizo						= CLERIC_T3,
 					/datum/action/cooldown/spell/zizo/rituos 							= CLERIC_T3,
