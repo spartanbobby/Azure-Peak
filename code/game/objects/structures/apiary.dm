@@ -14,6 +14,9 @@
 	var/pollinating = FALSE
 	var/turf/last_pollinated
 
+	var/target_move_failures = 0
+	var/max_target_move_failures = 3
+
 	// Bee genetics variables
 	var/bee_efficiency = 1.0 // Pollen collection multiplier
 	var/bee_aggression = 0 // Chance to attack on disturbance (0-100)
@@ -53,7 +56,9 @@
 	// Handle movement and merging
 	if(merge_target)
 		var/turf/turf = get_step_towards2(src, merge_target)
-		Move(turf, get_dir(src, turf))
+		if(!Move(turf, get_dir(src, turf)))
+			return
+
 		if(get_dist(merge_target, src) == 0)
 			merge_target.bee_count += bee_count
 			merge_target.update_overlays()
@@ -64,7 +69,19 @@
 
 	if(target)
 		var/turf/turf = get_step_towards2(src, target)
-		Move(turf, get_dir(src, turf))
+
+		if(!Move(turf, get_dir(src, turf)))
+			target_move_failures++
+
+			if(target_move_failures >= max_target_move_failures)
+				target_move_failures = 0
+				target = null
+				return_to_hive()
+
+			return
+
+		target_move_failures = 0
+
 		if(get_dist(target, src) == 0)
 			if(istype(target, /obj/structure/apiary))
 				enter_hive()
@@ -81,6 +98,9 @@
 			attacked_mobs.Cut()
 
 /obj/effect/bees/proc/enter_hive()
+	if(!hive)
+		return
+
 	hive.bee_objects -= src
 	hive.sleeping_bees += bee_count
 	hive.outside_bees -= bee_count
@@ -88,6 +108,7 @@
 	hive.on_bee_enter(bee_count)
 	hive = null
 	target = null
+	target_move_failures = 0
 	qdel(src)
 
 /obj/effect/bees/proc/try_pollinate()
@@ -130,7 +151,11 @@
 		return_to_hive()
 
 /obj/effect/bees/proc/return_to_hive()
+	if(!hive)
+		return
+
 	target = hive
+	target_move_failures = 0
 
 /obj/effect/bees/proc/attack_nearby_targets()
 	if(pollinating || merge_target)
@@ -346,7 +371,7 @@
 	stored_combs = 0
 	update_icon_state()
 
-/obj/structure/apiary/attackby(obj/item/I, mob/user, params) 
+/obj/structure/apiary/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/queen_bee))
 		if(queen_bee)
 			to_chat(user, span_warning("There's already a queen!"))
