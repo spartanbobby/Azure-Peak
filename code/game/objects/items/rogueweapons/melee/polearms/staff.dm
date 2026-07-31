@@ -260,15 +260,13 @@
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/steel/astrata
 	name = "solar scepter"
-	desc = "A decorated quarterstaff reinforced with metal with enough heft behind it to send deadites back into Necra's realm. \
-	Exceedingly durable and capable it is favorite of many orders that forgo cladding themselves in steel."
+	desc = "A quarterstaff bearing the symbol of Astrata, Her rule given form in a scepter atop a reinforced shaft."
 	icon_state = "quarterstaff_astrata"
 	max_integrity = 230
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/steel/noc
 	name = "lunar crescent"
-	desc = "A decorated quarterstaff reinforced with metal with enough heft behind it to send deadites back into Necra's realm. \
-	Exceedingly durable and capable it is favorite of many orders that forgo cladding themselves in steel."
+	desc = "A quarterstaff bearing the symbol of Noc, His moonlight taken form atop a reinforced shaft."
 	icon_state = "quarterstaff_noc"
 	max_integrity = 230
 
