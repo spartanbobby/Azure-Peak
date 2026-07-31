@@ -850,8 +850,6 @@
 	var/obj/structure/apiary/A = target
 
 	to_chat(user, span_notice("<i>You carefully examine [A] through [src], studying the bees, comb, and workings of the hive.</i>"))
-	to_chat(user, span_blue("---"))
-
 	// Honeycomb
 	if(A.stored_combs <= 0)
 		to_chat(user, span_notice("- There are no finished honeycombs ready for harvest."))
@@ -861,8 +859,6 @@
 		to_chat(user, span_green("- Several substantial combs are visible, capped and heavy with honey."))
 	else
 		to_chat(user, span_notice("- A small amount of finished honeycomb is visible among the working bees."))
-	to_chat(user, span_blue("---"))
-
 	// Queen
 	if(A.queen_bee)
 		var/obj/item/queen_bee/Q = A.queen_bee
@@ -885,8 +881,6 @@
 
 	else
 		to_chat(user, span_artery("- No queen can be found. The bees appear disorganized, and there are signs that the colony is without its usual center."))
-	to_chat(user, span_blue("---"))
-
 	// Colony activity
 	var/total_bees = A.bee_count + A.outside_bees + A.sleeping_bees
 
@@ -900,16 +894,12 @@
 		to_chat(user, span_green("- The colony is bustling with activity. Bees are moving constantly through the hive."))
 	else
 		to_chat(user, span_greentext("- The colony is exceptionally busy, with a deep and vigorous hum coming from the hive."))
-	to_chat(user, span_blue("---"))
-
 	// Sleeping bees
 	if(A.sleeping_bees > 0)
 		if(A.sleeping_bees >= 10)
 			to_chat(user, span_blue("- A considerable number of bees appear to be resting deeper within the hive."))
 		else
 			to_chat(user, span_blue("- Some bees appear to be resting within the hive between bouts of work."))
-	to_chat(user, span_blue("---"))
-
 	// Wax and comb production
 	if(A.comb_progress >= 75)
 		to_chat(user, span_blue("- The bees are actively building and filling fresh comb. Wax work appears particularly vigorous."))
@@ -917,8 +907,6 @@
 		to_chat(user, span_blue("- There are signs of ongoing comb construction, with fresh wax being worked into the hive."))
 	else if(A.comb_progress > 1)
 		to_chat(user, span_blue("- A little fresh wax is being worked, though the colony does not appear to be producing comb particularly rapidly."))
-	to_chat(user, span_blue("---"))
-
 	// Pollen stores
 	if(A.pollen >= 75)
 		to_chat(user, span_greentext("- The hive contains abundant pollen stores. The colony has clearly been foraging successfully."))
@@ -928,8 +916,6 @@
 		to_chat(user, span_green("- There is some pollen stored within the hive, though the reserves are modest."))
 	else
 		to_chat(user, span_yellow("- Very little pollen can be found within the hive. The colony's recent foraging appears poor."))
-	to_chat(user, span_blue("---"))
-
 	// Disease
 	if(A.has_disease)
 		switch(A.disease_type)
@@ -949,15 +935,12 @@
 
 	else
 		to_chat(user, span_green("- No obvious signs of disease or infestation can be found."))
-	to_chat(user, span_blue("---"))
-
 	// Swarming
 	if(A.swarm_progress >= 80)
 		to_chat(user, span_artery("- The bees appear unusually restless and crowded. The colony may be preparing to swarm."))
 	else if(A.swarm_progress >= 40)
 		to_chat(user, span_yellow("- There is a noticeable restlessness among the bees, though no swarm appears imminent."))
-
-	to_chat(user, span_blue("---"))
+	to_chat(user, span_blue("------------"))
 	// General colony condition
 	if(!A.queen_bee)
 		to_chat(user, span_yellow("- Overall, the colony appears poorly organized without a queen to anchor it."))
@@ -969,7 +952,6 @@
 		to_chat(user, span_green("- Overall, the colony appears stable and reasonably productive."))
 	else
 		to_chat(user, span_yellow("- Overall, the colony appears small and somewhat fragile."))
-	to_chat(user, span_blue("---"))
 
 /obj/item/bee_treatment
 	name = "bee medication"
