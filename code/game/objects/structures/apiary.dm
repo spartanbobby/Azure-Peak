@@ -16,6 +16,7 @@
 
 	var/target_move_failures = 0
 	var/max_target_move_failures = 3
+	var/list/bad_targets = list()
 
 	// Bee genetics variables
 	var/bee_efficiency = 1.0 // Pollen collection multiplier
@@ -68,26 +69,39 @@
 			return
 
 	if(target)
-		var/turf/turf = get_step_towards2(src, target)
-
-		if(!Move(turf, get_dir(src, turf)))
-			target_move_failures++
-
-			if(target_move_failures >= max_target_move_failures)
-				target_move_failures = 0
+		// Check whether the current target is blacklisted.
+		if(bad_targets[target])
+			if(world.time < bad_targets[target])
 				target = null
-				return_to_hive()
+				target_move_failures = 0
+			else
+				bad_targets -= target
 
-			return
+		if(target)
+			var/turf/turf = get_step_towards2(src, target)
 
-		target_move_failures = 0
+			if(!Move(turf, get_dir(src, turf)))
+				target_move_failures++
 
-		if(get_dist(target, src) == 0)
-			if(istype(target, /obj/structure/apiary))
-				enter_hive()
-				return
-			target = null
-			try_pollinate()
+				if(target_move_failures >= max_target_move_failures)
+					// Target appears unreachable. Blacklist it for 1 minute.
+					bad_targets[target] = world.time + 1 MINUTES
+					target_move_failures = 0
+					target = null
+
+					// Immediately try to find another target.
+					if(hive)
+						hive.give_bee_target()
+				else
+					return
+
+			if(target && get_dist(target, src) == 0)
+				if(istype(target, /obj/structure/apiary))
+					enter_hive()
+					return
+
+				target = null
+				try_pollinate()
 
 	if(agitated)
 		if(agitation_countdown > 0)
@@ -599,18 +613,37 @@
 
 /obj/structure/apiary/proc/give_bee_target()
 	var/list/targets = list()
+
 	for(var/obj/structure/soil/soil in view(7, src))
 		if(!soil.plant)
 			continue
 		targets |= soil
+
 	for(var/obj/structure/flora/roguegrass/herb/herb in view(7, src))
 		targets |= herb
+
+	if(!targets.len)
+		return
 
 	for(var/obj/effect/bees/bee in bee_objects)
 		if(bee.pollinating || bee.target)
 			continue
-		if(targets.len)
-			bee.target = pick(targets)
+
+		var/list/valid_targets = list()
+
+		for(var/atom/possible_target in targets)
+			// Target is currently blacklisted by this bee.
+			if(bee.bad_targets[possible_target])
+				if(world.time < bee.bad_targets[possible_target])
+					continue
+
+				// Blacklist expired.
+				bee.bad_targets -= possible_target
+
+			valid_targets += possible_target
+
+		if(valid_targets.len)
+			bee.target = pick(valid_targets)
 
 /obj/structure/apiary/proc/try_create_bees()
 	if(!comb_progress)
