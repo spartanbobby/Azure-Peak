@@ -84,16 +84,12 @@
 	body_parts_covered = EYES
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HEAD
 	anvilrepair = /datum/skill/craft/armorsmithing
-	var/lensmoved = FALSE
+	var/lensmoved = TRUE
 	grid_width = 32
 	grid_height = 32
 
-/obj/item/clothing/mask/rogue/spectacles/inq/spawnpair
-	lensmoved = TRUE
-
 /obj/item/clothing/mask/rogue/spectacles/inq/equipped(mob/user, slot)
 	..()
-
 	if(slot == SLOT_WEAR_MASK || slot == SLOT_HEAD)
 		if(!lensmoved)
 			ADD_TRAIT(user, TRAIT_NOCSHADES, "redlens")
@@ -110,12 +106,13 @@
 
 /obj/item/clothing/mask/rogue/spectacles/inq/attack_right(mob/user, slot)
 	..()
-
 	if(!lensmoved)
+		playsound(user, 'sound/items/inqglassesoff.ogg', 80)
 		to_chat(user, span_info("You discreetly slide the inner lenses out of the way."))
 		REMOVE_TRAIT(user, TRAIT_NOCSHADES, "redlens")
 		lensmoved = TRUE
 		return
+	playsound(user, 'sound/items/inqglasseson.ogg', 80)
 	to_chat(user, span_info("You discreetly slide the inner lenses back into place."))
 	ADD_TRAIT(user, TRAIT_NOCSHADES, "redlens")
 	lensmoved = FALSE
@@ -340,10 +337,12 @@
 /obj/item/clothing/mask/rogue/facemask/steel/confessor/lensed/attack_right(mob/user, slot)
 	..()
 	if(!lensmoved)
+		playsound(user, 'sound/items/inqglassesoff.ogg', 80)
 		to_chat(user, span_info("You discreetly slide the inner lenses out of the way."))
 		REMOVE_TRAIT(user, TRAIT_NOCSHADES, "redlens")
 		lensmoved = TRUE
 		return
+	playsound(user, 'sound/items/inqglasseson.ogg', 80)
 	to_chat(user, span_info("You discreetly slide the inner lenses back into place."))
 	ADD_TRAIT(user, TRAIT_NOCSHADES, "redlens")
 	lensmoved = FALSE
