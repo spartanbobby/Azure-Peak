@@ -693,3 +693,15 @@
 	path = /obj/item/clothing/head/roguetown/decoration/orle/donator_dyeable
 	triumph_cost = 3
 	sort_category = "Triumphs"
+
+/datum/loadout_item/ranger_cloak
+	name = "Ranger Cloak, Forest Green"
+	path = /obj/item/clothing/cloak/rangercloak
+	triumph_cost = 2
+	sort_category = "Triumphs"
+
+/datum/loadout_item/ranger_cloak_gray
+	name = "Ranger Cloak, Neutral Gray"
+	path = /obj/item/clothing/cloak/rangercloak/gray
+	triumph_cost = 2
+	sort_category = "Triumphs"
