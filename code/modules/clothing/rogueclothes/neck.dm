@@ -1724,7 +1724,7 @@
 	icon_state = "gold_opal"
 	desc = "A luxurious golden amulet encrusted with a polished piece of opal, donnable both on neck and wrist."
 
-clothing/neck/roguetown/carved/goldjade
+/obj/clothing/neck/roguetown/carved/goldjade
 	name = "golden jade amulet"
 	icon_state = "gold_jade"
 	desc = "A luxurious golden amulet encrusted with a polished piece of jade, donnable both on neck and wrist."
