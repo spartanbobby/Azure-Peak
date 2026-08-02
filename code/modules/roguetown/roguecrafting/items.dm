@@ -209,7 +209,7 @@
 /datum/crafting_recipe/roguetown/survival/zigbox
 	name = "zigbox"
 	result = /obj/item/storage/belt/rogue/pouch/zigarrete
-	reqs = /obj/item/paper/scroll = 2
+	reqs = list(/obj/item/paper/scroll = 2)
 	req_table = TRUE
 	craftdiff = 2
 
