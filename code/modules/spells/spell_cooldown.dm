@@ -1713,13 +1713,15 @@
 		return
 
 	var/list/modifiers = params2list(params)
+	if(charge_started_at || currently_charging)
+		if(LAZYACCESS(modifiers, BUTTON_CHANGED) == RIGHT_CLICK)
+			cancel_casting(voluntary = TRUE)
+		return COMPONENT_CLIENT_MOUSEDOWN_INTERCEPT
+	if(LAZYACCESS(modifiers, BUTTON_CHANGED) != MIDDLE_CLICK)
+		return
 	if(LAZYACCESS(modifiers, SHIFT_CLICKED))
 		return
 	if(LAZYACCESS(modifiers, CTRL_CLICKED))
-		return
-	if(LAZYACCESS(modifiers, LEFT_CLICK))
-		return
-	if(LAZYACCESS(modifiers, RIGHT_CLICK))
 		return
 	if(LAZYACCESS(modifiers, ALT_CLICKED))
 		return
@@ -1727,8 +1729,6 @@
 		return
 	if(!IsAvailable())
 		return COMPONENT_CLIENT_MOUSEDOWN_INTERCEPT // Still consume the click so it doesn't fall through to old charge system
-	if(charge_started_at || currently_charging)
-		return
 
 	if(istype(_target, /atom/movable/screen/inventory))
 		pass() // Inventory clicks resolve to the actual item later in ClickOn — allow charging
@@ -1772,6 +1772,10 @@
 	if(QDELETED(src) || QDELETED(owner))
 		return
 
+	var/list/modifiers = params2list(params)
+	if(LAZYACCESS(modifiers, BUTTON_CHANGED) != MIDDLE_CLICK)
+		return
+
 	// Stop the failsafe timer
 	if(auto_cancel_timer)
 		deltimer(auto_cancel_timer)
@@ -1809,8 +1813,6 @@
 	if(!on_end_charge(success, quiet = penalised)) // Give them another try — end_charging() already re-registered MOUSEDOWN
 		return
 
-	var/list/modifiers = params2list(params)
-
 	// At this point we DO care about the _target value
 	if(isnull(location) || istype(_target, /atom/movable/screen))
 		_target = resolve_out_of_view_click(source, params)
@@ -1831,7 +1833,10 @@
 		return
 
 	var/list/modifiers = params2list(params)
-	if(!LAZYACCESS(modifiers, MIDDLE_CLICK))
+	if(LAZYACCESS(modifiers, BUTTON_CHANGED) == RIGHT_CLICK)
+		cancel_casting(voluntary = TRUE)
+		return
+	if(LAZYACCESS(modifiers, BUTTON_CHANGED) != MIDDLE_CLICK)
 		return
 
 	if(auto_cancel_timer)

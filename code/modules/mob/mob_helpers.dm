@@ -73,7 +73,7 @@
 	if(check_face_subzone(zone))
 		return BODY_ZONE_HEAD
 	return zone
-		
+
 /proc/check_bind_subzone(zone_def)
 	if(!zone_def)
 		return FALSE

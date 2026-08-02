@@ -236,6 +236,10 @@
 	if(SEND_SIGNAL(src, COMSIG_CLIENT_MOUSEUP, object, location, control, params) & COMPONENT_CLIENT_MOUSEUP_INTERCEPT)
 		click_intercept_time = world.time
 
+	if(mob?.channeling_spell?.currently_charging)
+		charging = 0
+		return
+
 	if(charging && isliving(mob))
 		update_to_mob(mob, 0)
 

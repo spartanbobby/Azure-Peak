@@ -57,7 +57,7 @@
 	if(.)
 		return FALSE
 	var/list/modifiers = params2list(params)
-	if(!modifiers["middle"])
+	if(modifiers[BUTTON_CHANGED] != MIDDLE_CLICK)
 		return TRUE
 	if(!can_cast(caller) || !cast_check(FALSE, ranged_ability_user))
 		return FALSE
