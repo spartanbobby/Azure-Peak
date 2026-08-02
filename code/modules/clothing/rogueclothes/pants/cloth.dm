@@ -184,3 +184,18 @@
 	detail_color = "CLOTHING_WHITE"
 	desc = "A pair of baggy pants of Ranesheni origin, with a long banner-like cloth draped between the two pant legs."
 	salvage_result = /obj/item/natural/cloth
+
+/obj/item/clothing/under/roguetown/tights/clothharem
+	name = "harem pants"
+	icon_state = "harem"
+	desc = "A pair of cloth harem pants, with a baggy fit and a tapered ankle. Originating from the Ranesheni region, these pants are known for their comfort and ease of movement."
+	detail_tag = "_detail"
+	armor = ARMOR_PADDED
+	max_integrity = ARMOR_INT_LEG_LEATHER
+	blocksound = SOFTUNDERHIT
+	break_sound = 'sound/foley/cloth_rip.ogg'
+	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
+	sewrepair = TRUE
+	body_parts_covered = GROIN|LEGS
+	cold_protection = 10
+	detail_color = CLOTHING_WHITE

@@ -1900,3 +1900,18 @@
 	inhand_mod = TRUE
 	detail_tag = "_detail"
 	detail_color = "#405996"
+
+/obj/item/clothing/cloak/dupatta
+	name = "dupatta"
+	desc = "A loose garment that is usually draped across ones upper body."
+	icon_state = "dupatta"
+	item_state = "dupatta"
+	alternate_worn_layer = TABARD_LAYER
+	boobed = FALSE
+	flags_inv = HIDECROTCH|HIDEBOOB
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_ARMOR
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	nodismemsleeves = TRUE
+	color = CLOTHING_WHITE
+	detail_tag = "_detail"
+	detail_color = CLOTHING_WHITE
