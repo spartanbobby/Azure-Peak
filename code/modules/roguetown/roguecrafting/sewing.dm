@@ -476,6 +476,22 @@
 
 /* craftdif of 2+ */
 
+datum/crafting_recipe/roguetown/sewing/harem
+	name = "harem pants"
+	category = "Pants"
+	result = list(/obj/item/clothing/under/roguetown/tights/clothharem)
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 2
+
+datum/crafting_recipe/roguetown/sewing/dupatta
+	name = "dupatta"
+	category = "Cloaks"
+	result = list(/obj/item/clothing/cloak/dupatta)
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 2
+
 /datum/crafting_recipe/roguetown/sewing/clothpaddedgloves
 	name = "padded gloves"
 	category = "Gloves"
