@@ -139,7 +139,7 @@
 #define CANCEL_PENALTY_COST_PARTIAL 0.5 // Resource cost you take for canceling a partial charge
 #define CANCEL_PENALTY_COST_CHARGED 1 // Full charge = same cost as just tossing it out
 #define CANCEL_PENALTY_COOLDOWN 0.5
-#define CANCEL_PENALTY_COOLDOWN_MAX 10 SECONDS // We don't want high CD spell to penalize you too hard
+#define CANCEL_PENALTY_COOLDOWN_MAX 5 SECONDS // We don't want high CD spell to penalize you too hard
 #define CANCEL_GRACE_FRACTION 0.3 // How many decisecond you have to cancel a spell quickly
 #define CANCEL_GRACE_MINIMUM 3
 
