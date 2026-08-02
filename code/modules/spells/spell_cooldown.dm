@@ -178,6 +178,8 @@
 	// Following vars are used for mouse pointer charge only
 	/// World time that the charge started.
 	var/charge_started_at = 0
+	/// Lag compensation for charging. If the server lag, we credits them for time held down.
+	var/charge_started_realtime = 0
 	/// Charge target time, from get_charge_time().
 	var/charge_target_time = 0
 	/// Whether the spell is currently charged, for cases where you want to keep casting after the initial charge (projectiles).
@@ -304,22 +306,25 @@
 
 	// Update mouse charge pointer based on progress
 	if(owner.client && charge_started_at && charge_target_time)
-		var/progress = world.time - charge_started_at
+		var/progress = max(world.time - charge_started_at, charge_started_realtime ? REALTIMEOFDAY - charge_started_realtime : 0)
 		var/percentage = clamp((progress / charge_target_time) * 100, 0, 100)
 		var/new_icon = SSmousecharge.access(percentage)
 		if(owner.client.mouse_pointer_icon != new_icon)
 			owner.client.mouse_pointer_icon = new_icon
 
 	// Charge goal reached — enter the held phase; keep processing so hold_drain bleeds while held.
-	if(world.time > (charge_started_at + charge_target_time))
+	if(charge_complete())
 		fully_charged = TRUE
 		fully_charged_at = world.time
+		if(charge_sound_instance)
+			owner.stop_sound_channel(CHANNEL_CHARGED_SPELL)
+			playsound(owner, sound(null, repeat = 0), 50, FALSE, channel = CHANNEL_CHARGED_SPELL)
 		if(owner.client)
 			owner.client.mouse_pointer_icon = 'icons/effects/mousemice/swang/acharged.dmi'
 			if(hide_charge_effect)
-				owner.playsound_local(owner, 'sound/magic/charged.ogg', 40, TRUE)
+				owner.playsound_local(owner, 'sound/magic/charge_ready.ogg', 50, TRUE)
 			else
-				playsound(owner, 'sound/magic/charged.ogg', 40, TRUE)
+				playsound(owner, 'sound/magic/charge_ready.ogg', 50, TRUE)
 
 /datum/action/cooldown/spell/Grant(mob/grant_to)
 	// Spells are hard baked to pratically only work with living owners
@@ -1140,6 +1145,7 @@
 	hold_warned = 0
 	next_hold_shake = 0
 	charge_started_at = null
+	charge_started_realtime = 0
 	charge_target_time = null
 	// Only drop the cache if we're not about to enter the "charged, waiting to fire" phase
 	// (charge-then-click spells). Caller sets charged=TRUE after this returns on success.
@@ -1272,6 +1278,14 @@
 	if(!source_aspect || ispath(source_aspect, /datum/magic_aspect/pseudo))
 		return FALSE
 	return TRUE
+
+/// Whether the charge window has elapsed. Credits real held time so tick lag can't eat a full charge.
+/datum/action/cooldown/spell/proc/charge_complete()
+	if(world.time >= (charge_started_at + charge_target_time))
+		return TRUE
+	if(charge_started_realtime && (REALTIMEOFDAY - charge_started_realtime) >= charge_target_time)
+		return TRUE
+	return FALSE
 
 /datum/action/cooldown/spell/proc/past_cancel_commitment()
 	if(fully_charged || charged)
@@ -1755,6 +1769,7 @@
 
 	on_start_charge()
 	charge_started_at = world.time
+	charge_started_realtime = REALTIMEOFDAY
 	charge_target_time = charge_time
 
 	if(HAS_TRAIT(owner, TRAIT_SWIFTCAST)) // Makes your next spell be instant.
@@ -1786,7 +1801,7 @@
 		cancel_casting()
 		return
 
-	var/success = world.time >= (charge_started_at + charge_target_time)
+	var/success = charge_complete()
 
 	// Charge-then-click: releasing the mouse doesn't cast — wait for a second click
 	if(charge_then_click)
