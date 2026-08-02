@@ -352,7 +352,8 @@
 				doneset = 1
 				if(L.used_intent?.warnie == "aimwarn")
 					L.stop_sound_channel(CHANNEL_WEAPON_DRAW)
-				L.playsound_local(L, L.used_intent?.ready_sound || 'sound/combat/charge_ready.ogg', 70, TRUE)
+				if(L.used_intent?.ready_sound)
+					L.playsound_local(L, L.used_intent.ready_sound, 70, TRUE)
 				if(L.curplaying && !L.used_intent.keep_looping)
 					L.curplaying.on_mouse_up()
 				chargedprog = 100

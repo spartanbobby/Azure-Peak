@@ -24,7 +24,7 @@
 	/// Extra fatigue removed on missing the target, or if the enemy dodges.
 	var/misscost = 1
 	var/tranged = 0
-	/// Sound played to the charger when a charge/draw reaches full. Null = generic charge_ready click.
+	/// Sound played to the charger when a charge/draw reaches full. Null = no sound.
 	var/ready_sound
 	/// Turns of auto-aim as well as the attack anim.
 	var/noaa = FALSE
