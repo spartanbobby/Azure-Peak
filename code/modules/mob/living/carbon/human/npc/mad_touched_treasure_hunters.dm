@@ -105,16 +105,16 @@
 	H.STAPER = 15
 	H.STAINT = 12
 
-	H.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/maces, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 2, TRUE)
 
 	if(prob(40))
 		var/voicepack_choice = rand(1, 4)
@@ -184,7 +184,7 @@
 	H.STAPER = 13
 	H.STACON -= 1
 	H.STAWIL -= 1
-	H.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/bows, 5, TRUE)
 
 /datum/ambush_config/solo_treasure_hunter
 	mob_types = list(

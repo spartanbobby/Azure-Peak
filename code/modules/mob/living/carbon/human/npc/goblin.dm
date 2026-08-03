@@ -469,7 +469,7 @@ GLOBAL_LIST_INIT(goblin_pyromancer_aggro, list(
 	H.STAPER = 7
 	H.STACON -= 1
 	H.STAWIL -= 1
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/bows, 2, TRUE)
 	H.upgrade_ai_controller(/datum/ai_controller/human_npc/archer)
 
 /datum/outfit/job/roguetown/npc/goblin/slinger/pre_equip(mob/living/carbon/human/H)
@@ -484,7 +484,7 @@ GLOBAL_LIST_INIT(goblin_pyromancer_aggro, list(
 	H.STACON -= 1
 	H.STAWIL -= 1
 	H.STAPER = 6
-	H.adjust_skillrank(/datum/skill/combat/slings, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/slings, 2, TRUE)
 	H.upgrade_ai_controller(/datum/ai_controller/human_npc/archer)
 
 /mob/living/carbon/human/species/goblin/npc/bomber
