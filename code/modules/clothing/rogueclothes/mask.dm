@@ -110,14 +110,8 @@
 /obj/item/clothing/mask/rogue/spectacles/golden
 	name = "golden spectacles"
 	icon_state = "goggles"
-	break_sound = "glassbreak"
-	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 35 //this'll stop one or two good hits
-	integrity_failure = 0.5
-	resistance_flags = FIRE_PROOF
-	body_parts_covered = EYES
 	armor = ARMOR_PLATE_BSTEEL //however, it can stop some *very strong* piercing. Essentially, ablative armor
-	anvilrepair = /datum/skill/craft/armorsmithing
 	adjustable = CAN_CADJUST
 	var/active_item = FALSE
 
@@ -760,13 +754,8 @@
 	name = "iron spectacles"
 	desc = "Iron-framed spectacles built to weather rough treatment. They sit firm upon the face, no matter how heated the exchange."
 	icon_state = "igoggles"
-	break_sound = "glassbreak"
-	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 30
-	integrity_failure = 0.5
 	armor = ARMOR_PLATE_BSTEEL
-	resistance_flags = FIRE_PROOF
-	body_parts_covered = EYES
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 
@@ -777,13 +766,8 @@
 	name = "bronze spectacles"
 	desc = "Bronze frames holding thick glass lenses. Favored by those who would rather trust tempered metal than delicate craft."
 	icon_state = "bgoggles"
-	break_sound = "glassbreak"
-	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 30
-	integrity_failure = 0.5
 	armor = ARMOR_PLATE_BSTEEL
-	resistance_flags = FIRE_PROOF
-	body_parts_covered = EYES
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 
@@ -791,12 +775,8 @@
 	name = "steel spectacles"
 	desc = "Steel spectacles wrought with a artificier's pragmatism. Clear sight is worth little if the frame shatters at the first strike."
 	icon_state = "sgoggles"
-	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 40 // slightly more durable for the cqc nerds (stills 1 hit to break)
-	integrity_failure = 0.5
 	armor = ARMOR_PLATE_BSTEEL
-	resistance_flags = FIRE_PROOF
-	body_parts_covered = EYES
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 
