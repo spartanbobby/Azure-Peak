@@ -90,6 +90,9 @@
 	if(used_armor)
 		protection = used_armor.armor.getRating(d_type)
 	pen_total -= (protection * 2)
+
+	if(armor_pen == protection)
+		pen_total = 1	// If we match, we still get a little extra.
 	var/balance_bonus = 0
 	var/sharpness_bonus = 0
 	var/damfactor_bonus = 0
