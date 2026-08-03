@@ -130,8 +130,8 @@
 	H.STALUC = 10
 	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, skill, TRUE)
 	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, skill, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_JOURNEYMAN, TRUE)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	switch(tier)
 		if(2, 3)
@@ -213,7 +213,7 @@
 	H.STACON -= 1
 	H.STAWIL -= 1
 	H.adjust_skillrank_up_to(/datum/skill/combat/bows, ranged_skill, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, clamp(ranged_skill - 1, 2, 6), TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, clamp(ranged_skill - 1, SKILL_LEVEL_APPRENTICE, SKILL_LEVEL_LEGENDARY), TRUE)
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow
 	backl = /obj/item/quiver/conjured
 	beltr = /obj/item/rogueweapon/sword/short/iron
@@ -225,7 +225,7 @@
 	H.STACON -= 1
 	H.STAWIL -= 1
 	H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, ranged_skill, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, clamp(ranged_skill - 1, 2, SKILL_LEVEL_EXPERT), TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, clamp(ranged_skill - 1, SKILL_LEVEL_APPRENTICE, SKILL_LEVEL_EXPERT), TRUE)
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	backl = /obj/item/quiver/bolt/conjured
 	beltr = /obj/item/rogueweapon/sword/short/iron

@@ -84,8 +84,8 @@
 	H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_APPRENTICE, TRUE)
 	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_APPRENTICE, TRUE)
 	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_APPRENTICE, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_JOURNEYMAN, TRUE)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron
 	neck = /obj/item/clothing/neck/roguetown/coif

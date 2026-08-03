@@ -175,17 +175,17 @@ GLOBAL_LIST_INIT(highwayman_aggro, world.file2list("strings/rt/highwaymanaggroli
 			if(prob(65)) //More likely but loses upgrade for shield pick
 				l_hand = /obj/item/rogueweapon/shield/buckler/palloy
 
-	H.adjust_skillrank_up_to(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/staves, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 2, TRUE) // Trash mobs, untrained.
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/staves, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_APPRENTICE, TRUE) // Trash mobs, untrained.
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_APPRENTICE, TRUE)
 
 	if(prob(30))
 		var/voicepack_choice = rand(1, 4)
@@ -217,16 +217,16 @@ GLOBAL_LIST_INIT(highwayman_aggro, world.file2list("strings/rt/highwaymanaggroli
 	H.STAINT = 10 //Higher, due to losing their bombs cause of how inhereting the loadout works.
 	// Rest of the random gear is handled via subtyping regular highwaymen, this includes our weaponry picks. Which yes, means a slight downgrade.
 
-	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/staves, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/staves, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_JOURNEYMAN, TRUE)
 
 /datum/outfit/job/roguetown/human/species/human/northern/highwayman/archer/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -244,7 +244,7 @@ GLOBAL_LIST_INIT(highwayman_aggro, world.file2list("strings/rt/highwaymanaggroli
 	H.STAPER = 9
 	H.STACON -= 1
 	H.STAWIL -= 1
-	H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_EXPERT, TRUE)
 
 /datum/outfit/job/roguetown/human/species/human/northern/highwayman/crossbowman/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -262,7 +262,7 @@ GLOBAL_LIST_INIT(highwayman_aggro, world.file2list("strings/rt/highwaymanaggroli
 	H.STAPER = 9
 	H.STACON -= 1
 	H.STAWIL -= 1
-	H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, SKILL_LEVEL_EXPERT, TRUE)
 
 /mob/living/carbon/human/species/human/northern/highwayman/road_knight
 	threat_point = THREAT_DEADLY
@@ -303,10 +303,10 @@ GLOBAL_LIST_INIT(highwayman_aggro, world.file2list("strings/rt/highwaymanaggroli
 	H.STAWIL = 10
 	H.STAPER = 10
 	H.STAINT = 8
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_MASTER, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 
 /mob/living/carbon/human/species/human/northern/highwayman/sharpshooter
 	ai_controller = /datum/ai_controller/human_npc/archer
@@ -353,7 +353,7 @@ GLOBAL_LIST_INIT(highwayman_aggro, world.file2list("strings/rt/highwaymanaggroli
 	H.STAWIL = 8
 	H.STAPER = 13
 	H.STAINT = 8
-	H.adjust_skillrank_up_to(/datum/skill/combat/bows, 5, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_MASTER, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
 	H.upgrade_ai_controller(/datum/ai_controller/human_npc/archer)

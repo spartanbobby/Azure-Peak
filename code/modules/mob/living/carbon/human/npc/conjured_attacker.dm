@@ -97,8 +97,8 @@
 	H.STALUC = 10
 	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, skill, TRUE)
 	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, skill, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_JOURNEYMAN, TRUE)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	mask = /obj/item/clothing/mask/rogue/padded
 	head = /obj/item/clothing/head/roguetown/helmet/leather

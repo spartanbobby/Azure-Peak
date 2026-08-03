@@ -191,15 +191,15 @@ GLOBAL_LIST_INIT(drowraider_aggro, world.file2list("strings/rt/drowaggrolines.tx
 	H.STAWIL = 8
 	H.STAPER = 10
 	H.STAINT = 10
-	H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_APPRENTICE, TRUE)
 
 	if(prob(50))
 		var/voicepack_choice = rand(1, 4)
@@ -246,5 +246,5 @@ GLOBAL_LIST_INIT(drowraider_aggro, world.file2list("strings/rt/drowaggrolines.tx
 	H.STAWIL = 7
 	H.STAPER = 11
 	H.STAINT = 10
-	H.adjust_skillrank_up_to(/datum/skill/combat/bows, 4, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_EXPERT, TRUE)
 	H.upgrade_ai_controller(/datum/ai_controller/human_npc/archer)

@@ -143,15 +143,15 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 	H.STAPER = 8 //AIMING? Who needs that lame-ass shit? GRAGGAR GRAGGAR GRAGGAR!!
 	H.STAINT = 8 //Minimal req to use specials
 	H.STASTR = 14
-	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/maces, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/shields, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_APPRENTICE, TRUE)
 
 	H.dna.species.soundpack_m = GLOB.voice_packs[/datum/voicepack/male/warrior]
 	H.dna.species.soundpack_f = GLOB.voice_packs[/datum/voicepack/female/warrior]
@@ -186,7 +186,7 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 	H.STAPER = 11
 	H.STAINT = 8
 	H.STASTR = 12
-	H.adjust_skillrank_up_to(/datum/skill/combat/bows, 3, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_JOURNEYMAN, TRUE)
 	H.upgrade_ai_controller(/datum/ai_controller/human_npc/archer)
 
 /datum/outfit/job/roguetown/human/species/human/northern/searaider/archer/reaver/pre_equip(mob/living/carbon/human/H)
@@ -234,11 +234,11 @@ GLOBAL_LIST_INIT(searaider_aggro, world.file2list("strings/rt/searaideraggroline
 	H.STAWIL = 9
 	H.STAPER = 9
 	H.STAINT = 8
-	H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 4, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_MASTER, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_APPRENTICE, TRUE)
+	H.adjust_skillrank_up_to(/datum/skill/misc/climbing, SKILL_LEVEL_APPRENTICE, TRUE)
 	H.dna.species.soundpack_m = GLOB.voice_packs[/datum/voicepack/male/warrior]
 	H.dna.species.soundpack_f = GLOB.voice_packs[/datum/voicepack/female/warrior]
