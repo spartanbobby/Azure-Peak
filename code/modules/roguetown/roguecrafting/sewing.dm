@@ -26,7 +26,7 @@
 	name = "sash"
 	category = "Robes"
 	result = list(/obj/item/clothing/cloak/sash)
-	reqs = list(/obj/item/natural/cloth = 1)
+	reqs = list(/obj/item/natural/cloth = 2)
 	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/sewing/tiyon
