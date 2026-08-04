@@ -145,7 +145,7 @@
 	if(L)
 		prob2defend = prob2defend + (L.STASPD * 10)
 	if(U)
-		prob2defend = prob2defend - (U.STASPD * 10)
+		prob2defend = prob2defend - (U.STASPD * (U.mind ? 10 : 5))
 	if(I)
 		if(I.wbalance == WBALANCE_SWIFT && U.STASPD > L.STASPD) //nme weapon is quick, so they get a bonus based on spddiff
 			prob2defend = prob2defend - ( I.wbalance * ((U.STASPD - L.STASPD) * 10) )
@@ -194,6 +194,9 @@
 		if(!is_in_cone)
 			ignore_DE_bonus = TRUE
 
+		if(STASPD <= 9)
+			ignore_DE_bonus = TRUE
+
 		if(I && IL)	//Skilldiff applies extra stamloss, tentative
 			drained += (UH.get_skill_level(I.associated_skill) - H.get_skill_level(IL.associated_skill)) * 2
 
@@ -204,7 +207,7 @@
 				if(dodgetime <= CLICK_CD_FAST)
 					drained += (abs(round((CLICK_CD_HEAVY - dodgetime) / 2)))
 
-		if(has_trait && H.mind && !ignore_DE_bonus && H.STASPD > 10)
+		if(has_trait && H.mind && !ignore_DE_bonus)
 			prob2defend = 90	//We cap it out if we have Dodge Expert as a Player.
 
 		if(H.STASPD < U.STASPD)
