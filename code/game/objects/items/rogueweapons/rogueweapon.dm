@@ -212,3 +212,9 @@
 		playsound(src, 'sound/foley/equip/swordsmall1.ogg', 20, FALSE)
 
 	return
+
+/obj/item/rogueweapon/get_mechanics_examine(mob/user)
+	. = ..()
+	if(twirly)
+		var/twirlskill = twirly - ((associated_skill == /datum/skill/combat/arcyne) ? 1 : 0)
+		. += span_info("You can twirl this weapon by right-clicking it in your hand. Doing so safely requires [skill_to_string(twirlskill)] skills; anything less risks harming yourself.")
