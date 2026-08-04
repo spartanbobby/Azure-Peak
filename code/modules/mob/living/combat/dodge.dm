@@ -145,7 +145,13 @@
 	if(L)
 		prob2defend = prob2defend + (L.STASPD * 10)
 	if(U)
-		prob2defend = prob2defend - (U.STASPD * (U.mind ? 10 : 5))
+		var/dodgemod = 10
+		// This is to compensate for getting swarmed / flanked by simplemobs which can (somewhat)
+		// Occur more frequently. DE users will be able to dodge those a bit better even if DE
+		// Behaviour doesn't trigger.
+		if(has_trait && !U.mind && !UH)
+			dodgemod = 5
+		prob2defend = prob2defend - (U.STASPD * dodgemod)
 	if(I)
 		if(I.wbalance == WBALANCE_SWIFT && U.STASPD > L.STASPD) //nme weapon is quick, so they get a bonus based on spddiff
 			prob2defend = prob2defend - ( I.wbalance * ((U.STASPD - L.STASPD) * 10) )
