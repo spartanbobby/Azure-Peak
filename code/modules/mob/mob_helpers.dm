@@ -857,14 +857,16 @@
 /mob/proc/select_organ_slot(choice)
 	organ_slot_selected = choice
 
+// Must stay the exact inverse of aimheight_change()'s table. Any drift and clicking a zone
+// on the HUD then scrolling the aim wheel jumps to a different limb than the one shown.
 /mob/proc/select_zone(choice)
 	zone_selected = choice
 	switch(choice)
-		if(BODY_ZONE_PRECISE_SKULL)
-			aimheight = 19
-		if(BODY_ZONE_PRECISE_EARS)
-			aimheight = 18
 		if(BODY_ZONE_HEAD)
+			aimheight = 19
+		if(BODY_ZONE_PRECISE_SKULL)
+			aimheight = 18
+		if(BODY_ZONE_PRECISE_EARS)
 			aimheight = 17
 		if(BODY_ZONE_PRECISE_R_EYE)
 			aimheight = 16
@@ -884,17 +886,17 @@
 			aimheight = 9
 		if(BODY_ZONE_R_ARM)
 			aimheight = 8
-		if(BODY_ZONE_PRECISE_R_HAND)
-			aimheight = 7
 		if(BODY_ZONE_L_ARM)
+			aimheight = 7
+		if(BODY_ZONE_PRECISE_R_HAND)
 			aimheight = 6
 		if(BODY_ZONE_PRECISE_L_HAND)
 			aimheight = 5
 		if(BODY_ZONE_R_LEG)
 			aimheight = 4
-		if(BODY_ZONE_PRECISE_R_FOOT)
-			aimheight = 3
 		if(BODY_ZONE_L_LEG)
+			aimheight = 3
+		if(BODY_ZONE_PRECISE_R_FOOT)
 			aimheight = 2
 		if(BODY_ZONE_PRECISE_L_FOOT)
 			aimheight = 1
