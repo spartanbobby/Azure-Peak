@@ -361,6 +361,7 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(
 #define BAD_GUARD_FATIGUE_DRAIN 20 //Percentage of your green bar lost on letting a guard expire.
 #define EXPOSED_INTEG_MOD 2.5	//Multiplier for melee integrity / simple-mob damage if we hit an Exposed target.
 #define VULN_INTEG_MOD 1.3		//Multiplier for melee integrity / simple-mob damage if we hit a Vulnerable target.
+#define EXPOSED_CAST_LOCKOUT 4 SECONDS	// Cap on how long Exposed can deny casting
 #define BASE_RCLICK_CD 30 SECONDS
 #define BAIT_RCLICK_CD 20 SECONDS
 #define BIND_CD 15 SECONDS
@@ -421,7 +422,7 @@ Medical defines
 #define CONSTITUTION_BLEEDRATE_MOD 0.05	//How much slower we'll be bleeding for every CON point. 0.1 = 10% slower.
 #define CONSTITUTION_BLEEDRATE_CAP 20	//The CON value up to which we get a bleedrate reduction.
 
-#define WILLPOWER_STARTING_STAMINA 135	//Starting stamina (green bar) value. Before major changes this would represent Expert Athletics + ~11.5 WIL 
+#define WILLPOWER_STARTING_STAMINA 135	//Starting stamina (green bar) value. Before major changes this would represent Expert Athletics + ~11.5 WIL
 #define WILLPOWER_MODIFIER	5	//How much stamina (flat value) we gain (or lose) for every WIL above / below 10.
 
 #define SPEED_MOVSPD_MOD 0.075	//Multiplicative modifier for our speed, per point (for both <10 and >10 values)
@@ -435,7 +436,7 @@ Medical defines
 #define CRIT_ARMOUR_THRESHOLD 0.35 // ratio of obj_integrity and max_integrity for zone armour. Beyond this, crits are prevented.
 
 /*
-	Critical Resistance Defines 
+	Critical Resistance Defines
 */
 // Normal classes are guaranteed 4 resists, NPC 1, noblood / revenant 1
 #define CRIT_RESISTANCE_STACKS_PLAYER 4
