@@ -71,6 +71,11 @@ without going through the click pipeline, so spells can deliver weapon-style str
 	if(!skip_animation)
 		user.do_attack_animation(target, visual_effect, weapon, item_animation_override = anim_type)
 
+	var/datum/status_effect/buff/clash/limbguard/LG = target.has_status_effect(/datum/status_effect/buff/clash/limbguard)
+	if(LG?.is_active && LG.protected_zone == def_zone && user != target)
+		LG.process_attack(target, target, user, weapon, def_zone)
+		return 0
+
 	// Optional shield check — blocked like a projectile (shield takes 25% as integrity damage).
 	if(allow_shield_check && ishuman(target))
 		var/mob/living/carbon/human/H = target
