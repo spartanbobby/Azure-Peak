@@ -148,7 +148,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/regenerating/proc/setup_auto_repair()
 	repair_time = (max_integrity / auto_repair_mode_base) * auto_repair_mode_time
-	
+
 	// Ensure relative mode is on to respect the new calculated repair_time
 	relative_repair_mode = TRUE
 	auto_repair_mode_triggered = TRUE
@@ -197,18 +197,6 @@
 	</br>Happiness must be fought for."
 	armor = ARMOR_PADDED
 	max_integrity = 400
-	repair_time = 20 SECONDS
-
-/obj/item/clothing/suit/roguetown/armor/regenerating/skin/iconoclast
-	name = "dragon's skin"
-	desc = "We passed upon the stair, we spoke of was and when.</br> \
-	Although I wasn't there, he said I was his friend.</br> \
-	Which came as some surprise. I spoke into his eyes.</br> \
-	I thought you died alone, a long, long time ago.</br> \
-	Oh no, not me, I never lost control.</br> \
-	You're face to face, with the man who sold the world."
-	armor = ARMOR_DRAGONSKIN
-	max_integrity = 450
 	repair_time = 20 SECONDS
 
 /obj/item/clothing/suit/roguetown/armor/regenerating/skin/easttats
