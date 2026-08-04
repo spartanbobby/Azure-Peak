@@ -200,7 +200,7 @@
 		if(!is_in_cone)
 			ignore_DE_bonus = TRUE
 
-		if(STASPD <= 9)
+		if(L.STASPD <= 9)
 			ignore_DE_bonus = TRUE
 
 		if(I && IL)	//Skilldiff applies extra stamloss, tentative
