@@ -44,7 +44,7 @@
 /datum/action/cooldown/spell/zizo/snuff_lights
 	name = "Snuff Lights"
 	desc = "Extinguish most light sources within 2 range. For 5 seconds, you will also hone your Darksight. Both effects scale up from Miracle skill."
-	fluff_desc = "Flame, light, purity... all arrogant lies of the living. Wretched falsehoods peddled by the Ten to keep mortals fearful of the dark. They are intrusions; frail comforts that convince men they are safe from what waits beyond their sight. Zizo's first revelation was simple: light is not needed to see. Truth does not shine. It festers in the dark, waiting for those willing to behold it."
+	fluff_desc = "Flame, light, purity... all arrogant lies of the Living. Wretched falsehoods peddled by the Ten to keep mortals fearful of the dark. They are intrusions; frail comforts that convince men they are safe from what waits beyond their sight. Zizo's first revelation was simple: light is not needed to see. Truth does not shine. It festers in the dark, waiting for those willing to behold it."
 	button_icon_state = "snufflight"
 	associated_stat = null
 	charge_required = FALSE
@@ -112,6 +112,124 @@
 	REMOVE_TRAIT(owner, TRAIT_NITEVISION, "snuff_lights")
 	owner.update_sight()
 
+/////////////////////////////////
+// T1 - Zizo Miracle Selection //
+/////////////////////////////////
+
+/datum/action/cooldown/spell/zizo/stripknowledgeorprofane
+	name = "Means of Progress"
+	desc = "Choose between Zizo's Knowledge at the price of your sanity and perception (Insight), or Zizo's Power for offensively embedding bone lances into victims at range (Profane Bone)."
+	fluff_desc = "There is always a cost to Progress, if there's anything every follower of Zizo knows; 'Progress commands sacrifice'."
+	button_icon_state = "firstspellpack"
+
+	click_to_activate = FALSE
+	cast_range = SPELL_RANGE_ADJACENT
+
+	primary_resource_cost = SPELLCOST_MIRACLE_MINOR
+
+	secondary_resource_cost = SPELLCOST_MINOR_PROJECTILE
+
+	invocation_type = INVOCATION_NONE //It has seperate message ON USE
+
+	charge_required = FALSE
+	cooldown_time = 10 SECONDS//Does not matter it's single use
+
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z
+
+	var/chosen_spell
+	var/zizo_stripknowledge = /datum/action/cooldown/spell/zizo/stripknowledge
+	var/zizo_profane = /datum/action/cooldown/spell/projectile/zizo/profane
+	var/choosingspell = FALSE
+
+/datum/action/cooldown/spell/zizo/stripknowledgeorprofane/cast(atom/cast_on)
+	. = ..()
+	if(choosingspell == TRUE)
+		to_chat(owner, span_warning("I'm already choosing a spell!"))
+	else
+		var/choice = chosen_spell
+		choosingspell = TRUE
+		if(!chosen_spell)
+			choice = alert(owner, "What shalt you take from them? Knowledge or Lyfe", "PROGRESS COMMANDS SACRIFICE", "Knowledge - Strip Wisdom", "Lyfe - Profane Bone")
+			chosen_spell = choice
+		switch(choice)
+			if("Knowledge - Strip Wisdom")
+				owner.mind?.AddSpell(new zizo_stripknowledge, owner)
+				owner.mind?.RemoveSpell(src.type)
+			if("Lyfe - Profane Bone")
+				owner.mind?.AddSpell(new zizo_profane, owner)
+				owner.mind?.RemoveSpell(src.type)
+			else
+				return FALSE
+
+///////////////////////
+// T1 - Strip Wisdom. //
+///////////////////////
+// Reverse-enlightenment, as a twisted mockery of Noc's miracle. This one debuffs the int of whoever you cast it upon. -2 to be precise. sire.
+
+/datum/action/cooldown/spell/zizo/stripknowledge
+	name = "Strip Wisdom"
+	desc = "Invoke Zizo's will onto a target, stripping their unworthy knowledge and dulling their mynd."
+	fluff_desc = "Truth, Inzanity, Progress, the Absolute mandate of her Design. It is a difficult matter for the ignorant masses to even comprehend the means, but even Zizo knows not all are beyond the grasp of her ultimate truth, no matter how much they deny it."
+	button_icon_state = "stripknowledge"
+	sound = 'sound/magic/baotha_blessdrink.ogg'
+	glow_intensity = GLOW_INTENSITY_LOW
+
+	cast_range = SPELL_RANGE_GROUND
+	self_cast_possible = FALSE
+
+	primary_resource_cost = 30 //slightly more expensive vs profane
+	secondary_resource_cost = 20
+
+	invocations = list("Zizo! Zizo! Strip away this unworthy mynd!") //Slightly louder whisper than Noc
+	invocation_type = INVOCATION_WHISPER
+
+	spell_flags = SPELL_PSYDON
+
+	charge_required = TRUE
+	charge_time = 1 SECONDS
+	charge_slowdown = CHARGING_SLOWDOWN_SMALL
+	charge_sound = 'sound/magic/chargingold.ogg'
+	cooldown_time = 2 MINUTES
+
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z
+
+/datum/action/cooldown/spell/zizo/stripknowledge/cast(atom/cast_on)
+	. = ..()
+	var/mob/living/carbon/human/H = owner
+	if(!istype(H))
+		return FALSE
+
+	if(!isliving(cast_on))
+		to_chat(H, span_warning("That is not a valid target!"))
+		return FALSE
+
+	if(HAS_TRAIT(cast_on, TRAIT_DEADITE)) //unique funny easter egg for deadites
+		to_chat(H, span_warning("My target lacks any signs of intelligence to strip!"))
+		return FALSE
+
+	var/mob/living/spelltarget = cast_on
+
+	H.visible_message("[H] mutters a profane incantation and [spelltarget]'s glint of intelligence dulls'.")
+	spelltarget.apply_status_effect(/datum/status_effect/buff/zizo_knowledge)
+	spelltarget.add_stress(/datum/stressevent/zizo_knowledge)
+	return TRUE
+
+/atom/movable/screen/alert/status_effect/buff/zizo_knowledge
+	name = "Stripped Knowledge"
+	desc = "Profane magic is hindering my intelligence."
+	icon_state = "stripknowledge"
+
+/datum/status_effect/buff/zizo_knowledge
+	id = "zizo_knowledge"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/zizo_knowledge
+	duration = 2 MINUTES
+	effectedstats = list(STATKEY_INT = -2)
+
+/datum/stressevent/zizo_knowledge
+	timer = 2 MINUTES
+	stressadd = 3
+	desc = span_red("I feel a shiver down my spine as unnatural magicka dulls my mynd.")
+
 ////////////////
 //T1 - PROFANE//
 ////////////////
@@ -126,6 +244,8 @@
 	secondary_resource_cost = 15
 	charge_required = FALSE
 	cooldown_time = 30 SECONDS
+
+	spell_flags = SPELL_PSYDON
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN
 
 /obj/item/bone/profane_splinter
@@ -319,11 +439,78 @@
 	associated_skill = /datum/skill/magic/holy
 	primary_resource_cost = 100
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN
+	charge_sound = 'sound/magic/chargingold.ogg'
 
-// T3: Rituos - Zizo's Lesser Work. A single painful ritual that grants the caster a choice:
+
+///////////////////////
+// T4 - Bewstow Chant //
+///////////////////////
+// Give any fellow Zizo worshipper the ability to speak and understand Zizocant. Exclusive to antagonists at T4, soft or converted acolytes (if clergy somehow convert to Zizo).
+
+/datum/action/cooldown/spell/zizo/bestowcant
+	name = "Bestow Zizocant"
+	desc = "Bestow the forbidden tongue of Zizo's chant, requires a semi-lengthy ritual and a fellow Cabalist of Zizo's faith. You must remain still during the ritual."
+	fluff_desc = "A tongue known to the initated of Zizo's Cabal, as well as the reanimated by those whom serve in her name. To the ignorant it is but gibberish with an eerie resemblance to the elven tongue; but to the enlightened it is a hallowed tongue reborn from the reminants of all that were lost."
+	button_icon_state = "zizocant"
+	sound = 'sound/magic/baotha_blessdrink.ogg'
+	glow_intensity = GLOW_INTENSITY_LOW
+
+	cast_range = 2 //We want to be very close, no sniping people with Zizospeak.
+	self_cast_possible = FALSE //Use rituos, she COMMANDS sacrifice.
+
+	primary_resource_cost = 75
+	secondary_resource_cost = 30
+
+	invocation_type = INVOCATION_NONE
+
+	charge_required = TRUE
+	charge_time = 5 SECONDS
+	charge_slowdown = CHARGING_SLOWDOWN_HEAVY
+	charge_sound = 'sound/magic/chargingold.ogg'
+	cooldown_time = 1 MINUTES
+
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z | SPELL_REQUIRES_NO_MOVE
+
+/datum/action/cooldown/spell/zizo/bestowcant/cast(atom/cast_on)
+	. = ..()
+	var/mob/living/carbon/human/H = owner
+	if(!istype(H))
+		return FALSE
+
+	if(!isliving(cast_on))
+		to_chat(H, span_warning("That is not a valid target!"))
+		return FALSE
+
+	var/mob/living/spelltarget = cast_on
+
+	if(spelltarget != H && !HAS_TRAIT(spelltarget, TRAIT_CABAL))
+		to_chat(H, span_warning("They do not hold Zizo's blessing! The rites reject them!"))
+		return FALSE
+
+	if(spelltarget != H && HAS_TRAIT(spelltarget, TRAIT_CABAL))
+		to_chat(H, span_warning("I bestow Zizo's sacred tongue upon [spelltarget]!"))
+		to_chat(spelltarget, span_warning("A strange chant settles into familarity in my mind. I can use ,W to speak Zizo's tongue, however its best I do so carefully as to not draw attention."))
+		spelltarget.grant_language(/datum/language/undead)
+	return TRUE
+
+//Lich has cost-free version. So they can recruit people proper.
+/datum/action/cooldown/spell/zizo/bestowcant/lich
+	primary_resource_type = SPELL_COST_ENERGY //just so we hop off the devotion system.
+	primary_resource_cost = 30
+	associated_skill = /datum/skill/magic/arcane
+	required_items = null
+
+///////////////////
+// T3 - Rituos  //
+///////////////////
+// - Zizo's Lesser Work. A single painful ritual that grants the caster a choice:
+
 // Progress: Arcyne knowledge (2 minor aspects, 4 utilities). No skeletonization. -- Kunai: I made this more distinctive from Undeath, now it also gives you some traits to give a better progress vibe.
-// Unlife: Full skeletonization + MOB_UNDEAD, grants bonechill and raise_deadite directly. -- Kunai: We already have raise_deadite, so it's a moot point to give them the Necromancer version of it. Just gave them bonemend and a few more traits to give the vibe of a 'half-lich'.
+// Unlife: Full skeletonization (minus head) + MOB_UNDEAD, grants bonechill and raise_deadite. -- Kunai: We already have raise_deadite, so it's a moot point to give them the Necromancer version of it. Just gave them bonemend and a few more traits to give the vibe of a 'half-lich'.
 // Both paths grant undead language and TRAIT_ARCYNE. One-time use - cannot be cast again after completion.
+
+//SOEP -- Undeath gets: miracle-raise undead, bone catacalysm + raise deadite + classic undeath traits. Offensive varient w/ silver weakness and stamina-control for functional immortality.
+//SOEP -- Progress gets: rapid skill leveling, ability to consume lux into health and stamina, more utility points for casting. Defensive varient w/ focus on talent and assistance.
 
 /datum/action/cooldown/spell/zizo/rituos
 	name = "Rituos"
@@ -395,7 +582,8 @@
 	exploit_this = FALSE
 	return TRUE
 
-/// T3: Bone Cataclysm - Pretty much pops your summons into sad remains of their former selves. Shouldn't do a lot of damage, but it frags someone with bone splinters if they're close enough.
+
+/// T? - Undeath Path: Bone Cataclysm - Pretty much pops your summons into sad remains of their former selves. Shouldn't do a lot of damage, but it frags someone with bone splinters if they're close enough.
 /datum/action/cooldown/spell/zizo/bone_cataclysm
 	name = "Bone Cataclysm"
 	desc = "Detonate all of your nearby skeletons in a wave of profane bone shrapnel. You and Gravemarked allies will not be harmed by it.<br><br>If used outside Combat Mode, you will disintegrate them and restore your energy."
@@ -591,10 +779,66 @@
 	)
 
 	playsound(T, 'sound/magic/swap.ogg', 50, TRUE)
-	caster.energy_add(100)
+	caster.energy_add(120)
 	caster.stamina_add(-50)
 
 	new /obj/item/ash(T)
 	new /obj/item/ash(T)
 
 	qdel(S)
+
+// RAISE LESSER SKELETON (T?) - Undeath path: The new 'main' Zizo undeath-raising skill. Summon's durability scales from Miracle skill. Granted W/ Undeath Rituos
+/datum/action/cooldown/spell/raise_undead_formation/zizo
+	name = "Raise Lesser Skeleton"
+	desc = "Invoke raw Enochian magicka to bind loose bones into a simple skeletal thrall. Its crude physiology is held together purely by magic; unable to be incapacitated, it shall stand until it crumbles into spare bones. It is also simpler to control, so you can order it to move, guard or attack manually."
+	fluff_desc = "The faithful of Zizo do not raise the dead, they mock life by proving how little of it is truly required. Flesh decays, thought falters, and souls flee screaming into the arms of Necra, yet bone remains obedient. Through the language of ancient Enochian words of power, scattered remains are lashed together into a parody of mortal form, animated not by purpose or memory, but by the simple joy of defying the natural order."
+	background_icon = 'icons/mob/actions/zizomiracles.dmi'
+	button_icon = 'icons/mob/actions/zizomiracles.dmi'
+	button_icon_state = "skeleton"
+	spell_color = GLOW_COLOR_ZIZO
+	primary_resource_cost = 60
+	secondary_resource_cost = 40
+	charge_required = TRUE
+	weapon_cast_penalized = TRUE
+	charge_time = 2 SECONDS
+	hold_drain = 1
+	charge_slowdown = CHARGING_SLOWDOWN_SMALL
+	charge_sound = 'sound/magic/chargingold.ogg'
+	cooldown_time = 30 SECONDS
+	cabal_affine = TRUE
+	miracle = TRUE
+	to_spawn = 1
+	invocation_type = null
+	invocations = null
+	associated_skill = /datum/skill/magic/holy
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN
+
+//Reskin + Flavor of diagnose spell w/ some different flavor. Used for Necromancers/Lich.
+/obj/effect/proc_holder/spell/invoked/diagnose/secular/zizo
+	name = "Arcane Diagnosis"
+	desc = "A highly-practiced reading of the body's humors and hidden ailments performed afar with left-handed magicks. Reveals a target's condition, with greater skill in medicine granting deeper detail. By embedding a Forceps on your patient, you may even identify substances within the blood; but even the most unskilled physicker can tell from a Cheele or Leech's reactions."
+	overlay_icon = 'icons/mob/actions/zizomiracles.dmi'
+	action_icon = 'icons/mob/actions/zizomiracles.dmi'
+	range = SPELL_RANGE_GROUND //Longer than regular diagnosis range. Progress Baby!
+	antimagic_allowed = FALSE //Arcane, duh.
+
+// Diagnosis (T?) - Progress Path: Reflavored version of Pestra's diagnosis, it basically does what you'd expect. Has a highly inefficent cost for some unique perks like extra range.
+/obj/effect/proc_holder/spell/invoked/diagnose/zizo
+	name = "Profane Diagnosis"
+	desc = "Call upon Enochian magicka and Zizo's stolen medical knowledge to read the body's humors and hidden ailments at a sizable distance. Reveals a target's condition with perfect clarity. To perceive one's blood content, all you'll need is but an incision."
+	overlay_icon = 'icons/mob/actions/zizomiracles.dmi'
+	action_icon = 'icons/mob/actions/zizomiracles.dmi'
+	range = SPELL_RANGE_GROUND //Longer than regular diagnosis range. Progress Baby!
+	devotion_cost = 15 //Significantly more expensive (3x)
+
+// Enochian Analyze (T?) - Progress Path: A long-range miracle version of the spell engineering goggles give you, Progress Baby!
+/obj/effect/proc_holder/spell/invoked/engineeranalyze/zizo
+	desc = "Examine a structure's details through invoking Enochian magicka to see the world through Zizo's design without the need of specialised tools, close or afar."
+	overlay_icon = 'icons/mob/actions/zizomiracles.dmi'
+	action_icon = 'icons/mob/actions/zizomiracles.dmi'
+	range = SPELL_RANGE_GROUND
+	invocation_type = "none"
+	associated_skill = /datum/skill/magic/holy
+	antimagic_allowed = TRUE
+	miracle = TRUE
+	devotion_cost = 15 //Progress
