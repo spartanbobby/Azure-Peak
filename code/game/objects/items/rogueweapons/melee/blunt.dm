@@ -1298,7 +1298,6 @@
 	minstr = 8
 	max_integrity = 350
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
 	swingsound = BLUNTWOOSH_LARGE
 	gripsprite = TRUE
 	wlength = WLENGTH_LONG
