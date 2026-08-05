@@ -161,6 +161,8 @@ GLOBAL_LIST_INIT(skeleton_aggro, list(
 /mob/living/carbon/human/species/skeleton/conjured/after_creation()
 	..()
 
+	patron = /datum/patron/inhumen/zizo
+
 	AddComponent(/datum/component/ai_aggro_system)
 
 	job = "Lesser Skeleton"
@@ -168,6 +170,7 @@ GLOBAL_LIST_INIT(skeleton_aggro, list(
 	ADD_TRAIT(src, TRAIT_DUSTABLE, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_DUST_DELETE_GEAR, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_DUALWIELDER, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_CABAL, TRAIT_GENERIC)
 
 	var/datum/component/conjured_minion/minion = GetComponent(/datum/component/conjured_minion)
 	var/mob/living/master = minion?.summoner_ref?.resolve()
@@ -179,6 +182,9 @@ GLOBAL_LIST_INIT(skeleton_aggro, list(
 		faction = list("[master.real_name]_faction")
 		apply_fellowship_faction(master, src)
 		faction -= FACTION_UNDEAD
+		faction -= FACTION_SKELETON
+		faction -= FACTION_DUNDEAD
+		faction -= "Skeleton_faction"
 
 	switch(loadout)
 		if("sword_shield")

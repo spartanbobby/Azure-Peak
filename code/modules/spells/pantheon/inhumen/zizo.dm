@@ -787,32 +787,6 @@
 
 	qdel(S)
 
-// RAISE LESSER SKELETON (T?) - Undeath path: The new 'main' Zizo undeath-raising skill. Summon's durability scales from Miracle skill. Granted W/ Undeath Rituos
-/datum/action/cooldown/spell/raise_undead_formation/zizo
-	name = "Raise Lesser Skeleton"
-	desc = "Invoke raw Enochian magicka to bind loose bones into a simple skeletal thrall. Its crude physiology is held together purely by magic; unable to be incapacitated, it shall stand until it crumbles into spare bones. It is also simpler to control, so you can order it to move, guard or attack manually."
-	fluff_desc = "The faithful of Zizo do not raise the dead, they mock life by proving how little of it is truly required. Flesh decays, thought falters, and souls flee screaming into the arms of Necra, yet bone remains obedient. Through the language of ancient Enochian words of power, scattered remains are lashed together into a parody of mortal form, animated not by purpose or memory, but by the simple joy of defying the natural order."
-	background_icon = 'icons/mob/actions/zizomiracles.dmi'
-	button_icon = 'icons/mob/actions/zizomiracles.dmi'
-	button_icon_state = "skeleton"
-	spell_color = GLOW_COLOR_ZIZO
-	primary_resource_cost = 60
-	secondary_resource_cost = 40
-	charge_required = TRUE
-	weapon_cast_penalized = TRUE
-	charge_time = 2 SECONDS
-	hold_drain = 1
-	charge_slowdown = CHARGING_SLOWDOWN_SMALL
-	charge_sound = 'sound/magic/chargingold.ogg'
-	cooldown_time = 30 SECONDS
-	cabal_affine = TRUE
-	miracle = TRUE
-	to_spawn = 1
-	invocation_type = null
-	invocations = null
-	associated_skill = /datum/skill/magic/holy
-	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN
-
 //Reskin + Flavor of diagnose spell w/ some different flavor. Used for Necromancers/Lich.
 /obj/effect/proc_holder/spell/invoked/diagnose/secular/zizo
 	name = "Arcane Diagnosis"
