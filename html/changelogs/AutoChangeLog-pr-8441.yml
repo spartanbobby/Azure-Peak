@@ -1,0 +1,4 @@
+author: "borneblood"
+delete-after: True
+changes:
+  - bugfix: "Fixed a bunch of oddities in Dual Wielder. Report any oddities remaining."
