@@ -8,7 +8,7 @@
 	button_icon = 'icons/mob/actions/mage_cryomancy.dmi'
 	name = "Verglas"
 	desc = "Lay a 7x7 patch of treacherous ice; anyone who steps onto it slides in the direction they were moving until they run off. \
-	Use the Alt Mode keybind to switch between Lay (cast and forget), Hold (maintained by concentration for as long as you like, but shattered the instant you are struck or cast another spell), or Skate (as Hold, but only a small area under you, which follows you so long as you do not lose concentration. Note: be ready to move quickly after you cast this!)."
+	Use the Alt Mode keybind to switch between Lay (cast and forget), Hold (maintained by concentration for as long as you like, but shattered the instant you are struck or cast another spell), or Skate (as Hold, but only a small area under you, which follows you so long as you do not lose concentration or stop moving. Note: be ready to move quickly after you cast this!)."
 	button_icon_state = "snap_freeze"
 	sound = 'sound/spellbooks/crystal.ogg'
 	spell_color = GLOW_COLOR_ICE
