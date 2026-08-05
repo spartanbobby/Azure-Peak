@@ -559,8 +559,9 @@ There are several things that need to be remembered:
 
 			//add sleeve overlays, then offset
 			var/list/sleeves = list()
-			if(wear_wrists.sleeved && armsindex > 0 && !should_hide_sleeves_for_layer(WRISTSLEEVE_LAYER))
-				sleeves = get_sleeves_layer(wear_wrists,armsindex,WRISTSLEEVE_LAYER)
+			var/wristsleevelayer = (wear_wrists.alternate_worn_layer == OVER_GLOVES_LAYER) ? OVER_GLOVES_LAYER : WRISTSLEEVE_LAYER
+			if(wear_wrists.sleeved && armsindex > 0 && !should_hide_sleeves_for_layer(wristsleevelayer))
+				sleeves = get_sleeves_layer(wear_wrists,armsindex,wristsleevelayer)
 
 			if(sleeves)
 				for(var/mutable_appearance/S as anything in sleeves)
@@ -1118,7 +1119,6 @@ There are several things that need to be remembered:
 	remove_overlay(CLOAK_LAYER)
 	remove_overlay(CLOAK_BEHIND_LAYER)
 	remove_overlay(TABARD_LAYER)
-	remove_overlay(UNDER_ARMOR_LAYER)
 
 	var/obj/item/bodypart/taur/taur = get_taur_tail()
 	var/icon/c_mask = taur?.clip_mask
@@ -1158,17 +1158,16 @@ There are several things that need to be remembered:
 					cloak_overlay.pixel_y += dna.species.offset_features[OFFSET_CLOAK_F][2]
 			if(cloak.alternate_worn_layer == TABARD_LAYER)
 				overlays_standing[TABARD_LAYER] = cloak_overlay
-			if(cloak.alternate_worn_layer == UNDER_ARMOR_LAYER)
-				overlays_standing[UNDER_ARMOR_LAYER] = cloak_overlay
 			if(cloak.alternate_worn_layer == CLOAK_BEHIND_LAYER)
 				overlays_standing[CLOAK_BEHIND_LAYER] = cloak_overlay
-			if(!cloak.alternate_worn_layer)
+			if(!cloak.alternate_worn_layer || cloak.alternate_worn_layer == UNDER_ARMOR_LAYER)
 				cloaklays += cloak_overlay
 
 			//add sleeve overlays, then offset
 			var/list/cloaksleeves = list()
 			if(cloak.sleeved)
-				cloaksleeves = get_sleeves_layer(cloak,0,CLOAK_LAYER)
+				var/sleevelayer = (cloak.alternate_worn_layer == UNDER_ARMOR_LAYER) ? UNDER_ARMOR_LAYER : CLOAK_LAYER
+				cloaksleeves = get_sleeves_layer(cloak,0,sleevelayer)
 
 			if(length(cloaksleeves))
 				for(var/mutable_appearance/S as anything in cloaksleeves)
@@ -1234,7 +1233,6 @@ There are several things that need to be remembered:
 	apply_overlay(TABARD_LAYER)
 	apply_overlay(CLOAK_BEHIND_LAYER)
 	apply_overlay(CLOAK_LAYER)
-	apply_overlay(UNDER_ARMOR_LAYER)
 
 /mob/living/carbon/human/update_inv_shirt()
 	remove_overlay(SHIRT_LAYER)
@@ -1486,7 +1484,7 @@ There are several things that need to be remembered:
 	var/armor_icon_state = skin_armor.icon_state
 	if(!(src.mobility_flags & MOBILITY_STAND))
 		armor_icon_state = "[skin_armor.icon_state]_down"
-	
+
 	var/mutable_appearance/armor_overlay = mutable_appearance(skin_armor.icon, armor_icon_state, layer = ARMOR_LAYER)
 
 	overlays_standing[ARMOR_LAYER] = armor_overlay
@@ -2000,7 +1998,7 @@ generate/load female uniform sprites matching all previously decided variables
 			new_limbs += BP.get_limb_icon(hideaux = hiden)
 		else
 			new_limbs += BP.get_limb_icon()
-	
+
 	if(isooze(src))
 		for(var/image/limb_alpha in new_limbs)
 			limb_alpha.alpha = 180
