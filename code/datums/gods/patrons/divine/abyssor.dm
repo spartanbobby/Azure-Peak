@@ -25,7 +25,9 @@
 	titles = list(
 		"Dreamer",
 		"Forgotten One",
-		"Abysawa"
+		"Abysawa",
+		"Aiboshen", // lingyue
+		"Deepfather" // used by painter content
 	)
 
 	storyteller = /datum/storyteller/abyssor
