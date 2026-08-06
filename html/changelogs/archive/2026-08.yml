@@ -164,3 +164,13 @@
       not have any orientalist implication to it.
   changelingonberry:
   - admin: custom descriptors now display in the player panel
+2026-08-06:
+  Ketrai:
+  - bugfix: fixed hunting tracks spawning on lava & water tiles
+  Ryan180602:
+  - bugfix: hair pixel layering
+  borneblood:
+  - bugfix: Fixed a bunch of oddities in Dual Wielder. Report any oddities remaining.
+  - refactor: Zizo skeleton summoning is fixed (again x6) by reworking the spell.
+  - rscdel: The new Zizo spells have been reverted temporarily for reorganization
+      purposes, they'll be back shortly.
