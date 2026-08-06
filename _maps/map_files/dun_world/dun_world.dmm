@@ -74039,12 +74039,6 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/inq/office)
-"nSi" = (
-/obj/machinery/light/rogue/campfire/fireplace{
-	pixel_x = 16
-	},
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/town/roofs)
 "nSl" = (
 /obj/structure/table/wood/poor,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
@@ -525574,7 +525568,7 @@ bGf
 bGf
 bGf
 bGf
-nSi
+bGf
 bGf
 bGf
 bGf
