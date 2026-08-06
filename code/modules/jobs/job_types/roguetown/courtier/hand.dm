@@ -292,10 +292,15 @@
 	if(!current_agent) // display a table-of-contents menu
 		var/HTML = {"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
 			<html><head><style type=\"text/css\">
-			body { background-image:url('book.png');background-repeat: repeat; }</style></head><body scroll=yes><h2 style='margin: 4px; padding:0px;'>Hand's Files: Agents of the Court</h2><hr/><b>Current agents:</b>"}
+			body { background-image:url('book.png');background-repeat: repeat; }</style></head><body scroll=yes><div style='
+			font-family: Georgia, Times New Roman, serif;
+			padding: 16px;
+			max-width: 800px;
+			margin: auto;
+			color: black;'><h2 style='margin: 4px; padding:0px;'>Hand's Files: Agents of the Court</h2><hr/><b>Current agents:</b>"}
 		for(var/realname in GLOB.court_agents)
 			HTML += "<br><a href='?src=[REF(src)];agent=[realname]'>[realname]</a>"
-		HTML += "<a href='?src=[REF(src)];close=1' style='position:absolute;right:15px;bottom:15px'>Close</a></body></html>"
+		HTML += "<a href='?src=[REF(src)];close=1' style='position:absolute;right:15px;bottom:15px'>Close</a></div></body></html>"
 		user << browse(HTML, "window=hand_files;size=550x450;can_resize=1")
 	else
 		var/mob/living/carbon/human/agent = GLOB.court_agents[current_agent]
@@ -316,12 +321,18 @@
 		var/HTML = {"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
 			<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type=\"text/css\">
 					body { background-image:url('book.png');background-repeat: repeat; color: #14103f}</style></head><body scroll=yes>
+					<div style='
+			font-family: Georgia, Times New Roman, serif;
+			padding: 16px;
+			max-width: 800px;
+			margin: auto;
+			color: black;'>
 					<h2 style='margin: 4px; padding:0px;'>Agent File: [current_agent]</h2><hr>
 			<b>Agent Name:</b> [current_agent]<br/>[codename ? "<b>Codename:</b> [codename]<br/>":""][(descriptor_name!= " ") ? "<b>Appearance:</b> [descriptor_name]<br/>" : ""]<b>Profession:</b> [agent.get_role_title()]
 			<hr/>
 			[hand_notes_html]
 			<hr/>
-			<a href='?src=[REF(src)];back=1' style='position:absolute;left:15px;bottom:15px'>Back</a><a href='?src=[REF(src)];close=1' style='position:absolute;right:15px;bottom:15px'>Close</a></body></html>"}
+			<a href='?src=[REF(src)];back=1' style='position:absolute;left:15px;bottom:15px'>Back</a><a href='?src=[REF(src)];close=1' style='position:absolute;right:15px;bottom:15px'>Close</a></div></body></html>"}
 
 		user << browse(HTML, "window=hand_files;size=550x450;can_resize=1")
 
