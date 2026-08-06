@@ -16,28 +16,19 @@
 	townie_contract_gate_exempt = TRUE
 	class_setup_examine = FALSE
 	has_subprefs = TRUE
+	default_subprefs = list("codename" = null, "hand_file_notes" = null, "hand_file_notes_raw" = null)
 
 /datum/job/roguetown/adventurer/courtagent/Topic(href, list/href_list)
 	var/client/C = usr.client
-	if(!C)
+	if(!C || !C.prefs)
 		return
-	var/datum/preferences/prefs = C.prefs
-	if(!prefs)
-		return
-	if(!prefs.job_subprefs || !islist(prefs.job_subprefs))
-		prefs.job_subprefs = list()
-	if(!prefs.job_subprefs[title])
-		prefs.job_subprefs[title] = list("codename" = null, "hand_file_notes" = null, "hand_file_notes_raw" = null)
-	var/list/subprefs = prefs.job_subprefs[title]
+	var/list/subprefs = get_roleprefs(C)
 	if(href_list["codename"])
 		subprefs["codename"] = tgui_input_text(usr, "By what are you addressed?", "CODENAME", subprefs["codename"], MAX_NAME_LEN)
 		update_subprefs_window(usr)
 	if(href_list["hand_file_notes"])
 		subprefs["hand_file_notes_raw"] = tgui_input_text(usr, "What does your file say?", "THY DEEDS ARE KNOWN", subprefs["hand_file_notes_raw"], multiline = TRUE, encode = FALSE)
 		subprefs["hand_file_notes"] = parsemarkdown(subprefs["hand_file_notes_raw"], usr)
-		update_subprefs_window(usr)
-	if(href_list["subprefsreset"])
-		prefs.job_subprefs[title] = list("codename" = null, "hand_file_notes" = null, "hand_file_notes_raw" = null)
 		update_subprefs_window(usr)
 	if(href_list["markdownhelp"])
 		var/list/dat = list()
