@@ -263,7 +263,7 @@
 
 /datum/status_effect/verglas_concentration/skate/tick()
 	. = ..()
-	if(owner.cmode)
+	if(owner.in_combat_until > world.time) // if you're ever "in combat" it breaks
 		owner.remove_status_effect(/datum/status_effect/verglas_concentration/skate)
 
 /obj/effect/verglas/temp/Initialize(mapload, lifespan = 0)
