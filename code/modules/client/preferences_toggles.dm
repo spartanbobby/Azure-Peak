@@ -29,7 +29,7 @@
 		usr.client.prefs.ShowChoices(usr, 4)
 
 /client/verb/toggle_fullscreen()
-	set name = "ToggleFullscreen"
+	set name = "Toggle Fullscreen"
 	set category = "Preferences.Options"
 	set desc = ""
 	if(prefs)
@@ -193,18 +193,6 @@
 	else
 		to_chat(src, "You will no longer hear music in the lobby.")
 		mob.stop_sound_channel(CHANNEL_LOBBYMUSIC)
-
-/client/verb/toggle_roleplay_ads()
-	set name = "Roleplay Ads (Toggle)"
-	set category = "OOC"
-	set desc = ""
-	if(prefs)
-		prefs.toggles ^= ROLEPLAY_ADS
-		prefs.save_preferences()
-	if(prefs.toggles & ROLEPLAY_ADS)
-		to_chat(src, "You will now be notified of new roleplay ads.")
-	else
-		to_chat(src, "You will no longer be notified of new roleplay ads.")
 
 /client/verb/stop_sounds_rogue()
 	set name = "StopSounds"
