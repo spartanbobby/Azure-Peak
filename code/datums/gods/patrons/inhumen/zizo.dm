@@ -35,8 +35,9 @@
 		"Archlich",
 		"Arch Lich",
 		"Pale Lady",
+		"Architect",
 		"Zimiko",
-		"Wolf" // fjall
+		"Wolf", // fjall
 	)
 
 /datum/patron/inhumen/zizo/post_equip(mob/living/pious)

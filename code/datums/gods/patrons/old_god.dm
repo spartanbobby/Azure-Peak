@@ -28,6 +28,10 @@
 
 	titles = list(
 		"God", // people call him this for. some reason. he has a name, y'all
+		"Architect",
+		"Allfather",
+		"Creator",
+		"Father",
 		"Saidon",
 		"Saidun" // lingyue
 	)

@@ -25,7 +25,9 @@
 		"Treefather",
 		"Tree-Father",
 		"Denno",
-		"Diantuoshen" // lingyue
+		"Diantuoshen", // lingyue
+		"Volf-skinned", // fjall
+		"Volfskinned"
 	)
 
 // In grove, bog, cross, or ritual chalk
