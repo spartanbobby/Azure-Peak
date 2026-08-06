@@ -487,7 +487,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	if(length(virtue_choices))
 		virtue.picked_choices = virtue_choices.Copy()
-	
+
 	if(length(virtuetwo_choices))
 		virtuetwo.picked_choices = virtuetwo_choices.Copy()
 
@@ -662,6 +662,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["joblessrole"] >> joblessrole
 	//Load prefs
 	S["job_preferences"] >> job_preferences
+	S["job_subprefs"] >> job_subprefs
 
 	//Quirks
 	S["all_quirks"] >> all_quirks
@@ -891,6 +892,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["joblessrole"]		, joblessrole)
 	//Write prefs
 	WRITE_FILE(S["job_preferences"] , job_preferences)
+	WRITE_FILE(S["job_subprefs"] , job_subprefs)
 
 	//Quirks
 	WRITE_FILE(S["all_quirks"]			, all_quirks)

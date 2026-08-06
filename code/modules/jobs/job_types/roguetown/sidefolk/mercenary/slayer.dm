@@ -9,8 +9,8 @@
 	extra_context = "Only the dwarves who swore an Oath to the ten may become Trollslayers." // dwarf exclusive and will force Ravox
 
 	traits_applied = list(TRAIT_CRITICAL_RESISTANCE, TRAIT_SHIRTLESS) //TRAIT_SHIRTLESS prevents equip on the head, armor and shirt slots and enables class-specific weapons
-	subclass_stats = list( 
-		STATKEY_STR = 2, 
+	subclass_stats = list(
+		STATKEY_STR = 2,
 		STATKEY_CON = 5,
 		STATKEY_WIL = 2,
 		STATKEY_INT = -3, // Brain dented in an accident involving 2 squirrels and a drunk zizite.
@@ -50,7 +50,7 @@
 			/obj/item/natural/head/troll = 1 // will spawn inside of the belt but I can't be bothered to make it spawn in the headhook
 		)
 		var/weapons = list("Hatchets", "Greataxe")
-		var/weapon_choice = input("Choose your weapon", "How will you channel your rage?") as anything in weapons
+		var/weapon_choice = input(H, "Choose your weapon", "How will you channel your rage?") as anything in weapons
 		switch(weapon_choice)
 			if("Greataxe")
 				backl = /obj/item/rogueweapon/stoneaxe/battle/slayer
@@ -131,7 +131,7 @@
 		/datum/species/dwarf,
 		/datum/species/dwarf/mountain
 		)
-	surgery_cover = FALSE 
+	surgery_cover = FALSE
 	max_integrity = 135
 	sewrepair = FALSE
 	repairmsg_begin = "The thick skin cover starts to bulge and repair tears"
