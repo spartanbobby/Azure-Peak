@@ -34,6 +34,7 @@
 #define READABLE_ZONE_LEGS		"Legs"
 #define READABLE_ZONE_L_LEG		"Left leg"
 #define READABLE_ZONE_R_LEG		"Right leg"
+#define READABLE_ZONE_TAUR		"Tauric half"
 
 #define READABLE_ZONE_SKULL		"Skull"
 #define READABLE_ZONE_NOSE		"Nose"

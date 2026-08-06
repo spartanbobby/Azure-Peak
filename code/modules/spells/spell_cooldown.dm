@@ -710,7 +710,7 @@
 			return FALSE
 
 	var/mob/living/living_owner = owner
-	if(istype(living_owner) && living_owner.has_status_effect(/datum/status_effect/debuff/exposed))
+	if(istype(living_owner) && living_owner.has_status_effect(/datum/status_effect/debuff/cast_disrupted))
 		if(feedback)
 			owner.balloon_alert(owner, "Too exposed to focus!")
 		return FALSE
