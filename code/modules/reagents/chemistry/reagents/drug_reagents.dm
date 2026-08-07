@@ -5,10 +5,11 @@
 	var/trippy = TRUE //Does this drug make you trip?
 
 /datum/reagent/drug/swampweed
-	name = "Powdered Swampweed"
+	name = "Swamp Oil"
 	description = "The crushed or liquidated essence of the swampweed plant. Produces vivid hallucinations... and, some say, enhances the mentalisms."
 	color = "#388151" // rgb: 96, 165, 132
 	overdose_threshold = 30
+	taste_description = "muddy jacksberries" // apparently weed can taste like berries. idfk get someone who smokes big loud 2 revise this.
 
 /datum/reagent/drug/swampweed/on_mob_life(mob/living/carbon/M)
 	M.set_drugginess(30)
@@ -60,11 +61,11 @@
 	M.adjustOxyLoss(1.1  * REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
 
-/datum/reagent/drug/nicotine
-	name = "Nicotine"
-	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
+/datum/reagent/drug/westleach
+	name = "Westleach Extract"
+	description = "An extract of the westleach plant. Provides a stimulating effect pleasant to many."
 	reagent_state = LIQUID
-	color = "#60A584" // rgb: 96, 165, 132
+	color = "#d8e29e" // rgb: 96, 165, 132
 	addiction_threshold = 999
 	taste_description = "smoke"
 	trippy = FALSE
@@ -72,21 +73,21 @@
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 
 
-/datum/reagent/drug/nicotine/on_mob_end_metabolize(mob/living/M)
+/datum/reagent/drug/westleach/on_mob_end_metabolize(mob/living/M)
 //	M.remove_stress(/datum/stressevent/pweed)
 	..()
 
-/datum/reagent/drug/nicotine/on_mob_metabolize(mob/living/M)
+/datum/reagent/drug/westleach/on_mob_metabolize(mob/living/M)
 	var/mob/living/carbon/V = M
 	V.add_stress(/datum/stressevent/pweed)
 	..()
 
-/datum/reagent/drug/nicotine/on_mob_life(mob/living/carbon/M)
+/datum/reagent/drug/westleach/on_mob_life(mob/living/carbon/M)
 	M.sate_addiction(/datum/charflaw/addiction/smoker)
 	..()
 	. = 1
 
-/datum/reagent/drug/nicotine/overdose_process(mob/living/M)
+/datum/reagent/drug/westleach/overdose_process(mob/living/M)
 	M.adjustToxLoss(0.1  * REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.adjustOxyLoss(1.1  * REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
