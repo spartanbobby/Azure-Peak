@@ -1005,7 +1005,8 @@
 			if(99 to INFINITY)
 				severity = 6
 		overlay_fullscreen("brute", /atom/movable/screen/fullscreen/brute, severity)
-		if(severity >= 3)
+		//drops to 30 stops rapid health changes at this threshold from spamming the overlay.
+		if(hurtdamage >= 40 || (screens["painflash"] && hurtdamage > 30))
 			overlay_fullscreen("painflash", /atom/movable/screen/fullscreen/painflash)
 		else
 			clear_fullscreen("painflash")
