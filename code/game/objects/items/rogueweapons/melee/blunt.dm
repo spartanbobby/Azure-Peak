@@ -73,6 +73,9 @@
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 10
 
+/datum/intent/mace/demolish/lesser
+	demolition_mod = 2.5
+
 /datum/intent/mace/rangedthrust
 	name = "thrust"
 	blade_class = BCLASS_STAB
@@ -1294,7 +1297,7 @@
 	force = 13
 	force_wielded = 25
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged)
-	gripped_intents = list(/datum/intent/use, /datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/mace/demolish)
+	gripped_intents = list(/datum/intent/use, /datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/mace/demolish/lesser)
 	minstr = 8
 	max_integrity = 350
 	w_class = WEIGHT_CLASS_BULKY
