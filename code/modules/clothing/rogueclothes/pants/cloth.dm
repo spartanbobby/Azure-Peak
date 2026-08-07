@@ -186,9 +186,9 @@
 	salvage_result = /obj/item/natural/cloth
 
 /obj/item/clothing/under/roguetown/tights/clothharem
-	name = "harem pants"
+	name = "shalwar pants"
 	icon_state = "harem"
-	desc = "A pair of cloth harem pants, with a baggy fit and a tapered ankle. Originating from the Ranesheni region, these pants are known for their comfort and ease of movement."
+	desc = "A pair of cloth shalwar pants, with a baggy fit and a tapered ankle. Originating from the Ranesheni region, these pants are known for their comfort and ease of movement."
 	detail_tag = "_detail"
 	armor = ARMOR_PADDED
 	max_integrity = ARMOR_INT_LEG_LEATHER

@@ -64,7 +64,7 @@
 	path = /obj/item/clothing/under/roguetown/tights/dhoti
 	sort_category = "Pants"
 
-/datum/loadout_item/harem
-	name = "Harem Pants"
+/datum/loadout_item/shalwar
+	name = "shalwar Pants"
 	path = /obj/item/clothing/under/roguetown/tights/clothharem
 	sort_category = "Pants"
