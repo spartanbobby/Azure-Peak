@@ -39,6 +39,7 @@
 	spell_impact_intensity = SPELL_IMPACT_MEDIUM
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z
+	ignore_combat_tag = TRUE // otherwise it breaks immediately on cast
 
 	var/verglas_radius = 3
 	var/verglas_mode = VERGLAS_MODE_LAY
