@@ -391,7 +391,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/clothing/mask/cigarette/rollie/cannabis
 	name = "swampleaf zig"
 	desc = "A paper wrapped cartridge of sweet smelling smokeleaf."
-	list_reagents = list(/datum/reagent/drug/space_drugs = 30)
+	list_reagents = list(/datum/reagent/drug/swampweed = 30)
 
 /obj/item/clothing/mask/cigarette/rollie/cannabis/cheroot
 	name = "swampleaf cheroot"
@@ -399,7 +399,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	aspects of both."
 	smoketime = 240
 	list_reagents = list(
-		/datum/reagent/drug/space_drugs = 30,
+		/datum/reagent/drug/swampweed = 30,
 		/datum/reagent/drug/nicotine = 15,
 		)
 
@@ -428,7 +428,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	nauseating for the laymen."
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/mentha = 15)
-	
+
 /obj/item/clothing/mask/cigarette/rollie/blackberry
 	name = "blackberry zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly smooth taste with a sweet and refreshing effect."
@@ -440,7 +440,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/blackberry = 15)
 
-/obj/item/clothing/mask/cigarette/rollie/apple 
+/obj/item/clothing/mask/cigarette/rollie/apple
 	name = "apple zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly smooth taste with a cooling effect."
 	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/drug/apple = 15)
@@ -450,8 +450,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A rewrapped westleach zig with some alchemically extracted apple essence."
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/apple = 15)
-	
-/obj/item/clothing/mask/cigarette/rollie/menthaapple 
+
+/obj/item/clothing/mask/cigarette/rollie/menthaapple
 	name = "mentha-apple zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly smooth taste with a cooling effect."
 	list_reagents = list(/datum/reagent/drug/nicotine = 30, /datum/reagent/drug/apple = 7, /datum/reagent/drug/mentha = 8)
@@ -461,7 +461,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A rewrapped westleach zig with some alchemically extracted mentha and apple essence."
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/apple = 7, /datum/reagent/drug/mentha = 8)
-	
+
 /obj/item/clothing/mask/cigarette/rollie/chocolate
 	name = "chocolate zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly bittersweet taste of cocoa."
@@ -472,7 +472,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A rewrapped westleach zig with some alchemically extracted chocolate essence."
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/chocolate = 12, /obj/item/reagent_containers/food/snacks/chocolate = 3)
-	
+
 /obj/item/clothing/mask/cigarette/rollie/strawberry
 	name = "strawberry zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly smooth taste with a sweet and refreshing effect."
@@ -483,7 +483,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A rewrapped westleach zig with some alchemically extracted strawberry essence."
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/strawberry = 15)
-	
+
 /obj/item/clothing/mask/cigarette/rollie/carrot
 	name = "carrot zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly smooth taste with a sweet and refreshing effect."
@@ -494,7 +494,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	desc = "A rewrapped westleach zig with some alchemically extracted carrot essence."
 	smoketime = 240
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/drug/carrot = 15)
-	
+
 /obj/item/clothing/mask/cigarette/rollie/lime
 	name = "lime zig"
 	desc = "Dried westleach carefully wrapped in fine paper. It has a particularly smooth taste with a sweet and refreshing effect."

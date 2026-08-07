@@ -699,9 +699,9 @@
 	desc = "A prepared pipeweed prized for its foggy effects."
 	icon_state = "swampweedd"
 	dry = TRUE
-	pipe_reagents = list(/datum/reagent/drug/space_drugs = 30)
-	list_reagents = list(/datum/reagent/drug/space_drugs = 2,/datum/reagent/consumable/nutriment = 1)
-	grind_results = list(/datum/reagent/drug/space_drugs = 5)
+	pipe_reagents = list(/datum/reagent/drug/swampweed = 30)
+	list_reagents = list(/datum/reagent/drug/swampweed = 2,/datum/reagent/consumable/nutriment = 1)
+	grind_results = list(/datum/reagent/drug/swampweed = 5)
 	eat_effect = /datum/status_effect/debuff/badmeal
 
 /obj/item/reagent_containers/food/snacks/grown/rogue/swampweeddry/Initialize()
