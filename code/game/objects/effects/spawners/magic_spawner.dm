@@ -49,7 +49,7 @@
 	icon_state = "elemental"
 	lootcount = 1
 	loot_value = LOOT_VALUE_DUNGEON_MIXED
-	junk_loot = list(/obj/item/natural/stone = 2, /obj/item/natural/feather = 1, obj/item/flint = 1)
+	junk_loot = list(/obj/item/natural/stone = 2, /obj/item/natural/feather = 1, /obj/item/flint = 1)
 	loot = list(
 		// TIER ONE - 70%
 		/obj/item/magic/elemental/mote = 70,
@@ -67,7 +67,7 @@
 	icon_state = "general_components"
 	lootcount = 1
 	loot_value = LOOT_VALUE_DUNGEON_MIXED
-	junk_loot = list(/obj/item/natural/stone = 2, /obj/item/natural/feather = 1, obj/item/flint = 1)
+	junk_loot = list(/obj/item/natural/stone = 2, /obj/item/natural/feather = 1, /obj/item/flint = 1)
 	loot = list(
 		/obj/item/chalk = 1,
 		/obj/effect/spawner/lootdrop/elemental = 2,
@@ -84,8 +84,8 @@
 	icon_state = "t1comp"
 	lootcount = 1
 	loot_value = LOOT_VALUE_COMPONENTS_TIER1
-	junk_loot = list(/obj/item/natural/stone = 1, /obj/item/natural/feather = 1, obj/item/flint = 1,
-					/obj/item/candle/yellow = 1, obj/item/ash = 1)
+	junk_loot = list(/obj/item/natural/stone = 1, /obj/item/natural/feather = 1, /obj/item/flint = 1,
+					/obj/item/candle/yellow = 1, /obj/item/ash = 1)
 	loot = list(
 		/obj/item/magic/infernal/ash = 1,
 		/obj/item/magic/fae/fairydust = 1,
@@ -100,7 +100,7 @@
 	loot = list(
 		/obj/item/magic/infernal/fang/ = 1,
 		/obj/item/magic/fae/iridescentscale = 1,
-		/obj/item/magic/elemental/shard = 10,
+		/obj/item/magic/elemental/shard = 1,
 	)
 
 /obj/effect/spawner/lootdrop/component_spawner_tier_1/tier_3
@@ -110,8 +110,8 @@
 	loot_value = LOOT_VALUE_COMPONENTS_TIER3
 	loot = list(
 		/obj/item/magic/infernal/core = 1,
-	/obj/item/magic/fae/heartwoodcore = 1,
-	/obj/item/magic/elemental/fragment = 1,
+		/obj/item/magic/fae/heartwoodcore = 1,
+		/obj/item/magic/elemental/fragment = 1,
 	)
 
 /obj/effect/spawner/lootdrop/component_spawner_tier_1/tier_4
