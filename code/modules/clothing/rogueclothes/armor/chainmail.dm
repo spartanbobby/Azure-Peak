@@ -354,20 +354,6 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo/get_examine_highlight_status()
 	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo/heavy
-	name = "fused avantyne hauberk"
-	desc = "The rings crackle softly with avantynic power, yet its fused firmly lyke a second skin. There is no going back, there is only forward in her name."
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo/heavy/Initialize(mapload)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo/heavy/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
 //
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/graggar
