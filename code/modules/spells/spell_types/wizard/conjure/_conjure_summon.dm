@@ -1,5 +1,6 @@
 #define CONJURE_DISMISS_FADE_TIME (4 SECONDS)
 #define CONJURE_RECOIL_SLOW "conjure_recoil_slow"
+#define CONJURE_LIMB_LOSS_WEIGHT 0.15
 
 /proc/dismiss_conjured_minion(mob/living/M)
 	if(QDELETED(M))
@@ -60,7 +61,7 @@
 	var/recoil_severity = CONJURE_RECOIL_FULL
 	var/recoil_stamina_only = FALSE
 	var/reclaim_recoil = TRUE
-	var/reclaim_recoil_min = 0.25
+	var/reclaim_recoil_threshold = 0.25
 
 /datum/action/cooldown/spell/conjure_summon/Grant(mob/grant_to)
 	. = ..()
@@ -197,11 +198,19 @@
 	if(!istype(user))
 		return
 	var/scale = 0
+	var/count = 0
 	for(var/mob/living/M in reclaimed)
 		if(QDELETED(M))
 			continue
-		scale += max(M.conjure_damage_fraction(), reclaim_recoil_min)
+		count++
+		var/wounded = M.conjure_damage_fraction()
+		if(wounded < reclaim_recoil_threshold)
+			continue
+		scale += wounded
+	if(!count)
+		return
 	if(scale <= 0)
+		to_chat(user, span_notice("My [summon_noun][count > 1 ? "s unravel" : " unravels"] painlessly."))
 		return
 	apply_conjure_recoil(user, recoil_energy_floor, recoil_severity, clamp(scale, 0, 1), FALSE, recoil_stamina_only)
 
@@ -217,7 +226,11 @@
 	if(maxHealth <= 0)
 		return 0
 	var/total = getBruteLoss() + getFireLoss() + getToxLoss() + getOxyLoss()
-	return clamp(total / maxHealth, 0, 1)
+	var/fraction = total / maxHealth
+	var/list/missing = get_missing_limbs()
+	if(length(missing))
+		fraction += length(missing) * CONJURE_LIMB_LOSS_WEIGHT
+	return clamp(fraction, 0, 1)
 
 /proc/apply_conjure_recoil(mob/living/summoner, energy_floor = 200, severity = CONJURE_RECOIL_FULL, scale = 1, block = TRUE, stamina_only = FALSE)
 	if(!istype(summoner))
