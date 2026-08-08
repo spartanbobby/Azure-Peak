@@ -92,7 +92,7 @@
 		/obj/item/magic/elemental/mote = 1,
 	)
 
-/obj/effect/spawner/lootdrop/component_spawner_tier_1/tier_2
+/obj/effect/spawner/lootdrop/component_spawner/tier_2
 	name = "component spawner tier 2"
 	icon_state = "t2comp"
 	lootcount = 1
@@ -103,7 +103,7 @@
 		/obj/item/magic/elemental/shard = 1,
 	)
 
-/obj/effect/spawner/lootdrop/component_spawner_tier_1/tier_3
+/obj/effect/spawner/lootdrop/component_spawner/tier_3
 	name = "component spawner tier 3"
 	icon_state = "t3comp"
 	lootcount = 1
@@ -114,7 +114,7 @@
 		/obj/item/magic/elemental/fragment = 1,
 	)
 
-/obj/effect/spawner/lootdrop/component_spawner_tier_1/tier_4
+/obj/effect/spawner/lootdrop/component_spawner/tier_4
 	name = "component spawner tier 4"
 	icon_state = "t4comp"
 	lootcount = 1
