@@ -51,6 +51,7 @@
 
 	var/max_summons = 1
 	var/summons_per_cast = 1
+	var/summon_replace_mode = CONJURE_SUMMON_GROUP
 	var/list/conjured_mobs = list()
 	var/current_mode = 1
 	var/list/modes = list()
@@ -58,6 +59,8 @@
 	var/recoil_energy_floor = 200
 	var/recoil_severity = CONJURE_RECOIL_FULL
 	var/recoil_stamina_only = FALSE
+	var/reclaim_recoil = TRUE
+	var/reclaim_recoil_min = 0.25
 
 /datum/action/cooldown/spell/conjure_summon/Grant(mob/grant_to)
 	. = ..()
@@ -117,7 +120,7 @@
 /datum/action/cooldown/spell/conjure_summon/get_spell_statistics(mob/living/user)
 	var/list/stats = ..()
 	if(length(modes))
-		stats += span_info("Mode (toggle with Shift+G): [modes[current_mode]["name"]]. You may maintain [max_summons] [summon_noun][max_summons > 1 ? "s" : ""] at a time; recasting at capacity re-summons. Losing one to death recoils violently upon you. Dismiss Conjuration releases them without the shock, but a battered servant still recoils as it unbinds - the more hurt it is, the deeper the toll.")
+		stats += span_info("Mode (toggle with Shift+G): [modes[current_mode]["name"]]. You may maintain [max_summons] [summon_noun][max_summons > 1 ? "s" : ""] at a time; recasting at capacity [summon_replace_mode == CONJURE_SUMMON_SINGLES ? "unbind the oldest summon to make room" : "re-summons"][reclaim_recoil ? ", reclaiming a wounded summon recoils upon you" : ""]. Losing one to death recoils violently upon you. Dismiss Conjuration will charge a partial recoil the more hurt the summon is.")
 	return stats
 
 /datum/action/cooldown/spell/conjure_summon/can_cast_spell(feedback = TRUE)
@@ -144,12 +147,25 @@
 		to_chat(user, span_warning("The targeted location is blocked. My summon fails to come forth."))
 		return FALSE
 
-	var/at_capacity = (length(conjured_mobs) >= max_summons)
-	if(at_capacity)
-		dismiss_summons(conjured_mobs.Copy())
-	var/to_spawn = at_capacity ? summons_per_cast : min(summons_per_cast, max_summons - length(conjured_mobs))
+	var/list/to_dismiss
+	var/to_spawn
+	if(summon_replace_mode == CONJURE_SUMMON_SINGLES)
+		to_spawn = min(summons_per_cast, max_summons)
+		var/overflow = to_spawn - (max_summons - length(conjured_mobs))
+		if(overflow > 0)
+			to_dismiss = conjured_mobs.Copy(1, min(overflow, length(conjured_mobs)) + 1)
+	else if(length(conjured_mobs) >= max_summons)
+		to_dismiss = conjured_mobs.Copy()
+		to_spawn = summons_per_cast
+	else
+		to_spawn = min(summons_per_cast, max_summons - length(conjured_mobs))
 	if(to_spawn < 1)
 		to_spawn = 1
+	if(length(to_dismiss))
+		conjured_mobs -= to_dismiss
+		if(reclaim_recoil)
+			apply_reclaim_recoil(user, to_dismiss)
+		dismiss_summons(to_dismiss)
 
 	var/list/all_summoned = list()
 	for(var/i in 1 to to_spawn)
@@ -176,6 +192,18 @@
 	if(lvl >= SKILL_LEVEL_EXPERT)
 		return 2
 	return 1
+
+/datum/action/cooldown/spell/conjure_summon/proc/apply_reclaim_recoil(mob/living/user, list/reclaimed)
+	if(!istype(user))
+		return
+	var/scale = 0
+	for(var/mob/living/M in reclaimed)
+		if(QDELETED(M))
+			continue
+		scale += max(M.conjure_damage_fraction(), reclaim_recoil_min)
+	if(scale <= 0)
+		return
+	apply_conjure_recoil(user, recoil_energy_floor, recoil_severity, clamp(scale, 0, 1), FALSE, recoil_stamina_only)
 
 /datum/action/cooldown/spell/conjure_summon/proc/dismiss_summons(list/mobs)
 	for(var/mob/living/M in mobs)
