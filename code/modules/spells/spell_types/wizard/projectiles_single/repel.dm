@@ -19,7 +19,7 @@
 	charge_required = FALSE
 	cooldown_time = 15 SECONDS
 
-	projectile_type = /obj/projectile/magic/lesser_repel
+	projectile_type = /obj/projectile/magic/repel
 
 	associated_skill = /datum/skill/magic/arcane
 	spell_tier = 1
@@ -43,7 +43,7 @@
 				return ..()
 	return ..()
 
-/obj/projectile/magic/lesser_repel
+/obj/projectile/magic/repel
 	name = "bolt of repelling"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "curseblob"
@@ -51,7 +51,7 @@
 	range = 15
 	cannot_cross_z = TRUE
 
-/obj/projectile/magic/lesser_repel/on_hit(target)
+/obj/projectile/magic/repel/on_hit(target)
 	var/atom/throw_target = get_edge_target_turf(firer, get_dir(firer, target))
 	if(isliving(target))
 		var/mob/living/L = target

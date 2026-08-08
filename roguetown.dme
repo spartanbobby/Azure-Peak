@@ -3314,7 +3314,6 @@
 #include "code\modules\spells\spell_types\wizard\kinesis\kinetic_burst.dm"
 #include "code\modules\spells\spell_types\wizard\kinesis\mass_crush.dm"
 #include "code\modules\spells\spell_types\wizard\kinesis\mass_gravity.dm"
-#include "code\modules\spells\spell_types\wizard\kinesis\repel.dm"
 #include "code\modules\spells\spell_types\wizard\kinesis\repulse.dm"
 #include "code\modules\spells\spell_types\wizard\kinesis\soulshot.dm"
 #include "code\modules\spells\spell_types\wizard\legacy_spells_unused\acid_splash.dm"
