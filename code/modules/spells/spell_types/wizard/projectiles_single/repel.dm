@@ -1,5 +1,5 @@
-/datum/action/cooldown/spell/projectile/lesser_repel
-	name = "Lesser Repel"
+/datum/action/cooldown/spell/projectile/repel
+	name = "Repel"
 	desc = "Shoot out a magical bolt that pushes away a freestanding item from the caster. Doesn't work on large or living targets. Instead of repelling a target, it will throw an object in your hand if cast while in throw mode."
 	button_icon = 'icons/mob/actions/roguespells.dmi'
 	button_icon_state = "fetch"
@@ -29,7 +29,7 @@
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC | SPELL_REQUIRES_HUMAN
 	allow_cross_z = FALSE
 
-/datum/action/cooldown/spell/projectile/lesser_repel/cast(atom/cast_on)
+/datum/action/cooldown/spell/projectile/repel/cast(atom/cast_on)
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		var/obj/I = H.get_active_held_item()
@@ -44,7 +44,7 @@
 	return ..()
 
 /obj/projectile/magic/lesser_repel
-	name = "lesser bolt of repelling"
+	name = "bolt of repelling"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "curseblob"
 	flag = "blunt"
