@@ -1218,6 +1218,7 @@
 #include "code\game\objects\effects\spawners\gibspawner.dm"
 #include "code\game\objects\effects\spawners\loot_chests.dm"
 #include "code\game\objects\effects\spawners\loot_spawners.dm"
+#include "code\game\objects\effects\spawners\magic_spawner.dm"
 #include "code\game\objects\effects\spawners\lootdrop.dm"
 #include "code\game\objects\effects\spawners\roguemapgen.dm"
 #include "code\game\objects\effects\spawners\sewer_spawner.dm"
