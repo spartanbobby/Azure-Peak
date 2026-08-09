@@ -1901,17 +1901,14 @@
 	detail_tag = "_detail"
 	detail_color = "#405996"
 
-/obj/item/clothing/cloak/dupatta
-	name = "dupatta"
-	desc = "A loose garment that is usually draped across ones upper body."
-	icon_state = "dupatta"
-	item_state = "dupatta"
-	alternate_worn_layer = TABARD_LAYER
+/obj/item/clothing/cloak/sash
+	name = "sash"
+	desc = "A large sash that can be draped across one's torso."
+	icon_state = "sash"
+	item_state = "sash"
 	boobed = FALSE
-	flags_inv = HIDECROTCH|HIDEBOOB
-	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_ARMOR
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_BACK_R|ITEM_SLOT_BACK_L|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
 	nodismemsleeves = TRUE
-	color = CLOTHING_WHITE
-	detail_tag = "_detail"
-	detail_color = CLOTHING_WHITE
+	inhand_mod = TRUE
