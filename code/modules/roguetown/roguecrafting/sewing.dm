@@ -500,7 +500,7 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-	datum/crafting_recipe/roguetown/sewing/dupatta
+/datum/crafting_recipe/roguetown/sewing/dupatta
 	name = "dupatta"
 	category = "Cloaks"
 	result = list(/obj/item/clothing/cloak/dupatta)
