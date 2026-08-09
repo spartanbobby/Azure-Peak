@@ -50,8 +50,8 @@
 	pumpkin spice and tossed into a kettle, it makes for an absolutely divine drink."
 	bitesize = 3 //Sharing is caring!
 	icon_state = "chocolatehalf"
-	slices_num = null
-	slice_path = null
+	slices_num = 2
+	slice_path = /obj/item/reagent_containers/food/snacks/chocolate/slice2
 
 /obj/item/reagent_containers/food/snacks/chocolate/slice2
 	name = "quarter chocolate ingot"
@@ -62,8 +62,8 @@
 	pumpkin spice and tossed into a kettle, it makes for an absolutely divine drink."
 	bitesize = 1 //is a literal bite
 	icon_state = "chocolatequarter"
-	slices_num = 2
-	slice_path = /obj/item/reagent_containers/food/snacks/chocolate/slice2
+	slices_num = null
+	slice_path = null
 
 /obj/item/reagent_containers/food/snacks/jamtallow
 	dish_type = DISH_SWEET
