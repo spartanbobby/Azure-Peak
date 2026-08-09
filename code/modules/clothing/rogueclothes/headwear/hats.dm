@@ -628,6 +628,7 @@
 	icon = 'icons/roguetown/clothing/special/courtphys.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/courtphys.dmi'
 	salvage_result = /obj/item/natural/silk
+	sewrepair = TRUE
 
 /obj/item/clothing/head/roguetown/courtphysician/Initialize()
 	. = ..()
