@@ -492,7 +492,7 @@
 
 /* craftdif of 2+ */
 
-	datum/crafting_recipe/roguetown/sewing/shalwar
+/datum/crafting_recipe/roguetown/sewing/shalwar
 	name = "shalwar pants"
 	category = "Pants"
 	result = list(/obj/item/clothing/under/roguetown/tights/clothharem)
