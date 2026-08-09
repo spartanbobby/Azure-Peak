@@ -607,14 +607,8 @@
 
 /datum/action/cooldown/spell/zizo/bone_cataclysm/cast(atom/cast_on)
 	. = ..()
-
-	to_chat(owner, span_notice("BONE DEBUG: cast entered."))
-
 	var/list/valid_skeletons = list()
 	var/mob/living/caster = owner
-
-	to_chat(owner, span_notice("BONE DEBUG: searching for skeletons."))
-
 	for(var/mob/living/S in view(9, owner))
 		if(QDELETED(S))
 			continue
@@ -633,18 +627,12 @@
 			continue
 
 		valid_skeletons += skeleton
-		to_chat(owner, span_notice("BONE DEBUG: skeleton accepted. Total = [length(valid_skeletons)]."))
 
 	if(!length(valid_skeletons))
-		to_chat(owner, span_warning("BONE DEBUG: NO VALID SKELETONS."))
 		owner.balloon_alert(owner, "No bound skeletons nearby!")
 		return FALSE
 
-	to_chat(owner, span_notice("BONE DEBUG: found [length(valid_skeletons)] skeletons."))
-
 	if(owner.cmode)
-		to_chat(owner, span_notice("BONE DEBUG: COMBAT MODE. Scheduling explosions."))
-
 		for(var/mob/living/S in valid_skeletons)
 			if(QDELETED(S))
 				continue
@@ -652,22 +640,11 @@
 			S.Jitter(100)
 
 			var/delay = rand(3 SECONDS, 6 SECONDS)
-			to_chat(owner, span_notice("BONE DEBUG: explosion delay = [delay]."))
-
 			var/datum/beam/B = caster.Beam(S, icon_state = "necra_beam", time = delay, maxdistance = 20)
-
-			if(B)
-				to_chat(owner, span_notice("BONE DEBUG: beam created."))
-			else
-				to_chat(owner, span_warning("BONE DEBUG: BEAM CREATION FAILED."))
-
 			spawn(delay)
-				to_chat(owner, span_notice("BONE DEBUG: delayed explosion executing."))
 				explode_skeleton(S, caster, B)
 
 		return TRUE
-
-	to_chat(owner, span_notice("BONE DEBUG: NOT IN COMBAT MODE. Scheduling despawns."))
 
 	for(var/mob/living/S in valid_skeletons)
 		if(QDELETED(S))
@@ -676,17 +653,9 @@
 		S.Jitter(100)
 
 		var/delay = rand(2 SECONDS, 3 SECONDS)
-		to_chat(owner, span_notice("BONE DEBUG: despawn delay = [delay]."))
-
 		var/datum/beam/B = caster.Beam(S, icon_state = "necra_beam", time = delay, maxdistance = 20)
 
-		if(B)
-			to_chat(owner, span_notice("BONE DEBUG: beam created."))
-		else
-			to_chat(owner, span_warning("BONE DEBUG: BEAM CREATION FAILED."))
-
 		spawn(delay)
-			to_chat(owner, span_notice("BONE DEBUG: delayed despawn executing."))
 			despawn_skeleton(S, caster, B)
 
 	return TRUE
