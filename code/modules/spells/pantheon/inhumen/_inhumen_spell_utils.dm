@@ -5,27 +5,18 @@
 ////////
 
 /datum/action/cooldown/spell/zizo/bone_cataclysm/proc/explode_skeleton(mob/living/S, mob/living/caster, datum/beam/B)
-	to_chat(caster, span_notice("BONE DEBUG: explode_skeleton called."))
-
 	if(B && !QDELETED(B))
-		to_chat(caster, span_notice("BONE DEBUG: ending beam."))
 		B.End()
 
 	if(!S || QDELETED(S))
-		to_chat(caster, span_warning("BONE DEBUG: skeleton missing or deleted."))
 		return
 
 	if(!caster || QDELETED(caster))
 		return
 
-	to_chat(caster, span_notice("BONE DEBUG: skeleton valid."))
-
 	var/turf/T = get_turf(S)
 	if(!T)
-		to_chat(caster, span_warning("BONE DEBUG: skeleton has no turf."))
 		return
-
-	to_chat(caster, span_notice("BONE DEBUG: got explosion turf."))
 
 	var/faction_tag = "[caster.real_name]_faction"
 
@@ -33,15 +24,11 @@
 	new /obj/effect/temp_visual/explosion(T)
 	playsound(T, 'sound/misc/explode/explosion.ogg', 50)
 
-	to_chat(caster, span_notice("BONE DEBUG: explosion created."))
-
 	var/list/thrownatoms = list()
 
 	for(var/turf/nearby in get_hear(1, T))
 		for(var/atom/movable/AM in nearby)
 			thrownatoms += AM
-
-	to_chat(caster, span_notice("BONE DEBUG: found [length(thrownatoms)] atoms for knockback."))
 
 	for(var/atom/movable/AM in thrownatoms)
 		if(QDELETED(AM))
@@ -77,8 +64,6 @@
 		var/atom/throwtarget = get_edge_target_turf(T, get_dir(T, get_step_away(AM, T)))
 		AM.safe_throw_at(throwtarget, 2, 1, caster, force = MOVE_FORCE_EXTREMELY_STRONG)
 
-	to_chat(caster, span_notice("BONE DEBUG: knockback complete."))
-
 	for(var/mob/living/carbon/C in view(4, T))
 		if(C.stat == DEAD && C.mind)
 			continue
@@ -93,8 +78,6 @@
 			continue
 
 		var/dist = get_dist(C, T)
-		to_chat(caster, span_notice("BONE DEBUG: checking carbon at distance [dist]."))
-
 		var/min_splinters
 		var/max_splinters
 
@@ -114,14 +97,10 @@
 		var/splinter_count = rand(min_splinters, max_splinters)
 		var/brute_damage = rand(10, 20)
 
-		to_chat(caster, span_notice("BONE DEBUG: applying brute damage."))
 		C.adjustBruteLoss(brute_damage)
-
-		to_chat(caster, span_notice("BONE DEBUG: creating [splinter_count] splinters."))
 
 		for(var/i in 1 to splinter_count)
 			if(!length(C.bodyparts))
-				to_chat(caster, span_warning("BONE DEBUG: target has no bodyparts."))
 				break
 
 			var/obj/item/bodypart/limb = pick(C.bodyparts)
@@ -133,33 +112,21 @@
 		C.apply_status_effect(/datum/status_effect/debuff/exposed, 10 SECONDS)
 		to_chat(C, span_userdanger("Bone splinters bury themselves deep into your flesh!"))
 
-	to_chat(caster, span_notice("BONE DEBUG: creating remains."))
-
 	new /obj/effect/decal/remains/human(T)
 	qdel(S)
 
-	to_chat(caster, span_notice("BONE DEBUG: EXPLOSION COMPLETE."))
-
-
 /datum/action/cooldown/spell/zizo/bone_cataclysm/proc/despawn_skeleton(mob/living/S, mob/living/caster, datum/beam/B)
-	to_chat(caster, span_notice("BONE DEBUG: despawn_skeleton called."))
-
 	if(B && !QDELETED(B))
-		to_chat(caster, span_notice("BONE DEBUG: ending beam."))
 		B.End()
 
 	if(!S || QDELETED(S))
-		to_chat(caster, span_warning("BONE DEBUG: skeleton missing or deleted."))
 		return
 
 	if(!caster || QDELETED(caster))
 		return
 
-	to_chat(caster, span_notice("BONE DEBUG: skeleton valid for despawn."))
-
 	var/turf/T = get_turf(S)
 	if(!T)
-		to_chat(caster, span_warning("BONE DEBUG: skeleton has no turf."))
 		return
 
 	S.visible_message(
@@ -168,23 +135,11 @@
 	)
 
 	playsound(T, 'sound/magic/swap.ogg', 50, TRUE)
-
-	to_chat(caster, span_notice("BONE DEBUG: despawn effects played."))
-
 	caster.energy_add(120)
 	caster.stamina_add(-50)
-
-	to_chat(caster, span_notice("BONE DEBUG: energy restored."))
-
 	new /obj/item/ash(T)
 	new /obj/item/ash(T)
-
-	to_chat(caster, span_notice("BONE DEBUG: ash created."))
-
 	qdel(S)
-
-	to_chat(caster, span_notice("BONE DEBUG: DESPAWN COMPLETE."))
-
 
 /datum/action/cooldown/spell/zizo/rituos/proc/run_ritual_chant(mob/living/carbon/human/user, path_choice)
 	var/list/chant_lines
