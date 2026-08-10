@@ -603,6 +603,7 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "cropgambeson"
 	icon_state = "cropgambeson"
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/donator_cropped
 	name = "Low Cut Gambeson"
@@ -611,6 +612,7 @@
 	icon = 'icons/clothing/donor_clothes.dmi'
 	item_state = "cropgambeson"
 	icon_state = "cropgambeson"
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/storage/belt/rogue/leather/donator
 	name = "belt of caped leathers"
