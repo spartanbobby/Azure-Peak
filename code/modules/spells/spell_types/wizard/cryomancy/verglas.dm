@@ -266,6 +266,8 @@
 	. = ..()
 	if(owner.in_combat_until > world.time) // if you're ever "in combat" it breaks
 		owner.remove_status_effect(/datum/status_effect/verglas_concentration/skate)
+	if(!H.stamina_add(2))
+		H.remove_status_effect(/datum/status_effect/verglas_concentration/skate)
 
 /obj/effect/verglas/temp/Initialize(mapload, lifespan = 0)
 	. = ..(mapload, lifespan || VERGLAS_SKATE_LIFESPAN)
@@ -276,8 +278,6 @@
 	var/mob/living/carbon/human/H = exiting
 	if(ishuman(exiting) && H.has_status_effect(/datum/status_effect/verglas_concentration))
 		new /obj/effect/verglas/temp(get_turf(newloc))
-		if(!H.stamina_add(2))
-			H.remove_status_effect(/datum/status_effect/verglas_concentration/skate)
 
 /obj/effect/verglas/temp/Destroy()
 	UnregisterSignal(get_turf(src),	COMSIG_ATOM_EXIT)
