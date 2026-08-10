@@ -8,8 +8,7 @@
 	subclass_languages = list(/datum/language/etruscan)
 	traits_applied = list(TRAIT_DODGEEXPERT)
 	subclass_virtues = list(
-		/datum/virtue/combat/guarded,
-		/datum/virtue/utility/riding
+		/datum/virtue/combat/guarded
 	)
 	subclass_stats = list(
 		STATKEY_SPD = 3,
@@ -29,10 +28,15 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/stealing = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/riding = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/lockpicking = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/music = SKILL_LEVEL_EXPERT,
 	)
+
+/datum/advclass/mercenary/vaquero/equipme(mob/living/carbon/human/H, dummy)
+	if(should_wear_femme_clothes(H))
+		horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
+	return ..()
 
 /datum/outfit/job/roguetown/mercenary/vaquero/pre_equip(mob/living/carbon/human/H)
 	..()
