@@ -1139,7 +1139,7 @@
 	max_integrity = 300 // +50
 
 /obj/item/rogueweapon/halberd/psyhalberd/relic
-	name = "Stigmata"
+	name = "\"Stigmata\""
 	desc = "Christened in the Siege of Lirvas, these silver-tipped poleaxes - wielded by a lonesome contingent of Saint Eora's \
 	paladins - kept the horrors at bay for forty daes-and-nites. Long-since-recovered from the rubble, this relic now serve as \
 	a bulwark for the defenseless."
@@ -1239,7 +1239,7 @@
 
 /// Ported from Scarlet Reach's Glaive. We're avoiding force increase because I hate roguepen. It can have better blade integrity and defense instead.
 /obj/item/rogueweapon/halberd/glaive/knightcaptain
-	name = "'Deliverance'"
+	name = "\"Deliverance\""
 	desc = "A masterwork glaive with a seasoned ashwood shaft reinforced by brass-sheathed steel bands. The blacksteel blade \
 	bears inscriptions on both side. One reads, \"QUIS CUSTODIET\" while the other reads, \"IPSOS CUSTODES\"."
 	icon = 'icons/roguetown/weapons/special/captainglaive.dmi'
@@ -1250,7 +1250,7 @@
 	sellprice = 250
 
 /obj/item/rogueweapon/halberd/pestran
-	name = "Lance of Boils"
+	name = "\"Lance of Boils\""
 	desc = "For when a scalpel is too short, and you still need to perform Pestra's holy work."
 	icon_state = "pestranhalberd"
 
@@ -1663,6 +1663,13 @@
 	icon_state = "elfglaive"
 	max_blade_int = 180 //Elven design makes it sharper
 	sellprice = 60
+
+/obj/item/rogueweapon/halberd/glaive/elvish/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("wielded")
+				return list("shrink" = 0.6,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 /obj/item/rogueweapon/spear/partizan/baotha
 	name = "saccharine swordspear"
