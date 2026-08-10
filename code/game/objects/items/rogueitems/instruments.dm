@@ -86,7 +86,7 @@
 		user.remove_status_effect(/datum/status_effect/buff/playing_music)
 		return
 	else
-		var/playdecision = alert(user, "Would you like to start a band?", "Band Play", "Yes", "No")
+		var/playdecision = alert(user, "Would you like to start a band?", "Band Play", "No", "Yes")
 		switch(playdecision)
 			if("Yes")
 				groupplaying = TRUE
@@ -186,7 +186,7 @@
 				if(theirinstrument.playing)
 					continue
 				if(potentialbandmates != user)
-					if(alert(potentialbandmates, "Would you like to perform in a band?", "Band Play", "Yes", "No") != "Yes")
+					if(alert(potentialbandmates, "Would you like to perform in a band?", "Band Play", "No", "Yes") != "Yes")
 						continue
 				var/songchoice = input(potentialbandmates, "Which song shall [potentialbandmates] perform?", "Music", name) as null|anything in theirinstrument.song_list
 				if(!songchoice)
