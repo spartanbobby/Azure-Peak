@@ -41,11 +41,11 @@
 
 /datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
-	addtimer(CALLBACK(src, PROC_REF(know_agents), L), 5 SECONDS)
 	if(L)
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			GLOB.court_spymaster[H.real_name] = H
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, know_agents)), 5 SECONDS)
 
 ///////////
 //CLASSES//

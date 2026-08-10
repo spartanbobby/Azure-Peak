@@ -101,7 +101,7 @@
 					to_chat(H, span_notice("Set your class preferences for Court Agent to disable this popup!"))
 					agent_prefs["hand_file_notes"] = parsemarkdown(tgui_input_text(H, "What does your file say?", "THY DEEDS ARE KNOWN", multiline = TRUE, encode = FALSE))
 					agent_prefs["codename"] = tgui_input_text(H, "Do you have a codename?", "CODENAME", null, MAX_NAME_LEN)
-			addtimer(CALLBACK(src, PROC_REF(know_employer), H), 1 MINUTES) // give roundstart a bit to settle
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, know_employer)), 1 MINUTES) // give roundstart a bit to settle
 			addtimer(CALLBACK(src, PROC_REF(give_zadcage), H), 1 MINUTES) // this needs to happen after equipment ideally
 			..()
 
