@@ -23,6 +23,9 @@
 	var/mob/living/target = cast_on
 	if(!isliving(target))
 		return FALSE
+	if(!mind(target)) //Trust the plan, until I can unfuck this, I am fucking this up completely on non-players.
+		to_chat(owner, span_notice("You cannot declare something mindless an ally."))
+		return FALSE
 
 	var/faction_tag = "[owner.real_name]_faction"
 
