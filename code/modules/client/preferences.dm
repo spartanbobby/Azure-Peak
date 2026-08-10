@@ -232,9 +232,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/favorite_dish = NONE
 	var/favorite_drink = NONE
 
-
-	var/tgui_pref = TRUE
-
 	var/race_bonus
 
 	var/preset_bounty_enabled = FALSE
@@ -752,7 +749,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<b>TGUI Theme:</b> <a href='?_src_=prefs;preference=tgui_theme'>[get_tgui_theme_display_name()]</a><br>"
 			dat += "<b>Parchment Theme:</b> <a href='?_src_=prefs;preference=parchment_skin'>[get_parchment_skin_display_name()]</a><br>"
 			dat += "<b>Panel Theme:</b> <a href='?_src_=prefs;preference=statbrowser_theme'>[get_statbrowser_theme_display_name()]</a><br>"
-			dat += "<b>UI Mode:</b> <a href='?_src_=prefs;preference=tgui_ui_prefs;task=menu'>[tgui_pref ? "TGUI" : "Legacy"]</a><br>"
 			dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
 			dat += "<b>Ambient Occlusion:</b> <a href='?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Window Flashing:</b> <a href='?_src_=prefs;preference=winflash'>[(windowflashing) ? "Enabled":"Disabled"]</a><br>"
@@ -1488,9 +1484,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 				SetAntag(user)
 			else
 				SetAntag(user)
-	else if(href_list["preference"] == "tgui_ui_prefs")
-		tgui_pref = !tgui_pref
-
 	else if(href_list["preference"] == "subvirtue")
 		var/task = href_list["task"]
 		if(task == "input")
