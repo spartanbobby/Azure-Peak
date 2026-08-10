@@ -8,7 +8,6 @@
 	category_tags = list(CTAG_MERCENARY, CTAG_MERCPARTY_MARKSMAN)
 	cmode_music = 'sound/music/combat_steppe.ogg'
 	subclass_languages = list(/datum/language/aavnic)
-	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
 	extra_context = "This subclass has 4 loadouts with various stats, skills & equipment."
 	subclass_skills = list(
 	//Universal skills
@@ -21,6 +20,9 @@
 		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
 		/datum/skill/craft/sewing = SKILL_LEVEL_NOVICE,
 		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
+	)
+	subclass_virtues = list(
+		/datum/virtue/utility/riding
 	)
 
 /datum/outfit/job/roguetown/mercenary/steppesman/pre_equip(mob/living/carbon/human/H)
