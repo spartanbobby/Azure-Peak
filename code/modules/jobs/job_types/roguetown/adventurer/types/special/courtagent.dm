@@ -126,17 +126,17 @@
 		H.put_in_hands(cage)
 	to_chat(H, span_notice("I feel the reassuring weight of my zadcage[bag?" in my bag":""]. It is my lifeline; it risks exposing me. I must keep it safe and hidden."))
 
-/datum/job/roguetown/adventurer/courtagent/proc/know_employer(mob/living/carbon/human/H)
+/mob/living/carbon/human/proc/know_employer()
 	if(!GLOB.court_spymaster.len)
-		to_chat(H, span_boldnotice("I currently have no spymaster."))
+		to_chat(src, span_boldnotice("I currently have no spymaster."))
 	else
-		to_chat(H, span_boldnotice("My spymaster is:"))
+		to_chat(src, span_boldnotice("My spymaster is:"))
 		for(var/name in GLOB.court_spymaster)
-			to_chat(H, span_greentext(name))
+			to_chat(src, span_greentext(name))
 			var/mob/living/carbon/human/hand = GLOB.court_spymaster[name]
 			if(hand && istype(hand) && hand.mind)
-				hand.mind.i_know_person(H)
-				H.mind.i_know_person(hand)
+				hand.mind.i_know_person(src)
+				src.mind.i_know_person(hand)
 
 /datum/job/roguetown/adventurer/courtagent/proc/remember_employer()
 	set name = "Remember Spymaster"
@@ -144,5 +144,6 @@
 
 	if(!ishuman(usr))
 		return
-	know_employer(usr)
+	var/mob/living/carbon/human/H = usr
+	H.know_employer()
 	return

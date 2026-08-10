@@ -224,17 +224,17 @@
 ////////////////////
 
 
-/datum/job/roguetown/hand/proc/know_agents(mob/living/carbon/human/H)
+/mob/living/carbon/human/proc/know_agents()
 	if(!GLOB.court_agents.len)
-		to_chat(H, span_boldnotice("I currently have no agents."))
+		to_chat(src, span_boldnotice("I currently have no agents."))
 	else
-		to_chat(H, span_boldnotice("I currently have these agents:"))
+		to_chat(src, span_boldnotice("I currently have these agents:"))
 		for(var/name in GLOB.court_agents)
-			to_chat(H, span_greentext(name))
+			to_chat(src, span_greentext(name))
 			var/mob/living/carbon/human/agent = GLOB.court_agents[name]
 			if(agent && istype(agent) && agent.mind)
-				agent.mind.i_know_person(H)
-				H.mind.i_know_person(agent)
+				agent.mind.i_know_person(src)
+				src.mind.i_know_person(agent)
 
 /datum/job/roguetown/hand/proc/remember_agents()
 	set name = "Remember Agents"
@@ -242,7 +242,8 @@
 
 	if(!ishuman(usr))
 		return
-	know_agents(usr)
+	var/mob/living/carbon/human/H = usr
+	H.know_agents()
 	return
 
 /obj/effect/proc_holder/spell/self/convertrole/agent
