@@ -180,22 +180,20 @@
 			var/list/instrumentsintheband = list()
 			var/list/bandmates = list()
 			for(var/mob/living/carbon/human/potentialbandmates in pplnearby)
-				var/list/thisguyinstrument = list()
-				var/obj/item/iteminhand = potentialbandmates.get_active_held_item()
-				if(istype(iteminhand, /obj/item/rogue/instrument))
-					var/decision = alert(potentialbandmates, "Would you like to perform in a band?", "Band Play", "Yes", "No")
-					switch(decision)
-						if("No")
-							continue
-						else
-							bandmates += potentialbandmates
-							instrumentsintheband += iteminhand
-							thisguyinstrument += iteminhand
-							for(var/obj/item/rogue/instrument/bandinstrumentspersonal in thisguyinstrument)
-								if(bandinstrumentspersonal.playing)
-									continue
-								bandinstrumentspersonal.curfile = input(potentialbandmates, "Which song shall [potentialbandmates] perform?", "Music", name) as null|anything in bandinstrumentspersonal.song_list
-								bandinstrumentspersonal.curfile = bandinstrumentspersonal.song_list[bandinstrumentspersonal.curfile]
+				var/obj/item/rogue/instrument/theirinstrument = potentialbandmates.get_active_held_item()
+				if(!istype(theirinstrument))
+					continue
+				if(theirinstrument.playing)
+					continue
+				if(potentialbandmates != user)
+					if(alert(potentialbandmates, "Would you like to perform in a band?", "Band Play", "Yes", "No") != "Yes")
+						continue
+				var/songchoice = input(potentialbandmates, "Which song shall [potentialbandmates] perform?", "Music", name) as null|anything in theirinstrument.song_list
+				if(!songchoice)
+					continue
+				theirinstrument.curfile = theirinstrument.song_list[songchoice]
+				bandmates += potentialbandmates
+				instrumentsintheband += theirinstrument
 			if(do_after(user, 1))
 				for(var/obj/item/rogue/instrument/bandinstrumentsband in instrumentsintheband)
 					if(!bandinstrumentsband.curfile)
