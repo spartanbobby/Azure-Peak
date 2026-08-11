@@ -2359,7 +2359,24 @@ As Excaliber."
 	icon_state = "athena_psyrapier"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
-// Octus
+// ATICIUS
+/obj/item/rogueweapon/sword/long/aticius
+	name = "For Love's Sake"
+	desc = "An oversized cleaver, fashioned out of polished gilbranze. A psycruciform starguard fits at the hilt, where a strip of cloth has been tied, dyed in Eoran pink.<br>\
+	The metal is not alive. Perhaps it never will be. Perhaps that is the point. A blade for a tyme that is not now, and may never be - yet it is here, and undeniable.<br>\
+	'Liebe. Do you know how long forever is?'<br>\
+	'Liebe. This is a promise to remember. From me, to you.'<br>\
+	'I promise that, 'til the sands are amaranthine and Noc wanders darkly...'<br>\
+	'That I will be here with you. For love's sake.'"
+	icon_state = "fls"
+	sheathe_icon = "fls"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	swingsound = BLADEWOOSH_HUGE
+
+/obj/item/rogueweapon/sword/long/aticius/get_examine_highlight_status()
+	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ODD, HERESYDESC_GILBRANZE_ARTIFICE)
+
+// OCTUS
 /obj/item/rogueweapon/greatsword/falling_star
     name = "Falling Star"
     desc = "A curved executioner's blade designated as suicidal because of its ridiculously unwieldy nature. \
@@ -2367,3 +2384,17 @@ As Excaliber."
 	The curved blade design makes it suitable for swings and chops, but poor for stabbing victims."
     icon = 'icons/obj/items/donor_weapons_64.dmi'
     icon_state = "fallingstar"
+
+// ROSYSATURNIIDAE
+/obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask
+	name = "Beaked Mask"
+	desc = "A plated steel mask made to resemble a bird's beak.<br> \
+	While similar to the long masks of Pestra's faithful, this is designed to protect against far less insidious dangers. Namely, bladed weapons.<br> \
+	<font color='3399FF'>The light in your past will be your enemy, and whenever it catches you, it will burn you.</font><br>  \
+	<font color='3399FF'>But first, it must catch you. Go into the dark ahead, and do not look back.</font>"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "birdmask"
+
+/obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask/ComponentInitialize()
+    pass() // *flips the bird at you* (this isnt meant to be adjustable)

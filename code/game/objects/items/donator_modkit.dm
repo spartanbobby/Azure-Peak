@@ -949,6 +949,14 @@
 	)
 	result_item = /obj/item/rogueweapon/sword/rapier/athena
 
+//Aticius - For Love's Sake
+/obj/item/enchantingkit/aticius_fls
+	name = "'For Love's Sake' morphing elixir"
+	target_items = list(
+		/obj/item/rogueweapon/sword/long
+	)
+	result_item = /obj/item/rogueweapon/sword/long/aticius
+
 //Octus - Falling Star
 /obj/item/enchantingkit/weapon/falling_star
 	name = "'Falling Star' morphing elixer"
@@ -957,3 +965,12 @@
 		/obj/item/rogueweapon/greatsword/paalloy
 	)
 	result_item = /obj/item/rogueweapon/greatsword/falling_star
+
+// RosySaturniidae - Beaked Mask
+/obj/item/enchantingkit/rosy/birdmask
+	name = "'Beaked Mask' morphing elixir"
+	target_items = list(
+		/obj/item/clothing/mask/rogue/facemask/steel/maille,
+		/obj/item/clothing/mask/rogue/facemask/steel/maille/fluted
+	)
+	result_item = /obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask
