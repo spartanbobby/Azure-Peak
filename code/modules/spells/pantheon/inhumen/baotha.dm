@@ -70,8 +70,6 @@
 	recharge_time = 30 SECONDS
 	miracle = TRUE
 	devotion_cost = 10
-	invocation_type = "whisper"
-	invocations = list("Release your love to me.")
 
 /obj/effect/proc_holder/spell/invoked/baothablessings/cast(list/targets, mob/living/user)
 	if(isliving(targets[1]))
@@ -224,7 +222,7 @@
 
 /obj/item/clothing/ring/griefflower
 	name = "rosa ring"
-	desc = "Numbing-touch rosa sickly-sweet scent trickle unto my nose, and into soul. <br><br> YOU ARE EVERYTHING; RELEASE THY LOVE UNTO ME."
+	desc = "Numbing-touch rosa sickly-sweet scent trickle unto my nose, and into soul. <br><br>THOU ART EVERYTHING; RELEASE THY LOVE UNTO ME."
 	icon_state = "baothaflower"
 	item_state = "baothaflower"
 	icon = 'icons/roguetown/items/produce.dmi'
@@ -394,7 +392,7 @@
 // T2 - clears all stress. Forget your worries, pookie bear.
 /obj/effect/proc_holder/spell/invoked/lasthigh
 	name = "Last High"
-	desc = "Pleasure's perfume, just before the fall."
+	desc = "Gives someone but a hint of Baotha's relief, giving them peace and draining their worries- for a bit."
 	action_icon = 'icons/mob/actions/baothamiracles.dmi'
 	overlay_icon = 'icons/mob/actions/baothamiracles.dmi'
 	overlay_state = "last_high"
@@ -412,6 +410,8 @@
 	miracle = TRUE
 	devotion_cost = 75
 	human_req = TRUE
+	invocation_type = "whisper"
+	invocations = list("Release your love to me.")
 
 /obj/effect/proc_holder/spell/invoked/lasthigh/cast(list/targets, mob/living/user)
 	if(isliving(targets[1]))
@@ -420,17 +420,16 @@
 			return FALSE
 
 		target.visible_message(
-			span_info("[target] is forced to deeply inhale a sweet smelling mist. They twist and choke as spittle runs down the corner of their mouth, yet an eerie calm passes over them."),
-			span_notice("The world fades around me. My throat melts, my stomach churns, and the pounding in my chest feels relentless. I can barely move, but it doesn't matter. Oblivion melts into love in front of my glossed-over eyes.")
+			span_info("[target] is covered in a sickly-sweet shimmer-mist. They shudder as an effluvium of spice and numbness benumbs them."),
+			span_notice("The world fades around me. Numbing warmth spreads through my limbs. The world is distant, but it doesn't matter. None of this matters. None of this ever really mattered.")
 		)
-		target.adjustToxLoss(3)
 		target.add_stress(/datum/stressevent/lasthigh)
 		return TRUE
 
 /datum/stressevent/lasthigh
 	timer = 10 MINUTES
 	stressadd = -99
-	desc = span_hypnophrase("The world fades around me. My throat melts, my stomach churns, and the pounding in my chest feels relentless. I can barely move, but it doesn't matter. Oblivion melts into love in front of my glossed-over eyes.")
+	desc = span_hypnophrase("Peace. I am floating on exhalation from Gotte's lips. From here, it's easy to see the truth; none of this matters. None of this ever really mattered.")
 
 
 // T3 - bond that lasts for 8 minutes as long as bonded are within 7 tiles, TRAIT_NOPAIN, spd = 5 end = 3
@@ -504,7 +503,7 @@
 		var/datum/physiology/phy = human_target.physiology
 		if(target.mob_biotypes & MOB_UNDEAD)
 			return FALSE	//No, you don't get to feel good. You're a undead mob. Feel bad.
-		target.visible_message(span_info("[target] twitches and shivers as a strange warmth radiates from them!"), span_notice("The pain from my wounds melts into sweet suffering. This feels... right."))
+		target.visible_message(span_info("[target] twitches and shivers as a strange warmth radiates from them!"), span_notice("The pain from my wounds melts into sweet statick."))
 		phy.pain_mod *= 0.5	//Literally halves your pain modifier.
 		addtimer(CALLBACK(src, PROC_REF(restore_pain_mod), phy), 1 MINUTES)
 		target.apply_status_effect(/datum/status_effect/buff/vitae)					//+2 Fortune and mood buff
