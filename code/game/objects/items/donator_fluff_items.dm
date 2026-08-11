@@ -598,7 +598,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/donator_cropped
 	name = "Low Cut Padded Gambeson"
-	desc = "An ordinary gambeson, trimmed down at the top and below by design to be more revealing and fitted to the body for more comfort."
+	desc = "A gambeson padded in the areas that matter, and trimmed down at the top and below by design to be more revealing and fitted to the body for more comfort."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "cropgambeson"
