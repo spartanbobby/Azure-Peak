@@ -222,6 +222,10 @@
 	seed_identity = "potato seeds"
 	plant_def_type = /datum/plant_def/potato
 
+/obj/item/seeds/fyritius
+    seed_identity = "fyritius seeds"
+    plant_def_type = /datum/plant_def/fyritiusflower
+
 /obj/item/seeds/poppy
 	seed_identity = "poppy seeds"
 	plant_def_type = /datum/plant_def/poppy
