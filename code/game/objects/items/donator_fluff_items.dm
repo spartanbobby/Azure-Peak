@@ -2384,3 +2384,15 @@ As Excaliber."
 	The curved blade design makes it suitable for swings and chops, but poor for stabbing victims."
     icon = 'icons/obj/items/donor_weapons_64.dmi'
     icon_state = "fallingstar"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt/wendy
+	name = "open eoran robe"
+	desc = "Used by more radical followers of the Eoran Church"
+	body_parts_covered = null // Keyhole should show boob size and the outfit is too open to get in the way of sex
+	icon_state = "wendydress"
+	item_state = "wendydress"
+	//flags_inv = HIDEBOOB // This pretty much only prevents seeing underwear and or clipping if you have really big tits
+	flags_inv = null
+	fanatic_wear = TRUE
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
