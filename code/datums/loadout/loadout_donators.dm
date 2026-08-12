@@ -227,6 +227,9 @@
 	name = "Gift - Armor Cosmetic, Heelification Elixir"
 	path = /obj/item/heelkit
 
+/datum/loadout_item/donator/universal/donator_cropped_gambeson
+	name = "Gift - Kit, Cropped Gambeson"
+	path = /obj/item/enchantingkit/donator_cropped_gambeson
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat
