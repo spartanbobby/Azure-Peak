@@ -179,7 +179,7 @@
 	if(!new_color || new_color == BLOOD_COLOR_RED)
 		remove_atom_colour(WASHABLE_COLOUR_PRIORITY) // Clears it from atom_colours list
 		remove_atom_colour(FIXED_COLOUR_PRIORITY)
-		src.color = null
+		color = null
 		blood_color = null
 	// Aka, if there's no custom species blood color set, keep these as the nice default sprite.
 	if(color == BLOOD_COLOR_RED)
@@ -190,11 +190,11 @@
 	if(!new_blood_color || new_blood_color == BLOOD_COLOR_RED)
 		remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
 		remove_atom_colour(FIXED_COLOUR_PRIORITY)
-		src.color = null
+		color = null
 		blood_color = null
 	else
 		blood_color = new_blood_color
-		src.color = blood_color
+		color = blood_color
 
 /obj/effect/decal/cleanable/blood/gibs/Crossed(mob/living/L)
 	if(istype(L))
