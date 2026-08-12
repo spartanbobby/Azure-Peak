@@ -83,7 +83,7 @@ There are several things that need to be remembered:
 	if(vheslyn_status?.on_fire)
 		var/filter = get_filter(VHESLYNFIRE_FILTER)
 		if(!filter)
-			add_filter(VHESLYNFIRE_FILTER, 2, list("type" = "outline", "color" = "#ffbf5f", "alpha" = 60, "size" = 2)) //lore-accurate w/ orchre-violet flames, this is the outline
+			add_filter(VHESLYNFIRE_FILTER, 2, list("type" = "outline", "color" = "#ff8c5f", "alpha" = 60, "size" = 2)) //lore-accurate w/ orchre-violet flames, this is the outline
 		if(!sunder_light_obj)
 			sunder_light_obj = mob_light("#e88dff", 5, 5) //on the violet flames
 		remove_overlay(SUNDER_LAYER)
