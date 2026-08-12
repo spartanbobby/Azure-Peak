@@ -84,7 +84,7 @@
 
 	shoes = /obj/item/clothing/shoes/roguetown/boots/psydonboots
 	armor = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/chest/disciple //125% of a leather armor.
-	shirt = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/body/disciple //125% of a heavy gambeson.
+	shirt = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/body/disciple //a heavy gambeson.
 
 	backpack_contents = list(/obj/item/roguekey/inquisitionmanor = 1,
 	/obj/item/paper/inqslip/arrival/ortho = 1)

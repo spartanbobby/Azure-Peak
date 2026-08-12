@@ -123,7 +123,7 @@
 	</br>Heaven's gate closed to us long ago, yet His children persist; as as long as they do, so must I. \
 	</br>Happiness must be fought for."
 	armor = ARMOR_PADDED
-	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //125% of a heavy gambeson.
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //a heavy gambeson.
 
 /obj/item/clothing/suit/roguetown/armor/manual/meditation/body/easttats //Only for roles with Honorbound, as the restrictions offset the better head coverage.
 	icon_state = "easttats"
@@ -259,7 +259,6 @@
 	</br>I came here because I wanted purpose, something solid to believe in.\
 	</br>They tell me doubt is natural, and that understanding comes with time.\
 	</br>For now, I will listen, learn, and try to live in a way that does not waste what was given to us."
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //a heavy gambeson.
 
 /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/body/disciple
 	name = "enduring skin"
@@ -269,7 +268,7 @@
 	</br>To give into despair and hopelessness, however, is to rob all meaning from His sacrifice. \
 	</br>Heaven's gate closed to us long ago, yet His children persist; as as long as they do, so must I. \
 	</br>Happiness must be fought for."
-	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //125% of a heavy gambeson.
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //a heavy gambeson.
 
 /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/chest
 	body_parts_covered = COVERAGE_VEST

@@ -99,7 +99,7 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/pontifex
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/pointfex //Yes, the item is spelled this way in the code.
 		if("Bare Skin (Sewing repair)") //does not get a chest-only skin layer, as ward layers there and is superior.
-			armor = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/body/disciple //125% of a heavy gambeson. More integ than a light brig, far worse protection.
+			armor = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/body/disciple //a heavy gambeson.
 		if("Bare Skin (Meditation repair)")
 			armor = /obj/item/clothing/suit/roguetown/armor/manual/meditation/body/disciple //Identical to other skin option aside from repair method.
 	var/naledi_book = pick(/obj/item/book/rogue/naledi1, /obj/item/book/rogue/naledi2, /obj/item/book/rogue/naledi3, /obj/item/book/rogue/naledi4)
