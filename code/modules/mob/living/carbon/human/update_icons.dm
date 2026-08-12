@@ -76,6 +76,37 @@ There are several things that need to be remembered:
 	dna.species.handle_body(src)
 	..()
 
+#define VHESLYNFIRE_FILTER "vheslynfire_filter"
+
+/mob/living/carbon/human/update_fire()
+	var/datum/status_effect/fire_handler/fire_stacks/vheslyn_status = has_status_effect(/datum/status_effect/fire_handler/fire_stacks/vheslyn)
+	if(vheslyn_status?.on_fire)
+		var/filter = get_filter(VHESLYNFIRE_FILTER)
+		if(!filter)
+			add_filter(VHESLYNFIRE_FILTER, 2, list("type" = "outline", "color" = "#ff8c5f", "alpha" = 60, "size" = 2)) //lore-accurate w/ orchre-violet flames, this is the outline
+		if(!sunder_light_obj)
+			sunder_light_obj = mob_light("#e88dff", 5, 5) //on the violet flames
+		remove_overlay(SUNDER_LAYER)
+		var/mutable_appearance/new_fire_overlay = mutable_appearance('icons/mob/OnFire.dmi', "sunder_burning", -SUNDER_LAYER)
+		new_fire_overlay.appearance_flags = RESET_COLOR
+		overlays_standing[SUNDER_LAYER] = new_fire_overlay
+		apply_overlay(SUNDER_LAYER)
+		return
+	else
+		remove_filter(VHESLYNFIRE_FILTER)
+		remove_overlay(SUNDER_LAYER)
+		QDEL_NULL(sunder_light_obj)
+
+	if(fire_stacks < 10)
+		return ..("Generic_mob_burning")
+	else
+		var/burning = dna.species.enflamed_icon
+		if(!burning)
+			return ..("widefire")
+		return ..(burning)
+
+#undef VHESLYNFIRE_FILTER
+
 #define SUNDER_FILTER "sunder_filter"
 
 /mob/living/carbon/human/update_fire()
