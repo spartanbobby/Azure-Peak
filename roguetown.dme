@@ -1354,6 +1354,7 @@
 #include "code\game\objects\items\rogueweapons\melee\knives\templar_knives.dm"
 #include "code\game\objects\items\rogueweapons\melee\polearms\lance.dm"
 #include "code\game\objects\items\rogueweapons\melee\polearms\polearms.dm"
+#include "code\game\objects\items\rogueweapons\melee\polearms\staff.dm"
 #include "code\game\objects\items\rogueweapons\melee\swords\greatswords.dm"
 #include "code\game\objects\items\rogueweapons\melee\swords\sword_intents.dm"
 #include "code\game\objects\items\rogueweapons\mmb\bite.dm"
