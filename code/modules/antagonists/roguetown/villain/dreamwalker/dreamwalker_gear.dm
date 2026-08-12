@@ -338,7 +338,7 @@
 	/// How much damage it takes before we spawn a repair shard
 	var/shard_threshold = 100
 	/// How much damage our repair shard repairs
-	var/shard_repair_value = 50
+	var/shard_repair_value = 25
 	/// Type of shard to spawn
 	var/obj/effect/temp_visual/dream_shard/shard_type = /obj/effect/temp_visual/dream_shard
 
