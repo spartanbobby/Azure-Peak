@@ -12525,6 +12525,10 @@
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
+"cus" = (
+/obj/effect/spawner/lootdrop/infernal_spawner,
+/turf/open/floor/rogue/church,
+/area/rogue/under/cave/goblinfort)
 "cut" = (
 /obj/structure/roguemachine/vendor{
 	keycontrol = "apothecary"
@@ -22196,7 +22200,6 @@
 "elm" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/greatsword/aalloy,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/goblinfort)
 "eln" = (
@@ -31604,8 +31607,8 @@
 /obj/structure/closet/crate/chest/lootbox,
 /obj/item/storage/belt/rogue/pouch/coins/rich,
 /obj/item/clothing/neck/roguetown/talkstone,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
+/obj/effect/spawner/lootdrop/component_spawner/tier_4,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "fYT" = (
@@ -44804,10 +44807,11 @@
 	lockid = "lich"
 	},
 /obj/item/book/granter/spell/bonechill,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/spawner/lootdrop/infernal_spawner,
+/obj/effect/spawner/lootdrop/infernal_spawner,
+/obj/effect/spawner/lootdrop/component_spawner/tier_4,
 /turf/open/floor/rogue/carpet/lord/right,
-/area/rogue/under/cave/licharena/bossroom)
+/area/rogue)
 "iwS" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/reagent_containers/glass/cup/silver{
@@ -50263,7 +50267,6 @@
 	},
 /obj/structure/flora/roguegrass,
 /obj/structure/bookcase/random/religion,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/cave/his_vault)
 "jxf" = (
@@ -56956,8 +56959,8 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "kIV" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /obj/item/ingot/blacksteel,
+/obj/effect/spawner/lootdrop/component_spawner/tier_3,
 /turf/open/floor/rogue/metal/barograte/open,
 /area/rogue/under/underdark/north)
 "kIY" = (
@@ -60950,6 +60953,7 @@
 "lrZ" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/ingot/silver,
+/obj/effect/spawner/lootdrop/component_spawner/tier_2,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "lsb" = (
@@ -75920,6 +75924,10 @@
 	},
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/under/cave/scarymaze)
+"oix" = (
+/obj/effect/spawner/lootdrop/fae_spawner,
+/turf/open/floor/rogue/cobble,
+/area/rogue/under/cave/his_vault)
 "oiy" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/reagent_containers/glass/bucket/pot,
@@ -82755,7 +82763,7 @@
 "ptg" = (
 /obj/machinery/light/rogue/candle/blue,
 /obj/structure/table/wood/fancy/black,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/spawner/lootdrop/infernal_spawner,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cave/mazedungeon)
 "pth" = (
@@ -84666,8 +84674,8 @@
 	locked = 1;
 	lockid = "psy_bog_dung_lootkey_two"
 	},
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/spawner/lootdrop/component_spawner/tier_2,
+/obj/effect/spawner/lootdrop/component_spawner/tier_4,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/his_vault)
 "pMr" = (
@@ -88313,6 +88321,10 @@
 /obj/effect/landmark/chimeric_calyx_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
+"qvG" = (
+/obj/effect/spawner/lootdrop/elemental,
+/turf/open/floor/rogue/cobble,
+/area/rogue/under/cave/his_vault)
 "qvI" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 8
@@ -89201,6 +89213,10 @@
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cavewet/bogcaves/north)
+"qDv" = (
+/obj/effect/spawner/lootdrop/component_spawner/tier_3,
+/turf/open/floor/rogue/cobble,
+/area/rogue/under/cave/his_vault)
 "qDy" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -94950,6 +94966,12 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/woods)
+"rKg" = (
+/obj/structure/table/finestone,
+/obj/machinery/light/rogue/candle/floorcandle,
+/obj/effect/spawner/lootdrop/component_spawner/tier_3,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave/scarymaze)
 "rKi" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 8
@@ -122144,7 +122166,6 @@
 	},
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
 "wOu" = (
@@ -122385,6 +122406,17 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
+"wRb" = (
+/obj/item/candle/yellow{
+	pixel_x = -6;
+	pixel_y = -15
+	},
+/obj/item/candle/yellow{
+	pixel_x = -6;
+	pixel_y = 26
+	},
+/turf/open/floor/rogue/church,
+/area/rogue/under/cave/goblinfort)
 "wRf" = (
 /turf/open/water/river/flow/east,
 /area/rogue/outdoors/beach/forest/north)
@@ -124221,6 +124253,17 @@
 /obj/machinery/light/rogue/candle/blue/r,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/inq/basement)
+"xku" = (
+/obj/item/candle/yellow{
+	pixel_x = 8;
+	pixel_y = 27
+	},
+/obj/item/candle/yellow{
+	pixel_x = 9;
+	pixel_y = -15
+	},
+/turf/open/floor/rogue/church,
+/area/rogue/under/cave/goblinfort)
 "xkE" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/rooftop/green/north,
@@ -126457,9 +126500,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cavewet/bogcaves/north)
 "xFW" = (
-/obj/structure/bookcase/random/religion,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/decal/cleanable/roguerune/arcyne/summoning/mid,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/his_vault)
 "xGa" = (
@@ -129240,6 +129281,10 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains)
+"yfz" = (
+/obj/effect/spawner/lootdrop/infernal_spawner,
+/turf/open/floor/rogue/cobble,
+/area/rogue/under/cave/his_vault)
 "yfA" = (
 /obj/structure/roguemachine/atm,
 /turf/open/floor/rogue/hexstone,
@@ -278434,7 +278479,7 @@ tUM
 vHM
 vHM
 vHM
-ltZ
+pQa
 pQa
 kFW
 hRx
@@ -278883,9 +278928,9 @@ hvt
 vwN
 wIv
 itW
+oix
 xFN
-xFN
-xFN
+yfz
 xFN
 cfK
 nCk
@@ -279787,9 +279832,9 @@ ujN
 kFW
 kYA
 oCD
+qvG
 xFN
-xFN
-xFN
+qDv
 hsH
 jxc
 oZu
@@ -392653,7 +392698,7 @@ vUn
 mnW
 tiX
 cnq
-vUn
+rKg
 uhV
 tiX
 roX
@@ -522322,7 +522367,7 @@ uPk
 cmU
 hrT
 hrT
-hrT
+wRb
 upT
 hrT
 cmU
@@ -522773,9 +522818,9 @@ mQP
 uPk
 cmU
 hrT
-hrT
+cus
 lpl
-hrT
+cus
 hrT
 cmU
 uPk
@@ -523226,7 +523271,7 @@ uPk
 cmU
 upT
 hrT
-hrT
+xku
 hrT
 hrT
 cmU
