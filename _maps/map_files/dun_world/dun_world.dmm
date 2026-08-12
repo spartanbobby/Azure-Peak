@@ -41196,7 +41196,10 @@
 	},
 /obj/structure/fluff/railing/border,
 /obj/structure/table/finestone,
-/obj/item/clothing/neck/roguetown/psicross/inhumen/iron,
+/obj/item/clothing/neck/roguetown/psicross/inhumen/iron{
+	pixel_x = -5;
+	pixel_y = 5
+	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/zhurch)
 "hPy" = (
@@ -112017,9 +112020,6 @@
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "tablewood1"
-	},
-/obj/item/roguestatue/aalloy{
-	pixel_y = 16
 	},
 /obj/machinery/light/rogue/candle/blue,
 /turf/open/floor/rogue/hexstone,
