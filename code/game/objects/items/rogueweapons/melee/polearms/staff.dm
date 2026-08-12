@@ -40,6 +40,7 @@
 	special = /datum/special_intent/quarterstaff_sweep
 	anvilrepair = /datum/skill/craft/carpentry
 	resistance_flags = FLAMMABLE
+	twirly = SKILL_LEVEL_JOURNEYMAN
 
 /obj/item/rogueweapon/woodstaff/getonmobprop(tag)
 	. = ..()
@@ -347,3 +348,4 @@
 	sellprice = 80
 	no_loot_taint = TRUE
 	max_integrity = 250 //equal to psydonite; putting it at half of this was a neat little experiment but agonizing
+
