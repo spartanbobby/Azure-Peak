@@ -95,7 +95,6 @@
 			else
 				return
 
-		note_color = initial(note_color)
 		if(user.mind)
 			switch(user.get_skill_level(/datum/skill/misc/music))
 				if(1)
@@ -117,7 +116,7 @@
 					note_color = "#ff8000"
 					stressevent = /datum/stressevent/music/legendary
 				else
-					note_color = "#ffffff"
+					note_color = initial(note_color)
 					stressevent = /datum/stressevent/music
 		soundloop.stress2give = stressevent
 
