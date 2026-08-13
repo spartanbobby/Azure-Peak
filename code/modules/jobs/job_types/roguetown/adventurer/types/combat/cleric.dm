@@ -74,8 +74,8 @@
 					armor = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/chest/monke //a leather armor. Bonus durability over other monks, but you have to stitch it up.
 					shirt = /obj/item/clothing/suit/roguetown/armor/manual/tool/needle/body/monke //a gambeson.
 				else
-					armor = /obj/item/clothing/suit/roguetown/armor/manual/resting/chest/monk //leather armor with gambeson integ, this one needs resting.
-					shirt = /obj/item/clothing/suit/roguetown/armor/manual/emote/prayer/monk //a gambeson, repaired by praying.
+					armor = /obj/item/clothing/suit/roguetown/armor/manual/resting/chest/monk //leather armor with light gambeson integ, this one needs resting.
+					shirt = /obj/item/clothing/suit/roguetown/armor/manual/emote/prayer/monk //a light gambeson, repaired by praying.
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
 				gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted

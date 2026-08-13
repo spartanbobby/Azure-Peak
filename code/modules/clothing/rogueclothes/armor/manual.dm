@@ -300,7 +300,7 @@
 	</br>To give into despair and hopelessness, however, is to rob all meaning from His sacrifice. \
 	</br>Heaven's gate closed to us long ago, yet His children persist; as as long as they do, so must I. \
 	</br>Happiness must be fought for."
-	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //125% of a leather armor.
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //a leather armor.
 
 /*
  * EMOTE ARMOUR
@@ -371,7 +371,7 @@
 	name = "tough skin"
 	desc = "Do you forsake protection for enlightenment, or in repentance for past transgressions?"
 	armor = ARMOR_PADDED
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM //A gambeson.
+	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE //A light gambeson.
 
 /*
  * REST ARMOUR
@@ -437,6 +437,7 @@
 /obj/item/clothing/suit/roguetown/armor/manual/resting/body/thug
 	name = "calloused skin"
 	desc = "A brawler's hide, thickened by a hard life. A spell of rest is enough to knit it whole again."
+	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE //a light gambeson.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/body/barbarian
 	name = "hardened skin"
@@ -462,12 +463,12 @@
 /obj/item/clothing/suit/roguetown/armor/manual/resting/chest/thug
 	name = "calloused chest"
 	desc = "A brawler's hide, thickened by a hard life. A spell of rest is enough to knit it whole again."
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM //A leather armor with gambeson integ (slightly weaker).
+	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE //A leather armor with light gambeson integ.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/chest/monk
 	name = "tough chest"
 	desc = "Do you forsake protection for enlightenment, or in repentance for past transgressions?"
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM //A leather armor with gambeson integ (slightly weaker).
+	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE //A leather armor with light gambeson integ.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/chest/barbarian
 	name = "hardened chest"
