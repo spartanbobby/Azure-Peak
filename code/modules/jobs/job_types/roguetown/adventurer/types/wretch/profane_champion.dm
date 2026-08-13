@@ -9,10 +9,12 @@
 	traits_applied = list(TRAIT_HEAVYARMOR)
 	maximum_possible_slots = 4 //Same as templar
 	subclass_stats = list(
+	subclass_stats = list(
 		STATKEY_STR = 2,
-		STATKEY_CON = 3,
-		STATKEY_WIL = 4,
-	)//Buffed up Templar
+		STATKEY_CON = 1,
+		STATKEY_WIL = 4
+	)
+	)
 	subclass_skills = list(
 		/datum/skill/magic/holy = SKILL_LEVEL_EXPERT,
 		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
