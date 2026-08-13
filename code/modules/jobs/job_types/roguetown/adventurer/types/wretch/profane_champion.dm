@@ -32,8 +32,7 @@
         "Armor Plates" =  /obj/item/repair_kit/metal,
     )
 
-	extra_context = "This subclass gains the Wound Heal miracle."
-	tempo_capable = FALSE
+	tempo_capable = TRUE
 
 /datum/outfit/job/roguetown/wretch/profane_champion
 	has_loadout = TRUE
