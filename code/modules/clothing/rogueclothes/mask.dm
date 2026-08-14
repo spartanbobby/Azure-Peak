@@ -56,12 +56,16 @@
 
 /obj/item/clothing/mask/rogue/faceveil
 	name = "simple veil"
+	desc = "A remarkably plain veil meant to conceal ones face... if you wore this, a gust of wind would be all it takes to reveal your identity."
 	icon_state = "faceveil"
 	flags_inv = HIDEFACE|HIDESNOUT
-	body_parts_covered = FACE
-	desc = "A remarkably plain veil meant to conceal ones face... if you wore this, a gust of wind would be all it takes to reveal your identity."
+	adjustable = CAN_CADJUST
+	toggle_icon_state = TRUE
 	grid_width = 32
 	grid_height = 32
+
+/obj/item/clothing/mask/rogue/faceveil/ComponentInitialize()
+	AddComponent(/datum/component/adjustable_clothing, NECK, null, null, 'sound/foley/equip/rummaging-03.ogg', null, (UPD_HEAD|UPD_MASK))	//Standard mask
 
 /obj/item/clothing/mask/rogue/spectacles/inq
 	name = "otavan nocshade lens-pair"
