@@ -3278,6 +3278,78 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland
+	name = "woodland brigandine"
+	desc = "A set of fitted brigandine armour featuring a hardened leather further reinforced with steel plates beneath, worn over a light \
+	maille shirt. Its similarity to the Azurian Warden's brigandine is no accident. Rosawood's Elven Rangers had shared its design with \
+	their fellows, who had adapted it further for their own needs. Armour such as this is oft worn by the Wardens that range Rosawood as well."
+	item_state = "woodwalkbrig"
+	icon_state = "woodwalkbrig"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/attack_right(mob/user)
+	if(detail_tag)
+		return
+	var/the_time = world.time
+	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
+	if(!pickedcolor)
+		return
+	if(world.time > (the_time + 30 SECONDS))
+		return
+	detail_tag = "_detail"
+	detail_color = COLOR_MAP[pickedcolor]
+	update_icon()
+	if(ismob(loc))
+		var/mob/L = loc
+		L.update_inv_armor()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland
+	name = "woodland brigandine"
+	desc = "A set of fitted brigandine armour featuring a hardened leather further reinforced with steel plates beneath, worn over a light \
+	maille shirt. Its similarity to the Azurian Warden's brigandine is no accident. Rosawood's Elven Rangers had shared its design with \
+	their fellows, who had adapted it further for their own needs. Armour such as this is oft worn by the Wardens that range Rosawood as well."
+	item_state = "woodwalkbrig"
+	icon_state = "woodwalkbrig"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/attack_right(mob/user)
+	if(detail_tag)
+		return
+	var/the_time = world.time
+	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
+	if(!pickedcolor)
+		return
+	if(world.time > (the_time + 30 SECONDS))
+		return
+	detail_tag = "_detail"
+	detail_color = COLOR_MAP[pickedcolor]
+	update_icon()
+	if(ismob(loc))
+		var/mob/L = loc
+		L.update_inv_armor()
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
@@ -3294,6 +3366,16 @@ As Excaliber."
 	detail_color = "#7c6965"
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/custom
+	item_state = "woodwalkerbrig"
+	icon_state = "woodwalkerbrig"
+	detail_color = "#7c6965"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland
+	item_state = "woodwalkerbrig"
+	icon_state = "woodwalkerbrig"
+	detail_color = "#7c6965"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
 	detail_color = "#7c6965"
