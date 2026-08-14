@@ -122,8 +122,7 @@
 				remove_status_effect(/datum/status_effect/debuff/exposed)
 				emote("pain", forced = TRUE)
 			else if(consume_debuff && has_status_effect(/datum/status_effect/debuff/vulnerable))
-				// Ditto, but for Vulnerable & Blunt as well.
-				// intdamage *= VULN_INTEG_MOD
+				intdamage *= VULN_INTEG_MOD
 				playsound(src, 'sound/combat/vulnerable_pop.ogg', 100, TRUE)
 				visible_message(span_biginfo("[src] is struck into their armor while vulnerable!"))
 				remove_status_effect(/datum/status_effect/debuff/vulnerable)
