@@ -57,6 +57,8 @@
 /obj/item/clothing/mask/rogue/faceveil
 	name = "simple veil"
 	icon_state = "faceveil"
+	flags_inv = HIDEFACE|HIDESNOUT
+	body_parts_covered = FACE
 	desc = "A remarkably plain veil meant to conceal ones face... if you wore this, a gust of wind would be all it takes to reveal your identity."
 	grid_width = 32
 	grid_height = 32
