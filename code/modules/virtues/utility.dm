@@ -101,19 +101,12 @@
 					if(target_z && (recipient.mind?.assigned_role == "Adventurer"))
 						var/list/possible_chairs = list()
 						var/list/possible_spawns = list()
-						var/area_count = 0
-						var/list/z_seen = list()
-						var/chair_seen_total = 0
 
 						for(var/area/A in world)
 							if(!istype(A, /area/rogue/indoors/town/tavern))
 								continue
-							area_count++
 							for(var/obj/structure/chair/C in A)
-								chair_seen_total++
 								var/turf/T = get_turf(C)
-								if(T)
-									z_seen["[T.z]"] = (z_seen["[T.z]"] || 0) + 1
 								if(T && T.z == target_z && C.type == /obj/structure/chair/wood/rogue && !T.density && !T.is_blocked_turf(FALSE))
 									possible_chairs += C
 
