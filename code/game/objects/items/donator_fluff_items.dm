@@ -3370,12 +3370,12 @@ As Excaliber."
 	icon_state = "woodwalkerbrig"
 	detail_color = "#7c6965"
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
 	detail_color = "#7c6965"
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
 	detail_color = "#7c6965"
