@@ -135,7 +135,6 @@
 					continue
 				var/shouldrenderfemale = (female && !(thing.slot_flags & SLOT_RING)) // rings and amulets don't have _f icons, but gloves _do_
 				var/mutable_appearance/thing_appearance = thing.build_worn_icon(RING_LAYER, default_icon_file, isinhands, femaleuniform, override_state, shouldrenderfemale, customi, sleeveindex, boobed_overlay, clip_mask)
-				to_chat(world, span_warning("[thing_appearance.icon],[thing_appearance.icon_state]"))
 				thing_appearance.appearance_flags = RESET_COLOR
 				thing_appearance.pixel_x -= standing.pixel_x
 				thing_appearance.pixel_y -= standing.pixel_y
