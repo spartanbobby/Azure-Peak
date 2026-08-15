@@ -1440,7 +1440,13 @@
 
 /obj/item/rogueweapon/eirenxiv/eiren_m
 	name = "glintstone longsword"
-	desc = "A glimmering blade, forged from a blue-white ore found rarely within the duchy of Azuria. Identical to steel in its properties, the tempering process to preserve the blue sheen is extensive and time consuming."
+	desc = "A glimmering blade, forged from a blue-white ore found rarely within the Greyglint mines, located on the edge of the Ashen Forests of the duchy of Azuria. \
+			Identical to steel in its properties, the tempering process to preserve the blue sheen is extensive and time consuming. \
+			Failure in performing a single step of the procedure causes the material to shift hue and redden, a process called 'Bleeding', which renders it brittle and unusable. \
+			\n\
+			With the fall of the Darkwoods that once held possession of the mines this material and blades like these have become a rare sight. \
+			Only recently more seem to have been forged, with the secrets of tempering glintstone rediscovered, alongside the long-thought lost heir to the house. \
+			Now, the blue glint raised high once again, shines as an unmistakable signature that even from nothing but ashes new glory and greatness may be forged."
 	icon_state = "eiren_m"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	sheathe_icon = "eiren_m"
