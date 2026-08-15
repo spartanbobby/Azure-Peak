@@ -291,7 +291,7 @@ GLOBAL_LIST_EMPTY(cagent_zadcages)
 				cote.request_summon(link, usr, zads)
 			return TRUE
 
-/obj/item/zadcage/cagent/Initialize()
+/obj/item/zadcage/cagent/Initialize(mapload)
 	. = ..()
 	GLOB.cagent_zadcages += src
 	if(GLOB.hand_zadcote)

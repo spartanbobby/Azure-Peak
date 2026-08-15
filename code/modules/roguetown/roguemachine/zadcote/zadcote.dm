@@ -24,7 +24,7 @@
 	var/list/mail_log = list()
 	var/spawn_cages = TRUE
 
-/obj/item/roguemachine/zadcote/Initialize()
+/obj/item/roguemachine/zadcote/Initialize(mapload)
 	. = ..()
 	for(var/i in 1 to ZADCOTE_SLOT_CAP)
 		slots += new /datum/zadlink(src, i)
@@ -427,6 +427,6 @@ GLOBAL_VAR_INIT(hand_zadcote, null)
 	is_important = TRUE
 	spawn_cages = FALSE
 
-/obj/item/roguemachine/zadcote/hand/Initialize()
+/obj/item/roguemachine/zadcote/hand/Initialize(mapload)
 	. = ..()
 	GLOB.hand_zadcote = src
