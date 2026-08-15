@@ -95,7 +95,7 @@
 	blocksound = SOFTHIT
 	blade_dulling = DULLING_BASHCHOP
 	sewrepair = FALSE
-	max_integrity = 120
+	max_integrity = 300
 	item_flags = DROPDEL
 
 /datum/intent/simple/bear
