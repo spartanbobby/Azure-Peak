@@ -133,7 +133,7 @@
 
 /obj/item/orbofwisdom
 	name = "orb of wisdom"
-	desc = "Said to house the essence of the condemed Wizard 'Mineester the Omnipotent', whomst was punished for his hubris and arrogance. His grand punishment is to serve as a simple tool for answering any and all the questions that may be posed by all the Magos of Psydonia. (CLICK WITH THE ORB TO ANSWER YOUR QUESTION)"
+	desc = "Said to house the essence of the condemned Wizard 'Mineester the Omnipotent', whomst was punished for his hubris and arrogance. His grand punishment is to serve as a simple tool for answering any and all the questions that may be posed by all the Magos of Psydonia. (CLICK WITH THE ORB TO ANSWER YOUR QUESTION)"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
 	icon = 'icons/roguetown/rav/obj/cult.dmi'
