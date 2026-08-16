@@ -164,7 +164,7 @@
 	var/outline_colour = "#EB4445"
 	id = "axedance"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/axedance
-	duration = 20 SECONDS // should be enough to balance it out
+	duration = 30 SECONDS // should be enough to balance it out
 	effectedstats = list("speed" = 3, "strength" = 3)
 
 /datum/status_effect/buff/axedance/on_apply()
