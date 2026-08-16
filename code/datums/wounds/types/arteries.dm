@@ -17,7 +17,7 @@
 	can_sew = TRUE
 	can_cauterize = TRUE
 	critical = TRUE
-	sleep_healing = 0.5
+	sleep_healing = 0.5 // this needs to not be zero so that getting arteried in a cave isn't an RR for deadite-immune players; arteries still kill way faster than you can sleepheal them for everyone else
 	embed_chance = 75
 
 	werewolf_infection_probability = 100
