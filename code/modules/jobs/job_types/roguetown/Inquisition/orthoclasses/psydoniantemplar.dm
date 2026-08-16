@@ -97,7 +97,7 @@
 			H.change_stat(STATKEY_CON, -2)
 			H.change_stat(STATKEY_WIL, -2)
 
-	var/weapons = list("Psydonic Longsword", "Psydonic Broadsword", "Psydonic Executioner Sword", "Psydonic War Axe", "Psydonic Whip", "Psydonic Flail", "Psydonic Flanged Mace", "Psydonic Grand Mace", "Psydonic Maul", "Psydonic Halberd + Arming Sword", "Psydonic Spear + Flanged Mace", "Psydonic Poleaxe + Shortsword")
+	var/weapons = list("Psydonic Longsword", "Psydonic Broadsword", "Psydonic Executioner Sword", "Psydonic War Axe", "Psydonic Whip", "Psydonic Flail", "Psydonic Flanged Mace", "Psydonic Grand Mace", "Psydonic Halberd + Arming Sword", "Psydonic Spear + Flanged Mace", "Psydonic Poleaxe + Shortsword")
 	var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
 	switch(weapon_choice)
 		if("Psydonic Longsword")
