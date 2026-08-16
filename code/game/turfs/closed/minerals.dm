@@ -79,6 +79,11 @@
 		if(!ismineralturf(src))
 			return
 		attackby(item, user, multiplier = 2)
+	if(istype(user.used_intent, /datum/intent/mace/demolish) && (user.get_skill_level(/datum/skill/labor/mining) >= SKILL_LEVEL_APPRENTICE))
+		if(!do_after(user, 2 SECONDS, TRUE, src, TRUE, null, TRUE))
+			if(!ismineralturf(src))
+				return
+		attackby(item, user, multiplier = 2)
 	if(user.used_intent.type == /datum/intent/drill && (user.get_skill_level(/datum/skill/labor/mining) >= SKILL_LEVEL_APPRENTICE) && (istype(item, /obj/item/rogueweapon/contraption/pick/drill)))
 		var/obj/item/rogueweapon/contraption/pick/drill/drillitem = item
 		if(drillitem.current_charge < 10)
@@ -157,7 +162,7 @@
 			src.attackby(item, user, multiplier = 4)
 			user.stamina_add(25)
 	if(istype(user.used_intent, /datum/intent/mace/demolish) && (user.get_skill_level(/datum/skill/labor/mining) >= SKILL_LEVEL_APPRENTICE))
-		if(do_after(user, 2 SECONDS, TRUE, src))
+		if(do_after(user, 3 SECONDS, TRUE, src))
 			if(!ismineralturf(src))
 				return
 			src.attackby(item, user, multiplier = 4)
