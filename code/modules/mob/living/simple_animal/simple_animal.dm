@@ -213,7 +213,6 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	var/obj/item/caparison/ccaparison
 	var/obj/item/clothing/barding/bbarding
 	var/caparison_over_barding = FALSE
-	var/barding_speed_mult = 1
 	var/do_footstep = FALSE
 	var/fly_time = 3 SECONDS //default fly delay
 	var/datum/voicepack/voicepack = null
@@ -338,9 +337,6 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		user.visible_message(span_notice("[user] removes the bard from [src]."), span_notice("I remove the bard from [src]."))
 		var/obj/item/clothing/barding/B = bbarding
 		bbarding = null
-		// Reset any movement slowdown from barding when it is removed
-		barding_speed_mult = 1
-		updatehealth()
 		B.forceMove(get_turf(src))
 		user.put_in_hands(B)
 		update_icon()
@@ -440,16 +436,13 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	if(HAS_TRAIT(src, TRAIT_RIGIDMOVEMENT))
 		return
 	if(HAS_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN))
-		var/base_delay = initial(move_to_delay)
-		move_to_delay = base_delay * barding_speed_mult
+		move_to_delay = initial(move_to_delay)
 		return
 	var/health_deficiency = getBruteLoss() + getFireLoss()
 	if(health_deficiency >= ( maxHealth - (maxHealth*0.50) ))
-		var/damaged_delay = initial(move_to_delay) + 2
-		move_to_delay = damaged_delay * barding_speed_mult
+		move_to_delay = initial(move_to_delay) + 2
 	else
-		var/normal_delay = initial(move_to_delay)
-		move_to_delay = normal_delay * barding_speed_mult
+		move_to_delay = initial(move_to_delay)
 
 /mob/living/simple_animal/hostile/forceMove(turf/T)
 	var/list/BM = list()
