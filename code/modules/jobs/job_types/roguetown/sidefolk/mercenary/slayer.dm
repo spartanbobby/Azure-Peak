@@ -29,7 +29,6 @@
 		/datum/skill/misc/medicine = SKILL_LEVEL_APPRENTICE, // Sew up the countless holes you will be receiving
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE, //bare minimum so they can use silverfaces and the like
 	)
-	adv_stat_ceiling = list(STAT_STRENGTH = 12) // I'm sorry but you're not grabbing muscular and aiming chest with 12 speed 17 strength swift intent spam.
 
 /datum/outfit/job/roguetown/mercenary/trollslayer
 	allowed_patrons = ALL_SLAYER_PATRONS
@@ -165,7 +164,7 @@
 	var/outline_colour = "#EB4445"
 	id = "axedance"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/axedance
-	duration = 30 SECONDS // should be enough to balance it out
+	duration = 20 SECONDS // should be enough to balance it out
 	effectedstats = list("speed" = 3, "strength" = 3)
 
 /datum/status_effect/buff/axedance/on_apply()
