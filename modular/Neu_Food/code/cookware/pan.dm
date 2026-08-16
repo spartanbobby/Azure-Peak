@@ -24,6 +24,7 @@
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	obj_flags = CAN_BE_HIT
 
+
 /obj/item/cooking/pan/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -56,6 +57,14 @@
 	icon_state = "bronzepan"
 	throwforce = 30 //We both know why.
 	max_integrity = 200
+
+/obj/item/cooking/pan/blacksteel
+	name = "blacksteel pan"
+	desc = "When in doubt on how to make something worthy of a lord, use the most expensive tools to say it brings flavor."
+	icon_state = "blpan"
+	wdefense = 4 //it's gonna cost a whole ingot of blacksteel gotta make it interesting
+	throwforce = 30 //We both know why.
+	max_integrity = 300
 
 /obj/item/cooking/pan/stone
 	name = "hotrock"
