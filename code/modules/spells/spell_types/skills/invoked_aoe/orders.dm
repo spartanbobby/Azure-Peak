@@ -2,6 +2,9 @@
 // BASELINE ORDER //
 ////////////////////
 
+#define LEADERSHIP_ORDER_SHARED_COOLDOWN "leadership_order_cooldown"
+
+
 /datum/action/cooldown/spell/order
 	name = ""
 	background_icon = 'icons/mob/actions/orders.dmi'
@@ -21,7 +24,9 @@
 	charge_time = 1.5 SECONDS
 	charge_slowdown = CHARGING_SLOWDOWN_NONE
 	charge_swingdelay_type = SWINGDELAY_PENALTY
-	cooldown_time = 2 SECONDS
+	cooldown_time = 2 MINUTES
+
+	shared_cooldown = LEADERSHIP_ORDER_SHARED_COOLDOWN
 
 	ignore_armor_penalty = TRUE
 	associated_stat = null
