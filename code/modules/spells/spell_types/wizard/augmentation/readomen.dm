@@ -44,7 +44,7 @@
 	var/list/reign_messages = list(
 		/datum/faith/divine = list(
 			/datum/faith/divine = "The Leylines feel still, and ready to be molded.",
-			/datum/faith/inhumen = "They Leylines feel controlled, like it's potential is being surpressed.",
+			/datum/faith/inhumen = "They Leylines feel controlled, like it's potential is being suppressed.",
 			/datum/faith/old_god = "They Leylines feel average, they could always be more controlled.",
 		),
 		/datum/faith/inhumen = list(
