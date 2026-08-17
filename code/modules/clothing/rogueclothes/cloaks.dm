@@ -148,7 +148,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(alert(user, "Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
 		detail_color = initial(detail_color)
 		color = initial(color)
 		boobed_detail = initial(boobed_detail)
@@ -561,7 +561,7 @@
 	color = CLOTHING_PURPLE
 	custom_design = TRUE
 
-/obj/item/clothing/cloak/tabard/knight/Initialize()
+/obj/item/clothing/cloak/tabard/knight/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -578,7 +578,7 @@
 	detail_tag = "_quad"
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/tabard/retinue/Initialize()
+/obj/item/clothing/cloak/tabard/retinue/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -605,7 +605,7 @@
 	detail_color = CLOTHING_RED
 	boobed_detail = FALSE
 
-/obj/item/clothing/cloak/tabard/crusader/Initialize()
+/obj/item/clothing/cloak/tabard/crusader/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -634,7 +634,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(alert(user, "Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
 		detail_color = initial(detail_color)
 		color = initial(color)
 		update_icon()
@@ -668,7 +668,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(alert(user, "Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
 		detail_color = initial(detail_color)
 		color = initial(color)
 		update_icon()
@@ -739,7 +739,7 @@
 	detail_tag = "_quad"
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/tabard/stabard/guard/Initialize()
+/obj/item/clothing/cloak/tabard/stabard/guard/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -805,7 +805,7 @@
 /obj/item/clothing/cloak/tabard/stabard/mercenary
 	detail_tag = "_quad"
 
-/obj/item/clothing/cloak/tabard/stabard/mercenary/Initialize()
+/obj/item/clothing/cloak/tabard/stabard/mercenary/Initialize(mapload)
 	. = ..()
 	detail_tag = pick("_quad", "_spl", "_box", "_dim")
 	color = pick(CLOTHING_COLOR_MAP)
@@ -845,7 +845,7 @@
 	detail_tag = "_quad"
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/tabard/stabard/surcoat/guard/Initialize()
+/obj/item/clothing/cloak/tabard/stabard/surcoat/guard/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -899,7 +899,7 @@
 		var/mob/L = loc
 		L.update_inv_cloak()
 
-/obj/item/clothing/cloak/lordcloak/Initialize()
+/obj/item/clothing/cloak/lordcloak/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -1071,7 +1071,7 @@
 	salvage_result = /obj/item/natural/fur
 	salvage_amount = 1
 
-/obj/item/clothing/cloak/raincloak/furcloak/crafted/Initialize()
+/obj/item/clothing/cloak/raincloak/furcloak/crafted/Initialize(mapload)
 	. = ..()
 	if(prob(50))
 		color = pick("#685542","#66564d")
@@ -1120,7 +1120,7 @@
 /obj/item/clothing/cloak/cape/red
 	color = CLOTHING_RED
 
-/obj/item/clothing/cloak/cape/guard/Initialize()
+/obj/item/clothing/cloak/cape/guard/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -1147,6 +1147,18 @@
 	icon_state = "puritan_cape"
 	color = CLOTHING_BLACK
 	allowed_race = CLOTHED_RACES_TYPES
+
+/obj/item/clothing/cloak/scout
+	name = "scout cloak"
+	desc = "A weathered cape cut short at the flank."
+	icon_state = "scout_cloak"
+	item_state = "scout_cloak"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
 
 /obj/item/clothing/cloak/cape/inquisitorgold
 	name = "golden order cloak"
@@ -1321,7 +1333,7 @@
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	inhand_mod = FALSE
 
-/obj/item/clothing/cloak/half/vet/Initialize()
+/obj/item/clothing/cloak/half/vet/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -1572,7 +1584,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(alert(user, "Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
 		detail_tag = initial(detail_tag)
 		update_icon()
 		if(ismob(loc))
@@ -1581,7 +1593,7 @@
 		return
 	custom_design = TRUE
 
-/obj/item/clothing/cloak/tabard/stabard/guardhood/Initialize()
+/obj/item/clothing/cloak/tabard/stabard/guardhood/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
@@ -1621,7 +1633,7 @@
 	naledicolor = TRUE
 	desc = "A limp piece of fabric traditionally used to fasten bags that are too baggy, but in modern days has become more of a fashion statement than anything."
 
-/obj/item/clothing/cloak/hierophant/Initialize()
+/obj/item/clothing/cloak/hierophant/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -1667,7 +1679,7 @@
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
 
-/obj/item/clothing/cloak/graggar/Initialize()
+/obj/item/clothing/cloak/graggar/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "CLOAK", "RENDERED ASUNDER")
 
@@ -1679,7 +1691,7 @@
 	desc = "Sorrow begets spite; and when one has nothing else to lose, spite is all that's needed for Man to defy God."
 	icon_state = "graggarcloak_heavy"
 
-/obj/item/clothing/cloak/graggar/Initialize()
+/obj/item/clothing/cloak/graggar/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "CLOAK", "RENDERED ASUNDER")
 
@@ -1834,7 +1846,7 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/cloak/cotehardie/Initialize()
+/obj/item/clothing/cloak/cotehardie/Initialize(mapload)
 	..()
 	update_icon()
 
@@ -1857,7 +1869,7 @@
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	detail_color = "#39404d"
 
-/obj/item/clothing/cloak/banneret/Initialize()
+/obj/item/clothing/cloak/banneret/Initialize(mapload)
 	. = ..()
 	if(GLOB.lordprimary)
 		lordcolor(GLOB.lordprimary, GLOB.lordsecondary)
