@@ -239,7 +239,7 @@
 	new /obj/item/psydonmusicbox(src)
 
 /datum/inqports/articles/psymaul
-	name = "Relic - The Psydonic Maul, Evershattering"
+	name = "Relic - The Maul, Evershattering"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/psymaul/
 	marquescost = 6 //its meant to be easy to aquire, even solo orthodoxist can get it. unique weapon/wall leveling tool, marq shop keeps it from being stolen until you get the thing.
 	maximum = 1
