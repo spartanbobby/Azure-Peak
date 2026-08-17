@@ -28,9 +28,7 @@
 		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 	)
-	subclass_stashed_items = list(
-        "Armor Plates" =  /obj/item/repair_kit/metal,
-    )
+	subclass_stashed_items = list("Armor Plates"=/obj/item/repair_kit/metal)
 
 	tempo_capable = TRUE
 
@@ -109,6 +107,7 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		)
+
 /datum/outfit/job/roguetown/wretch/profane_champion/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
 
