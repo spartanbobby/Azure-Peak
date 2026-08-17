@@ -250,6 +250,7 @@
 /obj/structure/closet/crate/chest/inqreliquary/relic/psymaul/Initialize(mapload)
 	. = ..()
 	new /obj/item/rogueweapon/mace/maul/grand/psy(src)
+	new /obj/item/rogueweapon/scabbard/gwstrap(src) //so you can lug it around
 
 /datum/inqports/articles/bmirror
 	name = "Relic - The Mirrors, Everseeing"
