@@ -2,9 +2,6 @@
 // BASELINE ORDER //
 ////////////////////
 
-#define LEADERSHIP_ORDER_SHARED_COOLDOWN "leadership_order_cooldown"
-
-
 /datum/action/cooldown/spell/order
 	name = ""
 	background_icon = 'icons/mob/actions/orders.dmi'
