@@ -82,8 +82,14 @@
 		return
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/bow = pawn.get_active_held_item()
 	if(!istype(bow))
-		finish_action(controller, FALSE, target_key)
-		return
+		bow = _find_archer_bow(pawn)
+		if(!bow)
+			finish_action(controller, FALSE, target_key)
+			return
+		_enter_bow_stance(controller, pawn, bow)
+		if(pawn.get_active_held_item() != bow)
+			finish_action(controller, FALSE, target_key)
+			return
 
 	var/dist = get_dist(pawn, target)
 	var/is_crossbow = istype(bow, /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow)
@@ -317,7 +323,7 @@
 	var/stashed = FALSE
 	if(pawn.belt)
 		for(var/slot in list(SLOT_BELT_R, SLOT_BELT_L))
-			if(!pawn.get_item_by_slot(slot) && pawn.equip_to_slot_if_possible(weapon, slot, disable_warning = TRUE))
+			if(!pawn.get_item_by_slot(slot) && pawn.equip_to_slot_if_possible(weapon, slot, disable_warning = TRUE, bypass_equip_delay_self = TRUE))
 				stashed = TRUE
 				break
 	if(!stashed)
@@ -337,7 +343,7 @@
 		var/stowed = FALSE
 		if(pawn.belt)
 			for(var/slot in list(SLOT_BELT_R, SLOT_BELT_L))
-				if(!pawn.get_item_by_slot(slot) && pawn.equip_to_slot_if_possible(held, slot, disable_warning = TRUE))
+				if(!pawn.get_item_by_slot(slot) && pawn.equip_to_slot_if_possible(held, slot, disable_warning = TRUE, bypass_equip_delay_self = TRUE))
 					stowed = TRUE
 					break
 		if(!stowed && !pawn.get_inactive_held_item())
@@ -415,5 +421,6 @@
 	bow.npc_force_arc = should_arc
 	if(should_arc)
 		aim_at = pawn.scatter_aim_turf(get_turf(aim_at), target, rand(1, ARCHER_NPC_ARC_MISS_TILES)) || aim_at
-	bow.process_fire(aim_at, pawn, TRUE, null, "", 0)
+	var/bonus_spread = ARCHER_NPC_BASE_SPREAD + (max(0, ARCHER_NPC_SPREAD_BASELINE - pawn.STAPER) * ARCHER_NPC_SPREAD_PER_POINT)
+	bow.process_fire(aim_at, pawn, TRUE, null, "", bonus_spread)
 	bow.npc_force_arc = FALSE
