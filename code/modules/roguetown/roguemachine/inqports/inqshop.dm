@@ -241,8 +241,9 @@
 /datum/inqports/articles/psymaul
 	name = "Relic - The Psydonic Maul, Evershattering"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/psymaul/
-	marquescost = 6 //its meant to be reasonably easy to aquire, even on solo inquis. unique weapon/pickaxe/wall leveling multitool, marq shop keeps it from being silently stolen UNTIL they buy it and leave it somewhere.
+	marquescost = 6 //its meant to be easy to aquire, even solo orthodoxist can get it. unique weapon/wall leveling tool, marq shop keeps it from being stolen until you get the thing.
 	maximum = 1
+	//it does 15% of max structure integ as damage, get siegebows if you want more leveling walls and faster.
 
 //Intended to exist seperate to inquisitor.
 
