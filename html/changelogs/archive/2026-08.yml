@@ -815,3 +815,24 @@
   saltprjak:
   - balance: Bear and Mole wildshapes lose critres and nopainstun. Bear hide gets
       x2.5 integrity compared to before.
+2026-08-18:
+  7erracotta:
+  - bugfix: fixed borked pottery items
+  KatTheFox:
+  - bugfix: Deadite immune players can now sleepheal even the most severe of wounds,
+      over a long period of time, preventing them from being effectively RRd by dying
+      in a random cave
+  kiwedespars:
+  - rscdel: removed pierceimmunity from gnolls. rejoice, you can receive surgery,
+      again.
+  mumblemancer:
+  - bugfix: bootcheck gives you silver coin if for >= 10 instead of == 10
+  radarseas:
+  - balance: Due to budget cuts in the Otavian's weaponry stocks for the inquisition;
+      The Psydonic maul is no longer a standard-issue weapon choice for adjudicators,
+      its now a one-time only, 6 marq purchase in the inquisitional shop. Don't lose
+      it!
+  - rscdel: You can no longer craft Psydonic mauls, they're an exclusive single-one-of-a-kind
+      weapon now.
+  - bugfix: Psydonic maul can no longer mine (it never could anyway, it'd just spam
+      you with a doafter timer because blunt intents can't mine rock)
