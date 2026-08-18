@@ -437,6 +437,7 @@
 	. += span_info("Stakes can be crafted with a stone to make whetstones, which are better at sharpening blades.")
 	. += span_info("Stakes are weak, but can double as improvised weapons with total armor penetration. Crafting a stake with a whetstone can make it into a more refined weapon.")
 	. += span_info("Driving a stake through the heart of an incapacitated revenant is one of the few ways to put them down for the week. Sharper stakes, and ones made of silver, are better at this.")
+	. += span_info("Staking also works to kill many other types of undead - generally, anyone you can't kill with bloodloss can be staked.")
 
 /obj/item/grown/log/tree/stake/getonmobprop(tag)
 	. = ..()

@@ -9,13 +9,13 @@
 	staketime = time
 	RegisterSignal(parent, COMSIG_ITEM_PRE_ATTACK, PROC_REF(handle_stake))
 
-/// If the target is a revenant who's incapacitated (in crit), you can stake their heart to properly kill them. They can still be revived, and lorewise they'll pop back up _eventually_, but this is how you properly kill them.
+/// If the target is a deathless character who's incapacitated (in crit), you can stake their heart to properly kill them. They can still be revived, and lorewise they'll pop back up _eventually_, but this is how you properly kill them.
 /datum/component/deaditeslayer/proc/handle_stake(datum/source, atom/A, mob/M, params)
 	if(!isliving(M) || !ishuman(A))
 		return
 	var/mob/living/carbon/human/rev = A
 	var/mob/living/user = M
-	if(!isdullahan(rev))
+	if(!HAS_TRAIT(rev, TRAIT_DEATHLESS))
 		return
 	if(!rev.stat) // technically this means you can stake sleeping revs. the alternative is making them fully unkillable while sleeping, which they can do in crit - so no
 		return

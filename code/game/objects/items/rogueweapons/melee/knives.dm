@@ -909,6 +909,7 @@
 /obj/item/rogueweapon/huntingknife/idagger/stake/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Driving a stake through the heart of an incapacitated revenant is one of the few ways to put them down for the week. Sharper stakes, and ones made of silver, are better at this.")
+	. += span_info("Staking also works to kill many other types of undead - generally, anyone you can't kill with bloodloss can be staked.")
 
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake
 	name = "silver-tipped stake"
@@ -954,6 +955,7 @@
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Driving a stake through the heart of an incapacitated revenant is one of the few ways to put them down for the week. Sharper stakes, and ones made of silver, are better at this.")
+	. += span_info("Staking also works to kill many other types of undead - generally, anyone you can't kill with bloodloss can be staked.")
 
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy
 	name = "silver-tipped otavan stake"
