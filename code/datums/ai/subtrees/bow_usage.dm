@@ -421,6 +421,8 @@
 	bow.npc_force_arc = should_arc
 	if(should_arc)
 		aim_at = pawn.scatter_aim_turf(get_turf(aim_at), target, rand(1, ARCHER_NPC_ARC_MISS_TILES)) || aim_at
-	var/bonus_spread = ARCHER_NPC_BASE_SPREAD + (max(0, ARCHER_NPC_SPREAD_BASELINE - pawn.STAPER) * ARCHER_NPC_SPREAD_PER_POINT)
+	var/bonus_spread = 0
+	if(!HAS_TRAIT(pawn, TRAIT_CONJURED_SUMMON))
+		bonus_spread = ARCHER_NPC_BASE_SPREAD + (max(0, ARCHER_NPC_SPREAD_BASELINE - pawn.STAPER) * ARCHER_NPC_SPREAD_PER_POINT)
 	bow.process_fire(aim_at, pawn, TRUE, null, "", bonus_spread)
 	bow.npc_force_arc = FALSE
