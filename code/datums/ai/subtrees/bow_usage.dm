@@ -123,14 +123,14 @@
 				controller.set_blackboard_key(BB_ARCHER_NPC_NEXT_SHOT, world.time)
 			else
 				controller.set_blackboard_key(BB_ARCHER_NPC_NEXT_SHOT, world.time + bow.get_npc_chargetime(pawn))
-			var/turf/juke = _archer_reposition_turf(pawn, target)
-			if(juke)
-				controller.set_blackboard_key(BB_ARCHER_NPC_REPOSITION_TURF, juke)
-				controller.set_blackboard_key(BB_ARCHER_NPC_REPOSITION_UNTIL, world.time + ARCHER_NPC_REPOSITION_TIME)
+			if(dist > ARCHER_NPC_JUKE_MIN_DIST)
+				var/turf/juke = _archer_reposition_turf(pawn, target)
+				if(juke)
+					controller.set_blackboard_key(BB_ARCHER_NPC_REPOSITION_TURF, juke)
+					controller.set_blackboard_key(BB_ARCHER_NPC_REPOSITION_UNTIL, world.time + ARCHER_NPC_REPOSITION_TIME)
 
 	var/draw_slow = _bow_draw_slowdown(bow)
-	var/next_shot = controller.blackboard[BB_ARCHER_NPC_NEXT_SHOT]
-	if(draw_slow && !is_crossbow && bow.chambered && world.time >= (next_shot - bow.get_npc_drawtime(pawn)))
+	if(draw_slow && !is_crossbow)
 		pawn.add_movespeed_modifier(MOVESPEED_ID_CHARGING, update = TRUE, priority = 100, override = TRUE, multiplicative_slowdown = draw_slow, movetypes = GROUND)
 	else
 		pawn.remove_movespeed_modifier(MOVESPEED_ID_CHARGING)

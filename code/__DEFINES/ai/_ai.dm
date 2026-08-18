@@ -169,6 +169,7 @@
 #define ARCHER_NPC_MIN_AIM_TIME			(0.4 SECONDS)
 #define ARCHER_NPC_ROF_PENALTY			1.6
 #define ARCHER_NPC_RETREAT_PROJECT		4
+#define ARCHER_NPC_JUKE_MIN_DIST		4
 #define ARCHER_NPC_REPOSITION_TIME		(0.6 SECONDS) // how long a post-shot random juke commits before the straight retreat resumes
 #define ARCHER_NPC_ARROW_SEARCH_RANGE	9
 #define ARCHER_NPC_SIMULATED_CHARGETIME 1.5 SECONDS // fallback bow charge time
