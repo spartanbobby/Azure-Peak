@@ -71,6 +71,8 @@
 /datum/sex_action/proc/shows_on_menu(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(debug_erp_panel_verb)
 		return FALSE
+	if(target.freeuse)
+		return TRUE
 	if(user.get_highest_grab_state_on(target) == GRAB_AGGRESSIVE)
 		return TRUE //Battlefuck buff
 	return TRUE
@@ -101,6 +103,9 @@
 
 	if(!bodypart)
 		return FALSE
+
+	if(target.freeuse)
+		return TRUE
 
 	if(user.get_highest_grab_state_on(target) == GRAB_AGGRESSIVE)
 		return TRUE //Battlefuck buff

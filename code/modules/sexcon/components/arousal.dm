@@ -172,7 +172,7 @@
 	var/list/parent_sessions = return_sessions_with_user(parent)
 	var/datum/sex_session/highest_priority = return_highest_priority_action(parent_sessions, parent)
 	var/mob/living/carbon/human/climaxer
-	var/mob/living/carbon/human/partner 
+	var/mob/living/carbon/human/partner
 	var/datum/sex_action/action = SEX_ACTION(highest_priority.current_action)
 
 	if(action.flipped)
@@ -193,7 +193,7 @@
 		var/turf/turf = get_turf(parent)
 		new /obj/effect/decal/cleanable/coom(turf)
 		after_ejaculation(action, climaxer, partner)
-	else	
+	else
 		var/return_message = action.handle_climax_message(climaxer, partner)
 		if(!return_message)
 			mob.visible_message(span_love("[mob] makes a mess!"))
@@ -257,7 +257,7 @@
 			climaxer.add_stress(/datum/stressevent/thrillsex)
 		if(prob(10))
 			climaxer.emote("groan", forced = TRUE)
-		return	
+		return
 
 	climaxer.emote("moan", forced = TRUE)
 	climaxer.playsound_local(climaxer, 'sound/misc/mat/end.ogg', 100)

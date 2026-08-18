@@ -185,6 +185,8 @@
 		return FALSE
 	if(!user.Adjacent(target) && !action.ranged_action)
 		return FALSE
+	if(target.freeuse)
+		return TRUE
 	if(action.check_incapacitated && user.incapacitated())
 		return FALSE
 	if(action.check_same_tile)
@@ -392,6 +394,7 @@
 	var/current_arousal = arousal_data["arousal"] || 0
 	data["arousal"] = min(100, (current_arousal / ACTIVE_EJAC_THRESHOLD) * 100)
 	data["frozen"] = arousal_data["frozen"] || FALSE
+	data["freeuse"] = my_user.freeuse || FALSE
 
 	// Which actions can be performed
 	var/list/can_perform = list()
@@ -451,6 +454,10 @@
 			. = TRUE
 		if("freeze_arousal")
 			SEND_SIGNAL(user, COMSIG_SEX_FREEZE_AROUSAL)
+			. = TRUE
+		if("toggle_freeuse")
+			user.freeuse = !user.freeuse
+			to_chat(user, span_notice("Positioning and exposure checks are now [user.freeuse ? "enabled" : "disabled"]."))
 			. = TRUE
 		if("update_session_name")
 			if(collective)
