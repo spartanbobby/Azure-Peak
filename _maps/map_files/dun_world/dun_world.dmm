@@ -112632,11 +112632,6 @@
 /obj/structure/closet/dirthole/closed,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/underdark/north)
-"uWb" = (
-/obj/machinery/light/rogue/candle,
-/obj/machinery/light/rogue/candle/r,
-/turf/open/floor/rogue/ruinedwood,
-/area/rogue/indoors/town)
 "uWc" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -401791,7 +401786,7 @@ ttj
 bGf
 bGf
 uBc
-uWb
+aEz
 hqI
 uWP
 duz
