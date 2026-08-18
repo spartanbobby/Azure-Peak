@@ -457,6 +457,10 @@
 		slapcraft_recipes = slapcraft_recipe_list,\
 		)
 
+/obj/item/grown/log/tree/stake/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/deaditeslayer, time = 20 SECONDS) // improvised as hell, so it takes a while. sharpen it first you peasant
+
 /obj/item/grown/log/tree/stake/attack_obj(obj/O, mob/living/user)
 	. = ..()
 	if(isitem(O))
