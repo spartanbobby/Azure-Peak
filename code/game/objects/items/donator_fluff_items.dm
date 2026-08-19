@@ -3129,6 +3129,19 @@ As Excaliber."
 	detail_tag = "_detail"
 	detail_color = 	"#365326"
 
+/obj/item/clothing/cloak/furcloak/woodland/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/cloak/furcloak/woodland/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 /obj/item/clothing/cloak/furcloak/woodland/donator_noire
 	name = "collared woodland mantle"
 	desc = "A flowing cloak that can be worn tighter or looser as the wearer deems fit. More than suitable for protection from the \
@@ -3167,6 +3180,19 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland
 	name = "woodland brigandine"
