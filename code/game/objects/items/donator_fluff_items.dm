@@ -2355,6 +2355,19 @@ As Excaliber."
 	item_state = "night_cloak"
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_BACK_L
 
+/obj/item/rogueweapon/example/dussack/moonlight
+	name = "Moonlight Dussack"
+	desc = "A curved blade with a sharpened short-edge on the back. Most often seen wielded by civillians in Grenzelhoft for self defense. Dussack mostly refers to a training item for fechters, however \
+	rarely seen are steel blades like these, a perfect cutting weapon, not too dissimilar to the Aavnic's sabres. This one is made of a unique alloy, it seems."
+	icon_state = "kadedussack"
+	sheathe_icon = "kadedussack"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	grid_height = 64
+	grid_width = 64
+
 // MORTOSASYE
 /obj/item/rogueweapon/woodstaff/implement/grand/morto
 	base_implement_name = null
