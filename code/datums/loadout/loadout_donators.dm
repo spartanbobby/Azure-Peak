@@ -949,17 +949,7 @@
 	path = /obj/item/clothing/head/roguetown/roguehood/shawlhood/woodland
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega","revennui")
 
-/datum/loadout_item/donator/nero_woodlandcloak_noire
-	name = "Gift - Collared Woodland Mantle"
-	path = /obj/item/clothing/cloak/furcloak/woodland/donator_noire
-	ckeywhitelist = list("nerocavalier")
-
-/datum/loadout_item/donator/nero_woodlandbrig
-	name = "Donator Kit - Woodland Brigandine"
-	path = /obj/item/enchantingkit/nero_woodlandbrig
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega","revennui")
-
 /datum/loadout_item/donator/nero_woodlandbrigplackart
-	name = "Donator Kit - Woodland Plackarted Brigandine"
+	name = "Donator Kit - Woodland Brigandine"
 	path = /obj/item/enchantingkit/nero_woodlandbrigplackart
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega","revennui")

@@ -1243,7 +1243,7 @@
 	result_item = null
 
 /obj/item/enchantingkit/nero_woodlandbrigplackart
-	name = "'Woodland Plackarted Brigandine' morphing elixir"
+	name = "'Woodland Brigandine' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Light Brigandine vest, \
 	a set of Studded Leather Armor, a Steel Cuirass, a Fluted Cuirass, a Haubergeon, or a Hauberk."
 	target_items = list(
