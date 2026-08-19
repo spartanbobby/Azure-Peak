@@ -312,8 +312,6 @@
 	force = 9
 	pixel_y = -16
 	pixel_x = -16
-	damfactor = 1.1
-	accfactor = 1.3
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	bigboy = TRUE
@@ -401,7 +399,7 @@
 	icon_state = "longbow"
 	slot_flags = ITEM_SLOT_BACK
 	damfactor = 1.3
-	accfactor = 1.1//How is a greater draw weight bow lower accuracy exactly???
+	accfactor = 0.9
 	pixel_y = -16
 	pixel_x = -16
 	inhand_x_dimension = 64
