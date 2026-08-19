@@ -202,7 +202,7 @@
 
 /datum/loadout_item/shawlhood
 	name = "Shawl (Hijab Variant)"
-	path = /obj/item/clothing/head/roguetown/shawlhood
+	path = /obj/item/clothing/head/roguetown/roguehood/shawlhood
 	sort_category = "Hats"
 
 /datum/loadout_item/maidband
