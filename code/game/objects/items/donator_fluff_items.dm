@@ -3122,7 +3122,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
-	color = CLOTHING_WHITE
+	color = null
 	allowed_sex = list(MALE, FEMALE)
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	sleevetype = "shirt"
@@ -3154,7 +3154,7 @@ As Excaliber."
 	name = "woodland shawl"
 	desc = "A distant cousin to the Naledian hijab, shawls like these offer plenty of coverage for the wearer's head and neck. It's looser \
 	on the head than most hoods, in order to preserve one's perception in the places where it'd count."
-	detail_color = "#365326"
+	color = "#365326"
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland
 	name = "woodland brigandine"
