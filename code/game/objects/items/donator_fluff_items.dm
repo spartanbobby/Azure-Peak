@@ -3181,6 +3181,10 @@ As Excaliber."
 	detail_color = "#697F5C"
 	detail_tag = "_detail"
 
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/Initialize(mapload)
+	..()
+	update_icon()
+
 /obj/item/clothing/suit/roguetown/armor/chainmail/woodland
 	name = "woodland brigandine"
 	desc = "A set of fitted brigandine armour featuring a hardened leather further reinforced with steel plates beneath, worn over a light \
