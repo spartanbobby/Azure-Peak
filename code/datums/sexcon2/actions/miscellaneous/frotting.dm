@@ -38,11 +38,15 @@
 
 /datum/sex_action/miscellaneous/frotting/on_start(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] shoves [user.p_their()] pintle against [target]'s own!"))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]shoves [user.p_their()] pintle against [target]'s own!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/frotting/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] lets go of both their pintle."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]lets go of both their pintles."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/frotting/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	sex_locks |= new /datum/sex_session_lock(user, ORGAN_SLOT_PENIS)
@@ -50,11 +54,15 @@
 
 /datum/sex_action/miscellaneous/frotting/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective()] frots pintles together with [target]."))
+	var/do_subtle = sex_session.doing_subtly
+
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] frots pintles together with [target]."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/frotting/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	playsound(user, 'sound/misc/mat/fingering.ogg', 20, TRUE, -2, ignore_walls = FALSE)
+	var/do_subtle = sex_session.doing_subtly
+
+	playsound(user, 'sound/misc/mat/fingering.ogg', 20, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
 	sex_session.perform_sex_action(user, 1, 4, TRUE)
 	sex_session.handle_passive_ejaculation()

@@ -37,10 +37,14 @@
 	return TRUE
 
 /datum/sex_action/scissoring/get_start_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	return span_warning("[user] spreads [user.p_their()] legs and aligns [user.p_their()] cunt against [target]'s own!")
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	return span_warning("[user] [do_subtle ? "subtly " : ""]spreads [user.p_their()] legs and aligns [user.p_their()] cunt against [target]'s own!")
 
 /datum/sex_action/scissoring/get_finish_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	return span_warning("[user] stops scissoring with [target].")
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	return span_warning("[user] stops [do_subtle ? "subtly " : ""]scissoring with [target].")
 
 ///if someone can convince me you can somehow find a way to do another action on scissoring that shouldn't be a seperate action I will remove this
 /datum/sex_action/scissoring/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
@@ -49,13 +53,16 @@
 
 /datum/sex_action/scissoring/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective()] scissors with [target]'s cunt."))
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] scissors with [target]'s cunt."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/scissoring/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	playsound(target, 'sound/misc/mat/segso.ogg', 50, TRUE, -2, ignore_walls = FALSE)
-	do_thrust_animate(user, target, sex_session)
-	do_onomatopoeia(user)
+	var/do_subtle = sex_session.doing_subtly
+	playsound(target, 'sound/misc/mat/segso.ogg', 50, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
+	if(!do_subtle)
+		do_thrust_animate(user, target, sex_session)
+		do_onomatopoeia(user)
 
 	sex_session.perform_sex_action(user, 1, 4, TRUE)
 	sex_session.handle_passive_ejaculation()

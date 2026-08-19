@@ -29,11 +29,15 @@
 
 /datum/sex_action/masturbate/penis/on_start(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] starts jerking off..."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] starts [do_subtle ? "subtly " : ""]jerking off..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/penis/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] stops jerking off."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] stops [do_subtle ? "subtly " : ""]jerking off."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/penis/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
@@ -41,11 +45,13 @@
 
 /datum/sex_action/masturbate/penis/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective()] strokes [user.p_their()] pintle..."))
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] strokes [user.p_their()] pintle..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/penis/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, -2, ignore_walls = FALSE)
+	var/do_subtle = sex_session.doing_subtly
+	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
 	do_onomatopoeia(user)
 

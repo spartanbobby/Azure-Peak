@@ -32,14 +32,20 @@
 
 /datum/sex_action/masturbate/other/tailjob_vagina/get_start_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] starts pressing [user.p_their()] tail into [target]'s cunt..."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] starts [do_subtle ? "subtly " : ""]pressing [user.p_their()] tail into [target]'s cunt..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/tailjob_vagina/get_finish_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] pulls out [user.p_their()] tail out of [target]'s cunt."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]pulls out [user.p_their()] tail out of [target]'s cunt."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/tailjob/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	user.visible_message(span_love("[user] cums over [target]'s tail!"))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]cums over [target]'s tail!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 	return "onto"
 
 /datum/sex_action/masturbate/other/tailjob_vagina/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
@@ -49,11 +55,13 @@
 
 /datum/sex_action/masturbate/other/tailjob_vagina/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective()] presses [user.p_their()] tail into [target]'s cunt..."))
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] presses [user.p_their()] tail into [target]'s cunt..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/tailjob_vagina/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, -2, ignore_walls = FALSE)
+	var/do_subtle = sex_session.doing_subtly
+	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
 	sex_session.perform_sex_action(target, 3, 4, TRUE)
 	sex_session.handle_passive_ejaculation(target)

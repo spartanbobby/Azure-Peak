@@ -37,29 +37,38 @@
 
 /datum/sex_action/oral/blowjob/on_start(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] starts sucking [target]'s pintle..."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] starts [do_subtle ? "subtly " : ""]sucking [target]'s pintle..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/oral/blowjob/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] stops sucking [target]'s pintle ..."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_warning("[user] stops [do_subtle ? "subtly " : ""]sucking [target]'s pintle ..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/oral/blowjob/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	sex_locks |= new /datum/sex_session_lock(user, BODY_ZONE_PRECISE_MOUTH)
 
 /datum/sex_action/oral/blowjob/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	user.visible_message(span_love("[user] cums into [target]'s mouth!"))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]cums into [target]'s mouth!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 	return "into"
 
 /datum/sex_action/oral/blowjob/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective()] sucks [target]'s pintle..."))
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] sucks [target]'s pintle..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/oral/blowjob/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.make_sucking_noise()
+	var/do_subtle = sex_session.doing_subtly
+	user.make_sucking_noise(do_subtle)
 	// you want to know how i got these scars?
 	if(istype(user.head, /obj/item/clothing/head/roguetown/jester))
 		playsound(user, SFX_JINGLE_BELLS, 30, TRUE, -2, ignore_walls = FALSE)
-	do_thrust_animate(user, target)
+	if(!do_subtle)
+		do_thrust_animate(user, target)
 
 	sex_session.perform_sex_action(target, 2, 0, TRUE)

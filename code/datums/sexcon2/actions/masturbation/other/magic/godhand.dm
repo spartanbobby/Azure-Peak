@@ -119,20 +119,22 @@
 
 /datum/sex_action/masturbate/other/godjob/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
 
 	var/list/data = get_patron_data(user.patron?.type)
 
 	user.visible_message(
 		sex_session.spanify_force(
-			"[user] [sex_session.get_generic_force_adjective()] jerks [target]'s pintle off... [data["message"]]"
-		)
+			"[user] [sex_session.get_generic_force_adjective(do_subtle)] jerks [target]'s pintle off... [data["message"]]"
+		), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE)
 	)
 
 /datum/sex_action/masturbate/other/godjob/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/do_subtle = sex_session.doing_subtly
 	var/skill_level = user.get_skill_level(/datum/skill/magic/holy)
 
-	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, -2, ignore_walls = FALSE)
+	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
 	var/list/data = get_patron_data(user.patron?.type)
 

@@ -141,6 +141,14 @@ export const SexSession = () => {
                       inline
                       compact
                       color="transparent"
+                      onClick={() => act('toggle_subtle')}
+                    >
+                      {data.doing_subtly ? 'DOING SUBTLY' : 'DOING VISIBLY'}
+                    </Button>
+                    <Button
+                      inline
+                      compact
+                      color="transparent"
                       onClick={() => act('toggle_finished')}
                     >
                       {data.do_until_finished

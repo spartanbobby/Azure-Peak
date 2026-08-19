@@ -23,11 +23,14 @@
 	var/just_climaxed = FALSE
 	/// Whether to use knot when fucking (for knotted penis types)
 	var/do_knot_action = FALSE
+	/// Whether we're doing something subtly or visibly.
+	var/doing_subtly = FALSE
 
 	var/static/sex_id = 0
 	var/our_sex_id = 0 //this is so we can have more then 1 sex id open at once
 
 	// Moved here from proc/get_generic_force_adjective to reduce list initialization/destruction
+	var/static/list/stealth_force_adjectives 	= list("subtly", "sneakily", "covertly", "stealthily", "quietly")
 	var/static/list/low_force_adjectives		= list("gently", "carefully", "tenderly", "gingerly", "delicately", "lazily")
 	var/static/list/mid_force_adjectives		= list("firmly", "vigorously", "eagerly", "steadily", "intently")
 	var/static/list/high_force_adjectives		= list("roughly", "carelessly", "forcefully", "fervently", "fiercely")
@@ -150,7 +153,8 @@
 
 		action.on_perform(user, target)
 
-		action.show_sex_effects(user)
+		if(!doing_subtly)
+			action.show_sex_effects(user)
 
 		if(action.is_finished(user, target))
 			break
@@ -302,7 +306,9 @@
 		if(SEX_MANUAL_AROUSAL_FULL)
 			return "<font color='#d146f5'>FULLY ERECT</font>"
 
-/datum/sex_session/proc/get_generic_force_adjective()
+/datum/sex_session/proc/get_generic_force_adjective(is_stealth = FALSE)
+	if(is_stealth)
+		return pick(stealth_force_adjectives)
 	switch(force)
 		if(SEX_FORCE_LOW)
 			return pick(low_force_adjectives)
@@ -395,6 +401,7 @@
 	data["arousal"] = min(100, (current_arousal / ACTIVE_EJAC_THRESHOLD) * 100)
 	data["frozen"] = arousal_data["frozen"] || FALSE
 	data["freeuse"] = my_user.freeuse || FALSE
+	data["doing_subtly"] = doing_subtly || FALSE
 
 	// Which actions can be performed
 	var/list/can_perform = list()
@@ -459,6 +466,10 @@
 			user.freeuse = !user.freeuse
 			to_chat(user, span_notice("Positioning and exposure checks are now [user.freeuse ? "enabled" : "disabled"]."))
 			. = TRUE
+		if("toggle_subtle")
+			doing_subtly = !doing_subtly
+			to_chat(user, span_notice("My actions will now be [doing_subtly ? "visible only to those close" : "everyone in range."]."))
+			. = TRUE
 		if("update_session_name")
 			if(collective)
 				collective.collective_display_name = params["name"]
@@ -512,3 +523,16 @@
 
 /datum/sex_session/proc/set_current_force(new_force)
 	force = clamp(new_force, SEX_FORCE_MIN, SEX_FORCE_MAX)
+
+/// Literally just fetches the word "subtly" if we have subtle actions enabled.
+/datum/sex_session/proc/get_subtle_word()
+	if(doing_subtly)
+		return "subtly "
+	else
+		return ""
+/// It's either 1 or 7 depending on state of subtle actions.
+/datum/sex_session/proc/get_subtle_range()
+	if(doing_subtly)
+		return 1
+	else
+		return 7

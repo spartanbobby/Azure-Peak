@@ -182,10 +182,10 @@
 		climaxer = highest_priority.user
 		partner = highest_priority.target
 
-	playsound(parent, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
+	playsound(parent, 'sound/misc/mat/endout.ogg', 50, TRUE, extrarange = (highest_priority.doing_subtly ? -6 : 0), ignore_walls = FALSE)
 	// Special case for when the climaxer has a penis but no testicles
 	if(!mob.getorganslot(ORGAN_SLOT_TESTICLES) && mob.getorganslot(ORGAN_SLOT_PENIS))
-		mob.visible_message(span_love("[mob] climaxes, yet nothing is released!"))
+		mob.visible_message(span_love("[mob] climaxes, yet nothing is released!"), vision_distance = (highest_priority.doing_subtly ? 1 : DEFAULT_MESSAGE_RANGE))
 		after_ejaculation(action, climaxer, partner)
 		return
 	if(!highest_priority)
@@ -196,7 +196,7 @@
 	else
 		var/return_message = action.handle_climax_message(climaxer, partner)
 		if(!return_message)
-			mob.visible_message(span_love("[mob] makes a mess!"))
+			mob.visible_message(span_love("[mob] makes a mess!"), vision_distance = (highest_priority.doing_subtly ? 1 : DEFAULT_MESSAGE_RANGE))
 			var/turf/turf = get_turf(parent)
 			new /obj/effect/decal/cleanable/coom(turf)
 			after_ejaculation(action, climaxer, partner)
@@ -351,7 +351,7 @@
 		return
 	user.apply_damage(damage, BRUTE, part)
 
-/datum/component/arousal/proc/try_do_moan(arousal_amt, pain_amt, applied_force, giving)
+/datum/component/arousal/proc/try_do_moan(arousal_amt, pain_amt, applied_force, giving, doing_subtly)
 	var/mob/user = parent
 	if(arousal_amt < 1.5)
 		return
@@ -383,8 +383,13 @@
 			if(prob(60))
 				chosen_emote = "painmoan"
 
+	var/be_quiet = FALSE
+	var/list/parent_sessions = return_sessions_with_user(parent)
+	var/datum/sex_session/highest_priority = return_highest_priority_action(parent_sessions, parent)
+	if(pain_amt < PAIN_MILD_EFFECT && highest_priority?.doing_subtly)
+		be_quiet = TRUE
 	last_moan = world.time
-	user.emote(chosen_emote)
+	user.emote(chosen_emote, quiet = be_quiet)
 
 /datum/component/arousal/proc/try_do_pain_effect(pain_amt, giving)
 	var/mob/user = parent

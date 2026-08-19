@@ -29,11 +29,13 @@
 
 /datum/sex_action/masturbate/vagina_finger/on_start(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] starts fingering [user.p_their()] cunt..."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	user.visible_message(span_warning("[user] starts [sex_session.doing_subtly ? "subtly " : ""]fingering [user.p_their()] cunt..."), vision_distance = (sex_session.doing_subtly ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/vagina_finger/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
-	user.visible_message(span_warning("[user] stops fingering."))
+	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	user.visible_message(span_warning("[user] stops [sex_session.doing_subtly ? "subtly " : ""]fingering."), vision_distance = (sex_session.doing_subtly ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/vagina_finger/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
@@ -41,11 +43,13 @@
 
 /datum/sex_action/masturbate/vagina_finger/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective()] fingers [user.p_their()] cunt..."))
+	var/do_subtle = sex_session.doing_subtly
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [user.p_their()] cunt..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/vagina_finger/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
-	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, -2, ignore_walls = FALSE)
+	var/do_subtle = sex_session.doing_subtly
+	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
 	sex_session.perform_sex_action(user, 2, 4, TRUE)
 
