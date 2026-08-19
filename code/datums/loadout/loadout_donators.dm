@@ -946,7 +946,7 @@
 
 /datum/loadout_item/donator/nero_woodlandhood
 	name = "Gift - Woodland Shawl"
-	path = /obj/item/clothing/head/roguetown/roguehood/shawl/woodland
+	path = /obj/item/clothing/head/roguetown/roguehood/shawlhood/woodland
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega","revennui")
 
 /datum/loadout_item/donator/nero_woodlandcloak_noire

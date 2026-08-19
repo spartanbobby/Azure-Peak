@@ -3150,7 +3150,7 @@ As Excaliber."
 	icon_state = "noirecloak"
 	item_state = "noirecloak"
 
-/obj/item/clothing/head/roguetown/roguehood/shawl
+/obj/item/clothing/head/roguetown/roguehood/shawlhood
 	name = "shawl"
 	desc = "A distant cousin to the Naledian hijab, shawls like these offer plenty of coverage for the wearer's head and neck. It's looser \
 	on the head than most hoods, in order to preserve one's perception in the places where it'd count."
@@ -3163,7 +3163,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	color = null
 
-/obj/item/clothing/head/roguetown/roguehood/shawl/woodland
+/obj/item/clothing/head/roguetown/roguehood/shawlhood/woodland
 	name = "woodland shawl"
 	desc = "A distant cousin to the Naledian hijab, shawls like these offer plenty of coverage for the wearer's head and neck. It's looser \
 	on the head than most hoods, in order to preserve one's perception in the places where it'd count."
