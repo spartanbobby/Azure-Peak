@@ -3122,12 +3122,16 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
-	color = null
+	color = CLOTHING_WHITE
 	allowed_sex = list(MALE, FEMALE)
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	sleevetype = "shirt"
 	detail_tag = "_detail"
-	detail_color = "#365326"
+	detail_color = CLOTHING_AZURE
+
+/obj/item/clothing/cloak/furcloak/woodland/Initialize(mapload)
+	. = ..()
+	update_icon()
 
 /obj/item/clothing/cloak/furcloak/woodland/donator_noire
 	name = "collared woodland mantle"
@@ -3166,7 +3170,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_color = "#365326"
+	detail_color = "#697F5C"
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland
 	name = "woodland brigandine"
@@ -3178,7 +3182,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_color = "#365326"
+	detail_color = "#697F5C"
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/attack_right(mob/user)
 	if(detail_tag)
@@ -3215,7 +3219,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_color = "#365326"
+	detail_color = "#697F5C"
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/woodland/attack_right(mob/user)
 	if(detail_tag)
@@ -3252,7 +3256,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_color = "#365326"
+	detail_color = "#697F5C"
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/attack_right(mob/user)
 	if(detail_tag)
@@ -3289,7 +3293,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_color = "#365326"
+	detail_color = "#697F5C"
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/attack_right(mob/user)
 	if(detail_tag)
@@ -3326,7 +3330,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_color = "#365326"
+	detail_color = "#697F5C"
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/attack_right(mob/user)
 	if(detail_tag)
