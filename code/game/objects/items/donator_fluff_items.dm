@@ -3161,8 +3161,8 @@ As Excaliber."
 	desc = "A set of fitted brigandine armour featuring a hardened leather further reinforced with steel plates beneath, worn over a light \
 	maille shirt. Its similarity to the Azurian Warden's brigandine is no accident. Rosawood's Elven Rangers had shared its design with \
 	their fellows, who had adapted it further for their own needs. Armour such as this is oft worn by the Wardens that range Rosawood as well."
-	item_state = "woodwalkbrig"
-	icon_state = "woodwalkbrig"
+	item_state = "woodwalkerbrig"
+	icon_state = "woodwalkerbrig"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
