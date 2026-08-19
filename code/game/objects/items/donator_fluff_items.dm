@@ -3127,11 +3127,7 @@ As Excaliber."
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	sleevetype = "shirt"
 	detail_tag = "_detail"
-	detail_color = CLOTHING_AZURE
-
-/obj/item/clothing/cloak/furcloak/woodland/Initialize(mapload)
-	. = ..()
-	update_icon()
+	detail_color = 	"#365326"
 
 /obj/item/clothing/cloak/furcloak/woodland/donator_noire
 	name = "collared woodland mantle"
