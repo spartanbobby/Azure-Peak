@@ -3232,22 +3232,11 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/woodland/attack_right(mob/user)
-	if(detail_tag)
-		return
-	var/the_time = world.time
-	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
-	if(!pickedcolor)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
 	detail_tag = "_detail"
-	detail_color = COLOR_MAP[pickedcolor]
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/woodland/Initialize(mapload)
+	. = ..()
 	update_icon()
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_armor()
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/woodland/update_icon()
 	cut_overlays()
@@ -3269,22 +3258,11 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
-
-/obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/attack_right(mob/user)
-	if(detail_tag)
-		return
-	var/the_time = world.time
-	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
-	if(!pickedcolor)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
 	detail_tag = "_detail"
-	detail_color = COLOR_MAP[pickedcolor]
+
+/obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/Initialize(mapload)
+	. = ..()
 	update_icon()
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_armor()
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/update_icon()
 	cut_overlays()
@@ -3306,22 +3284,11 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/attack_right(mob/user)
-	if(detail_tag)
-		return
-	var/the_time = world.time
-	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
-	if(!pickedcolor)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
 	detail_tag = "_detail"
-	detail_color = COLOR_MAP[pickedcolor]
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/Initialize(mapload)
+	. = ..()
 	update_icon()
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_armor()
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/woodland/update_icon()
 	cut_overlays()
@@ -3343,22 +3310,11 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
-
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/attack_right(mob/user)
-	if(detail_tag)
-		return
-	var/the_time = world.time
-	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
-	if(!pickedcolor)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
 	detail_tag = "_detail"
-	detail_color = COLOR_MAP[pickedcolor]
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/Initialize(mapload)
+	. = ..()
 	update_icon()
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_armor()
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/woodland/update_icon()
 	cut_overlays()
