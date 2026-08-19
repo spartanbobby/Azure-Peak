@@ -1419,10 +1419,10 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/shawl
-	name = "shawl"
+/datum/crafting_recipe/roguetown/sewing/shawlhood
+	name = "shawl (hijab)"
 	category = "Hoods"
-	result = list(/obj/item/clothing/head/roguetown/roguehood/shawl)
+	result = list(/obj/item/clothing/head/roguetown/roguehood/shawlhood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
