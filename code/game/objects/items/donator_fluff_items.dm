@@ -3181,19 +3181,6 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
 
-/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/Initialize(mapload)
-	. = ..()
-	update_icon()
-
-/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
-
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland
 	name = "woodland brigandine"
 	desc = "A set of fitted brigandine armour featuring a hardened leather further reinforced with steel plates beneath, worn over a light \
@@ -3206,9 +3193,21 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_color = "#697F5C"
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/Initialize(mapload)
-	. = ..()
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/attack_right(mob/user)
+	if(detail_tag)
+		return
+	var/the_time = world.time
+	var/pickedcolor = input(user, "Select a color.","Brigandine Color") as null|anything in COLOR_MAP
+	if(!pickedcolor)
+		return
+	if(world.time > (the_time + 30 SECONDS))
+		return
+	detail_tag = "_detail"
+	detail_color = COLOR_MAP[pickedcolor]
 	update_icon()
+	if(ismob(loc))
+		var/mob/L = loc
+		L.update_inv_armor()
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/update_icon()
 	cut_overlays()
