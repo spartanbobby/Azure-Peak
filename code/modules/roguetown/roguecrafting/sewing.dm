@@ -1573,6 +1573,16 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 5
 
+/datum/crafting_recipe/roguetown/sewing/thinwinterdress
+	name = "thin winter dress"
+	category = "Dresses"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/tunic/thinwinterdress)
+	reqs = list(/obj/item/natural/cloth = 2, //cheaper because it is the unarmored clothing version
+				/obj/item/natural/fibers = 2,
+				/obj/item/natural/silk = 2)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
+
 /datum/crafting_recipe/roguetown/sewing/skirt
 	name = "skirt"
 	category = "Misc"
