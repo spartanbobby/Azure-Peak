@@ -2357,8 +2357,9 @@ As Excaliber."
 
 /obj/item/rogueweapon/example/dussack/moonlight
 	name = "Moonlight Dussack"
-	desc = "A curved blade with a sharpened short-edge on the back. Most often seen wielded by civillians in Grenzelhoft for self defense. Dussack mostly refers to a training item for fechters, however \
-	rarely seen are steel blades like these, a perfect cutting weapon, not too dissimilar to the Aavnic's sabres. This one is made of a unique alloy, it seems."
+	desc = "A curved blade with a sharpened short-edge on the back. Originating in Grenzelhoft, Dussack mostly refers to a training item for fechters, however \
+	sometimes seen are steel blades like these with a rounded-tip, a perfect cutting weapon that permits some thrusting, not too dissimilar to the Aavnic's szabla sabres. This one is made of a unique alloy it seems, bearing hints of blue. \
+	Arcyne energy seems to travel through it quite a bit easier."
 	icon_state = "kadedussack"
 	sheathe_icon = "kadedussack"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
