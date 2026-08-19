@@ -1008,7 +1008,7 @@
 	detail_color = CLOTHING_WHITE
 
 /obj/item/clothing/suit/roguetown/shirt/tunic/thinwinterdress
-	name = "winter dress"
+	name = "thin winter dress"
 	icon = 'icons/roguetown/clothing/shirts_royalty.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts_royalty.dmi'
 	desc = "A thin and light version of a comfortable dress popular amongst nobility during winter."
