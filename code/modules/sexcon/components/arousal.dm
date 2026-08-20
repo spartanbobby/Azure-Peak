@@ -137,6 +137,7 @@
 
 /datum/component/arousal/proc/receive_sex_action(datum/source, arousal_amt, pain_amt, giving, applied_force, applied_speed)
 	var/mob/user = parent
+	to_chat(world, "we're in receive_sex_action of [user] with source: [source], arousal_amt: [arousal_amt], pain_amt:[pain_amt], applied_force:[applied_force], applied_speed:[applied_speed]")
 
 	// Apply multipliers
 	arousal_amt *= get_force_pleasure_multiplier(applied_force, giving)
@@ -188,7 +189,7 @@
 		mob.visible_message(span_love("[mob] climaxes, yet nothing is released!"), vision_distance = (highest_priority.doing_subtly ? 1 : DEFAULT_MESSAGE_RANGE))
 		after_ejaculation(action, climaxer, partner)
 		return
-	if(!highest_priority)
+	if(!highest_priority)	// We reached this part without a dedicated session.
 		mob.visible_message(span_love("[mob] makes a mess!"))
 		var/turf/turf = get_turf(parent)
 		new /obj/effect/decal/cleanable/coom(turf)
@@ -198,7 +199,8 @@
 		if(!return_message)
 			mob.visible_message(span_love("[mob] makes a mess!"), vision_distance = (highest_priority.doing_subtly ? 1 : DEFAULT_MESSAGE_RANGE))
 			var/turf/turf = get_turf(parent)
-			new /obj/effect/decal/cleanable/coom(turf)
+			if(!highest_priority.doing_subtly)
+				new /obj/effect/decal/cleanable/coom(turf)
 			after_ejaculation(action, climaxer, partner)
 		else
 			handle_climax(return_message, climaxer, partner, action)

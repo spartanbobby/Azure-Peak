@@ -121,7 +121,7 @@
 	var/base_speed = -1
 	var/base_force = -1
 	action.on_start(user, target)
-
+	var/transmitted_once = FALSE
 	while(TRUE)
 		#ifndef LOCALTEST
 		// DO NOT allow NPC sex except on local, for testing
@@ -147,11 +147,17 @@
 			break
 
 		if (speed != base_speed || force != base_force)
+			transmitted_once = FALSE
 			base_force = force
 			base_speed = speed
 			action.on_perform_message(user, target)
 
+		if(!transmitted_once)
+			action.on_perform_message(user, target)
+			transmitted_once = TRUE
+
 		action.on_perform(user, target)
+
 
 		if(!doing_subtly)
 			action.show_sex_effects(user)
@@ -204,7 +210,7 @@
 			return FALSE
 	return TRUE
 
-/datum/sex_session/proc/perform_sex_action(mob/living/carbon/human/action_target, arousal_amt, pain_amt, giving)
+/datum/sex_session/proc/perform_sex_action(mob/living/carbon/human/action_target, arousal_amt, pain_amt, giving, force, speed)
 	SEND_SIGNAL(action_target, COMSIG_SEX_RECEIVE_ACTION, arousal_amt, pain_amt, giving, force, speed)
 
 /datum/sex_session/proc/handle_passive_ejaculation(mob/living/carbon/human/handler)

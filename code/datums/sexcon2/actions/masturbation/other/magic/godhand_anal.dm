@@ -10,6 +10,8 @@
 	var/obj/item/held_item = user.get_active_held_item()
 	if(!held_item || !istype(held_item, /obj/item/melee/new_touch_attack/orison))
 		return FALSE
+	if(target.freeuse)
+		return TRUE
 	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	return TRUE
@@ -23,9 +25,11 @@
 	var/obj/item/held_item = user.get_active_held_item()
 	if(!held_item || !istype(held_item, /obj/item/melee/new_touch_attack/orison))
 		return FALSE
-	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
-		return FALSE
 	if(check_sex_lock(target, ORGAN_SLOT_ANUS))
+		return FALSE
+	if(target.freeuse)
+		return TRUE
+	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	return TRUE
 
@@ -121,7 +125,7 @@
 	user.visible_message(
 		sex_session.spanify_force(
 			"[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [target]'s butt... [data["message"]]"
-		), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE)
+		), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE)
 	)
 
 

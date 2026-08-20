@@ -30,7 +30,7 @@
 /datum/sex_action/miscellaneous/grind_body/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] grinds against [target]."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] grinds against [target]."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/grind_body/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

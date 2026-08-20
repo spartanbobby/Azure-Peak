@@ -6,9 +6,11 @@
 /datum/sex_action/masturbate/other/tailjob_anal/shows_on_menu(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)
 		return FALSE
-	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
-		return FALSE
 	if(!user.getorganslot(ORGAN_SLOT_TAIL))
+		return FALSE
+	if(target.freeuse)
+		return TRUE
+	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	return TRUE
 
@@ -18,9 +20,11 @@
 		return FALSE
 	if(user == target)
 		return FALSE
-	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
-		return FALSE
 	if(!user.getorganslot(ORGAN_SLOT_TAIL))
+		return FALSE
+	if(target.freeuse)
+		return TRUE
+	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	return TRUE
 
@@ -45,7 +49,7 @@
 /datum/sex_action/masturbate/other/tailjob_anal/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] prods [target]'s butt with [user.p_their()] tail..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] prods [target]'s butt with [user.p_their()] tail..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/tailjob_anal/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

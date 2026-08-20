@@ -6,6 +6,8 @@
 /datum/sex_action/sex/other/boobsmother/shows_on_menu(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	if(user == target)
 		return FALSE
+	if(target.freeuse)
+		return TRUE
 	if(!check_location_accessible(target, user, BODY_ZONE_CHEST))
 		return FALSE
 	if(!user.getorganslot(ORGAN_SLOT_BREASTS))
@@ -18,9 +20,11 @@
 		return FALSE
 	if(user == target)
 		return FALSE
-	if(!check_location_accessible(target, user, BODY_ZONE_CHEST))
-		return FALSE
 	if(!user.getorganslot(ORGAN_SLOT_BREASTS))
+		return FALSE
+	if(target.freeuse)
+		return TRUE
+	if(!check_location_accessible(target, user, BODY_ZONE_CHEST))
 		return FALSE
 	return TRUE
 
@@ -37,7 +41,7 @@
 /datum/sex_action/sex/other/boobsmother/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	target.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] smothers [target]'s face with [user.p_their()] tits..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	target.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] smothers [target]'s face with [user.p_their()] tits..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/sex/other/boobsmother/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

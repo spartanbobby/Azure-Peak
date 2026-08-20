@@ -10,9 +10,11 @@
 	var/obj/item/held_item = user.get_active_held_item()
 	if(!held_item || !istype(held_item, /obj/item/melee/new_touch_attack/prestidigitation))
 		return FALSE
-	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
-		return FALSE
 	if(!target.getorganslot(ORGAN_SLOT_VAGINA))
+		return FALSE
+	if(target.freeuse)
+		return TRUE
+	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	return TRUE
 
@@ -25,11 +27,13 @@
 	var/obj/item/held_item = user.get_active_held_item()
 	if(!held_item || !istype(held_item, /obj/item/melee/new_touch_attack/prestidigitation))
 		return FALSE
-	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
-		return FALSE
 	if(check_sex_lock(target, ORGAN_SLOT_VAGINA))
 		return FALSE
 	if(!target.getorganslot(ORGAN_SLOT_VAGINA))
+		return FALSE
+	if(target.freeuse)
+		return TRUE
+	if(!check_location_accessible(user, target, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	return TRUE
 
@@ -37,13 +41,13 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] starts to [do_subtle ? "subtly " : ""]finger [target]'s cunt with arcyne..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] starts to [do_subtle ? "subtly " : ""]finger [target]'s cunt with arcyne..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/magejob_vagina/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] stops [do_subtle ? "subtly " : ""]fingering [target]."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] stops [do_subtle ? "subtly " : ""]fingering [target]."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/magejob_vagina/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
@@ -52,7 +56,7 @@
 /datum/sex_action/masturbate/other/magejob_vagina/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [target]'s cunt..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [target]'s cunt..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/magejob_vagina/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
