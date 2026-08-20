@@ -371,7 +371,7 @@
 /datum/loadout_item/donator/funky
 	name = "Trimmed down padded dress"
 	path = /obj/item/clothing/suit/roguetown/shirt/dress/funkydress
-	ckeywhitelist = list("funkemonke")
+	ckeywhitelist = list("funkemonke", "droolingcowboy")
 
 /datum/loadout_item/donator/eekasqueak
 	name = "Saffira encrusted tiara"
