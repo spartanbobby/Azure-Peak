@@ -166,7 +166,7 @@
 				L.visible_message(span_warning("The beam splinters against [L]!"))
 				playsound(T, 'sound/magic/magic_nulled.ogg', 100)
 				continue
-			if(guard_source && !QDELETED(guard_source) && guard_source.spell_guard_check(L, TRUE, deflected ? null : caster))
+			if(guard_source && !QDELETED(guard_source) && guard_source.spell_guard_check(L, TRUE, caster, punish_caster = deflected ? FALSE : null))
 				deflected = TRUE
 				L.visible_message(span_warning("[L] turns the beam aside!"))
 				continue

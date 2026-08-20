@@ -249,7 +249,7 @@
 		if(blocked_by_antimagic && L.anti_magic_check())
 			on_antimagic_block(L)
 			continue
-		if(spell_guard_check(L, FALSE, deflected ? null : H))
+		if(spell_guard_check(L, FALSE, H, punish_caster = deflected ? FALSE : null))
 			deflected = TRUE
 			continue
 		hit_any = TRUE
