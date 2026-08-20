@@ -280,10 +280,8 @@ GLOBAL_LIST_EMPTY(crimson_crucible_personal_servant_summons)
 		return "The crucible cannot bind a servant before my bloodline is chosen."
 	if(current < SERVANT_COST)
 		return "The crucible needs [SERVANT_COST] vitae in the cup."
-	if(HAS_TRAIT(user, TRAIT_BLOODPOOL_BORN))
-		return "A servant cannot summon another servant."
-	if(vampire.generation >= GENERATION_NEONATE) //Vampires cannot be below a generation of what they summon, no vagabonds w/ thrall-capable vampires. YOU ARE NOT AN ANTAGONIST.
-		return "Your blood generation is too thin."
+	if(HAS_TRAIT(user, TRAIT_NOVAMPMITOSIS))
+		return "I am unable to summon a servant from this." //hardlock trait
 	return ""
 
 /obj/structure/vampire/bloodpool/proc/can_summon_personal_servant(mob/living/user)
@@ -1066,8 +1064,11 @@ GLOBAL_LIST_EMPTY(crimson_crucible_personal_servant_summons)
 			SSjob.EquipRank(target, "Vampire Spawn", TRUE) //Rare and powerful champions, they can level vampyric powers to become minibosses, alongside siring 5 additional vampyres of a lower generation.
 			var/datum/antagonist/vampire/new_antag = new /datum/antagonist/vampire(incoming_clan = initiator_clan, forced_clan = TRUE, generation = GENERATION_ANCILLAE)
 			target.mind.add_antag_datum(new_antag)
-	ADD_TRAIT(target, TRAIT_BLOODPOOL_BORN, TRAIT_GENERIC)
-	ADD_TRAIT(target, TRAIT_DUSTABLE, TRAIT_GENERIC) //They cannot be cured unlike sired vampires, so we let them just dust on death. They get good enough skills to make up for it, less back and forth with revival checking "hey can I cure this one?".
+
+	//All servantry get these traits
+	ADD_TRAIT(target, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
+	ADD_TRAIT(target, TRAIT_QUICKSILVERRESISTANT, TRAIT_GENERIC) //prevents deconversion, full stop
+	ADD_TRAIT(target, TRAIT_DUSTABLE, TRAIT_GENERIC) //They cannot be cured, so we let them dust on death. Also because lore-wise you're also ancient, you date far-too-far-back to survive a lethal blow in vessel.
 
 /datum/vampire_project/servant/servant_t1
 	display_name = "Summon Vampyre Servant"
