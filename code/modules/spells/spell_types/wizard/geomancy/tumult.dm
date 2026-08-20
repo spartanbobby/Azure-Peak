@@ -4,6 +4,7 @@
 /datum/action/cooldown/spell/tumult
 	button_icon = 'icons/mob/actions/mage_geomancy.dmi'
 	name = "Tumult"
+	expose_caster_on_deflect = FALSE
 	desc = "Erupts stone from the ground, or become one yourself and bowls through your foes! switch mode with Shift-G.\n\
 	CAIRN erupts a cairn from a spot you choose, hitting those caught and leaving them Vulnerable, with more damage in the center. You are unharmed by the spell.\n\
 	RAMSTAM turns you into a rolling boulders that hurtle to a marked destination, restricted to the cardinal and diagonal direction. You batter asides anyone in the way for a small amount of damage. If you hit a wall, you will burst out gravel around you, deals damage to it, and ricochet to the spot you came from. If you are riposted, it will halt and exposes you. If you rolls through a stone pillar, you will shatter it for gravel bursts that you are immune to. You cannot steer once begun."
@@ -256,7 +257,7 @@
 		for(var/mob/living/L in next)
 			if(L == H)
 				continue
-			if(spell_guard_check(L, TRUE, H))
+			if(spell_guard_check(L, TRUE, H, punish_caster = TRUE))
 				riposte_counter(H, L)
 				countered = TRUE
 				break

@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/mass_gravity
 	button_icon = 'icons/mob/actions/mage_kinesis.dmi'
 	name = "Mass Gravity"
+	expose_caster_on_deflect = FALSE
 	desc = "Weighten space in an entire area, crushing everyone within and bringing them to the ground. \
 	Stronger opponents will resist and merely be off-balanced. \
 	The spell takes longer to materialize than its single-target counterpart, but covers a much larger zone.\n\n\

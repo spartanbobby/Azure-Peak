@@ -112,7 +112,7 @@
 					continue
 				if(L.anti_magic_check())
 					continue
-				if(L.guard_deflect_spell("Fireball", TRUE, caster))
+				if(L.guard_deflect_spell("Fireball", TRUE, caster, punish_caster = FALSE))
 					continue
 				arcyne_strike(caster, L, null, aoe_damage, BODY_ZONE_CHEST, \
 					BCLASS_BURN, spell_name = "Fireball (Blast)", \
@@ -249,7 +249,7 @@
 				continue
 			if(L.anti_magic_check())
 				continue
-			if(L.guard_deflect_spell("Pillar of Flame", TRUE, caster))
+			if(L.guard_deflect_spell("Pillar of Flame", TRUE, caster, punish_caster = FALSE))
 				continue
 			if(istype(caster) && !QDELETED(caster))
 				arcyne_strike(caster, L, null, damage, aim_zone || BODY_ZONE_CHEST, BCLASS_BURN, spell_name = "Pillar of Flame", damage_type = BURN, skip_animation = TRUE, exact_zone = TRUE)

@@ -181,7 +181,7 @@
 					continue
 				if(L.anti_magic_check())
 					continue
-				if(L.guard_deflect_spell("Ice Burst", TRUE, caster))
+				if(L.guard_deflect_spell("Ice Burst", TRUE, caster, punish_caster = FALSE))
 					continue
 				arcyne_strike(caster, L, null, aoe_damage, BODY_ZONE_CHEST, \
 					BCLASS_BURN, spell_name = "Ice Burst (Shatter)", \

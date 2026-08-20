@@ -4,6 +4,7 @@
 /datum/action/cooldown/spell/menhir
 	button_icon = 'icons/mob/actions/mage_geomancy.dmi'
 	name = "Menhir"
+	expose_caster_on_deflect = FALSE
 	desc = "Hurl a massive boulder that shatters into stone fragments and deals double damage to structures.\n\
 	HEAVE flings it in a flat line at a target - immediate, but stopped by walls and cover.\n\
 	DROP calls it down from directly above you.\n\

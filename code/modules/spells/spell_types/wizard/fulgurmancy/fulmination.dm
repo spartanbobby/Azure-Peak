@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/fulmination
 	button_icon = 'icons/mob/actions/mage_fulgurmancy.dmi'
 	name = "Fulmination"
+	expose_caster_on_deflect = FALSE
 	desc = "Cast down storm on your enemy. Toggle firing mode (Shift+G):\n\
 	Heaven's Strike: Call down a single devastating bolt on a target tile, striking the aimed body part for massive damage.\n\
 	Thunderstrike: Blanket a wide 5x5 area, striking all of it at once for flat damage after a brief warning."

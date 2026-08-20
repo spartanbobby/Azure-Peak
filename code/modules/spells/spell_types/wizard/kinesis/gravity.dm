@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/gravity
 	button_icon = 'icons/mob/actions/mage_kinesis.dmi'
 	name = "Gravity"
+	expose_caster_on_deflect = FALSE
 	desc = "Weighten space around someone, crushing them and knocking them to the floor. Stronger opponents will resist and be off-balanced. Target can adapt to gravity for 15 seconds after being knocked down, making them stand firm against conseuctive hit."
 	button_icon_state = "gravity"
 	sound = 'sound/magic/gravity.ogg'

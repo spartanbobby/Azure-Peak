@@ -172,7 +172,7 @@
 		return
 	var/actual_damage = arc_damage
 	var/mob/living/carbon/human/caster = firer
-	if(L.guard_deflect_spell("Arc Bolt", TRUE, caster))
+	if(L.guard_deflect_spell("Arc Bolt", TRUE, caster, punish_caster = FALSE))
 		return
 	if(istype(caster) && ishuman(L))
 		arcyne_strike(caster, L, null, actual_damage, def_zone, BCLASS_BURN, \

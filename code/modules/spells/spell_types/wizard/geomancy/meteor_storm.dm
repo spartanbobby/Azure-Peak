@@ -6,6 +6,7 @@
 /datum/action/cooldown/spell/meteor_strike
 	button_icon = 'icons/mob/actions/mage_geomancy.dmi'
 	name = "Meteor Storm"
+	expose_caster_on_deflect = FALSE
 	desc = "Call down a devastating barrage of nine boulders onto a wide area. \
 	Each boulder deals heavy damage on direct hit, splashes nearby, and sends gravel fragments flying. \
 	Deals 2x damage to structures. \

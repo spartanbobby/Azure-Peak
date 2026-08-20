@@ -3,6 +3,7 @@
 	button_icon = 'icons/mob/actions/classuniquespells/spellfist.dmi'
 	button_icon_state = "grasp_of_psydon"
 	name = "Grasp of Psydon"
+	expose_caster_on_deflect = FALSE
 	desc = "Slam your open palm forward, sending forth tendrils of arcyne force to a target area up to 4 paces away on the same level. After a brief telegraph, all targets in the area are yanked toward you. \
 		At 3+ momentum: consumes 3 to deal 40 blunt damage to the aimed bodypart on each yanked target.\n\n\
 		'Push forth your hand with your conduit open, and imagine, with His will, seizing upon the very object or person you desire within your grasp, then, pull your hand backward. Close, and clench your fist, pushing forward slightly, opening your conduit again, and you shall seize your enemy from afar, and pull them toward you.'"

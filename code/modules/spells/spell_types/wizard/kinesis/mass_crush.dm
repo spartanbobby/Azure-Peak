@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/mass_crush
 	button_icon = 'icons/mob/actions/mage_kinesis.dmi'
 	name = "Mass Crush"
+	expose_caster_on_deflect = FALSE
 	desc = "Compress gravitational force over a wide area, crushing everyone within. \
 	The spell is highly telegraphed but devastating to anyone caught inside. \
 	Crushes through armor with exceptional force. Slows struck targets briefly."

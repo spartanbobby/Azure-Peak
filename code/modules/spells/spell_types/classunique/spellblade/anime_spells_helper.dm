@@ -75,7 +75,11 @@ without going through the click pipeline, so spells can deliver weapon-style str
 
 	var/datum/status_effect/buff/clash/limbguard/LG = target.has_status_effect(/datum/status_effect/buff/clash/limbguard)
 	if(LG?.is_active && LG.protected_zone == def_zone && user != target)
-		LG.process_attack(target, target, user, weapon, def_zone)
+	// Only an attack with an actual weapon can trigger a the full guard deflect effect. So no disarming / exposure from blocking fire breath.
+		if(weapon)
+			LG.process_attack(target, target, user, weapon, def_zone)
+		else
+			LG.block_spell(target, user, spell_name)
 		return 0
 
 	// Optional shield check — blocked like a projectile (shield takes 25% as integrity damage).

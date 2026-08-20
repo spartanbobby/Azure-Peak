@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/crush
 	button_icon = 'icons/mob/actions/mage_kinesis.dmi'
 	name = "Crush"
+	expose_caster_on_deflect = FALSE
 	desc = "Compress gravitational force onto a single point, crushing the aimed body part. It is telegraphed and can be walked out of. \
 	Crushes through armor with exceptional force. Slows struck targets briefly."
 	button_icon_state = "crush"

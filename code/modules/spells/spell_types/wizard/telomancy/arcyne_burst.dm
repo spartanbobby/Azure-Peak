@@ -1,6 +1,7 @@
 /datum/action/cooldown/spell/arcyne_burst
 	button_icon = 'icons/mob/actions/mage_telomancy.dmi'
 	name = "Arcyne Burst"
+	expose_caster_on_deflect = FALSE
 	desc = "Mark a nearby area with arcyne force. It swells for a few seconds before bursting, striking everyone across the whole zone with a wave of kinetic force and hurling them outward."
 	button_icon_state = "arcyne_burst"
 	sound = 'sound/magic/vlightning.ogg'

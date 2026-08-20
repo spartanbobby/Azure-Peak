@@ -353,7 +353,7 @@
 				continue
 			if(summon.faction_check_mob(victim))
 				continue
-			if(victim.guard_deflect_spell("Overloaded", TRUE, caster))
+			if(victim.guard_deflect_spell("Overloaded", TRUE, caster, punish_caster = FALSE))
 				continue
 			if(caster && !QDELETED(caster))
 				arcyne_strike(caster, victim, null, damage, zone, BCLASS_BURN, spell_name = "Overloaded", damage_type = BURN, skip_animation = TRUE)

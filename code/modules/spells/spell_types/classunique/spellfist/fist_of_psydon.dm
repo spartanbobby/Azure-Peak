@@ -3,6 +3,7 @@
 	button_icon = 'icons/mob/actions/classuniquespells/spellfist.dmi'
 	button_icon_state = "fist_of_psydon"
 	name = "Fist of Psydon"
+	expose_caster_on_deflect = FALSE
 	desc = "Slam your fist downward, sending arcyne force crashing into a 3x3 target area up to 5 paces away. \
 		Brief telegraph before the strike lands. Deals blunt damage to the aimed bodypart. \
 		At 3+ momentum: consumes 3 to double damage. \

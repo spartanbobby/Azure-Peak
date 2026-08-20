@@ -3,6 +3,7 @@
 /datum/action/cooldown/spell/void_beam
 	button_icon = 'icons/mob/actions/mage_telomancy.dmi'
 	name = "Void Beam"
+	expose_caster_on_deflect = FALSE
 	desc = "Fire a lance of raw arcyne force that exposes your foe. It is well telegraphed and does a decent amount of damage."
 	button_icon_state = "void_beam"
 	sound = 'sound/magic/soulshot.ogg'
