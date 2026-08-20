@@ -415,7 +415,6 @@
 	var/poster_name = sanitize_input("[params["poster_name"]]", NOTICEBOARD_NAME_MAX_LENGTH)
 	var/poster_title = sanitize_input("[params["poster_title"]]", NOTICEBOARD_ROLE_MAX_LENGTH)
 	if(!title || !body || !poster_name)
-		to_chat(world, span_warning("[title],[body],[poster_name]"))
 		to_chat(H, span_warning("The posting must bear a title, a body, and a name."))
 		return
 	noticeboard_add_posting(tier, title, body, poster_name, poster_title, H)
