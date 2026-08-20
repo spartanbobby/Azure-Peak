@@ -282,7 +282,8 @@ GLOBAL_LIST_EMPTY(crimson_crucible_personal_servant_summons)
 		return "The crucible needs [SERVANT_COST] vitae in the cup."
 	if(HAS_TRAIT(user, TRAIT_BLOODPOOL_BORN))
 		return "A servant cannot summon another servant."
-	if(Vamp.generation >= GENERATION_NEONATE) //Vampires cannot be below a generation of what they summon, no vagabonds w/ thrall-capable vampires. YOU ARE NOT AN ANTAGONIST.
+	if(vampire.generation >= GENERATION_NEONATE) //Vampires cannot be below a generation of what they summon, no vagabonds w/ thrall-capable vampires. YOU ARE NOT AN ANTAGONIST.
+		return "Your blood generation is too thin."
 	return ""
 
 /obj/structure/vampire/bloodpool/proc/can_summon_personal_servant(mob/living/user)
