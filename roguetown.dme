@@ -3306,7 +3306,6 @@
 #include "code\modules\spells\spell_types\wizard\ferramancy\blade_forms.dm"
 #include "code\modules\spells\spell_types\wizard\ferramancy\ferramancy_strikes.dm"
 #include "code\modules\spells\spell_types\wizard\ferramancy\form_hammer.dm"
-#include "code\modules\spells\spell_types\wizard\ferramancy\greatbow.dm"
 #include "code\modules\spells\spell_types\wizard\ferramancy\stygian_efflorescence.dm"
 #include "code\modules\spells\spell_types\wizard\fulgurmancy\_fulgurmancy_shared.dm"
 #include "code\modules\spells\spell_types\wizard\fulgurmancy\arc_bolt.dm"
