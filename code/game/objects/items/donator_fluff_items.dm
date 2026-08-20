@@ -84,6 +84,7 @@
 	icon = 'icons/obj/items/donor_objects.dmi'
 	icon_state = "azurosa_petal"
 	tastes = list("pleasantly mild sweetness" = 1)
+	seed = /obj/item/herbseed/rosa/azure
 	bitesize = 1
 	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/medicine/antidote = 2)
 	rotprocess = null
@@ -96,6 +97,7 @@
 	served to visiting diplomats and to those who're recovering from both injury-and-malaise alike."
 	icon = 'icons/obj/items/donor_objects.dmi'
 	icon_state = "azurosa_petal_dry"
+	seed = /obj/item/herbseed/rosa/azure
 	tastes = list("pleasantly mild sweetness" = 1)
 	bitesize = 1
 	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/medicine/antidote = 2)
