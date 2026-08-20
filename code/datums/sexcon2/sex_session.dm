@@ -466,7 +466,7 @@
 			. = TRUE
 		if("toggle_freeuse")
 			user.freeuse = !user.freeuse
-			to_chat(user, span_notice("Positioning and exposure checks are now [user.freeuse ? "enabled" : "disabled"]."))
+			to_chat(user, span_notice("Positioning and exposure checks are now [user.freeuse ? "disabled" : "enabled"]."))
 			. = TRUE
 		if("toggle_subtle")
 			doing_subtly = !doing_subtly
