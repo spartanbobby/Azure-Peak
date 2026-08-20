@@ -55,6 +55,8 @@
 
 /datum/sex_action/oral/cunnilingus/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	if(!sex_session)	// Inverted.
+		sex_session = get_sex_session(target, user)
 	var/do_subtle = sex_session.doing_subtly
 	user.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]finishes into [target]'s mouth!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 	return "into"
