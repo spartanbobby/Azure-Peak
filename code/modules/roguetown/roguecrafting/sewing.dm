@@ -1441,10 +1441,10 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/shawl
-	name = "shawl"
+/datum/crafting_recipe/roguetown/sewing/shawlhood
+	name = "shawl (hijab)"
 	category = "Hoods"
-	result = list(/obj/item/clothing/head/roguetown/roguehood/shawl)
+	result = list(/obj/item/clothing/head/roguetown/roguehood/shawlhood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
@@ -1595,10 +1595,29 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 5
 
+/datum/crafting_recipe/roguetown/sewing/thinwinterdress
+	name = "thin winter dress"
+	category = "Dresses"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/tunic/thinwinterdress)
+	reqs = list(/obj/item/natural/cloth = 2, //cheaper because it is the unarmored clothing version
+				/obj/item/natural/fibers = 2,
+				/obj/item/natural/silk = 2)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
+
 /datum/crafting_recipe/roguetown/sewing/skirt
 	name = "skirt"
 	category = "Misc"
 	result = list(/obj/item/clothing/under/roguetown/skirt)
+	reqs = list(/obj/item/natural/cloth = 1,
+				/obj/item/natural/fibers = 2)
+	tools = list(/obj/item/needle)
+	craftdiff = 4
+
+/datum/crafting_recipe/roguetown/sewing/skirt/short
+	name = "short skirt"
+	category = "Misc"
+	result = list(/obj/item/clothing/under/roguetown/skirt/short)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/fibers = 2)
 	tools = list(/obj/item/needle)
