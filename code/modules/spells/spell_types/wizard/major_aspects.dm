@@ -181,7 +181,6 @@
 		/datum/action/cooldown/spell/crush,
 		/datum/action/cooldown/spell/gravity,
 		/datum/action/cooldown/spell/telegraphed_strike/kinetic_burst,
-		/datum/action/cooldown/spell/greater_cleaning,
 		/datum/action/cooldown/spell/levitation,
 	)
 	variants = list(
@@ -213,7 +212,6 @@
 		/datum/action/cooldown/spell/void_beam,
 		/datum/action/cooldown/spell/arcyne_burst,
 		/datum/action/cooldown/spell/circumdatum,
-		/datum/action/cooldown/spell/greater_cleaning,
 	)
 	variants = list(
 		"mastery" = list(
