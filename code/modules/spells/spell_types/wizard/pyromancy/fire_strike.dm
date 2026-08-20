@@ -80,7 +80,8 @@
 			if(spell_guard_check(L, TRUE))
 				continue
 			if(istype(caster) && ishuman(L))
-				arcyne_strike(caster, L, null, mob_damage, BODY_ZONE_CHEST, BCLASS_BURN, spell_name = "Fire Strike", damage_type = BURN, skip_animation = TRUE)
+				if(arcyne_strike(caster, L, null, mob_damage, BODY_ZONE_CHEST, BCLASS_BURN, spell_name = "Fire Strike", damage_type = BURN, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+					continue
 			else
 				L.adjustFireLoss(mob_damage)
 			apply_scorch_stack(L, 2)

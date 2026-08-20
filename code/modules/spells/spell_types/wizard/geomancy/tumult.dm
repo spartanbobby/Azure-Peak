@@ -143,8 +143,9 @@
 		if(spell_guard_check(victim, TRUE))
 			victim.visible_message(span_warning("[victim] braces against the eruption!"))
 			continue
-		arcyne_strike(caster, victim, null, erupt_direct, target_zone, BCLASS_BLUNT, \
-			spell_name = "Cairn", damage_type = BRUTE, skip_animation = TRUE)
+		if(arcyne_strike(caster, victim, null, erupt_direct, target_zone, BCLASS_BLUNT, \
+			spell_name = "Cairn", damage_type = BRUTE, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+			continue
 		victim.apply_status_effect(/datum/status_effect/debuff/vulnerable, vuln_duration)
 		to_chat(victim, span_userdanger("Stone erupts beneath me!"))
 		new /obj/effect/temp_visual/spell_impact(get_turf(victim), spell_color, spell_impact_intensity)
@@ -162,8 +163,9 @@
 				continue
 			if(spell_guard_check(victim, TRUE))
 				continue
-			arcyne_strike(caster, victim, null, erupt_aoe, target_zone, BCLASS_BLUNT, \
-				spell_name = "Cairn", damage_type = BRUTE, skip_animation = TRUE)
+			if(arcyne_strike(caster, victim, null, erupt_aoe, target_zone, BCLASS_BLUNT, \
+				spell_name = "Cairn", damage_type = BRUTE, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+				continue
 			victim.apply_status_effect(/datum/status_effect/debuff/vulnerable, vuln_duration)
 			var/push_dir = get_dir(T, victim) || get_dir(caster, victim) || pick(GLOB.cardinals)
 			victim.safe_throw_at(get_ranged_target_turf(victim, push_dir, erupt_push), erupt_push, 1, caster, force = MOVE_FORCE_STRONG)
@@ -319,8 +321,9 @@
 	if(L.anti_magic_check())
 		return
 	if(ishuman(L))
-		arcyne_strike(H, L, null, barrel_damage, H.zone_selected || BODY_ZONE_CHEST, BCLASS_BLUNT, \
-			spell_name = "Ramstam", damage_type = BRUTE, skip_animation = TRUE)
+		if(arcyne_strike(H, L, null, barrel_damage, H.zone_selected || BODY_ZONE_CHEST, BCLASS_BLUNT, \
+			spell_name = "Ramstam", damage_type = BRUTE, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+			return
 	else
 		L.adjustBruteLoss(barrel_damage)
 	new /obj/effect/temp_visual/spell_impact(get_turf(L), spell_color, spell_impact_intensity)

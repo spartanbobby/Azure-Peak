@@ -88,7 +88,8 @@
 			L.visible_message(span_warning("[L] shrugs off the flames!"))
 			continue
 		if(istype(caster) && ishuman(L))
-			arcyne_strike(caster, L, null, strike_damage, def_zone, BCLASS_BURN, spell_name = "Ultio", damage_type = BURN, skip_animation = TRUE)
+			if(arcyne_strike(caster, L, null, strike_damage, def_zone, BCLASS_BURN, spell_name = "Ultio", damage_type = BURN, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+				continue
 		else
 			L.adjustFireLoss(strike_damage)
 		apply_scorch_stack(L, scorch_stacks, def_zone)

@@ -93,9 +93,11 @@
 			victim.visible_message(span_warning("[victim] breaks free of the tendrils!"))
 			continue
 		var/def_zone = H.zone_selected || BODY_ZONE_CHEST
-		arcyne_strike(H, victim, null, base_damage, def_zone, BCLASS_BLUNT, spell_name = "Grasp of Psydon")
+		if(arcyne_strike(H, victim, null, base_damage, def_zone, BCLASS_BLUNT, spell_name = "Grasp of Psydon") == ARCYNE_STRIKE_WARDED)
+			continue
 		if(empowered)
-			arcyne_strike(H, victim, null, empowered_damage, def_zone, BCLASS_BLUNT, spell_name = "Grasp of Psydon (Empowered)")
+			if(arcyne_strike(H, victim, null, empowered_damage, def_zone, BCLASS_BLUNT, spell_name = "Grasp of Psydon (Empowered)") == ARCYNE_STRIKE_WARDED)
+				continue
 		victim.throw_at(caster_turf, pull_distance, 4)
 
 		victim.visible_message(span_warning("[victim] is yanked toward [H] by tendrils of arcyne force!"))

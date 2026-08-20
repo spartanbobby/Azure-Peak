@@ -151,8 +151,9 @@
 	if(spell_guard_check(L, TRUE))
 		return
 	if(ishuman(L))
-		arcyne_strike(H, L, null, dmg, H.zone_selected || BODY_ZONE_CHEST, BCLASS_BLUNT, \
-			spell_name = name, damage_type = BRUTE, skip_animation = TRUE)
+		if(arcyne_strike(H, L, null, dmg, H.zone_selected || BODY_ZONE_CHEST, BCLASS_BLUNT, \
+			spell_name = name, damage_type = BRUTE, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+			return
 	else
 		L.adjustBruteLoss(dmg)
 	new /obj/effect/temp_visual/spell_impact(get_turf(L), spell_color, spell_impact_intensity)

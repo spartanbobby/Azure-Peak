@@ -136,10 +136,11 @@
 			continue
 		var/actual_damage = hs_damage
 		if(istype(caster) && ishuman(L))
-			arcyne_strike(caster, L, null, actual_damage, target_zone, \
+			if(arcyne_strike(caster, L, null, actual_damage, target_zone, \
 				BCLASS_BURN, spell_name = "Heaven's Strike", \
 				damage_type = BURN, \
-				skip_animation = TRUE)
+				skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+				continue
 		else
 			L.electrocute_act(actual_damage, src, 1, SHOCK_NOSTUN)
 		L.electrocute_act(0, src, 1, SHOCK_NOSTUN|SHOCK_VISUAL_ONLY)
@@ -175,10 +176,11 @@
 				L.visible_message(span_warning("[L] weathers the lightning strike!"))
 				continue
 			if(istype(caster) && !QDELETED(caster) && ishuman(L))
-				arcyne_strike(caster, L, null, damage, pick(random_zones), \
+				if(arcyne_strike(caster, L, null, damage, pick(random_zones), \
 					BCLASS_BURN, spell_name = spell_name, \
 					damage_type = BURN, \
-					skip_animation = TRUE)
+					skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+					continue
 			else
 				L.electrocute_act(damage, caster, 1, SHOCK_NOSTUN)
 			L.electrocute_act(0, caster, 1, SHOCK_NOSTUN|SHOCK_VISUAL_ONLY)

@@ -356,7 +356,8 @@
 			if(victim.guard_deflect_spell("Overloaded", TRUE, caster, punish_caster = FALSE))
 				continue
 			if(caster && !QDELETED(caster))
-				arcyne_strike(caster, victim, null, damage, zone, BCLASS_BURN, spell_name = "Overloaded", damage_type = BURN, skip_animation = TRUE)
+				if(arcyne_strike(caster, victim, null, damage, zone, BCLASS_BURN, spell_name = "Overloaded", damage_type = BURN, skip_animation = TRUE) == ARCYNE_STRIKE_WARDED)
+					continue
 			else
 				victim.adjustFireLoss(damage)
 			apply_scorch_stack(victim, 2, zone)

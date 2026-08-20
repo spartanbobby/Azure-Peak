@@ -80,7 +80,7 @@ without going through the click pipeline, so spells can deliver weapon-style str
 			LG.process_attack(target, target, user, weapon, def_zone)
 		else
 			LG.block_spell(target, user, spell_name)
-		return 0
+		return ARCYNE_STRIKE_WARDED
 
 	// Optional shield check — blocked like a projectile (shield takes 25% as integrity damage).
 	if(allow_shield_check && ishuman(target))
@@ -91,7 +91,7 @@ without going through the click pipeline, so spells can deliver weapon-style str
 				if(I.block_chance > 0)
 					I.take_damage(floor(damage / 4))
 					break
-			return 0
+			return ARCYNE_STRIKE_WARDED
 
 	// Default intdamage factor: blunt gets 1.6x (same as melee blunt), others get 1.0
 	if(isnull(intdamage_factor))

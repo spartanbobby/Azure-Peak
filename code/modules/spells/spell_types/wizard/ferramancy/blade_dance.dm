@@ -150,11 +150,12 @@
 				return
 			if(ishuman(L) && ishuman(caster))
 				var/target_zone = caster.zone_selected || BODY_ZONE_CHEST
-				arcyne_strike(caster, L, null, tick_damage, target_zone, \
+				if(arcyne_strike(caster, L, null, tick_damage, target_zone, \
 					BCLASS_CUT, spell_name = "Blade Dance", \
 					damage_type = BRUTE, \
 					skip_animation = TRUE, skip_message = TRUE, \
-					allow_shield_check = TRUE)
+					allow_shield_check = TRUE) == ARCYNE_STRIKE_WARDED)
+					continue
 			else
 				L.adjustBruteLoss(tick_damage)
 			new /obj/effect/temp_visual/spell_impact(get_turf(L), GLOW_COLOR_METAL, SPELL_IMPACT_MEDIUM)
