@@ -55,5 +55,5 @@
 /datum/sex_action/masturbate/breasts/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 
-	sex_session.perform_sex_action(user, 1, 4, TRUE)
+	sex_session.perform_sex_action(user, 1, 4, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation()

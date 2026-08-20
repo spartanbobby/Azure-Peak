@@ -75,4 +75,4 @@
 	if(!do_subtle)
 		do_thrust_animate(user, target)
 
-	sex_session.perform_sex_action(target, 2, 0, TRUE)
+	sex_session.perform_sex_action(target, 2, 0, TRUE, sex_session.speed, sex_session.force)

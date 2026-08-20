@@ -64,6 +64,6 @@
 	var/skill_level = user.get_skill_level(/datum/skill/magic/arcane)
 	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
-	sex_session.perform_sex_action(target, (2*skill_level), 0, TRUE)
+	sex_session.perform_sex_action(target, (2*skill_level), 0, TRUE, sex_session.speed, sex_session.force)
 
 	sex_session.handle_passive_ejaculation(target)

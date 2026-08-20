@@ -73,5 +73,5 @@
 
 	user.make_sucking_noise(do_subtle)
 
-	sex_session.perform_sex_action(target, arousal_amt, 0, TRUE)
+	sex_session.perform_sex_action(target, arousal_amt, 0, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)

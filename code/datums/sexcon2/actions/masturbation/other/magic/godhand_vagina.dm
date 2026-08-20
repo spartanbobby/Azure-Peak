@@ -41,13 +41,13 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] [do_subtly ? "subtly " : ""]starts to finger [target]'s cunt with divine help..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]starts to finger [target]'s cunt with divine help..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/godjob_vagina/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] [do_subtly ? "subtly " : ""]stops fingering [target]."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]stops fingering [target]."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/other/godjob_vagina/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
@@ -153,7 +153,9 @@
 		target,
 		data["arousal_mult"] * skill_level,
 		data["pain"],
-		TRUE
+		TRUE,
+		sex_session.speed,
+		sex_session.force
 	)
 
 	sex_session.handle_passive_ejaculation(target)

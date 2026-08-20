@@ -63,7 +63,7 @@
 	var/do_subtle = sex_session.doing_subtly
 	user.make_sucking_noise(do_subtle)
 
-	sex_session.perform_sex_action(target, 1, 3, TRUE)
+	sex_session.perform_sex_action(target, 1, 3, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)
 
 //No we really don't need remnants of milking code in here.

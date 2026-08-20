@@ -69,8 +69,8 @@
 		playsound(user, SFX_JINGLE_BELLS, 30, TRUE, -2, ignore_walls = FALSE)
 
 	if(istype(user.shoes, /obj/item/clothing/shoes/roguetown))
-		sex_session.perform_sex_action(target, 2, 10, TRUE)
+		sex_session.perform_sex_action(target, 2, 10, TRUE, sex_session.speed, sex_session.force)
 		sex_session.handle_passive_ejaculation(target)
 	else
-		sex_session.perform_sex_action(target, 2, 4, TRUE)
+		sex_session.perform_sex_action(target, 2, 4, TRUE, sex_session.speed, sex_session.force)
 		sex_session.handle_passive_ejaculation(target)

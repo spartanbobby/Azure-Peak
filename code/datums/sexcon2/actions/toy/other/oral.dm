@@ -56,4 +56,4 @@
 	var/do_subtle = sex_session.doing_subtly
 	user.make_sucking_noise(do_subtle)
 	var/obj/item/dildo/used_item = user.get_active_held_item()
-	sex_session.perform_sex_action(target, 0, used_item.pleasure, TRUE)
+	sex_session.perform_sex_action(target, 0, used_item.pleasure, TRUE, sex_session.speed, sex_session.force)

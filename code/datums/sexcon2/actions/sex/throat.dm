@@ -58,13 +58,13 @@
 		do_thrust_animate(user, target)
 		do_onomatopoeia(user)
 
-	sex_session.perform_sex_action(user, 2, 0, TRUE)
+	sex_session.perform_sex_action(user, 2, 0, TRUE, sex_session.speed, sex_session.force)
 
 	if(sex_session.considered_limp(user))
-		sex_session.perform_sex_action(target, 0, 2, FALSE)
+		sex_session.perform_sex_action(target, 0, 2, FALSE, sex_session.speed, sex_session.force)
 	else
 		var/target_pleasure = is_knotting ? 11 : 7
-		sex_session.perform_sex_action(target, 0, target_pleasure, FALSE)
+		sex_session.perform_sex_action(target, 0, target_pleasure, FALSE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation()
 
 /datum/sex_action/sex/throat/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
@@ -119,13 +119,13 @@
 		do_thrust_animate(user, target)
 		do_onomatopoeia(user)
 
-	sex_session.perform_sex_action(user, 2, 0, TRUE)
+	sex_session.perform_sex_action(user, 2, 0, TRUE, sex_session.speed, sex_session.force)
 
 	if(sex_session.considered_limp(user))
-		sex_session.perform_sex_action(target, 0, 2, FALSE)
+		sex_session.perform_sex_action(target, 0, 2, FALSE, sex_session.speed, sex_session.force)
 	else
 		var/target_pleasure = is_knotting ? 11 : 7
-		sex_session.perform_sex_action(target, 0, target_pleasure, FALSE)
+		sex_session.perform_sex_action(target, 0, target_pleasure, FALSE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation()
 
 /datum/sex_action/sex/throat/double/get_finish_message(mob/living/carbon/human/user, mob/living/carbon/human/target)

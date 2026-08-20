@@ -145,7 +145,9 @@
 		target,
 		data["arousal_mult"] * skill_level,
 		data["pain"],
-		TRUE
+		TRUE,
+		sex_session.speed,
+		sex_session.force
 	)
 
 	sex_session.handle_passive_ejaculation(target)

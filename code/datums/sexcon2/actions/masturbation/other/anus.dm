@@ -54,5 +54,5 @@
 	var/do_subtle = sex_session.doing_subtly
 	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
-	sex_session.perform_sex_action(target, 2, 6, TRUE)
+	sex_session.perform_sex_action(target, 2, 6, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)

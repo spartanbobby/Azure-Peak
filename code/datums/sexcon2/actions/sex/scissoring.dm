@@ -68,8 +68,8 @@
 		do_thrust_animate(user, target, sex_session)
 		do_onomatopoeia(user)
 
-	sex_session.perform_sex_action(user, 1, 4, TRUE)
+	sex_session.perform_sex_action(user, 1, 4, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation()
 
-	sex_session.perform_sex_action(target, 1, 4, TRUE)
+	sex_session.perform_sex_action(target, 1, 4, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)

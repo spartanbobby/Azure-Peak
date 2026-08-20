@@ -23,12 +23,12 @@
 		return FALSE
 	if(user == target)
 		return FALSE
-	if(target.freeuse)
-		return TRUE
 	if(!target.getorganslot(ORGAN_SLOT_PENIS))
 		return FALSE
 	if(check_sex_lock(target, ORGAN_SLOT_PENIS))
 		return FALSE
+	if(target.freeuse)
+		return TRUE
 	if(!check_location_accessible(target, user, BODY_ZONE_PRECISE_GROIN, TRUE))
 		return FALSE
 	// Need to stand up
@@ -69,5 +69,5 @@
 		playsound(user, SFX_JINGLE_BELLS, 30, TRUE, -2, ignore_walls = FALSE)
 
 
-	sex_session.perform_sex_action(target, 2, 4, TRUE)
+	sex_session.perform_sex_action(target, 2, 4, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)

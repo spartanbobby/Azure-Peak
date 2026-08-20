@@ -58,5 +58,5 @@
 	if(!do_subtle)
 		do_thrust_animate(user, target, sex_session)
 
-	sex_session.perform_sex_action(user, 2, 4, TRUE)
+	sex_session.perform_sex_action(user, 2, 4, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)

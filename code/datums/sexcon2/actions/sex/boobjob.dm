@@ -61,7 +61,7 @@
 		do_thrust_animate(user, target, sex_session)
 		do_onomatopoeia(user)
 
-	sex_session.perform_sex_action(user, 2, 4, TRUE)
+	sex_session.perform_sex_action(user, 2, 4, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)
 
 /datum/sex_action/sex/boobjob/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)

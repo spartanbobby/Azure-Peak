@@ -59,7 +59,7 @@
 	var/do_subtle = sex_session.doing_subtly
 	playsound(user, 'sound/misc/mat/fingering.ogg', 30, TRUE, (do_subtle ? -6 : -2), ignore_walls = FALSE)
 
-	sex_session.perform_sex_action(user, 2, 4, TRUE)
+	sex_session.perform_sex_action(user, 2, 4, TRUE, sex_session.speed, sex_session.force)
 
 /datum/sex_action/masturbate/penis_over/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	user.visible_message(span_love("[user] cums over [target]'s body!"))

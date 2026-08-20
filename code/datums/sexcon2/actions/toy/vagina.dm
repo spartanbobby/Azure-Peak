@@ -63,5 +63,5 @@
 	if(!do_subtle)
 		do_onomatopoeia(target)
 
-	sex_session.perform_sex_action(user, 2, used_item.pleasure, TRUE)
+	sex_session.perform_sex_action(user, 2, used_item.pleasure, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation()

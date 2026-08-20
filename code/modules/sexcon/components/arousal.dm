@@ -137,7 +137,6 @@
 
 /datum/component/arousal/proc/receive_sex_action(datum/source, arousal_amt, pain_amt, giving, applied_force, applied_speed)
 	var/mob/user = parent
-	to_chat(world, "we're in receive_sex_action of [user] with source: [source], arousal_amt: [arousal_amt], pain_amt:[pain_amt], applied_force:[applied_force], applied_speed:[applied_speed]")
 
 	// Apply multipliers
 	arousal_amt *= get_force_pleasure_multiplier(applied_force, giving)

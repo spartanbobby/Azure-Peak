@@ -60,5 +60,5 @@
 /datum/sex_action/oral/crotch_nuzzle/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 
-	sex_session.perform_sex_action(target, 0.5, 0, TRUE)
+	sex_session.perform_sex_action(target, 0.5, 0, TRUE, sex_session.speed, sex_session.force)
 	sex_session.handle_passive_ejaculation(target)

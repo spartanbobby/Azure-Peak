@@ -61,8 +61,8 @@
 	user.make_sucking_noise(do_subtle)
 
 	if(has_sensitive_ears(target) == TRUE || iself(target) || ishalfelf(target) || isdarkelf(target) || ishalforc(target) || isgoblinp(target) || isgnoll(target))
-		sex_session.perform_sex_action(target, 5, 0, TRUE)
+		sex_session.perform_sex_action(target, 5, 0, TRUE, sex_session.speed, sex_session.force)
 	else
-		sex_session.perform_sex_action(target, 0.5, 0, TRUE)
+		sex_session.perform_sex_action(target, 0.5, 0, TRUE, sex_session.speed, sex_session.force)
 
 	sex_session.handle_passive_ejaculation(target)

@@ -118,10 +118,7 @@
 /datum/sex_session/proc/sex_action_loop()
 	var/performed_action_type = current_action
 	var/datum/sex_action/action = SEX_ACTION(current_action)
-	var/base_speed = -1
-	var/base_force = -1
 	action.on_start(user, target)
-	var/transmitted_once = FALSE
 	while(TRUE)
 		#ifndef LOCALTEST
 		// DO NOT allow NPC sex except on local, for testing
@@ -134,7 +131,7 @@
 			break
 
 		var/do_time = action.do_time / get_speed_multiplier()
-		if(!do_after(user, do_time, target = target))
+		if(!do_after(user, do_time, progress = doing_subtly, target = target))
 			break
 
 		if(current_action == null || performed_action_type != current_action)
@@ -146,16 +143,7 @@
 		if(desire_stop)
 			break
 
-		if (speed != base_speed || force != base_force)
-			transmitted_once = FALSE
-			base_force = force
-			base_speed = speed
-			action.on_perform_message(user, target)
-
-		if(!transmitted_once)
-			action.on_perform_message(user, target)
-			transmitted_once = TRUE
-
+		action.on_perform_message(user, target)
 		action.on_perform(user, target)
 
 
