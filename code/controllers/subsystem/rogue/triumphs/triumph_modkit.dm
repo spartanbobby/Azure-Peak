@@ -113,7 +113,7 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_whip
 	name = "'Alloytip' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Bronze Whip, a Whip, or a Silver Whip."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Whip, a Bronze whip, a Silver Whip, or a Blacksteel Whip."
 	target_items = list(
 		/obj/item/rogueweapon/whip/silver				= /obj/item/rogueweapon/whip/silver/triumph,
 		/obj/item/rogueweapon/whip/bronze				= /obj/item/rogueweapon/whip/bronze/triumph,
