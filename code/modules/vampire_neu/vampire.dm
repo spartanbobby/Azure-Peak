@@ -119,16 +119,16 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 				vampdude?.cmode_music = 'sound/music/cmode/antag/combat_thrall.ogg'
 				vampdude?.adjust_skillrank_up_to(/datum/skill/magic/blood, 3, TRUE) // You are not even an antagonist
 				max_thralls = 0
-				ADD_TRAIT(target, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
+				ADD_TRAIT(vampdude, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
 			if(GENERATION_THINNERBLOOD)
 				vampdude?.cmode_music = 'sound/music/cmode/antag/combat_thrall.ogg'
 				vampdude?.adjust_skillrank_up_to(/datum/skill/magic/blood, 1, TRUE)
 				max_thralls = 0
-				ADD_TRAIT(target, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
+				ADD_TRAIT(vampdude, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
 			else
 				vampdude?.adjust_skillrank_up_to(/datum/skill/magic/blood, 2, TRUE) // Default weight if generation not set
 				max_thralls = 0
-				ADD_TRAIT(target, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
+				ADD_TRAIT(vampdude, TRAIT_NOVAMPMITOSIS, TRAIT_GENERIC) //no bloodpool vamps
 
 		if(HAS_TRAIT(vampdude, TRAIT_DNR)) //if you have DNR, we add dustable
 			ADD_TRAIT(vampdude, TRAIT_DUSTABLE, TRAIT_GENERIC)
