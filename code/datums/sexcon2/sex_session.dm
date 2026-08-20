@@ -119,6 +119,8 @@
 	var/performed_action_type = current_action
 	var/datum/sex_action/action = SEX_ACTION(current_action)
 	action.on_start(user, target)
+	var/base_speed = -1
+	var/base_force = -1
 	while(TRUE)
 		#ifndef LOCALTEST
 		// DO NOT allow NPC sex except on local, for testing
@@ -131,7 +133,7 @@
 			break
 
 		var/do_time = action.do_time / get_speed_multiplier()
-		if(!do_after(user, do_time, progress = doing_subtly, target = target))
+		if(!do_after(user, do_time, progress = !doing_subtly, target = target))
 			break
 
 		if(current_action == null || performed_action_type != current_action)
@@ -143,7 +145,13 @@
 		if(desire_stop)
 			break
 
-		action.on_perform_message(user, target)
+		if (!doing_subtly)
+			if(speed != base_speed || force != base_force)
+				base_force = force
+				base_speed = speed
+				action.on_perform_message(user, target)
+		else
+			action.on_perform_message(user, target)
 		action.on_perform(user, target)
 
 

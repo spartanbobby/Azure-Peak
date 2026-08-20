@@ -52,13 +52,13 @@
 /datum/sex_action/sex/other/footjob/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]cums over [target]'s feet!"), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]cums over [target]'s feet!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 	return "onto"
 
 /datum/sex_action/sex/other/footjob/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] jerks [target]'s pintle with [user.p_their()] feet..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] jerks [target]'s pintle with [user.p_their()] feet..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/sex/other/footjob/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

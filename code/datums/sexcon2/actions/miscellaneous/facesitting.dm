@@ -46,13 +46,13 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]sits [user.p_their()] cunt on [target]'s face!"), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]sits [user.p_their()] cunt on [target]'s face!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/facesitting/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] gets off [target]'s face."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] gets off [target]'s face."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/facesitting/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	sex_locks |= new /datum/sex_session_lock(target, BODY_ZONE_PRECISE_MOUTH)
@@ -62,7 +62,7 @@
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
 	var/verbstring = pick(list("rubs", "smushes", "forces"))
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] [verbstring] [user.p_their()] cunt against [target] face."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] [verbstring] [user.p_their()] cunt against [target] face."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/facesitting/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

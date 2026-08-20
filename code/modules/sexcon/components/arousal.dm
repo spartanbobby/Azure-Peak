@@ -182,6 +182,10 @@
 		climaxer = highest_priority.user
 		partner = highest_priority.target
 
+	if(mob == partner && action.flipped)
+		climaxer = mob
+		partner = highest_priority.target
+
 	playsound(parent, 'sound/misc/mat/endout.ogg', 50, TRUE, extrarange = (highest_priority.doing_subtly ? -6 : 0), ignore_walls = FALSE)
 	// Special case for when the climaxer has a penis but no testicles
 	if(!mob.getorganslot(ORGAN_SLOT_TESTICLES) && mob.getorganslot(ORGAN_SLOT_PENIS))

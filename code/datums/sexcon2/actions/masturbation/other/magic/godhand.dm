@@ -130,7 +130,7 @@
 	user.visible_message(
 		sex_session.spanify_force(
 			"[user] [sex_session.get_generic_force_adjective(do_subtle)] jerks [target]'s pintle off... [data["message"]]"
-		), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE)
+		), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE)
 	)
 
 /datum/sex_action/masturbate/other/godjob/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)

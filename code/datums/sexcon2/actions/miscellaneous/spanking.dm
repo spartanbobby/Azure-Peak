@@ -30,7 +30,7 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]positions [user.p_their()] hand to spank [target]'s butt!"), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]positions [user.p_their()] hand to spank [target]'s butt!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/spanking/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
@@ -38,7 +38,7 @@
 	if(sex_session.force >= SEX_FORCE_HIGH)
 		do_subtle = FALSE
 	var/msg = "[user] [sex_session.get_generic_force_adjective(do_subtle)] spanks [target]'s butt."
-	user.visible_message(sex_session.spanify_force(msg), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force(msg), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/spanking/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
@@ -69,7 +69,7 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] stops spanking [target]."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] stops spanking [target]."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/miscellaneous/spanking/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/locked = user.get_active_precise_hand()

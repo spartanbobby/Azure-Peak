@@ -34,13 +34,13 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]slides a dildo into [target]'s mouth!"), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]slides a dildo into [target]'s mouth!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/toy/other/oral/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]pulls [user.p_their()] dildo from [target]'s mouth."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] [do_subtle ? "subtly " : ""]pulls [user.p_their()] dildo from [target]'s mouth."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/toy/other/oral/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
@@ -49,7 +49,7 @@
 /datum/sex_action/toy/other/oral/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fucks [target]'s throat with a dildo!"), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fucks [target]'s throat with a dildo!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/toy/other/oral/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

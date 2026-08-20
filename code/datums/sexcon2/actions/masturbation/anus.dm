@@ -34,13 +34,13 @@
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] starts [sex_session.doing_subtly ? "subtly " : ""]fingering [user.p_their()] butt..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] starts [sex_session.doing_subtly ? "subtly " : ""]fingering [user.p_their()] butt..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/anus/on_finish(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(span_warning("[user] stops [sex_session.doing_subtly ? "subtly " : ""]fingering [user.p_their()] butt."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(span_warning("[user] stops [sex_session.doing_subtly ? "subtly " : ""]fingering [user.p_their()] butt."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/anus/lock_sex_object(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
@@ -49,7 +49,7 @@
 /datum/sex_action/masturbate/anus/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [user.p_their()] butt..."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [user.p_their()] butt..."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/masturbate/anus/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)

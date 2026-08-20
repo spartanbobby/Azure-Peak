@@ -125,7 +125,7 @@
 	user.visible_message(
 		sex_session.spanify_force(
 			"[user] [sex_session.get_generic_force_adjective(do_subtle)] fingers [target]'s butt... [data["message"]]"
-		), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE)
+		), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE)
 	)
 
 

@@ -50,8 +50,15 @@
 
 /datum/sex_action/sex/other/vagina/handle_climax_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
+	var/flipped = FALSE
+	if(!sex_session)
+		sex_session = get_sex_session(target, user)
+		flipped = TRUE
 	var/do_subtle = sex_session.doing_subtly
-	target.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]cums into [target]'s cunt!"), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	if(flipped)	// The one being ridden is accessing this.
+		target.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]cums into [target]'s cunt!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
+	else	// The rider
+		user.visible_message(span_love("[user] [do_subtle ? "subtly " : ""]quivers onto [target]'s pintle!"), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 	target.virginity = FALSE
 	user.virginity = FALSE
 	target.try_impregnate(user)
@@ -60,7 +67,7 @@
 /datum/sex_action/sex/other/vagina/on_perform_message(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
 	var/do_subtle = sex_session.doing_subtly
-	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] rides [target]."), vision_distance = (do_subtle ? 2 : DEFAULT_MESSAGE_RANGE))
+	user.visible_message(sex_session.spanify_force("[user] [sex_session.get_generic_force_adjective(do_subtle)] rides [target]."), vision_distance = (do_subtle ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /datum/sex_action/sex/other/vagina/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	var/datum/sex_session/sex_session = get_sex_session(user, target)
