@@ -940,6 +940,7 @@
 	body_parts_covered = EYES | NOSE
 	block2add = FOV_DEFAULT
 	max_integrity = ARMOR_INT_MASK_STEEL
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP|ITEM_SLOT_HEAD
 	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/mask/rogue/facemask/steel/visor/flimsy
