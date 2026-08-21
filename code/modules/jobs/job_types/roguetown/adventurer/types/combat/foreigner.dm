@@ -842,7 +842,7 @@
 	desc = "'A gentle rain falls softly on my weary eyes, as if to hide a lonely tear.. my life will be forever autumn..'"
 	icon_state = "aforestcloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
-	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_CLOAK
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
