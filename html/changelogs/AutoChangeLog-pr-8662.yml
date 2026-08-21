@@ -1,0 +1,4 @@
+author: "OrbisAnima"
+delete-after: True
+changes:
+  - qol: "Resident adventurers now show their job title in examine and when autoring books (unless they use a pen name of course)"
