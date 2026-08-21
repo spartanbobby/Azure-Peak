@@ -230,6 +230,11 @@
 /datum/loadout_item/donator/universal/donator_cropped_gambeson
 	name = "Gift - Kit, Cropped Gambeson"
 	path = /obj/item/enchantingkit/donator_cropped_gambeson
+
+/datum/loadout_item/donator/universal/donator_jacketed_gambeson
+	name = "Gift - Kit, Jacketed Gambeson"
+	path = /obj/item/enchantingkit/donator_jacketed_gambeson
+
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat
