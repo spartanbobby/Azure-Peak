@@ -2473,7 +2473,7 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/sewing/toga/dress
+/datum/crafting_recipe/roguetown/sewing/toga_dress
 	name = "toga, dress"
 	category = "Tabards"
 	result = list(/obj/item/clothing/cloak/tabard/toga/dress)
