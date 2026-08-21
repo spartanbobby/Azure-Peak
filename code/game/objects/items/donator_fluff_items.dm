@@ -3368,6 +3368,9 @@ As Excaliber."
 /obj/item/clothing/suit/roguetown/armor/gambeson/donator_arming
 	name = "jacketed gambeson"
 	icon_state = "darming"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/donator_arming/attack_right(mob/user)
 	if(!shiftable)
@@ -3400,6 +3403,9 @@ As Excaliber."
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/donator_arming
 	name = "heavy jacketed gambeson"
 	icon_state = "darming"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/donator_arming/attack_right(mob/user)
 	if(!shiftable)
