@@ -3,40 +3,75 @@
 	desc = "A robust-looking broom, made from a bundle of twigs. Sweep a wide swathe of floor clear of debris, glass, blood, dirt, and time without a care in the world."
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "broom"
+	experimental_inhand = TRUE
+	experimental_onhip = TRUE
 	possible_item_intents = list(/datum/intent/use, /datum/intent/mace/strike/wood)
-	gripped_intents = list(/datum/intent/use, /datum/intent/mace/strike/wood)
-	force = 10
-	force_wielded = 14
-	throwforce = 1
-	firefuel = 10 MINUTES
+	gripped_intents = list(/datum/intent/use, /datum/intent/mace/strike/wood, /datum/intent/spear/thrust/quarterstaff)
 	wlength = WLENGTH_LONG
 	sharpness = IS_BLUNT
-	resistance_flags = FLAMMABLE
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BACK
 	can_parry = TRUE
+	associated_skill = /datum/skill/craft/cooking
+	force = 10
+	force_wielded = 15
+	throwforce = 9
+	firefuel = 30 MINUTES
 	wdefense = 4
 	walking_stick = TRUE
-	associated_skill = /datum/skill/craft/cooking
 	anvilrepair = /datum/skill/craft/carpentry
 	smeltresult = /obj/item/ash
+	resistance_flags = FLAMMABLE
+	var/sweeping = FALSE
+	COOLDOWN_DECLARE(twirl_cooldown) //twirling has a cooldown on to_chat to reduce chatspam
 
 /obj/item/broom/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.6,"sx" = -6,"sy" = -1,"nx" = 8,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 32,"eturn" = -23,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.8,"sx" = -6,"sy" = -1,"nx" = 8,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 32,"eturn" = -23,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
-				return list("shrink" = 0.6,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.8,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 			if("onback")
-				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+				return list("shrink" = 0.8,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+			if("onbelt")
+				return list("shrink" = 0.8,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/broom/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Sweeping time scales inversely to Cooking skill.")
+	. += span_info("Sweeping time decreases with higher Cooking skill.")
+	. += span_info("STRONG intent will make you do a power-sweeping, targeting a 3x3 area!")
+	. += span_info("You can twirl [src] by right-clicking it in your hand while in combat mode. Doing so safely requires Expert skill; anything less risks harming yourself.")
+
+/obj/item/broom/rmb_self(mob/user)
+	. = ..()
+	if(. || !user.cmode) // don't want people to accidentally do this while cooking
+		return
+	SpinAnimation(4, 2) // The spin happens regardless of the cooldown
+	if(!COOLDOWN_FINISHED(src, twirl_cooldown))
+		return
+	COOLDOWN_START(src, twirl_cooldown, 3 SECONDS)
+	if((user.get_skill_level(associated_skill) < SKILL_LEVEL_EXPERT) && prob(40))
+		var/crit = prob(60) // separate role to KO
+		var/critmsg = " <span class='crit'><b>Critical hit!</b> [user] is knocked out!</span>"
+		user.visible_message(span_danger("While trying to twirl [src] [user] flings it instead, hitting [user.p_themselves()] in the head![crit ? critmsg : ""]"), span_userdanger("While trying to twirl [src] you fling it instead, hitting yourself in the head![crit ? critmsg : ""]"),)
+		var/mob/living/carbon/human/unfortunate_idiot = user
+		unfortunate_idiot.apply_damage(src.force, BRUTE, BODY_ZONE_PRECISE_SKULL)
+		if(crit)
+			unfortunate_idiot.flash_fullscreen("whiteflash3")
+			unfortunate_idiot.Unconscious(5 SECONDS)
+			playsound(get_turf(unfortunate_idiot), 'sound/combat/tf2crit.ogg', 100, FALSE)
+		playsound(get_turf(unfortunate_idiot), 'sound/misc/bonk.ogg', 100, FALSE)
+		user.dropItemToGround(src, TRUE)
+	else
+		user.visible_message(span_notice("[user] twirls [src] in a dramatic flourish!"), span_notice("You twirl [src] dramatically."),)
+		playsound(src, 'sound/combat/sidesweep_hit.ogg', 20, FALSE)
+
+	return
+
 
 /obj/item/broom/proc/sweep_time(mob/living/user)
-	return max(20 - user.get_skill_level(/datum/skill/craft/cooking) * 2.5, 5)
+	return max(40 - (user.get_skill_level(/datum/skill/craft/cooking) * 10), 5)
 
 /obj/item/broom/proc/sweep_message(atom/A, mob/living/user)
 	user.visible_message(span_notice("[user] dutifully sweeps \the [A]."), span_notice("I dutifully sweep \the [A]."))
@@ -80,14 +115,108 @@
 /obj/item/broom/attack_turf(turf/T, mob/living/user)
 	if(!user.used_intent || !istype(user.used_intent, /datum/intent/use))
 		return ..()
+
+	if(istype(user.rmb_intent, /datum/rmb_intent/strong))
+		if(sweeping)
+			return
+		sweep_strong(T, user)
+		return
+
 	if(istype(T, /turf/open/lava) || istype(T, /turf/open/water))
 		return
 	if(!do_after(user, sweep_time(user), target = T))
 		return
 	sweep_message(T, user)
+	new /obj/effect/particle_effect/thick_steam(get_turf(user))
+	if(!sweeping)
+		playsound(user, 'sound/items/broom_sweep.ogg', 150, TRUE)
+	gather_clutter(T, user, T)
+	broom_fu(T)
+	wash_atom(T, CLEAN_MEDIUM)
+
+/obj/item/broom/proc/sweep_strong(turf/center, mob/living/user)
+	if(!center || !user || sweeping)
+		return
+	sweeping = TRUE
+	var/list/tiles = list()
+	for(var/turf/T in range(1, center))
+		if(T == center)
+			continue
+		if(istype(T, /turf/open/lava) || istype(T, /turf/open/water))
+			continue
+		tiles += T
+
+	while(length(tiles))
+		if(QDELETED(user) || user.stat == DEAD)
+			sweeping = FALSE
+			return
+		var/turf/T = pick_n_take(tiles)
+		var/stuck = 0
+		while(user.loc != T)
+			if(QDELETED(user) || user.stat == DEAD)
+				sweeping = FALSE
+				return
+			var/turf/old_turf = get_turf(user)
+			step_to(user, T)
+			sleep(1)
+			if(get_turf(user) != old_turf)
+				playsound(user, "clothwipe", 100, TRUE)
+				stuck = 0
+			else
+				stuck++
+				if(stuck >= 10)
+					break
+		if(user.loc != T)
+			continue
+		if(!do_after(user, sweep_move_time(user), target = T))
+			sweeping = FALSE
+			return
+		if(QDELETED(user) || user.stat == DEAD)
+			sweeping = FALSE
+			return
+		sweep_message(T, user)
+		new /obj/effect/particle_effect/thick_steam(get_turf(user))
+		playsound(user, 'sound/items/broom_sweep.ogg', 150, TRUE)
+		gather_clutter(T, user, center)
+		broom_fu(T)
+		wash_atom(T, CLEAN_MEDIUM)
+		for(var/atom/A in T)
+			if(istype(A, /obj/effect/decal/cleanable) || ismob(A) || (isobj(A) && !istype(A, /obj/effect)))
+				wash_atom(A, CLEAN_MEDIUM)
+	if(QDELETED(user) || user.stat == DEAD)
+		sweeping = FALSE
+		return
+	var/stuck = 0
+	while(user.loc != center)
+		if(QDELETED(user) || user.stat == DEAD)
+			sweeping = FALSE
+			return
+		var/turf/old_turf = get_turf(user)
+		step_to(user, center)
+		sleep(1)
+		if(get_turf(user) != old_turf)
+			playsound(user, "clothwipe", 100, TRUE)
+			stuck = 0
+		else
+			stuck++
+			if(stuck >= 10)
+				sweeping = FALSE
+				return
+	if(!do_after(user, sweep_move_time(user), target = center))
+		sweeping = FALSE
+		return
+	if(QDELETED(user) || user.stat == DEAD)
+		sweeping = FALSE
+		return
+	sweep_message(center, user)
 	playsound(user, 'sound/items/broom_sweep.ogg', 150, TRUE)
-	gather_clutter(T, user)
-	sweep_area(T)
+	gather_clutter(center, user, center)
+	broom_fu(center)
+	wash_atom(center, CLEAN_MEDIUM)
+	for(var/atom/A in center)
+		if(istype(A, /obj/effect/decal/cleanable) || ismob(A) || (isobj(A) && !istype(A, /obj/effect)))
+			wash_atom(A, CLEAN_MEDIUM)
+	sweeping = FALSE
 
 /obj/item/broom/proc/sweep_area(turf/center)
 	var/washed = 0
@@ -115,20 +244,25 @@
 		if(is_sweep_trash(O))
 			qdel(O)
 
-/obj/item/broom/proc/gather_clutter(turf/T, mob/living/user)
-	if(!T)
+/obj/item/broom/proc/gather_clutter(turf/T, mob/living/user, turf/center)
+	if(!T || !center)
 		return
+
 	var/moved = 0
 	for(var/atom/movable/A in range(1, T))
 		if(moved >= 10)
 			break
-		if(A.loc == T)
+		if(A.loc == center)
 			continue
 		if(QDELETED(A))
 			continue
 		if(!is_clutter(A))
 			continue
-		A.forceMove(T)
+		A.forceMove(center)
 		moved++
+
 	if(moved)
-		user.visible_message(span_notice("[user] gathers the clutter into \the [T]."), span_notice("I gather the clutter into \the [T]."))
+		user.visible_message(span_notice("[user] gathers the clutter into \the [center]."), span_notice("I gather the clutter into \the [center]."))
+
+/obj/item/broom/proc/sweep_move_time(mob/living/user)
+	return max(5, 40 - (user.get_skill_level(/datum/skill/craft/cooking) * 5))
