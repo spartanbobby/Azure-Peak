@@ -52,7 +52,7 @@
 		return FALSE
 
 	for(var/turf/T in range(blast_radius, center))
-		new /obj/effect/temp_visual/trap_wall/fire(T)
+		new /obj/effect/temp_visual/telegraph/wall/fire(T)
 	center.visible_message(span_boldwarning("The air above ignites - something is coming down!"))
 	addtimer(CALLBACK(src, PROC_REF(drop_fireball), center), impact_delay)
 	return TRUE
@@ -74,8 +74,6 @@
 			S.take_damage(structural_damage, BRUTE, "blunt", object_damage_multiplier = 2)
 		T.take_damage(structural_damage, BRUTE, "blunt", object_damage_multiplier = 2)
 		for(var/mob/living/L in T.contents)
-			if(L == owner)
-				continue
 			if(L.anti_magic_check())
 				continue
 			if(spell_guard_check(L, TRUE))

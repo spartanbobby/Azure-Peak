@@ -25,7 +25,7 @@
 	item_state = "beekeeper"
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
-	alternate_worn_layer  = 8.9 //On top of helmet
+	alternate_worn_layer	= 8.9 //On top of helmet
 	body_parts_covered = HEAD|HAIR|EARS|NECK
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
 	sleevetype = null
@@ -69,7 +69,7 @@
 	icon_state = "dendormask"
 	item_state = "dendormask"
 	icon = 'icons/roguetown/clothing/head.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi' 
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
 	body_parts_covered = MOUTH
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
@@ -106,9 +106,6 @@
 	icon_state = "dungeoneer"
 	color = null
 
-/obj/item/clothing/head/roguetown/menacing/executioner/ComponentInitialize()
-	AddComponent(/datum/component/armour_filtering/positive, TRAIT_JAILOR, "dungeoneer")
-
 /obj/item/clothing/head/roguetown/jester
 	name = "jester's hat"
 	desc = "A funny-looking hat with jingly bells attached to it."
@@ -137,7 +134,7 @@
 	color = primary
 	update_icon()
 
-/obj/item/clothing/head/roguetown/jester/Initialize()
+/obj/item/clothing/head/roguetown/jester/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_JINGLE_BELLS, 2)
 	if(GLOB.lordprimary)
