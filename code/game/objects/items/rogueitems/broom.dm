@@ -127,8 +127,8 @@
 	if(!do_after(user, sweep_time(user), target = T))
 		return
 	sweep_message(T, user)
-	new /obj/effect/particle_effect/thick_steam(get_turf(user))
 	if(!sweeping)
+		new /obj/effect/particle_effect/thick_steam(get_turf(T))
 		playsound(user, 'sound/items/broom_sweep.ogg', 150, TRUE)
 	gather_clutter(T, user, T)
 	broom_fu(T)
