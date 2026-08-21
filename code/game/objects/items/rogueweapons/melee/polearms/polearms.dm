@@ -1243,7 +1243,7 @@
 /obj/item/rogueweapon/spear/boar/noc
 	name = "moonlight spear"
 	desc = "A spear with a wide head and a pair of wings below the head. The wings are designed to prevent a boar from charging past the spearhead. \
-	It is also useful for parrying and stopping a charging opponent."
+	It is also useful for parrying and stopping a charging opponent. This one in particular is made of blued steel."
 	icon_state = "nocspear"
 
 /obj/item/rogueweapon/spear/blacksteel
