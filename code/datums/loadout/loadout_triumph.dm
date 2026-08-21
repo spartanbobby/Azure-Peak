@@ -600,6 +600,12 @@
 	triumph_cost = 1
 	sort_category = "Triumphs"
 
+/datum/loadout_item/triumph_weaponkit_khanda
+	name = "Triumph Kit - Khanda"
+	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_khanda
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
 //////////////////
 //	PERFUMES !	//
 //////////////////

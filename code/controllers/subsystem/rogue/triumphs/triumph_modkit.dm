@@ -298,12 +298,25 @@
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_ida
 	name = "'Ida' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Shortsword or a Steel Shortsword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Shortsword, Steel Shortsword, Iron Arming Sword, and Steel Arming Sword."
 	target_items = list(
 		/obj/item/rogueweapon/sword/short/iron,
-		/obj/item/rogueweapon/sword/short
+		/obj/item/rogueweapon/sword/short,
+		/obj/item/rogueweapon/sword/iron,
+		/obj/item/rogueweapon/sword,
 		)
 	result_item = /obj/item/rogueweapon/example/ida
+
+/obj/item/enchantingkit/weapon/triumph_weaponkit_khanda
+	name = "'Khanda' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Arming Sword, Steel Arming Sword, Silver Arming Sword, and Bronze Arming Sword."
+	target_items = list(
+		/obj/item/rogueweapon/sword/silver			= /obj/item/rogueweapon/sword/silver/khanda,
+		/obj/item/rogueweapon/sword/bronze				= /obj/item/rogueweapon/sword/bronze/khanda,
+		/obj/item/rogueweapon/sword/iron					= /obj/item/rogueweapon/sword/iron/khanda,
+		/obj/item/rogueweapon/sword						= /obj/item/rogueweapon/sword/khanda
+		)
+	result_item = null
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_hwi
 	name = "'Hwi' morphing elixir"
@@ -461,6 +474,34 @@
 	desc = "A heavier alternative to the 'Njora' dagger, lengthened to adopt the more rigorous labors of fighting fiends. These Naledic-Lakkarian shortswords \
 	are said to be the closest inheritors of an ancient design; of the first swords wielded by Man, in the tymes before Syon, against the ultimate evil."
 	icon_state = "ida"
+	sheathe_icon = "sbroadsword"
+
+/obj/item/rogueweapon/sword/khanda
+	name = "steel khanda"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
+	desc = "A flat headed, double-edged straight sword hailing from Raneshen, Xylix is oft depicted wielding this blade in ancient murals, and the Khanda been long adapted as a symbol for freedom-fighters across the nation."
+	icon_state = "khanda"
+	sheathe_icon = "sbroadsword"
+
+/obj/item/rogueweapon/sword/iron/khanda
+	name = "iron khanda"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
+	desc = "A flat headed, double-edged straight sword hailing from Raneshen, Xylix is oft depicted wielding this blade in ancient murals, and the Khanda been long adapted as a symbol for freedom-fighters across the nation."
+	icon_state = "ikhanda"
+	sheathe_icon = "sbroadsword"
+
+/obj/item/rogueweapon/sword/silver/khanda
+	name = "silver khanda"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
+	desc = "A flat headed, double-edged straight sword hailing from Raneshen, Xylix is oft depicted wielding this blade in ancient murals, and the Khanda been long adapted as a symbol for freedom-fighters across the nation."
+	icon_state = "silver_khanda"
+	sheathe_icon = "sbroadsword"
+
+/obj/item/rogueweapon/sword/bronze/khanda
+	name = "bronze khanda"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
+	desc = "A flat headed, double-edged straight sword hailing from Raneshen, Xylix is oft depicted wielding this blade in ancient murals, and the Khanda been long adapted as a symbol for freedom-fighters across the nation."
+	icon_state = "bronze_khanda"
 	sheathe_icon = "sbroadsword"
 
 /obj/item/rogueweapon/example/hwi
