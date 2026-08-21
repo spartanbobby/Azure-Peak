@@ -905,3 +905,61 @@
   - rscadd: Adds a recipe to craft the thin winter dress
   - bugfix: fixes an arcyne ward interaction with the thin winter dress by repathing
       it
+2026-08-21:
+  Aeiraea:
+  - bugfix: Fixed the Scout Cloak not appearing as intended upon feminine characters
+      and short characters when facing any direction that is not south.
+  KatTheFox:
+  - bugfix: Fixed a runtime relating to throne announcements.
+  - bugfix: Fixed an exploit allowing enchantments to be stacked.
+  - bugfix: Fixed an oversight causing the decrepit kettle helm to smelt into steel
+      instead of glimmering slag
+  - bugfix: Fixed an issue where organs would be treated as sharp objects and embed,
+      particularly noticable as a gnoll devouring corpses
+  - bugfix: Fixed an issue where certain non-flora items (like skysugar slabs) would
+      claim you can crush them into seeds, despite that being untrue
+  - bugfix: Fixed an issue where rosa petals and their variants would be unable to
+      be crushed into seeds, forcing gardeners to make an alchemical mortar to plant
+      rosa
+  - bugfix: Fixed a runtime preventing noticeboard notices from being posted
+  - bugfix: Fixed most round statistics (such as gods' influences) being completely
+      untracked and therefore stuck at zero
+  - bugfix: Fixed conjured skeletons from being able to panel and be panelled
+  Lamasmaster:
+  - bugfix: Sergeant orders not working on Wardens
+  - refactor: Orders (Marshal/Sergeant/Disgraced MAA)
+  - balance: Standard Spear functions apply only to Standard Bearer again, it also
+      grants no bonus stats anymore besides stress relief. It lost 30 throwforce (so
+      10 now) and swapped 1 WIl for 1 CON on the statpack.
+  - image: Makes all bow and arrow sprites 64x64 to prevent flying arrows in UI and
+      onmob (this doesn't prevent weird offsets while dumping quiver or for fired
+      arrows)
+  - spellcheck: Selfbow > Yew Hunting Bow
+  OrbisAnima:
+  - balance: Buff the chance of flints working to 90% from 50%
+  RosySaturniidae:
+  - bugfix: the alloy-tipped triumph kit now has a blacksteel variant instead of downgrading
+      your 140 mammon whip
+  - rscadd: new dono ckey
+  SpartanBobby:
+  - rscadd: Added short skirt. A cut-down variation of the short jupon sprite that
+      you can wear on your legs
+  WeNeedMorePhoron:
+  - balance: Made NPC archers slower shooting and less accurate, again. Excluding
+      Conjured summons
+  - balance: Made a certain boss no longer spawn archers
+  - balance: Fixed an issue where broadhead and bodkin (baseline) arrows do not have
+      any damage falloff as intended.
+  mumblemancer:
+  - rscadd: seneschals now have a unique key to their door
+  radarseas:
+  - rscadd: Added TRAIT_NOVAMPMITOSIS, this prevents well, vampires from duplicating
+      via personal servantry, its only applied on basic VL servants/guards and thinbloods/thinnerbloods.
+      for now.
+  - rscdel: Removed zerobrine
+  - rscdel: Removed TRAIT_BLOODPOOL_BORN, into the pyres of hell with thee DAEMON!!
+      BEGONE!! THE POWER OF PSYDON REBUKES!!!
+  - bugfix: Fixed vamp mitosis + exploits for good
+  zeskorion:
+  - bugfix: wrenches with charges can now attack objects
+  - qol: battle-wrenches default to STRIKE instead of USE
