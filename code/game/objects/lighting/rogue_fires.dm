@@ -812,7 +812,7 @@
 	. = ..()
 	. += span_info("Resting by a campfire gradually restores energy and stamina, while also healing wounds and dislocations. Sleeping next to a campfire further enhances the boons of a good nite's rest.")
 	. += span_info("If the fire is gone, then it may have simply ran out of fuel as well. Left-click it with something flammable, such as a book or stick, before rekindling to keep yourself warm.")
-	. += span_info("You can place cookware (a kettle, or pan) on the campfire to boil liquids, fry food, or prepare stews.")
+	. += span_info("You can place a kettle on the campfire to boil liquids or prepare stews.")
 
 /obj/machinery/light/rogue/campfire/examine(mob/user)
 	. = ..()
