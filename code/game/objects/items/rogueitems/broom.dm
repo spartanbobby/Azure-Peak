@@ -4,7 +4,6 @@
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "broom"
 	experimental_inhand = TRUE
-	experimental_onhip = TRUE
 	possible_item_intents = list(/datum/intent/use, /datum/intent/mace/strike/wood)
 	gripped_intents = list(/datum/intent/use, /datum/intent/mace/strike/wood, /datum/intent/spear/thrust/quarterstaff)
 	wlength = WLENGTH_LONG
@@ -45,8 +44,6 @@
 
 /obj/item/broom/rmb_self(mob/user)
 	. = ..()
-	if(. || !user.cmode) // don't want people to accidentally do this while cooking
-		return
 	SpinAnimation(4, 2) // The spin happens regardless of the cooldown
 	if(!COOLDOWN_FINISHED(src, twirl_cooldown))
 		return
@@ -71,7 +68,7 @@
 
 
 /obj/item/broom/proc/sweep_time(mob/living/user)
-	return max(40 - (user.get_skill_level(/datum/skill/craft/cooking) * 10), 5)
+	return max(40 - (user.get_skill_level(/datum/skill/craft/cooking) * 15), 5)
 
 /obj/item/broom/proc/sweep_message(atom/A, mob/living/user)
 	user.visible_message(span_notice("[user] dutifully sweeps \the [A]."), span_notice("I dutifully sweep \the [A]."))
@@ -90,6 +87,7 @@
 		istype(A, /obj/item/paper/crumpled) || \
 		istype(A, /obj/item/grown/log/tree/stick) || \
 		istype(A, /obj/item/ash) || \
+		istype(A, /obj/item/organ) || \
 		istype(A, /obj/item/natural/glass_shard) || \
 		istype(A, /obj/item/natural/cloth) || \
 		istype(A, /obj/item/natural/fibers) || \
@@ -128,7 +126,7 @@
 		return
 	sweep_message(T, user)
 	if(!sweeping)
-		new /obj/effect/particle_effect/thick_steam(get_turf(T))
+		sweep_smoke(T, user)
 		playsound(user, 'sound/items/broom_sweep.ogg', 150, TRUE)
 	gather_clutter(T, user, T)
 	broom_fu(T)
@@ -175,7 +173,7 @@
 			sweeping = FALSE
 			return
 		sweep_message(T, user)
-		new /obj/effect/particle_effect/thick_steam(get_turf(user))
+		sweep_smoke(T, user)
 		playsound(user, 'sound/items/broom_sweep.ogg', 150, TRUE)
 		gather_clutter(T, user, center)
 		broom_fu(T)
@@ -266,3 +264,19 @@
 
 /obj/item/broom/proc/sweep_move_time(mob/living/user)
 	return max(5, 40 - (user.get_skill_level(/datum/skill/craft/cooking) * 5))
+
+/obj/item/broom/proc/sweep_smoke(turf/T, mob/living/user)
+	if(!T || !user)
+		return
+	var/matrix/small = matrix()
+	small.Scale(0.3, 0.3)
+	var/obj/effect/particle_effect/thick_steam/left_smoke = new(T)
+	var/obj/effect/particle_effect/thick_steam/right_smoke = new(T)
+	left_smoke.transform = small
+	right_smoke.transform = small
+	animate(left_smoke, pixel_x = -12, pixel_y = 6, transform = matrix(), time = 2, easing = EASE_OUT)
+	animate(pixel_x = -24, pixel_y = 0, alpha = 0, transform = matrix() * 1.15, time = 2, easing = SINE_EASING)
+	animate(right_smoke, pixel_x = 12, pixel_y = 6, transform = matrix(), time = 2, easing = EASE_OUT)
+	animate(pixel_x = 24, pixel_y = 0, alpha = 0, transform = matrix() * 1.15, time = 2, easing = SINE_EASING)
+	QDEL_IN(left_smoke, 5)
+	QDEL_IN(right_smoke, 5)
