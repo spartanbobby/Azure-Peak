@@ -132,7 +132,7 @@
 /datum/status_effect/debuff/scorched1
 	id = "scorched1"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/scorched1
-	duration = 25 SECONDS
+	duration = 15 SECONDS
 
 /atom/movable/screen/alert/status_effect/debuff/scorched1
 	name = "Scorched"
