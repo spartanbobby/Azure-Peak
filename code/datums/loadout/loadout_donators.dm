@@ -231,9 +231,13 @@
 	name = "Gift - Kit, Cropped Gambeson"
 	path = /obj/item/enchantingkit/donator_cropped_gambeson
 
-/datum/loadout_item/donator/universal/donator_jacketed_gambeson
-	name = "Gift - Kit, Jacketed Gambeson"
-	path = /obj/item/enchantingkit/donator_jacketed_gambeson
+/datum/loadout_item/donator/universal/donator_jacketed_gambeson_short
+	name = "Gift - Kit, Short Jacketed Gambeson"
+	path = /obj/item/enchantingkit/donator_jacketed_gambeson_short
+
+/datum/loadout_item/donator/universal/donator_jacketed_gambeson_long
+	name = "Gift - Kit, Long Jacketed Gambeson"
+	path = /obj/item/enchantingkit/donator_jacketed_gambeson_long
 
 // --- GRENZEL REGIONAL ---
 
