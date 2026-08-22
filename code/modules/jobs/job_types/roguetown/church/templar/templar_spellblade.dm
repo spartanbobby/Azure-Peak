@@ -23,12 +23,16 @@
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/magic/arcane = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/magic/holy = SKILL_LEVEL_NOVICE,
+		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
 	)
 
 /datum/outfit/job/roguetown/templar/noc_spellblade
@@ -61,9 +65,14 @@
 	id = /obj/item/clothing/ring/silver
 	backpack_contents = list(
 		/obj/item/ritechalk = 1,
+		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/storage/keyring/acolyte = 1,
 		/obj/item/rogueweapon/spellbook = 1,
 	)
+
+	var/patron_dagger = get_templar_patron_dagger(H)
+	if(patron_dagger)
+		backpack_contents += patron_dagger
 
 	H.cmode_music = 'sound/music/cmode/church/combat_reckoning.ogg'
 
