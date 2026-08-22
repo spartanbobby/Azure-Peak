@@ -460,7 +460,7 @@
 				arcyne_strike(caster, L, null, blast_damage, BODY_ZONE_CHEST, BCLASS_BURN, spell_name = "Pyroclasm", damage_type = BURN, skip_animation = TRUE)
 			else
 				L.adjustFireLoss(blast_damage)
-			apply_scorch_stack(L, 4)
+			apply_scorch_stack(L, 3)
 		for(var/obj/structure/damaged in T)
 			if(!istype(damaged, /obj/structure/flora/newbranch))
 				damaged.take_damage(blast_structural, BRUTE, "blunt", TRUE)
