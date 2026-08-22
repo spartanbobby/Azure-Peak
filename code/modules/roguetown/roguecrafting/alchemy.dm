@@ -66,18 +66,8 @@
 	name = "purified moondust"
 	category = "Table"
 	result = list(/obj/item/reagent_containers/powder/moondust_purest)
-	reqs = list(/obj/item/reagent_containers/powder/moondust = 2, /obj/item/alch/firedust = 1)
-	craftdiff = 3
-
-/datum/crafting_recipe/roguetown/alchemy/moon_purest_3x
-	name = "purified moondust (x3)"
-	category = "Table"
-	result = list(/obj/item/reagent_containers/powder/moondust_purest,
-					/obj/item/reagent_containers/powder/moondust_purest,
-					/obj/item/reagent_containers/powder/moondust_purest
-				)
-	reqs = list(/obj/item/reagent_containers/powder/moondust = 3, /obj/item/alch/firedust = 2)
-	craftdiff = 4
+	reqs = list(/obj/item/reagent_containers/powder/moondust = 1, /obj/item/alch/irondust = 3, /obj/item/alch/bonemeal = 1, /obj/item/alch/firedust = 1)
+	craftdiff = 5
 
 /datum/crafting_recipe/roguetown/alchemy/spice_compost
 	name = "spice (compost)"
