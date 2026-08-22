@@ -27,7 +27,6 @@
 	. = ..()
 	if(!tag)
 		return
-	// Defines how the broom is positioned for each equipment state.
 	switch(tag)
 		if("gen")
 			return list("shrink" = 0.8, "sx" = -6, "sy" = -1, "nx" = 8, "ny" = 0, "wx" = -4, "wy" = 0, "ex" = 2, "ey" = 1, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 0, "nturn" = -38, "sturn" = 37, "wturn" = 32, "eturn" = -23, "nflip" = 0, "sflip" = 8, "wflip" = 8, "eflip" = 0)
@@ -38,22 +37,19 @@
 		if("onbelt")
 			return list("shrink" = 0.8, "sx" = -2, "sy" = -5, "nx" = 4, "ny" = -5, "wx" = 0, "wy" = -5, "ex" = 2, "ey" = -5, "nturn" = 0, "sturn" = 0, "wturn" = 0, "eturn" = 0, "nflip" = 0, "sflip" = 0, "wflip" = 0, "eflip" = 0, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 0)
 
-// Shows the player how the broom's mechanics work.
 /obj/item/broom/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Sweeping time decreases with higher Cooking skill.")
 	. += span_info("STRONG intent will make you do a power-sweeping, targeting a 3x3 area!")
 	. += span_info("You can twirl [src] by right-clicking it in your hand while in combat mode. Doing so safely requires Expert skill; anything less risks harming yourself.")
 
-// Handles the broom's combat-mode right-click twirl.
 /obj/item/broom/rmb_self(mob/user)
 	. = ..()
-	// The animation always happens, even while the action itself is on cooldown.
 	SpinAnimation(4, 2)
 	if(!COOLDOWN_FINISHED(src, twirl_cooldown))
 		return
 	COOLDOWN_START(src, twirl_cooldown, 3 SECONDS)
-	// Unskilled users have a chance to smack themselves with the broom.
+	// smack thineself loser nerd
 	if(user.get_skill_level(associated_skill) < SKILL_LEVEL_EXPERT && prob(40))
 		var/crit = prob(60)
 		var/critmsg = " <span class='crit'><b>Critical hit!</b> [user] is knocked out!</span>"
@@ -67,28 +63,20 @@
 		playsound(get_turf(unfortunate_idiot), 'sound/misc/bonk.ogg', 100, FALSE)
 		user.dropItemToGround(src, TRUE)
 		return
-	// Skilled users safely twirl the broom.
 	user.visible_message(span_notice("[user] twirls [src] in a dramatic flourish!"), span_notice("You twirl [src] dramatically."))
 	playsound(src, 'sound/combat/sidesweep_hit.ogg', 20, FALSE)
 
-// Returns the time required to clean a single target.
-// Higher Cooking skill makes sweeping faster.
 /obj/item/broom/proc/sweep_time(mob/living/user)
 	return max(40 - (user.get_skill_level(associated_skill) * 15), 5)
-
-// Returns the delay between each movement during a strong sweep.
 /obj/item/broom/proc/sweep_move_time(mob/living/user)
 	return max(40 - (user.get_skill_level(associated_skill) * 15), 5)
 
-// Checks whether the broom's sweeping user can continue.
 /obj/item/broom/proc/sweep_alive(mob/living/user)
 	return !QDELETED(user) && user.stat != DEAD
 
-// Displays the standard sweeping message.
 /obj/item/broom/proc/sweep_message(atom/A, mob/living/user)
 	user.visible_message(span_notice("[user] dutifully sweeps \the [A]."), span_notice("I dutifully sweep \the [A]."))
 
-// Determines whether an object should be removed outright by sweeping.
 /obj/item/broom/proc/is_sweep_trash(obj/O)
 	return istype(O, /obj/effect/decal/cleanable/dirt) \
 		|| istype(O, /obj/item/paper/crumpled) \
@@ -97,7 +85,6 @@
 		|| istype(O, /obj/effect/decal/cleanable/debris) \
 		|| istype(O, /obj/effect/decal/remains/human)
 
-// Determines which loose objects are gathered toward the sweep's center.
 /obj/item/broom/proc/is_clutter(atom/movable/A)
 	return istype(A, /obj/item/natural/stone) \
 		|| istype(A, /obj/item/scrap) \
@@ -115,11 +102,9 @@
 		|| istype(A, /obj/item/ammo_casing) \
 		|| istype(A, /obj/item/rogueweapon/huntingknife/throwingknife)
 
-// Cleans a target object when using the normal sweeping intent.
 /obj/item/broom/attack_obj(obj/O, mob/living/user)
 	if(!istype(user.used_intent, /datum/intent/use))
 		return ..()
-	// Sticky webs are smashed rather than cleaned normally.
 	if(istype(O, /obj/structure/spider/stickyweb))
 		O.take_damage(200, BRUTE, "blunt", FALSE)
 		playsound(loc, "smashlimb", 50, FALSE)
@@ -130,7 +115,6 @@
 	playsound(user, "clothwipe", 100, TRUE)
 	broom_fu(O)
 
-// Handles normal single-tile sweeping and STRONG area sweeping.
 /obj/item/broom/attack_turf(turf/T, mob/living/user)
 	if(!istype(user.used_intent, /datum/intent/use))
 		return ..()
@@ -143,8 +127,6 @@
 		return
 	perform_sweep(T, user, T)
 
-// Performs a full strong sweep over the surrounding 3x3 area.
-// The user moves to each tile, sweeps it, then returns to the center.
 /obj/item/broom/proc/sweep_strong(turf/center, mob/living/user)
 	if(!center || !sweep_alive(user) || sweeping)
 		return
@@ -184,8 +166,6 @@
 	perform_sweep(center, user, center)
 	sweeping = FALSE
 
-// Moves the user toward a sweep target.
-// Returns FALSE if the user dies, is deleted, or becomes stuck.
 /obj/item/broom/proc/move_to_sweep(turf/target, mob/living/user)
 	var/stuck = 0
 	while(user.loc != target)
@@ -202,7 +182,6 @@
 			return FALSE
 	return TRUE
 
-// Performs everything that happens when a tile is actually swept.
 /obj/item/broom/proc/perform_sweep(turf/T, mob/living/user, turf/center)
 	sweep_message(T, user)
 	sweep_smoke(T)
@@ -211,7 +190,6 @@
 	broom_fu(T)
 	clean_sweep_turf(T)
 
-// Cleans the turf and relevant atoms standing on it.
 /obj/item/broom/proc/clean_sweep_turf(turf/T)
 	if(!T)
 		return
@@ -220,7 +198,6 @@
 		if(istype(A, /obj/effect/decal/cleanable) || ismob(A) || (isobj(A) && !istype(A, /obj/effect)))
 			wash_atom(A, CLEAN_MEDIUM)
 
-// Cleans a 3x3 area without performing the movement animation.
 /obj/item/broom/proc/sweep_area(turf/center)
 	var/washed = 0
 	var/max_washes = 75
@@ -237,7 +214,6 @@
 				wash_atom(A, CLEAN_MEDIUM)
 				washed++
 
-// Deletes loose trash that is meant to disappear when swept.
 /obj/item/broom/proc/broom_fu(atom/A)
 	var/turf/T = get_turf(A)
 	if(!T)
@@ -246,7 +222,6 @@
 		if(O.loc == T && is_sweep_trash(O))
 			qdel(O)
 
-// Pulls nearby loose clutter toward the sweep's center.
 /obj/item/broom/proc/gather_clutter(turf/T, mob/living/user, turf/center)
 	if(!T || !center)
 		return
@@ -261,9 +236,7 @@
 	if(moved)
 		user.visible_message(span_notice("[user] gathers the clutter into \the [center]."), span_notice("I gather the clutter into \the [center]."))
 
-// Creates the animated smoke puff used by each sweep.
-// Smoke starts tiny, flicks outward in both directions, expands, and fades.
-/obj/item/broom/proc/sweep_smoke(turf/T)
+/obj/item/broom/proc/sweep_smoke(turf/T) // anime is real
 	if(!T)
 		return
 	new /obj/effect/temp_visual/dir_setting/firing_effect/cleanshebling(T)
