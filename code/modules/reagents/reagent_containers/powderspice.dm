@@ -21,7 +21,6 @@
 	volume = 15
 	list_reagents = list(/datum/reagent/druqks = 15)
 	grind_results = list(/datum/reagent/druqks = 15)
-	sellprice = 10
 
 /datum/reagent/druqks
 	name = "Drukqs"
@@ -323,7 +322,6 @@
 	volume = 18
 	list_reagents = list(/datum/reagent/moondust_purest = 18)
 	grind_results = list(/datum/reagent/moondust_purest = 15)
-	sellprice = 30
 
 /datum/reagent/moondust_purest
 	name = "Purest Moondust"
@@ -382,7 +380,6 @@
 	volume = 15
 	list_reagents = list(/datum/reagent/starsugar = 15, /datum/reagent/consumable/nutriment = 24) // monster and newports diet
 	grind_results = list(/datum/reagent/starsugar = 15)
-	sellprice = 25
 
 /datum/reagent/starsugar
 	name = "starsugar"
@@ -468,7 +465,6 @@
 	volume = 15
 	list_reagents = list(/datum/reagent/herozium = 15)
 	grind_results = list(/datum/reagent/herozium = 15)
-	sellprice = 30
 
 /atom/movable/screen/fullscreen/herozium
 	icon = 'icons/roguetown/maniac/fullscreen_wakeup.dmi'
