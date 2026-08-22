@@ -210,7 +210,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/donator
 	name = "cropped haubergeon"
@@ -2355,7 +2355,7 @@ As Excaliber."
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
 	item_state = "night_cloak"
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_BACK_L
 
 /obj/item/rogueweapon/example/dussack/moonlight
 	name = "Moonlight Dussack"
