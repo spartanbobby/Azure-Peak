@@ -161,7 +161,7 @@
 			else
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 		if("phalangite")
-			var/polearm_weapons = list("Halberd", "Bardiche", "Boar Spear", "Dory", "Naginata")
+			var/polearm_weapons = list("Halberd", "Bardiche", "Moonlight Spear", "Dory", "Naginata")
 			var/polearm_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in polearm_weapons
 			switch(polearm_choice)
 				if("Halberd")
@@ -172,8 +172,8 @@
 					H.put_in_hands(new /obj/item/rogueweapon/halberd/bardiche(H))
 					qdel(H.get_item_by_slot(SLOT_BACK_R))
 					H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap(H), SLOT_BACK_R, TRUE)
-				if("Boar Spear")
-					H.put_in_hands(new /obj/item/rogueweapon/spear/boar(H))
+				if("Moonlight Spear")
+					H.put_in_hands(new /obj/item/rogueweapon/spear/boar/noc(H))
 					qdel(H.get_item_by_slot(SLOT_BACK_R))
 					H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap(H), SLOT_BACK_R, TRUE)
 				if("Dory")
