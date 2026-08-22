@@ -44,9 +44,9 @@
 		if(1)
 			target.balloon_alert_to_viewers("<font color='#ff8a3d'>scorched I</font>")
 		if(2)
-			target.balloon_alert_to_viewers("<font color='#ff8a3d'>scorched II (-1 con)</font>")
+			target.balloon_alert_to_viewers("<font color='#ff8a3d'>scorched II</font>")
 		if(3)
-			target.balloon_alert_to_viewers("<font color='#ff8a3d'>scorched III (-2 con)</font>")
+			target.balloon_alert_to_viewers("<font color='#ff8a3d'>scorched III</font>")
 
 /proc/apply_scorch_burn(mob/living/target, zone_override = null)
 	if(!isliving(target))
@@ -151,7 +151,6 @@
 	id = "scorched2"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/scorched2
 	duration = 25 SECONDS
-	effectedstats = list(STATKEY_CON = -1)
 
 /atom/movable/screen/alert/status_effect/debuff/scorched2
 	name = "Scorched II"
@@ -170,7 +169,6 @@
 	id = "scorched3"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/scorched3
 	duration = 25 SECONDS
-	effectedstats = list(STATKEY_CON = -2)
 
 /atom/movable/screen/alert/status_effect/debuff/scorched3
 	name = "Scorched III"
@@ -189,7 +187,6 @@
 	id = "scorched4"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/scorched4
 	duration = 25 SECONDS
-	effectedstats = list(STATKEY_CON = -2)
 
 /atom/movable/screen/alert/status_effect/debuff/scorched4
 	name = "Scorched IV"
