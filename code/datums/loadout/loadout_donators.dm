@@ -967,3 +967,48 @@
 	name = "Donator Kit - Woodland Brigandine"
 	path = /obj/item/enchantingkit/nero_woodlandbrigplackart
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega","revennui")
+
+/datum/loadout_item/donator/lagomorphica_obligatoire
+	name = "Donator Kit - Obligatoire"
+	path = /obj/item/enchantingkit/weapon/donator_lagomorphica_obligatoire
+	ckeywhitelist = list("lagomorphica","stalkerino")
+
+/datum/loadout_item/donator/lagomorphica_delirante
+	name = "Donator Kit - Delirante"
+	path = /obj/item/enchantingkit/weapon/donator_lagomorphica_delirante
+	ckeywhitelist = list("lagomorphica","stalkerino")
+
+/datum/loadout_item/donator/lagomorphica_traitresse
+	name = "Donator Kit - Traitresse"
+	path = /obj/item/enchantingkit/weapon/donator_lagomorphica_traitresse
+	ckeywhitelist = list("lagomorphica","stalkerino")
+
+/datum/loadout_item/donator/stalkerino_drowsword
+	name = "Donator Kit - Skikuldic Sword"
+	path = /obj/item/enchantingkit/weapon/donator_stalkerino_drowsword
+	ckeywhitelist = list("lagomorphica","stalkerino")
+
+/datum/loadout_item/donator/stalkerino_drowcrossbow
+	name = "Donator Kit - Skikuldic Crossbow"
+	path = /obj/item/enchantingkit/donator_stalkerino_drowcrossbow
+	ckeywhitelist = list("lagomorphica","stalkerino")
+
+/datum/loadout_item/donator/stalkerino_drowhelmet
+	name = "Donator Kit - Skikudic Savoyard"
+	path = /obj/item/enchantingkit/donator_stalkerino_drowhelmet
+	ckeywhitelist = list("lagomorphica","stalkerino")
+
+/datum/loadout_item/donator/chivalre_drowmantle
+	name = "Donator Kit - Scourge Mantle"
+	path = /obj/item/enchantingkit/donator_chivalre_drowmantle
+	ckeywhitelist = list("oddbomber3768")
+
+/datum/loadout_item/donator/chivalre_drowgreatflail
+	name = "Donator Kit - Jagged Skikuldic Greatflail"
+	path = /obj/item/enchantingkit/donator_chivalre_drowgreatflail
+	ckeywhitelist = list("oddbomber3768")
+
+/datum/loadout_item/donator/chivalre_drowgreatflailalt
+	name = "Donator Kit - Smooth Skikuldic Greatflail"
+	path = /obj/item/enchantingkit/donator_chivalre_drowgreatflailalt
+	ckeywhitelist = list("oddbomber3768")

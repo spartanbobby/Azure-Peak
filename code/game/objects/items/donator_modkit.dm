@@ -1044,6 +1044,35 @@
 	/obj/item/enchantingkit/chivalre_aasimar
 	) //Allows for a loadout's complete rethemeing, without retroactively bloating the loadout.dm file. Quick, dirty, but it'll work.
 
+
+/obj/item/enchantingkit/donator_chivalre_drowmantle
+	name = "'Scourge Mantle' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Hounskull Bascinet, a Pigface Bascinet, a \
+	Visored Sallet, or a Sayovard."
+	target_items = list(
+		/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull		= /obj/item/clothing/head/roguetown/helmet/shadowplate,
+		/obj/item/clothing/head/roguetown/helmet/bascinet/pigface				= /obj/item/clothing/head/roguetown/helmet/shadowplate,
+		/obj/item/clothing/head/roguetown/helmet/sallet/visored					= /obj/item/clothing/head/roguetown/helmet/shadowplate,
+		/obj/item/clothing/head/roguetown/helmet/heavy/guard					= /obj/item/clothing/head/roguetown/helmet/shadowplate
+	)
+	result_item = null
+
+/obj/item/enchantingkit/donator_chivalre_drowgreatflail
+	name = "'Jagged Skikuldic Greatflail' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Greatflail."
+	target_items = list(
+		/obj/item/rogueweapon/flail/peasantwarflail/iron						=	/obj/item/rogueweapon/flail/peasantwarflail/drow
+	)
+	result_item = null
+
+/obj/item/enchantingkit/donator_chivalre_drowgreatflailalt
+	name = "'Smooth Skikuldic Greatflail' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Greatflail."
+	target_items = list(
+		/obj/item/rogueweapon/flail/peasantwarflail/iron						=	/obj/item/rogueweapon/flail/peasantwarflail/drow/alt
+	)
+	result_item = null
+
 //Truill
 /obj/item/enchantingkit/truill_flowerblade
 	name = "'Beflowered Longsword' morphing elixir"
@@ -1276,9 +1305,64 @@
 
 /obj/item/enchantingkit/weapon/moonlightdussack
 	name = "'Moonlight Dussack' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Saber, or a Steel Shortsword"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Saber, or a Steel Shortsword."
 	target_items = list(
 		/obj/item/rogueweapon/sword/short,
 		/obj/item/rogueweapon/sword/sabre
 	)
 	result_item = /obj/item/rogueweapon/example/dussack/moonlight
+
+// Lagomorphica + Stalkerino
+/obj/item/enchantingkit/weapon/donator_lagomorphica_obligatoire
+	name = "'Obligatoire' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most two-handed swords."
+	target_items = list(
+		/obj/item/rogueweapon/sword/long
+	)
+	result_item = /obj/item/rogueweapon/example/lagomorphica_obligatoire
+
+/obj/item/enchantingkit/weapon/donator_lagomorphica_delirante
+	name = "'Delirante' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most two-handed swords."
+	target_items = list(
+		/obj/item/rogueweapon/sword/long
+	)
+	result_item = /obj/item/rogueweapon/example/lagomorphica_delirante
+
+/obj/item/enchantingkit/weapon/donator_lagomorphica_traitresse
+	name = "'Traitresse' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most non-blunt polearms."
+	target_items = list(
+		/obj/item/rogueweapon/spear,
+		/obj/item/rogueweapon/halberd
+	)
+	result_item = /obj/item/rogueweapon/example/lagomorphica_traitresse
+
+/obj/item/enchantingkit/weapon/donator_stalkerino_drowsword
+	name = "'Skikuldic Sword' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most two-handed swords."
+	target_items = list(
+		/obj/item/rogueweapon/sword/long
+	)
+	result_item = /obj/item/rogueweapon/example/stalkerino_drowsword
+
+/obj/item/enchantingkit/donator_stalkerino_drowcrossbow
+	name = "'Skikuldic Crossbow' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of either a Crossbow or a Slurbow."
+	target_items = list(
+		/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow			= /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow/donator_stalkerino,
+		/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow					= /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/donator_stalkerino
+	)
+	result_item = null
+
+/obj/item/enchantingkit/donator_stalkerino_drowhelmet
+	name = "'Skikudic Savoyard' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Hounskull Bascinet, a Pigface Bascinet, a \
+	Visored Sallet, or a Sayovard."
+	target_items = list(
+		/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull		= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/donator_stalkerino,
+		/obj/item/clothing/head/roguetown/helmet/bascinet/pigface				= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/donator_stalkerino,
+		/obj/item/clothing/head/roguetown/helmet/sallet/visored					= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/donator_stalkerino,
+		/obj/item/clothing/head/roguetown/helmet/heavy/guard					= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/donator_stalkerino
+	)
+	result_item = null
