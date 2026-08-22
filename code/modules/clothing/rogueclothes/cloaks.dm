@@ -1812,6 +1812,15 @@
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
 
+/obj/item/clothing/cloak/poncho/fancycoat/trimmed
+	name = "trimmed fancy coat"
+	desc = "A loose garment that is usually draped across ones upper body. No one's quite sure of its cultural origin but it does look fancy. This one has been trimmed to show ones legs. How scandalous."
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	icon_state = "noblecoattrimmed"
+	item_state = "noblecoattrimmed"
+
 /obj/item/clothing/cloak/poncho/mageblue
 	color = CLOTHING_MAGE_BLUE
 	detail_color = CLOTHING_MAGE_BLUE
