@@ -2142,6 +2142,8 @@ As Excaliber."
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	icon_state = "euthanasia"
 
+/obj/item/clothing/shoes/roguetown/boots/tabi
+
 //MAGI1138
 /obj/item/clothing/cloak/magi1138
 	name = "reappropriated Xylixian Cloak"
