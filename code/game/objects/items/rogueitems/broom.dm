@@ -178,7 +178,7 @@
 			playsound(user, "clothwipe", 100, TRUE)
 			stuck = 0
 			continue
-		if(++stuck >= 10)
+		if(++stuck >= 2)
 			return FALSE
 	return TRUE
 
