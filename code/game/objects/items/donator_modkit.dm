@@ -1317,9 +1317,9 @@
 	name = "'Obligatoire' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most two-handed swords."
 	target_items = list(
-		obj/item/rogueweapon/sword/long,
-		obj/item/rogueweapon/sword/saber,
-		obj/item/rogueweapon/sword/rapier
+		/obj/item/rogueweapon/sword/long,
+		/obj/item/rogueweapon/sword/saber,
+		/obj/item/rogueweapon/sword/rapier
 	)
 	result_item = /obj/item/rogueweapon/example/lagomorphica_obligatoire
 
