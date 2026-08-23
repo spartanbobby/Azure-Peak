@@ -843,7 +843,7 @@
 	icon_state = "steelclub"
 	max_blade_int = 175
 	throwforce = 25
-	smeltresult = /obj/item/ingot/iron
+	smeltresult = /obj/item/ingot/steel
 	wdefense = 3
 	max_integrity = 200
 
@@ -852,7 +852,7 @@
 	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with silver. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
 	icon_state = "clubsilver"
 	throwforce = 30
-	smeltresult = /obj/item/ingot/iron
+	smeltresult = /obj/item/ingot/silver
 	wdefense = 4
 	is_silver = TRUE
 
