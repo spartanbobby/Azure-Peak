@@ -1334,7 +1334,8 @@
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most non-blunt polearms."
 	target_items = list(
 		/obj/item/rogueweapon/spear,
-		/obj/item/rogueweapon/halberd
+		/obj/item/rogueweapon/halberd,
+		/obj/item/rogueweapon/greataxe
 	)
 	result_item = /obj/item/rogueweapon/example/lagomorphica_traitresse
 
@@ -1342,6 +1343,7 @@
 	name = "'Skikuldic Sword' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most two-handed swords."
 	target_items = list(
+		/obj/item/rogueweapon/sword,
 		/obj/item/rogueweapon/sword/long
 	)
 	result_item = /obj/item/rogueweapon/example/stalkerino_drowsword
