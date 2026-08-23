@@ -514,6 +514,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(trapped)
 		return
 
+	if(is_hidden_from_ghosts(target, src))
+		return
+
 	var/icon/I = icon(target.icon,target.icon_state,target.dir)
 
 	var/orbitsize = (I.Width()+I.Height())*0.5
@@ -995,6 +998,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 				to_chat(ui.user, span_notice("You cannot orbit lobby players."))
 				return TRUE
 
+			if(is_hidden_from_ghosts(target, owner))
+				to_chat(ui.user, span_notice("That target is protected from ghost orbit."))
+				return TRUE
+
 			owner.ManualFollow(target)
 			SStgui.update_uis(src)
 			return TRUE
@@ -1042,6 +1049,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(M.client?.holder?.fakekey)
 			continue
 		if(istype(M, /mob/dead/new_player))
+			continue
+		if(is_hidden_from_ghosts(M, user))
 			continue
 
 		if(isobserver(M))
