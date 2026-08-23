@@ -6,7 +6,6 @@
 	item_state = "spice"
 	possible_transfer_amounts = list()
 	volume = 15
-	sellprice = 10
 	grid_width = 32
 	grid_height = 32
 	dropshrink = 0.75
