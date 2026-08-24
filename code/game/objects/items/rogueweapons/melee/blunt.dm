@@ -1284,6 +1284,7 @@
 	max_integrity = 200
 	dropshrink = 0.8
 	throwforce = 15
+	associated_skill = /datum/skill/combat/maces
 	anvilrepair = /datum/skill/craft/engineering
 	wdefense = 3
 	wdefense_wbonus = 3
