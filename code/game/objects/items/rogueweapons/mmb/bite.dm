@@ -339,7 +339,7 @@
 				recoil_mult = 0.05
 
 		// if armor broke, your toof dont broke, ya git
-		var/obj/item/clothing/armor = C.get_item_by_slot(def_zone)
+		var/obj/item/clothing/armor = C.get_item_by_slot(sublimb_grabbed)
 		if(armor?.obj_broken)
 			recoil_mult = 0.05
 
