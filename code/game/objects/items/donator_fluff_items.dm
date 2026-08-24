@@ -2161,8 +2161,6 @@ As Excaliber."
 
 /obj/item/clothing/shoes/roguetown/boots/tabi/otavan
 	name = "psydonic tabis"
-	desc = "A pair of unique leather boots, platformed in the back and hooved along the toes. One must wonder if there's any \
-	sense to wearing such footwear, beyond the battlefield of a banquet."
 	icon_state = "river_otavatabi"
 	item_state = "river_otavatabi"
 	color = null
@@ -2172,8 +2170,6 @@ As Excaliber."
 
 /obj/item/clothing/shoes/roguetown/boots/tabi/otavan/inqboots
 	name = "inquisitorial tabis"
-	desc = "A pair of unique leather boots, platformed in the back and hooved along the toes. One must wonder if there's any \
-	sense to wearing such footwear, beyond the battlefield of a banquet."
 	color = null
 	armor = ARMOR_PLATE
 
