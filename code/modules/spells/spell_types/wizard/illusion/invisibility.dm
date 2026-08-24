@@ -18,8 +18,8 @@
 	invocation_type = INVOCATION_NONE
 
 	charge_required = TRUE
-	charge_swingdelay_type = NONE
-	charge_time = 5 SECONDS
+	charge_swingdelay_type = SWINGDELAY_CANCEL
+	charge_time = 2 SECONDS
 	hold_drain = 0
 	charge_slowdown = CHARGING_SLOWDOWN_SMALL
 	cooldown_time = 30 SECONDS
@@ -29,7 +29,7 @@
 	point_cost = 3
 	spell_impact_intensity = SPELL_IMPACT_NONE
 
-	spell_requirements = SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z | SPELL_REQUIRES_NO_MOVE
+	spell_requirements = SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z
 
 /datum/action/cooldown/spell/invisibility/cast(atom/cast_on)
 	. = ..()
