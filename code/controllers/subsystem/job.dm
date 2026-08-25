@@ -954,3 +954,34 @@ SUBSYSTEM_DEF(job)
 
 /datum/controller/subsystem/job/proc/JobDebug(message)
 	log_job_debug(message)
+
+/datum/controller/subsystem/job/proc/bitflag_to_department(department_flag, obsfuscated = FALSE)
+	var/key = "Wanderers"
+	if(obsfuscated)
+		return key
+	switch(department_flag) // Omega tier slop.
+		if(NOBLEMEN)
+			key = "Noblemen"
+		if(COURTIERS)
+			key = "Courtiers"
+		if(GARRISON)
+			key = "Garrison"
+		if(RETINUE)
+			key = "Retinue"
+		if(CHURCHMEN)
+			key = "Church"
+		if(INQUISITION)
+			key = "Inquisition"
+		if(BURGHERS)
+			key = "Burghers"
+		if(GUILDSMAN)
+			key = "Guildsmen"
+		if(PEASANTS)
+			key = "Peasants"
+		if(SIDEFOLK)
+			key = "Sidefolk"
+		if(WANDERERS)
+			key = "Wanderers"
+		else
+			key = "Wanderers"
+	return key
