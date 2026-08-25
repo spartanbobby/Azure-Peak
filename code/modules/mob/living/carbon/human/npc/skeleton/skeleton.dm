@@ -50,9 +50,11 @@ GLOBAL_LIST_INIT(skeleton_aggro, list(
 	SEND_SIGNAL(src, COMSIG_MOB_MODIFY_AGGRO_LINES, GLOB.skeleton_aggro, TRUE)
 	src.regenerate_icons() //Fixes the weird body with random genders for NPCs.
 	for(var/obj/item/equipped_item in get_equipped_items() + held_items)
-		equipped_item.AddComponent(/datum/component/item_on_drop/dust)
+		if(equipped_item.smeltresult && (equipped_item.smeltresult != /obj/item/ingot/aaslag))
+			equipped_item.AddComponent(/datum/component/item_on_drop/dust)
 	for(var/obj/item/held_item in held_items)
-		ADD_TRAIT(held_item, TRAIT_NODROP, TRAIT_GENERIC)
+		if(held_item.smeltresult != /obj/item/ingot/aaslag)
+			ADD_TRAIT(held_item, TRAIT_NODROP, TRAIT_GENERIC)
 
 /mob/living/carbon/human/species/skeleton/npc/ambush
 	threat_point = THREAT_MODERATE
