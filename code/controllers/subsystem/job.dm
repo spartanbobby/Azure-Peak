@@ -782,6 +782,10 @@ SUBSYSTEM_DEF(job)
 	if(job && H)
 		job.after_spawn(H, M, joined_late) // note: this happens before the mob has a key! M will always have a client, H might not.
 
+	if(ishuman(H))
+		var/mob/living/carbon/human/spawned_human = H
+		spawned_human.flag_gear_as_worn()
+
 	return H
 
 /datum/controller/subsystem/job/proc/handle_auto_deadmin_roles(client/C, rank)
