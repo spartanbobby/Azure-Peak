@@ -14,6 +14,8 @@
 	. = ..()
 	var/datum/action/cooldown/spell/telegraphed_strike/mob_ability/ground/hurled_rock/stone_throw/throwstone = new(src)
 	throwstone.Grant(src)
+	if(prob(50))
+		src.hide()
 
 /mob/living/simple_animal/hostile/retaliate/rogue/troll/cave/LoseTarget()
 	..()
