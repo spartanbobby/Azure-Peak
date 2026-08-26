@@ -14,3 +14,17 @@
 	. = ..()
 	var/datum/action/cooldown/spell/telegraphed_strike/mob_ability/ground/hurled_rock/stone_throw/throwstone = new(src)
 	throwstone.Grant(src)
+
+/mob/living/simple_animal/hostile/retaliate/rogue/troll/cave/LoseTarget()
+	..()
+	if(stat != DEAD)
+		hide()
+
+
+/mob/living/simple_animal/hostile/retaliate/rogue/troll/cave/GiveTarget()
+	..()
+	ambush()
+
+/mob/living/simple_animal/hostile/retaliate/rogue/troll/cave/Moved()
+	ambush()
+	. = ..()
