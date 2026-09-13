@@ -34,3 +34,21 @@
 	structurecraft = /obj/item/millstone
 	craftdiff = SKILL_LEVEL_JOURNEYMAN
 	craftsound = 'modular/Neu_Food/sound/milling.ogg'
+
+/datum/crafting_recipe/roguetown/cooking/cane_sugar
+	name = "sugar"
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/sugarcane = 1)
+	result = /obj/item/reagent_containers/food/snacks/sugar
+	always_availible = TRUE
+	structurecraft = /obj/item/millstone
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftsound = 'modular/Neu_Food/sound/milling.ogg'
+
+/datum/crafting_recipe/roguetown/cooking/teagrind
+	name = "ground tea leaves"
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/rogue/tealeaves_dry = 1)
+	result = /obj/item/reagent_containers/food/snacks/grown/rogue/tealeaves_ground
+	always_availible = TRUE
+	structurecraft = /obj/item/millstone
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftsound = 'modular/Neu_Food/sound/milling.ogg'
