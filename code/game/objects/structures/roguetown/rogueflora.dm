@@ -482,8 +482,6 @@
 		return 0
 	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
 		return 1
-	if(get_dir(loc, target) == dir)
-		return 0
 	return 1
 
 /obj/structure/flora/roguegrass/bush/onkick(mob/user)
