@@ -1368,6 +1368,7 @@
 	minstr = 4
 	wdefense = 3
 	max_integrity = 100
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/rogueweapon/sword/short/messer/hunting
 	name = "iron hunting sword"
