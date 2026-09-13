@@ -641,7 +641,7 @@
 					custom_offset = 23
 					taunt_message = "[user] flips [M] off with extreme prejudice!"
 
-				else if(istype(L.patron, /datum/patron/divine/necra) && HAS_TRAIT(M, TRAIT_DEATHLESS)) //DEATH TO THE DEATHLESS
+				else if(istype(L.patron, /datum/patron/divine/necra) && (HAS_TRAIT(M, TRAIT_DEATHLESS) && !HAS_TRAIT(M, TRAIT_VAMP_DREAMS))) //DEATH TO THE DEATHLESS (We check for vampires so we can't meta them)
 					taunticon = "midfinger"
 					custom_offset = 23
 					taunt_message = "[user] flips [M] off with extreme prejudice!"
