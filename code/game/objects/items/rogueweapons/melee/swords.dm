@@ -1372,29 +1372,14 @@
 /obj/item/rogueweapon/sword/short/messer/hunting
 	name = "iron hunting sword"
 	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of iron. \
-	It's a fairly reliable and affordable self-defense weapon."
+	It's a fairly reliable and affordable self-defense weapon. And, unlike other swords, it can be used to butcher animals."
 	icon_state = "ihunting"
 	sheathe_icon = "imesser"
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/chop/, /datum/intent/sword/thrust, /datum/intent/sword/strike)	//Gets sword chop VS the messer's evil ass axe chop.
 	force = 22
 	minstr = 4
 	wdefense = 2
-	wlength = WLENGTH_NORMAL
-	w_class = WEIGHT_CLASS_NORMAL
-	smeltresult = /obj/item/ingot/iron
-	max_integrity = 100
-
-/obj/item/rogueweapon/sword/short/messer/hunting
-	name = "iron hunting sword"
-	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of iron. \
-	It's a fairly reliable and affordable self-defense weapon."
-	icon_state = "ihunting"
-	sheathe_icon = "imesser"
-	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/chop/, /datum/intent/sword/thrust, /datum/intent/sword/strike)	//Gets sword chop VS the messer's evil ass axe chop.
-	force = 22
-	minstr = 4
-	wdefense = 2
-	wlength = WLENGTH_NORMAL
+	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/iron
 	max_blade_int = 150
@@ -1403,7 +1388,7 @@
 /obj/item/rogueweapon/sword/short/messer/hunting/steel
 	name = "steel hunting sword"
 	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of steel. \
-	It's a fairly reliable and affordable self-defense weapon."
+	It's a fairly reliable and affordable self-defense weapon. And, unlike other swords, it can be used to butcher animals."
 	force = 25
 	minstr = 6
 	smeltresult = /obj/item/ingot/steel
@@ -1434,7 +1419,7 @@
 /obj/item/rogueweapon/sword/short/messer/alt
 	name = "noble's hunting sword"
 	desc = "A noble single-edge sword that can hack through a saiga's neck like timberwood. It excels at slicing and chopping, and it's made of steel. \
-	It's a reliable self-defense weapon, and a status symbol amongst the peasantry; if a yeoman has this upon their hip, they mean business."
+	It's a reliable self-defense weapon, and a status symbol amongst the peasantry; if a yeoman has this upon their hip, they mean business. Unlike other hunting swords, it is unfit for butchering."
 	icon_state = "smesseralt"
 	sheathe_icon = "smesseralt"
 	wdefense = 3
