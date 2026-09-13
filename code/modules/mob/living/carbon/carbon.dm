@@ -396,7 +396,7 @@
 	var/datum/status_effect/fire_handler/fire_stacks/vheslyn_status = has_status_effect(/datum/status_effect/fire_handler/fire_stacks/vheslyn)
 	var/datum/status_effect/fire_handler/fire_stacks/sunder/blessed/blessed_sunder = has_status_effect(/datum/status_effect/fire_handler/fire_stacks/sunder/blessed)
 
-	if(mind && !cmode)
+	if(!mind || !cmode)
 		if(fire_status?.stacks + sunder_status?.stacks + vheslyn_status?.stacks + divine_status?.stacks + blessed_sunder?.stacks > 10 || !(mobility_flags & MOBILITY_STAND))
 			Paralyze(30, TRUE, TRUE)
 			Knockdown(50)
