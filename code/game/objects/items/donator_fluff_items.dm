@@ -4268,3 +4268,9 @@ As Excaliber."
 	line was added across the other side of the handle. \"Except the Conqueror.\""
 	icon_state = "rezasword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/sword/sabre/donator_limetease
+	name = "Malignant Sabre"
+	desc = "A sinister-looking saber with a dark aura. Its blade seems to pulse with an otherworldly energy."
+	icon_state = "limesaber"
+	icon = 'icons/obj/items/donor_weapons.dmi'
