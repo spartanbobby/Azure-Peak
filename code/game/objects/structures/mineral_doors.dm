@@ -887,7 +887,7 @@
 	repair_cost_second = /obj/item/ingot/iron
 	repair_skill = /datum/skill/craft/carpentry
 
-obj/structure/mineral_door/wood/donjon/OnCrafted(dirin)
+/obj/structure/mineral_door/wood/donjon/OnCrafted(dirin)
 	dir = turn(dirin, 180)
 	viewportdir = dir
 
