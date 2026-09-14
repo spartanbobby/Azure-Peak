@@ -1,0 +1,5 @@
+author: "borneblood"
+delete-after: True
+changes:
+  - image: "Changed Divine/Profane Blast's spell icon."
+  - spellcheck: "Changed Profane Blast's chant."
