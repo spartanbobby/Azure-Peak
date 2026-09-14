@@ -53,11 +53,28 @@
 	craftdiff = SKILL_LEVEL_JOURNEYMAN
 	craftsound = 'modular/Neu_Food/sound/milling.ogg'
 
-
 /datum/crafting_recipe/roguetown/cooking/coffee
 	name = "ground coffee cherries"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/rogue/coffee = 1)
 	result = /obj/item/reagent_containers/food/snacks/grown/rogue/coffeebeans
+	always_availible = TRUE
+	structurecraft = /obj/item/millstone
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftsound = 'modular/Neu_Food/sound/milling.ogg'
+
+/datum/crafting_recipe/roguetown/cooking/powdernut
+	name = "ground rocknuts"
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/nut = 1)
+	result = /obj/item/reagent_containers/powder/rocknut
+	always_availible = TRUE
+	structurecraft = /obj/item/millstone
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftsound = 'modular/Neu_Food/sound/milling.ogg'
+
+/datum/crafting_recipe/roguetown/cooking/tomatosauce
+	name = "tomato sauce"
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/tomato = 1)
+	result = /obj/item/reagent_containers/food/snacks/grown/fruit/tomato_sauce
 	always_availible = TRUE
 	structurecraft = /obj/item/millstone
 	craftdiff = SKILL_LEVEL_JOURNEYMAN
