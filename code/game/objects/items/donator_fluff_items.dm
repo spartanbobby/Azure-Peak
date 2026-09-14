@@ -4270,7 +4270,7 @@ As Excaliber."
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
 /obj/item/rogueweapon/sword/sabre/donator_limetease
-	name = "Malignant Sabre"
-	desc = "A sinister-looking saber with a dark aura. Its blade seems to pulse with an otherworldly energy."
+	name = "Malevolent Sabre"
+	desc = "A sinister-looking sabre with a deep malevolent aura. Its blade seems to pulse with an otherworldly energy only a god could imbue."
 	icon_state = "limesaber"
 	icon = 'icons/obj/items/donor_weapons.dmi'

@@ -1178,4 +1178,4 @@
 
 /datum/loadout_item/donator/limetease/limesaber
 	name = "Donator Kit - Malignant Blade"
-	path = /obj/item/enchantingkit/weapon/limetease_limesaber
+	path = /obj/item/enchantingkit/weapon/limesaber
