@@ -374,7 +374,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	desc = "A engineering contraption made to launch various objects in the direction it's pointed."
 	icon = 'icons/roguetown/misc/engineering_structure.dmi'
 	icon_state = "activator"
-	max_integrity = 45 // so it gets destroyed when used to explode a bomb
+	max_integrity = 750 // raised to make it more durable in large wars and events, where they are primarily used
 	//w_class = WEIGHT_CLASS_HUGE // mechanical stuff is usually pretty heavy.
 	density = TRUE
 	anchored = TRUE
