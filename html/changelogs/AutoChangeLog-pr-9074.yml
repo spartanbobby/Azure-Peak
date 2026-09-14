@@ -1,4 +1,0 @@
-author: "radarseas"
-delete-after: True
-changes:
-  - rscadd: "Necrans now flip off deadites with taunting, sovl. This does not include vampires, so no metagaming."
