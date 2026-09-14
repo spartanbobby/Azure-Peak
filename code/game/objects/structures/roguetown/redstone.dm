@@ -271,7 +271,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	desc = "Be careful. Stepping on this could either mean a bomb exploding or a door closing on you."
 	icon = 'icons/roguetown/misc/traps.dmi'
 	icon_state = "pressureplate"
-	max_integrity = 750 // raised to make it more durable in large wars and events, where they are primarily used
+	max_integrity = 45 // so it gets destroyed when used to explode a bomb
 	density = FALSE
 	anchored = TRUE
 	redstone_structure = TRUE
