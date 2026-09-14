@@ -1,0 +1,4 @@
+author: "OrbisAnima"
+delete-after: True
+changes:
+  - bugfix: "Makes it so the Ride with backdoor action uses the same logic as the regular riding action in the ERP panel"
