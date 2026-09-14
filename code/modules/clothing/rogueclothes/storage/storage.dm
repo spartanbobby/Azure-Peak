@@ -726,3 +726,11 @@
 	desc = "This belt has been sewn out of cloth, as opposed to tied. Which makes it superior. Obviously."
 	icon_state = "clothsash"
 	salvage_result = /obj/item/natural/cloth
+
+/obj/item/storage/belt/rogue/leather/belthooks
+	name = "belt hooks"
+	desc = "An Etruscan design, these metal clasps allow you to attach items directly to your pants, without the hassle of stringing a belt. Fashionable and useful."
+	item_state = "belthooks"
+	// belt + empty onmob sprite = welcome to fashion 💀
+	icon_state = "belthooks"
+
