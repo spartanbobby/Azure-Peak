@@ -296,9 +296,11 @@
 		return "the contract is already fulfilled"
 	if(has_started())
 		return "the work has already begun"
-	var/remaining = max(created_at, last_claimed_at) + QUEST_ISSUER_CANCEL_WINDOW - world.time
+	if(!quest_receiver_reference)
+		return null
+	var/remaining = last_claimed_at + QUEST_ISSUER_CANCEL_WINDOW - world.time
 	if(remaining > 0)
-		return "[max(1, round(remaining / (1 MINUTES)))] more minute(s) must pass"
+		return "its bearer has [max(1, round(remaining / (1 MINUTES)))] more minute(s) before it can be withdrawn"
 	return null
 
 /datum/quest/proc/describe_issuer_refund()

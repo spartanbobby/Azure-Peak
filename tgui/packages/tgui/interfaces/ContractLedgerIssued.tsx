@@ -49,9 +49,8 @@ export const IssuedContractsView = (props: {
   return (
     <>
       <div className="ContractLedger__InnkeeperFlavor">
-        A contract may be withdrawn {windowMinutes} minutes after it was issued
-        or last taken up, so long as the work has not begun. Its full cost is
-        returned; a Request&apos;s daily slot is not.
+        An untaken contract may be withdrawn anytime. Once taken up, its bearer
+        has {windowMinutes} minutes before it can be withdrawn, and never once the contract has begun. Its full cost is refunded, except for a Request's daily slot.
       </div>
       {entries.length === 0 ? (
         <div className="ContractLedger__InnkeeperEmpty">{emptyText}</div>
