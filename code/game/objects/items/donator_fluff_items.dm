@@ -4228,8 +4228,8 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/duelhat/donator_rezathedwarf
-	name = "Noah Enclave's hat"
+/obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat
+	name = "brimmed hat"
 	desc = "A well-made hat, trimmed with gold and silver, plumed with a rare feather. Rumored to be copied across the world by a \
 	merchant selling its likeness and using the wearer's name. Much to the original wearer's chagrin."
 	icon_state = "rezahat"
@@ -4241,11 +4241,11 @@ As Excaliber."
 	altdetail_tag = "_detailalt"
 	altdetail_color = CLOTHING_PURPLE
 
-/obj/item/clothing/head/roguetown/duelhat/donator_rezathedwarf/Initialize(mapload)
+/obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/head/roguetown/duelhat/donator_rezathedwarf/update_icon()
+/obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -4267,4 +4267,10 @@ As Excaliber."
 	founder of the house in his days as a slave. On its handle reads, originally read, \"The Chosen Have Nothing to Fear,\" but a new \
 	line was added across the other side of the handle. \"Except the Conqueror.\""
 	icon_state = "rezasword"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/sword/sabre/donator_limetease
+	name = "Malevolent Sabre"
+	desc = "A sinister-looking sabre with a deep malevolent aura. Its blade seems to pulse with an otherworldly energy only a god could imbue."
+	icon_state = "limesaber"
 	icon = 'icons/obj/items/donor_weapons.dmi'
