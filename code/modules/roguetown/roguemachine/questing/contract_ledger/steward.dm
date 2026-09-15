@@ -14,38 +14,20 @@
 			return "bonus pay"
 	return ""
 
-/obj/structure/roguemachine/contractledger/proc/build_blockade_recall_list()
+/obj/structure/roguemachine/contractledger/proc/build_active_writ_regions()
 	var/list/out = list()
 	for(var/datum/blockade/B as anything in GLOB.active_blockades)
 		var/datum/quest/kill/blockade_defense/Q = B.active_quest_ref?.resolve()
 		if(!istype(Q) || QDELETED(Q))
 			continue
 		var/datum/economic_region/ER = B.get_region()
-		out += list(build_writ_recall_entry(Q, ER ? ER.name : B.region_id))
+		out += ER ? ER.name : B.region_id
 	for(var/datum/threat_region/TR as anything in SSregionthreat.threat_regions)
 		var/datum/quest/kill/blockade_defense/Q = TR.active_hoard_recovery_ref?.resolve()
 		if(!istype(Q) || QDELETED(Q) || Q.failed || Q.complete)
 			continue
-		out += list(build_writ_recall_entry(Q, TR.region_name))
+		out += TR.region_name
 	return out
-
-/obj/structure/roguemachine/contractledger/proc/build_writ_recall_entry(datum/quest/kill/blockade_defense/Q, region_label)
-	var/reason = Q.recall_blocker()
-	var/recall_eligible = isnull(reason) ? TRUE : FALSE
-	var/seconds_until_recallable = 0
-	if(Q.current_wave == 0 && !Q.failed && !Q.complete && Q.issued_at)
-		var/elapsed = world.time - Q.issued_at
-		var/until_open = BLOCKADE_RECALL_WINDOW_DS - elapsed
-		if(until_open > 0)
-			seconds_until_recallable = round(until_open / 10)
-	return list(
-		"region" = region_label,
-		"recall_eligible" = recall_eligible,
-		"recall_blocker" = reason,
-		"seconds_until_recallable" = seconds_until_recallable,
-		"refund" = Q.get_funding_total(),
-		"refund_text" = Q.describe_issuer_refund(),
-	)
 
 /obj/structure/roguemachine/contractledger/proc/draw_commission_funds(list/draws, reason)
 	var/list/drawn = list()
@@ -388,45 +370,3 @@
 	playsound(src, 'sound/misc/coindispense.ogg', 60, FALSE, -1)
 	var/source_label = commission_source_label(is_directive, draws)
 	to_chat(steward, span_notice("Hoard recovery writ drafted [source_label] to your hand: <b>[Q.get_title()]</b>[levy_exempt ? " - <i>levy-exempt</i>" : ""][bonus_label_text ? " - <i>[bonus_label_text]</i>" : ""]."))
-
-/obj/structure/roguemachine/contractledger/proc/recall_blockade_writ_from_tgui(mob/user, list/params)
-	if(!ishuman(user))
-		return
-	var/mob/living/carbon/human/steward = user
-	if(!can_commission(steward))
-		return
-	if(!steward.Adjacent(src))
-		return
-	if(SSticker.current_state != GAME_STATE_PLAYING)
-		to_chat(steward, span_warning("The ledger is not yet open."))
-		return
-	var/region_name = params["region"]
-	if(!region_name)
-		return
-	var/datum/quest/kill/blockade_defense/Q
-	for(var/datum/blockade/B as anything in GLOB.active_blockades)
-		var/datum/economic_region/ER = B.get_region()
-		if(ER?.name == region_name)
-			Q = B.active_quest_ref?.resolve()
-			break
-	if(!Q)
-		var/datum/threat_region/TR = SSregionthreat.get_region(region_name)
-		Q = TR?.active_hoard_recovery_ref?.resolve()
-	if(!istype(Q) || QDELETED(Q))
-		to_chat(steward, span_warning("No writ is in circulation for that region."))
-		return
-	var/blocker = Q.recall_blocker()
-	if(blocker)
-		to_chat(steward, span_warning("The writ cannot be recalled: [blocker]."))
-		return
-	var/refund_text = Q.describe_issuer_refund()
-	if(!Q.recall(steward))
-		to_chat(steward, span_warning("The writ could not be recalled."))
-		return
-	SSquestpool.log_event("defense_recall", "[steward.real_name] recalled blockade writ on [region_name][refund_text ? " (refunded [refund_text])" : ""]")
-	scom_announce("The blockade writ for [region_name] has been recalled.")
-	playsound(src, 'sound/items/inqslip_sealed.ogg', 50, FALSE, -1)
-	if(refund_text)
-		to_chat(steward, span_notice("Writ recalled. Refunded [refund_text]."))
-	else
-		to_chat(steward, span_notice("Writ recalled."))

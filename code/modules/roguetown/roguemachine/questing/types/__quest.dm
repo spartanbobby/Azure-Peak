@@ -326,7 +326,7 @@
 
 /datum/quest/proc/refund_issuer_funding(reason, mob/actor)
 	. = describe_issuer_refund()
-	var/label = title || quest_type
+	var/label = get_title() || quest_type
 	for(var/list/source as anything in funding_sources)
 		var/datum/fund/fund = source["fund"]
 		var/datum/fund/escrow = source["escrow"]
@@ -350,3 +350,9 @@
 		return
 	issue_log_entry["status"] = status
 	issue_log_entry["refund"] = refund_text
+
+/datum/quest/proc/on_issuer_withdrawn(mob/withdrawer)
+	return
+
+/datum/quest/proc/office_may_withdraw()
+	return TRUE
