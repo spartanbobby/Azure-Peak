@@ -76,9 +76,7 @@
 
 /datum/hud/New(mob/owner)
 	mymob = owner
-//	Below adds a button to the HUD that toggles the action buttons on and off.
-//	Inactive until I can find a fitting icon for it.
-//	action_button_toggle = new /atom/movable/screen/action_button_toggle(null, src)
+	action_button_toggle = new /atom/movable/screen/action_button_toggle(null, src)
 
 	if (!ui_style)
 		// will fall back to the default if any of these are null
@@ -183,10 +181,8 @@
 				screenmob.client.screen += hotkeybuttons
 			if(infodisplay.len)
 				screenmob.client.screen += infodisplay
-//	Adds a button to the HUD that toggles the action buttons on and off.
-//	Inactive until I can find a fitting icon for it.
-//			if(action_button_toggle)
-//				screenmob.client.screen += action_button_toggle
+			if(action_button_toggle && screenmob.actions.len)
+				screenmob.client.screen += action_button_toggle
 
 
 			if(action_intent)

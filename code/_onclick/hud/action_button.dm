@@ -7,12 +7,16 @@
 
 	icon = 'icons/mob/actions.dmi'
 	icon_state = "hide"
-	screen_loc = "WEST:4,SOUTH:3"
+	screen_loc = "WEST:-32,SOUTH:0"
 	layer = ABOVE_HUD_LAYER
 	mouse_opacity = MOUSE_OPACITY_OPAQUE
 
 /atom/movable/screen/action_button_toggle/New(loc, datum/hud/hud)
 	our_hud = hud
+	var/matrix/M = matrix()
+	M.Scale(0.75, 0.75)
+	M.Translate(-4, -5)
+	transform = M
 	..()
 
 /atom/movable/screen/action_button_toggle/Click(location, control, params)
@@ -180,6 +184,11 @@
 /mob/proc/update_action_buttons(reload_screen)
 	if(!hud_used || !client)
 		return
+	if(hud_used.action_button_toggle)
+		if(actions.len && hud_used.hud_shown == HUD_STYLE_STANDARD)
+			client.screen += hud_used.action_button_toggle
+		else
+			client.screen -= hud_used.action_button_toggle
 	if(hud_used.action_button_toggle)
 		hud_used.action_button_toggle.icon_state = hud_used.action_buttons_hidden ? "show" : "hide"
 	if(hud_used.hud_shown != HUD_STYLE_STANDARD)
