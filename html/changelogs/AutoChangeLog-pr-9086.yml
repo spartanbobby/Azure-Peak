@@ -1,0 +1,6 @@
+author: "Juubo"
+delete-after: True
+changes:
+  - qol: "small mechanics examine update for the wrench."
+  - bugfix: "fixes rollers to be more consistent when setup and takke a single power source per axis"
+  - bugfix: "removed sound loop from grinders"
