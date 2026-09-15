@@ -1079,6 +1079,8 @@
 	name = "scarfed shawl"
 	desc = "Keeps the hair in check, and looks proper."
 	icon_state = "clothheadveil"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne
 	name = "avantyne-threaded barbute"
@@ -3221,7 +3223,7 @@ As Excaliber."
 	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
-	boobed = TRUE
+	boobed = FALSE
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	icon_state = "rhynncloak"
@@ -3230,9 +3232,11 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE) //Character-specific.
-	color = null
+	color = CLOTHING_RED
 	detail_tag = "_detail"
-	detail_color = COLOR_WHITE
+	detail_color = CLOTHING_WHITE
+	altdetail_tag = "_detailalt"
+	altdetail_color = CLOTHING_WHITE
 
 /obj/item/clothing/cloak/donator_rhynn/Initialize(mapload)
 	. = ..()
@@ -3246,6 +3250,12 @@ As Excaliber."
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+	if(get_altdetail_tag())
+		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[icon_state][altdetail_tag]"))
+		pic2.appearance_flags = RESET_COLOR
+		if(get_altdetail_color())
+			pic2.color = get_altdetail_color()
+		add_overlay(pic2)
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn
 	name = "jacketed brigandine"
@@ -3257,8 +3267,25 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	color = null
 	allowed_sex = list(FEMALE)
+	sleeved_detail = TRUE
+	nodismemsleeves = FALSE
+	color = CLOTHING_WHITE
+	detail_tag = "_detail"
+	detail_color = CLOTHING_RED
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
 
 //Lamprey
 /obj/item/clothing/head/roguetown/helmet/heavy/aventail/donator_lamprey

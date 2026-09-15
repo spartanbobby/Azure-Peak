@@ -1255,3 +1255,8 @@
 /datum/loadout_item/donator/limetease/limesaber
 	name = "Donator Kit - Malignant Blade"
 	path = /obj/item/enchantingkit/weapon/limesaber
+
+/datum/loadout_item/donator/mystogan_radiantmask
+	name = "Donator Item - Radiant Golden Mask"
+	path = /obj/item/clothing/mask/rogue/facemask/goldmask/radiant
+	ckeywhitelist = list("mystoganzi")
