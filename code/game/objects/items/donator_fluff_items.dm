@@ -4612,3 +4612,13 @@ As Excaliber."
 	desc = "A sinister-looking sabre with a deep malevolent aura. Its blade seems to pulse with an otherworldly energy only a god could imbue."
 	icon_state = "limesaber"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+// Mystogen
+/obj/item/clothing/mask/rogue/facemask/goldmask/radiant
+	name = "radiant gold mask"
+	desc = "A ceremonial mask that mimics Astrata's solar might. Relics like these were once commonplace across the Holy See's plains, as \
+	garments to be worn by village-acolytes during the summer solstice's many festivals. Nowadaes, they're a rare sight to see - at least, \
+	beyond the hands of wandering zealots and priests."
+	icon_state = "radiantgoldmask"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
