@@ -1197,6 +1197,16 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill/iron
+	name = "knight-errant's armet"
+	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgonet than an armet - was borne to further \
+	plate its men-at-arms against rising perils. A wider visor offers better vision in a torch-snuffed street, and small studs along the neckguard \
+	allow for it to be scarfed with ducal colors."
+	icon_state = "irockhillarmet"
+	item_state = "irockhillarmet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill
 	name = "jacketed plate-and-maille"
 	desc = "A maille-aketon of steel, comfortably fitted beneath a matching cuirass and a thick clothspun jacket. Originating from Rockhill's \
@@ -1221,6 +1231,18 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill/iron
+	name = "jacketed iron plate-and-maille"
+	desc = "A maille-aketon of iron, comfortably fitted beneath a matching cuirass and a thick clothspun jacket. Originating from Rockhill's \
+	armories, this slightly-less-expensive alternative to plate armor was fashioned to ensure every man-at-arms could stand and face the fief's \
+	rising perils. The fabric can be dyed in ducal colors, to avert cases of 'friendly fireballing'."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "irockhillmaille"
+	item_state = "irockhillmaille"
+	detail_tag = "_detail"
+	detail_color = COLOR_WHITE
 
 //
 
@@ -4242,6 +4264,23 @@ As Excaliber."
 	icon_state = "thistleapron"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/cloak/poncho/donator_thisle
+	name = "underdwelling artificer's poncho"
+	desc = "A loose garment that is usually draped across ones upper body. It's still smattered with patches of soot and mushroom-drool, though \
+	the darker silks fortunately keep those stains unnoticeable to passing eyes."
+	icon_state = "thistleponcho"
+	item_state = "thistleponcho"
+	alternate_worn_layer = TABARD_LAYER
+	boobed = FALSE
+	flags_inv = HIDECROTCH|HIDEBOOB
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_ARMOR
+	sleevetype = "poncho"
+	nodismemsleeves = TRUE
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
 
 /obj/item/storage/backpack/rogue/satchel/case

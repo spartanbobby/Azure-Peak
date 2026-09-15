@@ -286,6 +286,10 @@
 	name = "Gift - Kit, Jacketed Plate-and-Maille"
 	path = /obj/item/enchantingkit/donator_rockhillmaille
 
+/datum/loadout_item/donator/universal/donator_drowgoggles
+	name = "Gift - Kit, Skikuldic Goggles"
+	path = /obj/item/clothing/mask/rogue/spectacles/iron/drow
+
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat
@@ -1136,6 +1140,11 @@
 /datum/loadout_item/donator/flybrokenwings_drowapron
 	name = "Donator Item - Underdweller's Apron"
 	path = /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
+/datum/loadout_item/donator/flybrokenwings_drowcloak
+	name = "Donator Item - Underdweller's Cloak"
+	path = /obj/item/clothing/cloak/poncho/donator_thisle
 	ckeywhitelist = list("flybrokenwings")
 
 /datum/loadout_item/donator/flybrokenwings_case
