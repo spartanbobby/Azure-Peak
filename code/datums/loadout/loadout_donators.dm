@@ -286,6 +286,10 @@
 	name = "Gift - Kit, Jacketed Plate-and-Maille"
 	path = /obj/item/enchantingkit/donator_rockhillmaille
 
+/datum/loadout_item/donator/universal/donator_drowgoggles
+	name = "Gift - Kit, Skikuldic Goggles"
+	path = /obj/item/clothing/mask/rogue/spectacles/iron/drow
+
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat

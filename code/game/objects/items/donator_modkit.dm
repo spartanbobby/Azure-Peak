@@ -532,7 +532,7 @@
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a set of \
 	Steel or IronPlate-and-Maille."
 	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/iron	= /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill/iron,
+		/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy	= /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill/iron,
 		/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy			= /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill
 	)
 	result_item = null

@@ -1197,6 +1197,16 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill/iron
+	name = "knight-errant's armet"
+	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgonet than an armet - was borne to further \
+	plate its men-at-arms against rising perils. A wider visor offers better vision in a torch-snuffed street, and small studs along the neckguard \
+	allow for it to be scarfed with ducal colors."
+	icon_state = "irockhillarmet"
+	item_state = "irockhillarmet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill
 	name = "jacketed plate-and-maille"
 	desc = "A maille-aketon of steel, comfortably fitted beneath a matching cuirass and a thick clothspun jacket. Originating from Rockhill's \
