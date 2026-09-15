@@ -45,6 +45,16 @@
 	var/band_leader_name = ""
 	var/writ_type = WRIT_TYPE_OUTLAWRY
 	var/circumstance_text = ""
+	var/datum/fund/funding_fund
+	var/datum/fund/funding_escrow
+	var/funding_cost = 0
+	var/funding_rumor_points = 0
+	var/warrant_consumed = 0
+	var/list/issue_log_entry
+	var/last_claimed_at = 0
+	var/engaged = FALSE
+	var/datum/fund/deposit_payer
+	var/deposit_paid = 0
 
 /datum/quest/proc/get_lapse_time()
 	var/window = (source == QUEST_SOURCE_POOL) ? QUEST_POOL_STALE_THRESHOLD : QUEST_PLAYER_STALE_THRESHOLD
@@ -57,6 +67,12 @@
 			held_landmark.claimed_by = null
 		if(materialized)
 			held_landmark.cooldown_until = world.time + QUEST_LANDMARK_COOLDOWN
+
+	for(var/datum/weakref/spawner_ref in spawners)
+		var/obj/effect/quest_spawn/spawner = spawner_ref.resolve()
+		if(!QDELETED(spawner))
+			qdel(spawner)
+	spawners.Cut()
 
 	for(var/datum/weakref/tracked_weakref in tracked_atoms)
 		var/atom/target_atom = tracked_weakref.resolve()
@@ -122,6 +138,7 @@
 
 /datum/quest/proc/pop_all_spawners()
 	if(length(spawners))
+		engaged = TRUE
 		on_first_pop()
 	for(var/datum/weakref/ref in spawners)
 		var/obj/effect/quest_spawn/spawner = ref.resolve()
@@ -261,3 +278,59 @@
 /datum/quest/proc/on_claim(mob/user)
 	quest_receiver_reference = WEAKREF(user)
 	quest_receiver_name = user.real_name
+	last_claimed_at = world.time
+
+/datum/quest/proc/has_started()
+	if(complete || engaged || progress_current > 0)
+		return TRUE
+	for(var/datum/weakref/ref in tracked_atoms)
+		var/atom/movable/tracked = ref.resolve()
+		if(QDELETED(tracked) || isliving(tracked))
+			continue
+		if(!isturf(tracked.loc))
+			return TRUE
+	return FALSE
+
+/datum/quest/proc/issuer_cancel_blocker()
+	if(complete)
+		return "the contract is already fulfilled"
+	if(has_started())
+		return "the work has already begun"
+	var/remaining = max(created_at, last_claimed_at) + QUEST_ISSUER_CANCEL_WINDOW - world.time
+	if(remaining > 0)
+		return "[max(1, round(remaining / (1 MINUTES)))] more minute(s) must pass"
+	return null
+
+/datum/quest/proc/describe_issuer_refund()
+	var/list/parts = list()
+	if(funding_fund && funding_cost > 0)
+		parts += "[funding_cost]m to [funding_fund.name]"
+	if(funding_rumor_points > 0)
+		parts += "[funding_rumor_points] Rumor Points"
+	if(warrant_consumed > 0)
+		parts += "[warrant_consumed]p to the defense warrant"
+	return english_list(parts, nothing_text = "")
+
+/datum/quest/proc/refund_issuer_funding(reason, mob/actor)
+	. = describe_issuer_refund()
+	var/label = title || quest_type
+	if(funding_fund && funding_cost > 0)
+		if(!funding_escrow || !SStreasury.transfer(funding_escrow, funding_fund, funding_cost, "[reason] - [label]"))
+			SStreasury.mint(funding_fund, funding_cost, "[reason] - [label]")
+		if(funding_fund == SStreasury.burgher_pledge_fund)
+			record_round_statistic(STATS_PLEDGE_CONSUMED, -funding_cost)
+		record_round_statistic(STATS_CONTRACT_MAMMONS_REFUNDED, funding_cost)
+	funding_cost = 0
+	if(funding_rumor_points > 0)
+		SStreasury.rumor_points += funding_rumor_points
+		record_round_statistic(STATS_RUMOR_POINTS_CONSUMED, -funding_rumor_points)
+		funding_rumor_points = 0
+	if(warrant_consumed > 0)
+		SScity_assembly?.refund_defense(warrant_consumed, actor, "[reason] - [label]")
+		warrant_consumed = 0
+
+/datum/quest/proc/mark_issue_log(status, refund_text)
+	if(!issue_log_entry)
+		return
+	issue_log_entry["status"] = status
+	issue_log_entry["refund"] = refund_text
