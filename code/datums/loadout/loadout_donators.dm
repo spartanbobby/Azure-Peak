@@ -1138,6 +1138,11 @@
 	path = /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
 	ckeywhitelist = list("flybrokenwings")
 
+/datum/loadout_item/donator/flybrokenwings_drowcloak
+	name = "Donator Item - Underdweller's Cloak"
+	path = /obj/item/clothing/cloak/poncho/donator_thisle
+	ckeywhitelist = list("flybrokenwings")
+
 /datum/loadout_item/donator/flybrokenwings_case
 	name = "Gift - Kit, Cased Satchel"
 	path = /obj/item/enchantingkit/donator_case
