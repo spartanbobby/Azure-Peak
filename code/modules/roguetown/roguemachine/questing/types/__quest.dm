@@ -45,9 +45,7 @@
 	var/band_leader_name = ""
 	var/writ_type = WRIT_TYPE_OUTLAWRY
 	var/circumstance_text = ""
-	var/datum/fund/funding_fund
-	var/datum/fund/funding_escrow
-	var/funding_cost = 0
+	var/list/funding_sources
 	var/funding_rumor_points = 0
 	var/warrant_consumed = 0
 	var/list/issue_log_entry
@@ -303,10 +301,23 @@
 		return "its bearer has [max(1, round(remaining / (1 MINUTES)))] more minute(s) before it can be withdrawn"
 	return null
 
+/datum/quest/proc/add_funding(datum/fund/fund, amount, datum/fund/escrow)
+	if(!fund || amount <= 0)
+		return
+	if(!funding_sources)
+		funding_sources = list()
+	funding_sources += list(list("fund" = fund, "amount" = amount, "escrow" = escrow))
+
+/datum/quest/proc/get_funding_total()
+	. = 0
+	for(var/list/source as anything in funding_sources)
+		. += source["amount"]
+
 /datum/quest/proc/describe_issuer_refund()
 	var/list/parts = list()
-	if(funding_fund && funding_cost > 0)
-		parts += "[funding_cost]m to [funding_fund.name]"
+	for(var/list/source as anything in funding_sources)
+		var/datum/fund/fund = source["fund"]
+		parts += "[source["amount"]]m to [fund.name]"
 	if(funding_rumor_points > 0)
 		parts += "[funding_rumor_points] Rumor Points"
 	if(warrant_consumed > 0)
@@ -316,13 +327,16 @@
 /datum/quest/proc/refund_issuer_funding(reason, mob/actor)
 	. = describe_issuer_refund()
 	var/label = title || quest_type
-	if(funding_fund && funding_cost > 0)
-		if(!funding_escrow || !SStreasury.transfer(funding_escrow, funding_fund, funding_cost, "[reason] - [label]"))
-			SStreasury.mint(funding_fund, funding_cost, "[reason] - [label]")
-		if(funding_fund == SStreasury.burgher_pledge_fund)
-			record_round_statistic(STATS_PLEDGE_CONSUMED, -funding_cost)
-		record_round_statistic(STATS_CONTRACT_MAMMONS_REFUNDED, funding_cost)
-	funding_cost = 0
+	for(var/list/source as anything in funding_sources)
+		var/datum/fund/fund = source["fund"]
+		var/datum/fund/escrow = source["escrow"]
+		var/amount = source["amount"]
+		if(!escrow || !SStreasury.transfer(escrow, fund, amount, "[reason] - [label]"))
+			SStreasury.mint(fund, amount, "[reason] - [label]")
+		if(fund == SStreasury.burgher_pledge_fund)
+			record_round_statistic(STATS_PLEDGE_CONSUMED, -amount)
+		record_round_statistic(STATS_CONTRACT_MAMMONS_REFUNDED, amount)
+	funding_sources = null
 	if(funding_rumor_points > 0)
 		SStreasury.rumor_points += funding_rumor_points
 		record_round_statistic(STATS_RUMOR_POINTS_CONSUMED, -funding_rumor_points)

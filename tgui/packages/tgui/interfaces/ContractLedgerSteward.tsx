@@ -24,7 +24,7 @@ type BlockadeRecallEntry = {
   recall_blocker: string | null;
   seconds_until_recallable: number;
   refund: number;
-  refund_fund: string | null;
+  refund_text: string;
 };
 
 type StewardData = {
@@ -262,6 +262,7 @@ const ComposeView = () => {
   // 0 = none, 1 = light (1.25x), 2 = full (1.5x). Matches COMMISSION_BONUS_PAY_* defines.
   const [bonusPayLevel, setBonusPayLevel] = useState<0 | 1 | 2>(0);
   const [funding, setFunding] = useState<FundingSource>('pledge');
+  const [crownTopup, setCrownTopup] = useState<boolean>(false);
   const [inflight, setInflight] = useState<boolean>(false);
 
   const aldermanActing = !!data.is_alderman_acting;
@@ -292,6 +293,14 @@ const ComposeView = () => {
         : 1;
   const scaledCost = effectiveLevel !== 0 ? Math.round(cost * bonusMult) : cost;
   const effectiveCost = funding === 'directive' ? 0 : scaledCost;
+  const pledgeShortfall =
+    funding === 'pledge' && !aldermanActing
+      ? Math.max(0, scaledCost - data.pledge_balance)
+      : 0;
+  const topupActive = pledgeShortfall > 0 && crownTopup;
+  const costLabel = topupActive
+    ? `${coin(scaledCost - pledgeShortfall)} Pledge + ${coin(pledgeShortfall)} Purse`
+    : coin(effectiveCost);
 
   // If the currently-selected funding disappears (pledge repealed, quota spent), fall back.
   if (funding === 'pledge' && !pledgeAvailable) {
@@ -317,9 +326,11 @@ const ComposeView = () => {
   };
 
   const fundingDisabledReason =
-    funding === 'pledge' && data.pledge_balance < scaledCost
+    funding === 'pledge' && data.pledge_balance < scaledCost && !topupActive
       ? `Insufficient Pledge (need ${coin(scaledCost)}, have ${coin(data.pledge_balance)}).`
-      : funding === 'crown' && data.crown_purse_balance < scaledCost
+      : topupActive && data.crown_purse_balance < pledgeShortfall
+        ? `Insufficient Crown's Purse to cover the shortfall (need ${coin(pledgeShortfall)}, have ${coin(data.crown_purse_balance)}).`
+        : funding === 'crown' && data.crown_purse_balance < scaledCost
         ? `Insufficient Crown's Purse (need ${coin(scaledCost)}, have ${coin(data.crown_purse_balance)}).`
         : funding === 'directive' && directivesRemaining <= 0
           ? "Today's directive quota is spent."
@@ -356,6 +367,7 @@ const ComposeView = () => {
       // Bonus Pay forced off for Requests (directive) server-side as well.
       bonus_pay_level: effectiveLevel,
       funding,
+      crown_topup: topupActive ? 1 : 0,
     });
     setTimeout(() => setInflight(false), DISPATCH_DEBOUNCE_MS);
   };
@@ -514,6 +526,20 @@ const ComposeView = () => {
         </div>
       </FormRow>
 
+      {pledgeShortfall > 0 && (
+        <FormRow label="Shortfall">
+          <label>
+            <input
+              type="checkbox"
+              checked={crownTopup}
+              onChange={(e) => setCrownTopup(e.target.checked)}
+            />
+            &nbsp;Cover the {coin(pledgeShortfall)} shortfall from the
+            Crown&apos;s Purse ({coin(data.crown_purse_balance)})
+          </label>
+        </FormRow>
+      )}
+
       {funding === 'directive' && (
         <div className="ContractLedger__InnkeeperFlavor">
           A Request calls upon someone to answer out of duty. No coin changes
@@ -599,8 +625,8 @@ const ComposeView = () => {
         <div className="ContractLedger__InnkeeperFlavor">
           {recallEntry.recall_eligible
             ? `A writ is in circulation for ${recallEntry.region} and has gone unanswered. It can be recalled now${
-                recallEntry.refund > 0 && recallEntry.refund_fund
-                  ? ` (refunds ${coin(recallEntry.refund)} to ${recallEntry.refund_fund})`
+                recallEntry.refund_text
+                  ? ` (refunds ${recallEntry.refund_text})`
                   : ''
               }.`
             : `A writ is in circulation for ${recallEntry.region}. It cannot be recalled: ${recallEntry.recall_blocker ?? 'unknown reason'}.`}
@@ -618,8 +644,8 @@ const ComposeView = () => {
           {funding === 'directive'
             ? 'Submit Request'
             : isWrit
-              ? `Print Writ (${coin(effectiveCost)})`
-              : `Commission (${coin(effectiveCost)})`}
+              ? `Print Writ (${costLabel})`
+              : `Commission (${costLabel})`}
         </button>
         {isWrit && !!recallEntry?.recall_eligible && (
           <button

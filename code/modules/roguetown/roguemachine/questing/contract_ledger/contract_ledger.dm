@@ -37,7 +37,7 @@
 	. += span_info("Abandoning a contract forfeits its deposit to the treasury and places you under a brief guild cooldown before you may abandon another.")
 	. += span_info("Heads taken from <b>contract targets</b> carry no bounty - the contract's reward is payment in full. Beasts and brigands you hunt outside a contract still fetch coin at a HEADEATER.")
 	. += span_info("The <b>Innkeeper and their tavern staff</b> (Cook, Tapster) may compose rumor contracts here, spending Rumor Points to seed retrieval, courier, and light kill jobs across the realm.")
-	. += span_info("The <b>[english_list(GLOB.crown_authority_roles)]</b> may commission defense writs here - paid from the Burgher Pledge, the Crown's Purse, or issued as an unfunded Request. The Steward is the primary commissioner; the others substitute if the Steward is absent. A Regent sitting in the Lord's absence inherits commission authority for the duration of their regency.")
+	. += span_info("The <b>[english_list(GLOB.crown_authority_roles)]</b> may commission defense writs here - paid from the Burgher Pledge, the Crown's Purse, or issued as an unfunded Request. If the Pledge runs short, the Issuer may use the Crown's Purse to make up the difference. A Regent sitting in the Lord's absence inherits commission authority for the duration of their regency.")
 	. += span_info("A rumor or commission may be <b>withdrawn</b> from the Issued tab at once while no one has taken it up. Once taken, its bearer has [QUEST_ISSUER_CANCEL_WINDOW / (1 MINUTES)] minutes before it can be withdrawn, and it cannot be withdrawn once the contract has begun. Its cost is refunded in full. Postings that lapse are refunded automatically.")
 	. += span_info("<b>Townsfolk</b> may post contracts of their own using their own coin. It can be pinned to the board or handed over in person. The <b>[english_list(GLOB.crown_authority_roles)]</b> may commission any of them, but it will draw from the Crown's Purse at double the price. Only the poster may open what is recovered.")
 	. += span_info("Your <b>fellowship</b> may turn in contracts you hold on your behalf, should you fall in battle. The reward and levy is credited to the one who turns it in, using their tax exempt status, if any.")
@@ -268,11 +268,12 @@ GLOBAL_LIST_INIT(contract_proxy_officials, list(
 	if(!SStreasury.burn(pledge_account, HOARD_RECOVERY_PLEDGE, "Hoard Recovery pledge ([TR.region_name])"))
 		to_chat(user, span_warning("The pledge could not be withdrawn from your account."))
 		return
-	var/datum/quest/kill/blockade_defense/Q = SSquestpool.issue_hoard_recovery_request(TR, user, pledge_account, HOARD_RECOVERY_PLEDGE)
+	var/datum/quest/kill/blockade_defense/Q = SSquestpool.issue_hoard_recovery_request(TR, user)
 	if(!Q)
 		SStreasury.mint(pledge_account, HOARD_RECOVERY_PLEDGE, "Hoard Recovery pledge refund (issue failure)")
 		to_chat(user, span_warning("No recovery writ can be raised for [TR.region_name] right now. Your pledge is returned."))
 		return
+	Q.add_funding(pledge_account, HOARD_RECOVERY_PLEDGE)
 	playsound(src, 'sound/items/inqslip_sealed.ogg', 50, TRUE, -1)
 	to_chat(user, span_notice("Recovery writ issued for [TR.region_name]."))
 	SSquestpool.log_event("hoard_recovery_request", "[user.real_name] called a hoard recovery on [TR.region_name] (hoard [TR.banditry_hoard], pledge [HOARD_RECOVERY_PLEDGE])")
