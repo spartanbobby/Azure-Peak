@@ -752,7 +752,7 @@ SPECIALS START HERE
 	sfx_pre_delay = 'sound/combat/wooshes/blunt/wooshmed (1).ogg'
 	sfx_post_delay = 'sound/combat/hits/blunt/woodblunt (1).ogg'
 	delay = 0.6 SECONDS
-	cooldown = 15 SECONDS
+	cooldown = 35 SECONDS
 	requires_wielding = TRUE
 	stamcost = 20
 	var/vulnerable_dur = 3 SECONDS
