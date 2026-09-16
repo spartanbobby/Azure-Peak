@@ -3267,7 +3267,7 @@ As Excaliber."
 	color = CLOTHING_RED
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
-	populate_contents = list(
+	var/populate_contents = list(
 		/obj/item/clothing/head/roguetown/decoration/broche
 	)
 
