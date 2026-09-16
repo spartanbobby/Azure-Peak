@@ -2,6 +2,7 @@
 /// Uses a name-keyed associative list (gear_list) with per-item metadata for color, custom name, and custom description.
 /// Based on Bay / Eris / Sojourn loadout menu with a different UI but the same save format.
 #define LOADOUT_MAX_POINTS 10
+#define LOADOUT_MAX_NAME_LEN 64
 #define LOADOUT_MAX_DESC_LEN 1024
 #define LOADOUT_TRIUMPH_DISCOUNT 3 // donators get this many triumph points free in loadout
 #define LOADOUT_DONATOR_BONUS 5 // donators get this many extra loadout points
@@ -174,7 +175,7 @@
 				meta = list()
 				gear_list[item_name] = meta
 			if(custom_name)
-				meta["custom_name"] = copytext(custom_name, 1, MAX_NAME_LEN)
+				meta["custom_name"] = copytext(custom_name, 1, LOADOUT_MAX_NAME_LEN)
 			else
 				meta -= "custom_name"
 			return TRUE
@@ -207,6 +208,7 @@
 			return TRUE
 
 #undef LOADOUT_MAX_POINTS
+#undef LOADOUT_MAX_NAME_LEN
 #undef LOADOUT_MAX_DESC_LEN
 #undef LOADOUT_TRIUMPH_DISCOUNT
 #undef LOADOUT_DONATOR_BONUS

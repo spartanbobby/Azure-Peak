@@ -209,7 +209,7 @@ const TweakRow = (props: {
               </Box>
               <Input
                 width="200px"
-                maxLength={42}
+                maxLength={64}
                 placeholder="Custom name..."
                 value={localName}
                 onChange={(val) => setLocalName(val)}
