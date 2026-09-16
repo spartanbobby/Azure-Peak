@@ -116,6 +116,11 @@
 
 /mob/living/carbon/human/handle_roguebreath()
 	..()
+	if(HAS_TRAIT(src, TRAIT_PSYDONITE))
+		if(!HAS_TRAIT(src, TRAIT_BLACKBLOOD)) //Explicitly incompatible with Blackblood.
+			heal_wounds(0.4, psydonite = TRUE)
+			if(blood_volume > BLOOD_VOLUME_BAD && !HAS_TRAIT(src, TRAIT_NOBREATH))
+				heal_wounds(0.6, psydonite = TRUE) //Bulk of the healing is locked behind not having depleted blood and not being breathless.
 	if(HAS_TRAIT(src, TRAIT_NOBREATH))
 		return TRUE
 	if(HAS_TRAIT(src, TRAIT_HOLDBREATH))
