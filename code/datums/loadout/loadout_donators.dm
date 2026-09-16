@@ -1257,9 +1257,10 @@
 	name = "Donator Kit - The Enclave Blade"
 	path = /obj/item/enchantingkit/weapon/donator_rezathedwarf_blade
 
-/datum/loadout_item/donator/limetease/limesaber
+/datum/loadout_item/donator/lime_saber
 	name = "Donator Kit - Malignant Blade"
 	path = /obj/item/enchantingkit/weapon/limesaber
+	ckeywhitelist = list("limetease")
 
 /datum/loadout_item/donator/mystogan_radiantmask
 	name = "Donator Item - Radiant Golden Mask"
