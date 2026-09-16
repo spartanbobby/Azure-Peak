@@ -765,6 +765,9 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
+/obj/item/clothing/head/roguetown/decoration
+	armor = null
+
 /obj/item/clothing/head/roguetown/decoration/orle
 	name = "noble striped decoration"
 	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy."
@@ -1074,6 +1077,7 @@
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	smeltresult = /obj/item/ingot/drow
+	armor = null
 
 /obj/item/clothing/head/roguetown/shawl/donator
 	name = "scarfed shawl"
@@ -3286,10 +3290,12 @@ As Excaliber."
 	desc = "Noble lapels for a noble coat."
 	item_state = "rhynnbroche"
 	icon_state = "rhynnbroche"
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_CLOAK
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	color = null
+	worn_x_dimension = 32
+	worn_y_dimension = 32
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn
 	name = "jacketed brigandine"
