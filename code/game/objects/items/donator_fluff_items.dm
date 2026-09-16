@@ -1220,6 +1220,7 @@
 	rising perils. The fabric can be dyed in ducal colors, to avert cases of 'friendly fireballing'."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	icon_state = "rockhillmaille"
 	item_state = "rockhillmaille"
 	detail_tag = "_detail"
@@ -1245,6 +1246,7 @@
 	rising perils. The fabric can be dyed in ducal colors, to avert cases of 'friendly fireballing'."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	icon_state = "irockhillmaille"
 	item_state = "irockhillmaille"
 	detail_tag = "_detail"
