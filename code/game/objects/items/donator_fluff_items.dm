@@ -3267,6 +3267,9 @@ As Excaliber."
 	color = CLOTHING_RED
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
+	populate_contents = list(
+		/obj/item/clothing/head/roguetown/decoration/broche
+	)
 
 /obj/item/clothing/cloak/donator_rhynn_dyeable/Initialize(mapload)
 	. = ..()
@@ -3282,7 +3285,13 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/cloak/donator_rhynn_dyeable/PopulateContents()
-	new /obj/item/clothing/head/roguetown/decoration/broche(src) //Crude, but functions as a solution to this cloak refusing to properly layer _detailalt states (to my knowledge).
+	for(var/path in populate_contents)
+		var/obj/item/new_item = SSwardrobe.provide_type(path, loc)
+		if(!SEND_SIGNAL(src, COMSIG_TRY_STORAGE_INSERT, new_item, null, TRUE, TRUE))
+			new_item.inventory_flip(null, TRUE)
+			if(!SEND_SIGNAL(src, COMSIG_TRY_STORAGE_INSERT, new_item, null, TRUE, TRUE))
+
+				SSwardrobe.recycle_object(new_item)
 
 /obj/item/clothing/head/roguetown/decoration/broche
 	name = "golden broche"
