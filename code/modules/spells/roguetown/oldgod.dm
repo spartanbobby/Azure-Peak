@@ -240,9 +240,7 @@
 			return FALSE
 
 		target.apply_status_effect(/datum/status_effect/buff/psyhealing, psyhealing)
-		for(var/datum/wound/W as anything in wAmount)
-			if(W?.bleed_rate > 0)
-				W.set_bleed_rate(0)
+		target.apply_status_effect(/datum/status_effect/buff/adrenaline_rush/psydon)
 
 		return TRUE
 

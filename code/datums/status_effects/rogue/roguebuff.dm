@@ -2091,6 +2091,11 @@
 	desc = "The gambit worked! I can do anything! My heart races, the throb of my wounds wavers."
 	icon_state = "adrrush"
 
+/atom/movable/screen/alert/status_effect/buff/adrenaline_rush/psydon
+	name = "Endure"
+	desc = "I suffer in His light; My bleeding comes to a still."
+	icon_state = "adrrush"
+
 /datum/status_effect/buff/adrenaline_rush
 	id = "adrrush"
 	status_type = STATUS_EFFECT_REPLACE
@@ -2098,6 +2103,7 @@
 	duration = 18 SECONDS
 	examine_text = "SUBJECTPRONOUN is amped up!"
 	effectedstats = list(STATKEY_WIL = 1)
+	var/adrenaline_stam = TRUE
 	var/blood_restore = 30
 
 /datum/status_effect/buff/adrenaline_rush/on_apply()
@@ -2107,7 +2113,8 @@
 	if(istype(human))
 		human.playsound_local(get_turf(human), 'sound/misc/adrenaline_rush.ogg', 100, TRUE)
 		human.blood_volume = min((human.blood_volume + blood_restore), BLOOD_VOLUME_NORMAL)
-		human.stamina -= max((human.stamina - (human.max_stamina / 2)), 0)
+		if(adrenaline_stam)
+			human.stamina -= max((human.stamina - (human.max_stamina / 2)), 0)
 		human.pain_threshold += 50
 
 /datum/status_effect/buff/adrenaline_rush/on_remove()
@@ -2132,6 +2139,13 @@
 
 /datum/status_effect/buff/adrenaline_rush/graggar
 	effectedstats = list(STATKEY_CON = 3)
+
+/datum/status_effect/buff/adrenaline_rush/psydon
+	blood_restore = 0
+	alert_type = /atom/movable/screen/alert/status_effect/buff/adrenaline_rush/psydon
+	examine_text = "SUBJECTPRONOUN is enduring!"
+	duration = 8 SECONDS //This is on a 30 second cooldown miracle.
+	adrenaline_stam = FALSE
 
 /datum/status_effect/buff/nocblessing
 	id = "nocblessing"
