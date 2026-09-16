@@ -3227,18 +3227,18 @@ As Excaliber."
 	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
-	boobed = TRUE
+	boobed = FALSE
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
-	icon_state = "arhynncloak"
-	item_state = "arhynncloak"
+	icon_state = "rhynncloak"
+	item_state = "rhynncloak"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE) //Character-specific.
-	color = null
+	color = CLOTHING_RED
 	detail_tag = "_detail"
-	detail_color = COLOR_WHITE
+	detail_color = CLOTHING_WHITE
 
 /obj/item/clothing/cloak/donator_rhynn/Initialize(mapload)
 	. = ..()
@@ -3253,43 +3253,11 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/cloak/donator_rhynn_dyeable
-	name = "ladylike longcloak"
-	desc = "Ermine trimmed, dusted with fyritus. A siege mage's mantle is <i>traditionally</i> cermeonial, but that seldom keeps the more \
-	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
-	alternate_worn_layer = CLOAK_BEHIND_LAYER
-	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
-	boobed = FALSE
-	sleevetype = "shirt"
-	nodismemsleeves = TRUE
-	icon_state = "rhynncloak"
-	item_state = "rhynncloak"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	allowed_sex = list(FEMALE) //Character-specific.
-	color = CLOTHING_RED
-	detail_tag = "_detail"
-	detail_color = CLOTHING_WHITE
-
-/obj/item/clothing/cloak/donator_rhynn_dyeable/Initialize(mapload)
-	. = ..()
-	update_icon()
-
-/obj/item/clothing/cloak/donator_rhynn_dyeable/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
-
 /obj/item/clothing/head/roguetown/decoration/broche
 	name = "golden broche"
 	desc = "Noble lapels for a noble coat."
-	item_state = "rhynnbroche"
-	icon_state = "rhynnbroche"
+	item_state = "broche"
+	icon_state = "broche"
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_ARMOR
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'

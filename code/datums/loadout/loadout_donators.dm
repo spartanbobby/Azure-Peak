@@ -962,13 +962,8 @@
 	path = /obj/item/clothing/cloak/donator_rhynn
 	ckeywhitelist = list("rhynnrhynn")
 
-/datum/loadout_item/donator/rhynnrhynn_longcloak_dyeable
-	name = "Donator Item - Dyeable Longcloak"
-	path = /obj/item/clothing/cloak/donator_rhynn_dyeable
-	ckeywhitelist = list("rhynnrhynn")
-
-/datum/loadout_item/donator/rhynnrhynn_longcloak_dyeable_broche
-	name = "Donator Item - Dyeable Longcloak's Broche"
+/datum/loadout_item/donator/rhynnrhynn_longcloak_broche
+	name = "Donator Item - Ladylike Longcloak's Broche"
 	path = /obj/item/clothing/head/roguetown/decoration/broche
 	ckeywhitelist = list("rhynnrhynn")
 
