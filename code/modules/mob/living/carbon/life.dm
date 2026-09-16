@@ -118,9 +118,11 @@
 	..()
 	if(HAS_TRAIT(src, TRAIT_PSYDONITE))
 		if(!HAS_TRAIT(src, TRAIT_BLACKBLOOD)) //Explicitly incompatible with Blackblood.
-			heal_wounds(0.4, psydonite = TRUE)
-			if(blood_volume > BLOOD_VOLUME_BAD && !HAS_TRAIT(src, TRAIT_NOBREATH))
-				heal_wounds(0.6, psydonite = TRUE) //Bulk of the healing is locked behind not having depleted blood and not being breathless.
+			var/list/wCount = src.get_wounds()
+			if(wCount.len > 0)
+				heal_wounds(0.4, psydonite = TRUE)
+				if(blood_volume > BLOOD_VOLUME_BAD && !HAS_TRAIT(src, TRAIT_NOBREATH))
+					heal_wounds(0.6, psydonite = TRUE) //Bulk of the healing is locked behind not having depleted blood and not being breathless (revenants, constructs, vampyres, which is to say: most nasty edge cases)
 	if(HAS_TRAIT(src, TRAIT_NOBREATH))
 		return TRUE
 	if(HAS_TRAIT(src, TRAIT_HOLDBREATH))
