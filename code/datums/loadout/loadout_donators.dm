@@ -962,6 +962,11 @@
 	path = /obj/item/clothing/cloak/donator_rhynn
 	ckeywhitelist = list("rhynnrhynn")
 
+/datum/loadout_item/donator/rhynnrhynn_longcloak_dyeable
+	name = "Donator Item - Ladylike Longcloak, Dyeable"
+	path = /obj/item/clothing/cloak/donator_rhynn_dyeable
+	ckeywhitelist = list("rhynnrhynn")
+
 /datum/loadout_item/donator/rhynnrhynn_staff
 	name = "Donator Kit - Celestial Staff"
 	path = /obj/item/enchantingkit/rhynnrhynn_staff
