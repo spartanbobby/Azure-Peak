@@ -3290,12 +3290,12 @@ As Excaliber."
 	desc = "Noble lapels for a noble coat."
 	item_state = "rhynnbroche"
 	icon_state = "rhynnbroche"
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_CLOAK
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_ARMOR
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	color = null
-	worn_x_dimension = 32
-	worn_y_dimension = 32
+	grid_width = 32
+	grid_height = 32
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn
 	name = "jacketed brigandine"
