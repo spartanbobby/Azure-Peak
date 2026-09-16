@@ -53,10 +53,10 @@
 	craftdiff = SKILL_LEVEL_JOURNEYMAN
 	craftsound = 'modular/Neu_Food/sound/milling.ogg'
 
-/datum/crafting_recipe/roguetown/cooking/coffee
+/datum/crafting_recipe/roguetown/cooking/millcoffee
 	name = "ground coffee cherries"
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/rogue/coffee = 1)
-	result = /obj/item/reagent_containers/food/snacks/grown/rogue/coffeebeans
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/coffee = 1)
+	result =  /obj/item/reagent_containers/food/snacks/grown/coffeebeans
 	always_availible = TRUE
 	structurecraft = /obj/item/millstone
 	craftdiff = SKILL_LEVEL_JOURNEYMAN
