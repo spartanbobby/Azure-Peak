@@ -427,10 +427,11 @@
 	spread = 2
 
 /turf/closed/mineral/rogue/bedrock
-	name = "rock"
+	name = "bedrock"
 	desc = "Seems barren and nigh-indestructable"
 	icon_state = "rockyashbed"
 //	smooth_icon = 'icons/turf/walls/hardrock.dmi'
+	color = "#9b9b9b"
 	max_integrity = 10000000
 	damage_deflection = 99999999
 	above_floor = /turf/closed/mineral/rogue/bedrock
