@@ -3255,7 +3255,7 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/cloak/tabard/stabard/donator_broche
+/obj/item/clothing/head/roguetown/decoration/broche
 	name = "golden broche"
 	desc = "Noble lapels for a noble coat."
 	item_state = "broche"
@@ -4065,8 +4065,8 @@ As Excaliber."
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/light/donator_arming
 	name = "light jacketed gambeson"
-	icon_state = "djacket"
-	item_state = "djacket"
+	icon_state = "darming"
+	item_state = "darming"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'

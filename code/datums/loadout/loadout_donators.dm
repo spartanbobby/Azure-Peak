@@ -964,7 +964,7 @@
 
 /datum/loadout_item/donator/rhynnrhynn_longcloak_broche
 	name = "Donator Item - Ladylike Longcloak's Broche"
-	path = /obj/item/clothing/cloak/tabard/stabard/donator_broche
+	path = /obj/item/clothing/head/roguetown/decoration/broche
 	ckeywhitelist = list("rhynnrhynn")
 
 /datum/loadout_item/donator/rhynnrhynn_staff
