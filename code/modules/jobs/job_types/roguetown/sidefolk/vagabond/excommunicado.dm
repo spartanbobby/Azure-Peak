@@ -35,14 +35,6 @@
 
 	r_hand = /obj/item/rogueweapon/woodstaff
 
-	switch(H.patron?.type)
-		if(/datum/patron/inhumen/zizo)
-			head = /obj/item/clothing/head/roguetown/roguehood
-			H.mind?.AddSpell(new /datum/action/cooldown/spell/minion_order)
-			H.mind?.AddSpell(new /datum/action/cooldown/spell/gravemark)
-		else
-			head = /obj/item/clothing/head/roguetown/roguehood //Being excommunicated, only makes sense they start with their face covered
-
 	if (H.mind)
 		var/datum/devotion/C = new /datum/devotion(H, H.patron)
 		C.grant_miracles(H, cleric_tier = CLERIC_T4, passive_gain = CLERIC_REGEN_MINOR)
@@ -51,3 +43,7 @@
 		H.adjust_skillrank(/datum/skill/craft/cooking, rand(1,4), TRUE)
 		H.STAWIL = rand(8, 20) //Many fall in the face of chaos, but not this one, not today.
 		H.STACON = rand(5, 10)
+		if (istype (H.patron, /datum/patron/inhumen/zizo))
+			if(H.mind)
+				H.mind.AddSpell(new /datum/action/cooldown/spell/minion_order)
+				H.mind.AddSpell(new /datum/action/cooldown/spell/gravemark)
