@@ -1,5 +1,0 @@
-author: "changelingonberry"
-delete-after: True
-changes:
-  - qol: "custom loadout item names can now be up to 64 characters long"
-  - bugfix: "custom loadout items can no longer use special formatting like linebreaks"

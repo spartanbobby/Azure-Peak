@@ -692,3 +692,74 @@
   - balance: unbound skeletons also got swift back for consistency
   tmyqlfpir:
   - bugfix: Ice slipping letting mobs clip through solid objects
+2026-09-17:
+  FreeStylaLT:
+  - refactor: Added more PQ ranks.
+  IHaveNoOriginality:
+  - rscadd: Added a new weapon choice for confessors, the psydonic whip
+  Juubo:
+  - bugfix: fixes overclock damage to come up as limb damage and not item damage on
+      prosthetics
+  Lamasmaster:
+  - balance: Avatar of Rage (graggar T4) now fully works on gnolls, can be actually
+      used while incapacitated (except when you get full on knocked out), works on
+      off balance, reduced cast time to 1 second.
+  Ollanius:
+  - rscadd: (From a previous PR..) Adds the Jacketed Plate-and-Maille and Knight-Errant's
+      Armet, touched-up versions of Ratwood's watchmen armor. Comes in both iron-
+      and steel variants, and can be obtained as reskins via the Triumph menu.
+  - bugfix: (From a previous PR..) Reduces the lightness of Gothic Iron Armor to be
+      much more in line with other iron-paletted items.
+  - rscadd: Mystogen's radiant gold mask, Thistle's poncho, and Rhynn's broche.
+  - bugfix: Scarfed shawls should now properly render.
+  - bugfix: Cased satchels no longer cover the hands when worn.
+  - bugfix: Jacketed brigandine and decorated coat-of-plates now properly dye on all
+      sides.
+  - bugfix: The ladylike longcloak can now be dyed in both independant ways, with
+      the broche as an added connector.
+  - bugfix: Jacketed plate-and-maille now properly renders sleeve sprites.
+  Pokebutt:
+  - rscadd: new milling recipes
+  Ryan180602:
+  - bugfix: reverts 9045 to fix items with cosmetic storage hiding hair
+  - balance: Dueling goggles lose the armour.
+  - bugfix: Limetease's saber is now locked to the ckey.
+  WeNeedMorePhoron:
+  - balance: Archery and Slings skill is now the sole determinant of ranged rate of
+      fire and also drives accuracy. Perception now only scales ranged damage for
+      Sling and Bows.
+  - balance: STR below 10 reduce ROF of Longbow. No longer does anything else as it
+      was largely a cosmetic change anyway.
+  - balance: Draw times are properly floored and capped - bows range from 0.8 to 4.4
+      seconds, slings roughly 0.8 to 1.6. Crossbows no longer scale off Perception
+      at all.
+  - balance: Bows and slings now charge their stamina on release instead of draining
+      while held. Cancelling a draw costs the same as loosing the shot. Holding beyond
+      2 - 3 seconds (Scaling from 10 to 15 PER linearly) will strain you with a strain
+      emote and cost you accuracy and stamina.
+  - balance: Ranged accuracy reworked to 15 + 15 per skill level, minus 10 per tile
+      past your view range and minus 20 when shooting across Z levels. Shots below
+      a weapon's minimum or above its maximum range hit the chest. Aimed limb shot
+      cap at 75% at before, ultra precise zone like hand or feet 50, and face 30.
+  - balance: Removed the aim modifier from spells and retooled mage projectile accuracy.
+  - balance: Quivers now hold 24 arrows and 16 bolts, with arrow and bolt recipes
+      producing even number that fill them up.
+  - balance: Ranged NPCs retreat a bit longer while kiting, pause for a second after
+      firing, and had their ROF penalty cut from 1.6 to 1.3x.
+  - bugfix: A barely drawn shot no longer deals near-full damage while a fully drawn
+      one deals almost none.
+  - bugfix: NPCs can no longer parry / dodge while drawing a ranged weapon.
+  - code_imp: Archery, sling and crossbow tuning moved into defines, and the ranged
+      damage, accuracy and spread formulas split into shared procs.
+  - balance: Maximum accuracy vs a limb has been raised to 90% from 75%, given it
+      is now dependent on having high ranged skills and maintaining sweet spot.
+  anything86:
+  - qol: kick now defaults to chest when attempting to hit head without relevant traits
+  changelingonberry:
+  - qol: custom loadout item names can now be up to 64 characters long
+  - bugfix: custom loadout items can no longer use special formatting like linebreaks
+  zRainbowcat:
+  - qol: longcoat can now be put in cosmetics
+  - bugfix: fixed typo in release familiar spell
+  - qol: Items in cosmetic clots properly cover your body now
+  - bugfix: Hallowed trait actually works now
