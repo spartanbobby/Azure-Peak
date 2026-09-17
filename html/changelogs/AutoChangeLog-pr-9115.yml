@@ -1,0 +1,4 @@
+author: "Juubo"
+delete-after: True
+changes:
+  - bugfix: "fixes overclock damage to come up as limb damage and not item damage on prosthetics"
