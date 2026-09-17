@@ -505,7 +505,8 @@
 	var/chance_total = user_skill^2 + user_spd*2
 	if(HAS_TRAIT(user, TRAIT_ZJUMP))
 		chance_total += 50
-
+	if(HAS_TRAIT(user, TRAIT_LEAPER))
+		chance_total += 50
 	// failing flip will make you go prone and have a chance to crit-fail even if you have high for
 	var/flip_success = FALSE
 	// handle crit fail chance - 1% if youve got good for, 5% if it's negative
