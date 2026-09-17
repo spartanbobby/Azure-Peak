@@ -475,3 +475,61 @@
 			player1.visible_message(span_notice("After a gruelling battle, [player1] eventually manages to subdue the thumb of [player2]!"))
 		else
 			player2.visible_message(span_notice("After a gruelling battle, [player2] eventually manages to subdue the thumb of [player1]!"))
+
+/datum/emote/living/carbon/human/flip
+	key = "flip"
+	key_third_person = "flips"
+	message = "does a flip!"
+	restraint_check = TRUE
+
+// the code for this sucks but its funny
+/datum/emote/living/carbon/human/flip/run_emote(mob/user, params, type_override, intentional, targetted, animal, quiet)
+	if(!user)
+		return
+	if(!ishuman(user))
+		return
+
+	var/mob/living/carbon/human/H = user
+
+	if(!(H.mobility_flags & MOBILITY_STAND))
+		to_chat(H, span_warning("I can't flip while on the ground!"))
+		return
+
+	// call parent; does the actual emote.
+	. = ..()
+
+	// gather data
+	var/user_skill = H.get_skill_level(/datum/skill/misc/athletics)
+	var/user_for = H.STALUC
+	var/user_spd = H.STASPD
+	var/chance_total = user_skill^2 + user_spd*2
+	if(HAS_TRAIT(user, TRAIT_ZJUMP))
+		chance_total += 50
+
+	// failing flip will make you go prone and have a chance to crit-fail even if you have high for
+	var/flip_success = FALSE
+	// handle crit fail chance - 1% if youve got good for, 5% if it's negative
+	var/crit_fail_chance = 1
+	if(user_for < 10)
+		crit_fail_chance = 5
+	// animate
+	H.do_flip_animation()
+	if(prob(crit_fail_chance))
+		var/obj/item/bodypart/head = H.get_bodypart(BODY_ZONE_HEAD)
+		head?.add_wound(/datum/wound/fracture/neck/shatter)
+		H.visible_message(span_warning("[H] flubs the landing, falling over! Their NECK snaps with a SICKENING sound!"))
+		return
+	else if(!prob(chance_total))
+		H.Knockdown(2)
+		H.Immobilize(1)
+		H.visible_message(span_warning("[H] flubs the landing, falling over!"))
+
+
+
+
+/mob/living/carbon/human/verb/emote_flip()
+	set name = "Flip"
+	set category = "Emotes"
+
+	emote("flip", intentional = TRUE)
+
