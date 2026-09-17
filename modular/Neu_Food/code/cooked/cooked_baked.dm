@@ -466,7 +466,6 @@
 
 
 /obj/item/reagent_containers/food/snacks/rogue/zbun_jamtallow
-
 	cuisine = CUISINE_NORTH_IMPERIAL
 	dish_type = DISH_BREAD
 	name = "jamtallowed zun"
@@ -497,23 +496,6 @@
 	tastes = list("bread" = 1)
 	bitesize = 3
 	rotprocess = SHELFLIFE_EXTREME
-
-/obj/item/reagent_containers/food/snacks/rogue/zbun_zyn
-	cuisine = CUISINE_NORTH_IMPERIAL
-	dish_type = DISH_BREAD
-	name = "zyn"
-	desc = "A peculiar creation invented by Ecclescials who ran out of parchments. A zun has been cleaved in half, and a westleach-leaf \
-	stuffed within. It looks terrible, but surely tastes fine...?"
-	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
-	icon_state = "zbun_zyn"
-	list_reagents = list(/datum/reagent/consumable/nutriment = NUTRITION_THREE_QUARTER_MEAL)
-	faretype = FARE_LAVISH
-	w_class = WEIGHT_CLASS_NORMAL
-	bitesize = 4
-	rotprocess = SHELFLIFE_EXTREME
-	tastes = list("sweetly-sour jamminess" = 1, "decadent tartness" = 1)
-	eat_effect = /datum/status_effect/buff/greatsnackbuff
-	foodtype = GRAIN | FRUIT
 
 /obj/item/reagent_containers/food/snacks/rogue/zbun_zyn
 	cuisine = CUISINE_NORTH_IMPERIAL|CUISINE_SOUTH_IMPERIAL
