@@ -1252,6 +1252,19 @@
 	detail_tag = "_detail"
 	detail_color = COLOR_WHITE
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy/rockhill/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy/rockhill/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 //
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
