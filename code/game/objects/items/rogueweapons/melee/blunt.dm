@@ -383,7 +383,7 @@
 	icon_state = "deprived"
 
 /datum/intent/mace/smash/wood/ranged
-	reach = 2
+	reach = 1
 
 /obj/item/rogueweapon/mace/cudgel
 	name = "cudgel"

@@ -11,7 +11,8 @@
 	gripped_intents = list(/datum/intent/spear/bash/staff, /datum/intent/mace/smash/wood/ranged)
 	force = 10
 	force_wielded = 20
-	wdefense = 4.5
+	wdefense = 6
+	wdefense_wbonus = 5 // 90% vs one-skill-up matchup. 70% vs two-skill-up matchup. (Rare)
 	max_integrity = 200
 	special = /datum/special_intent/quarterstaff_sweep
 	sellprice = 34
@@ -46,7 +47,6 @@
 	icon_state = "diamondstaff"
 	implement_tier = IMPLEMENT_TIER_GRAND
 	implement_refund = IMPLEMENT_REFUND_GRAND
-	wdefense = 5
 	force_wielded = 25
 	max_integrity = 280
 	sellprice = 121

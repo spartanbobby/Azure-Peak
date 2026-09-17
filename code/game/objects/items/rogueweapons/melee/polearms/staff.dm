@@ -1,7 +1,7 @@
 /datum/intent/spear/bash/staff
 	name = "staff bash"
 	damfactor = 1
-	reach = 2
+	reach = 1
 
 /datum/intent/spear/bash/ranged/quarterstaff
 	damfactor = 1
@@ -32,7 +32,7 @@
 	pixel_x = -16
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	wdefense = 3
+	wdefense = 4
 	bigboy = TRUE
 	gripsprite = TRUE
 	associated_skill = /datum/skill/combat/staves
@@ -220,7 +220,8 @@
 	icon_state = "quarterstaff"
 	associated_skill = /datum/skill/combat/staves
 	max_integrity = 150
-	wdefense = 4
+	wdefense = 5
+	wdefense_wbonus = 5	// 90% in a same-skill matchup, 80% in a one-skill-below matchup.
 	smeltresult = /obj/item/ash
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/virtue

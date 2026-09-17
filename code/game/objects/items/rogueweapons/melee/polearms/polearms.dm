@@ -235,7 +235,7 @@
 	smeltresult = /obj/item/ingot/iron
 	associated_skill = /datum/skill/combat/polearms
 	walking_stick = TRUE
-	wdefense = 4
+	wdefense = 4.5
 	thrown_bclass = BCLASS_STAB
 	throwforce = 25
 	resistance_flags = FLAMMABLE
