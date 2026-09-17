@@ -2093,7 +2093,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/adrenaline_rush/psydon
 	name = "Endure"
-	desc = "I suffer in His light; My bleeding comes to a still."
+	desc = "I suffer in His light; my bleeding comes to a still."
 	icon_state = "adrrush"
 
 /datum/status_effect/buff/adrenaline_rush
