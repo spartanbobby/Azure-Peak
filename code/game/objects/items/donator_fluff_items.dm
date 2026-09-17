@@ -3263,7 +3263,7 @@ As Excaliber."
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_ARMOR
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	color = null
+	color = nulla
 	grid_width = 32
 	grid_height = 32
 
