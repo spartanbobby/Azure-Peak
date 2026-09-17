@@ -507,19 +507,19 @@
 		chance_total += 50
 	if(HAS_TRAIT(user, TRAIT_LEAPER))
 		chance_total += 50
-	// failing flip will make you go prone and have a chance to crit-fail even if you have high for
-	var/flip_success = FALSE
-	// handle crit fail chance - 1% if youve got good for, 5% if it's negative
+
 	var/crit_fail_chance = 1
 	if(user_for < 10)
-		crit_fail_chance = 5
+		crit_fail_chance = 10-user_for
 	// animate
 	H.do_flip_animation()
+	// check for crit fail chance. always possible.
 	if(prob(crit_fail_chance))
 		var/obj/item/bodypart/head = H.get_bodypart(BODY_ZONE_HEAD)
 		head?.add_wound(/datum/wound/fracture/neck/shatter)
 		H.visible_message(span_warning("[H] flubs the landing, falling over! Their NECK snaps with a SICKENING sound!"))
 		return
+	// if no crit fail, check to see if it fails normally. if it does, knock 'em down and whatever. if not, just do nothin
 	else if(!prob(chance_total))
 		H.Knockdown(2)
 		H.Immobilize(1)
