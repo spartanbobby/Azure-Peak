@@ -3264,10 +3264,8 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	color = null
-	custom_design = TRUE
 	body_parts_covered = CHEST
 	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_CLOAK | ITEM_SLOT_MASK
-	storage = FALSE
 	grid_width = 32
 	grid_height = 32
 
