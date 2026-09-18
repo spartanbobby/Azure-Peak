@@ -1,0 +1,5 @@
+author: "radarseas"
+delete-after: True
+changes:
+  - balance: "sunderstacks and debuffs moved around, it should be noticably less punishing at one and more at several. Unless you're a vampire, then you feel the full brunt of it."
+  - balance: "vampires take (60) vs (40) sunderstacks. - This means they die in 3 to 4 blows vs 4 to 6 blows if you can keep the pressure with blessed silver. As well as feeling the effects of critical sunders slightly longer than regular silver-weak."
