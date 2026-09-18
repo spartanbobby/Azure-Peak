@@ -1,4 +1,0 @@
-author: "KatTheFox"
-delete-after: True
-changes:
-  - bugfix: "Roleprefs checked during a specific period - only court agent afaik - now work on latejoin as well as roundstart rolling"
