@@ -596,7 +596,7 @@
 	UnregisterSignal(src, COMSIG_ITEM_AFTERATTACK)
 	return ..()
 
-/obj/item/rogueweapon/contraption/pick/drill/on_attack(target, user, proximity_flag, click_parameters)
+/obj/item/rogueweapon/contraption/pick/drill/proc/on_attack(target, user, proximity_flag, click_parameters)
 	if(target && user && proximity_flag && isliving(target))
 		charge_deduction(target, user, rand(50, 100))
 
