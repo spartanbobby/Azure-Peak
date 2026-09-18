@@ -1,0 +1,9 @@
+author: "Ollanius"
+delete-after: True
+changes:
+  - bugfix: "Fixes an edge case where jacketed maille could retain its higher-end stats if its morphing elixir was used with iron equipment."
+  - bugfix: "Light gambeson equivalent to long- and short-jacketed gambeson reskins, to avoid potential unintended consequences."
+  - bugfix: "Broches now properly render in all circumstances."
+  - rscadd: "(In a previous PR..) Steel and decablessed pauldrons, available to donators, courtesy of Aroliacue and Zydras!"
+  - rscadd: "(In a previous PR..) Heartplate and plackart morphing elixirs can now be applied (with new results) to studded leather armor, heavy leather armor, and steel half-plate."
+  - rscadd: "Scalemail can now be morphed by Gothic Steel and Iron armor elixirs, defaulting to the nearest equivalent without arm coverage."
