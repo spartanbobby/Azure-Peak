@@ -736,7 +736,9 @@ SUBSYSTEM_DEF(job)
 		to_chat(M,related_policy)
 	if(job && H)
 		if(H.client && H.mind)
-			H.mind.job_subprefs = H.client.prefs?.job_subprefs.Copy()
+			var/list/subprefs = H.client.prefs?.job_subprefs
+			if(subprefs)
+				H.mind.job_subprefs = subprefs.Copy()
 		job.after_spawn(H, M, joined_late) // note: this happens before the mob has a key! M will always have a client, H might not.
 
 	if(ishuman(H))
