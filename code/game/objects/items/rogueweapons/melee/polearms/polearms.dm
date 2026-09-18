@@ -546,7 +546,7 @@
 	smeltresult = /obj/item/ingot/steel
 	max_blade_int = 230
 	minstr = 8
-	wdefense = 6
+	wdefense = 4.5
 	throwforce = 15
 
 /obj/item/rogueweapon/spear/billhook/avantyne
