@@ -4269,8 +4269,24 @@ As Excaliber."
 	icon_state = "rezasword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
+// LIMETEASE
 /obj/item/rogueweapon/sword/sabre/donator_limetease
 	name = "Malevolent Sabre"
 	desc = "A sinister-looking sabre with a deep malevolent aura. Its blade seems to pulse with an otherworldly energy only a god could imbue."
 	icon_state = "limesaber"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+// LIMETEASE
+/obj/item/rogue/instrument/guitar/rosa_silveredguitar
+	name = "Silvered Rosa Guitar"
+	desc = "A guitar adorned with rosas, silvered strings, and a mauve body, crafted by the finest luthiers of Rosawood. Its sound resonates with a clarity that can soothe even the most troubled soul."
+	icon = 'icons/obj/items/donor_music.dmi'
+	icon_state = "rosa_silveredguitar"
+
+// LIMETEASE
+/obj/item/rogue/instrument/guitar/silveredguitar
+	name = "Silvered Guitar"
+	desc = "A guitar adorned with silvered strings and a mauve body, crafted by the finest luthiers of Rosawood. Its sound resonates with a clarity that can soothe even the most troubled soul."
+	icon = 'icons/obj/items/donor_music.dmi'
+	icon_state = "silveredguitar"
+
