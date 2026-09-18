@@ -1262,6 +1262,15 @@
 	path = /obj/item/enchantingkit/weapon/limesaber
 	ckeywhitelist = list("limetease")
 
+/datum/loadout_item/donator/rosa_silveredguitar
+	name = "Donator Item - Silvered Rosa Guitar"
+	path = /obj/item/rogue/instrument/guitar/rosa_silveredguitar
+	ckeywhitelist = list("limetease", "simplypoodle", "gentlemanlyheadcrab")
+
+/datum/loadout_item/donator/silvered_guitar
+	name = "Donator Item - Silvered Guitar"
+	path = /obj/item/rogue/instrument/guitar/silveredguitar
+	ckeywhitelist = list("limetease", "simplypoodle", "gentlemanlyheadcrab")
 /datum/loadout_item/donator/mystogan_radiantmask
 	name = "Donator Item - Radiant Golden Mask"
 	path = /obj/item/clothing/mask/rogue/facemask/goldmask/radiant
