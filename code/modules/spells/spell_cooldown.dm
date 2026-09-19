@@ -73,6 +73,8 @@
 	var/requires_aspect_access = FALSE
 	/// Visual impact intensity for on-hit effects. See SPELL_IMPACT defines.
 	var/spell_impact_intensity = SPELL_IMPACT_NONE
+	/// Whether a guard deflecting this spell's non-projectile effect will expose the caster or not
+	var/expose_caster_on_deflect = TRUE
 	/// If true, the spell can be refunded. Set by learnspell when learned.
 	var/refundable = FALSE
 	/// Aspect type path this spell was granted by, if any. Used by the aspect picker
@@ -795,14 +797,15 @@
 			return FALSE
 
 	if(LAZYLEN(required_items))
-		var/found = FALSE
-		for(var/obj/item/I in owner.contents)
-			if(is_type_in_list(I, required_items) || HAS_TRAIT(owner, TRAIT_HALLOWED))
-				found = TRUE
-				break
-		if(!found && feedback)
-			owner.balloon_alert(owner, "Missing something to cast!")
-			return FALSE
+		if(!HAS_TRAIT(owner, TRAIT_HALLOWED))
+			var/found = FALSE
+			for(var/obj/item/I in owner.contents)
+				if(is_type_in_list(I, required_items))
+					found = TRUE
+					break
+			if(!found && feedback)
+				owner.balloon_alert(owner, "Missing something to cast!")
+				return FALSE
 
 	return TRUE
 
@@ -961,7 +964,7 @@
 
 		//Psydonites/Vheslynites feel nothing
 		if((primary_resource_type == SPELL_COST_DEVOTION) && HAS_TRAIT(cast_on, TRAIT_PSYDONITE) && !(spell_flags & SPELL_PSYDON) || HAS_TRAIT(cast_on, TRAIT_UNFORGIVABLE) && !(spell_flags & SPELL_PSYDON))
-			cast_on.visible_message(span_info("[cast_on] stirs for a moment, the miracle dissipates."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
+			cast_on.visible_message(span_info("[cast_on] stirs for a moment, the miracle dissipates."), span_blue("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
 			playsound(cast_on, 'sound/magic/PSY.ogg', 100, FALSE, -1)
 			owner.playsound_local(owner, 'sound/magic/PSY.ogg', 100, FALSE, -1)
 			return sig_return | SPELL_CANCEL_CAST
@@ -1958,14 +1961,17 @@
 	if(source)
 		source.click_intercept_time = 0
 
-/datum/action/cooldown/spell/proc/spell_guard_check(mob/living/target, no_message = FALSE, mob/living/attacker)
+/// punish_caster overrides expose_caster_on_deflect for one call, for spells that mix a direct strike with a telegraphed zone.
+/datum/action/cooldown/spell/proc/spell_guard_check(mob/living/target, no_message = FALSE, mob/living/attacker, punish_caster)
 	if(!isliving(target))
 		return FALSE
 	if(target == owner)
 		return FALSE
 	if(isnull(attacker))
 		attacker = owner
-	return target.guard_deflect_spell(name, no_message, attacker)
+	if(isnull(punish_caster))
+		punish_caster = expose_caster_on_deflect
+	return target.guard_deflect_spell(name, no_message, attacker, punish_caster)
 
 /datum/action/cooldown/spell/proc/signal_cancel()
 	SIGNAL_HANDLER
