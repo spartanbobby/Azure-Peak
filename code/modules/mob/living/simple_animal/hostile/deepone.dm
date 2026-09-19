@@ -140,8 +140,8 @@
 	STACON = 10
 	STASTR = 12
 	STASPD = 12
-	health = DEEPONE_HEALTH_HOUND
-	maxHealth = DEEPONE_HEALTH_HOUND
+	health = DEEPONE_HOUND_HEALTH
+	maxHealth = DEEPONE_HOUND_HEALTH
 	harm_intent_damage = 18
 	melee_damage_lower = 12
 	melee_damage_upper = 32
@@ -171,8 +171,8 @@
 	speak_chance = 2
 	turns_per_move = 4
 	see_in_dark = 6
-	health = DEEPONE_HEALTH_HOUND
-	maxHealth = DEEPONE_HEALTH_HOUND
+	health = DEEPONE_HOUND_HEALTH
+	maxHealth = DEEPONE_HOUND_HEALTH
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
