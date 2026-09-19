@@ -1,0 +1,4 @@
+author: "KatTheFox"
+delete-after: True
+changes:
+  - bugfix: "Latejoining no longer runtimes if you never set roleprefs on a character slot"
