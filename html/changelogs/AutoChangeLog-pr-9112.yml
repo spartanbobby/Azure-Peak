@@ -1,4 +1,0 @@
-author: "OrbisAnima"
-delete-after: True
-changes:
-  - code_imp: "Clamps the precision of ligthing cache values for sunlight so we have more cached types in the ligthing system instead of infinite stuff due to how long numbers can be in byond. Conservative Values were used to avoid artifacts."
