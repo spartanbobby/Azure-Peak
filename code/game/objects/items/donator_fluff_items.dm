@@ -2894,7 +2894,7 @@ As Excaliber."
 /obj/item/clothing/head/roguetown/crown/serpcrown/mortosuncrown
 	name = "sun crown"
 	article = null // prevents it becoming the the sun crown.
-	desc = "A far too extravagant crown made of gold, sporting a ruby at the center. The metal has been shaped to resemble sunrays."
+	desc = "A far too extravagant crown made of gold, sporting a rontz at the center. The metal has been shaped to resemble sunrays."
 	replace_existing_roguemachine_crown = TRUE
 	icon_state = "mortosasye_suncrown"
 	item_state = "mortosasye_suncrown"
