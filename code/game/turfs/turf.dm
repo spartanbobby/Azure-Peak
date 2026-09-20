@@ -730,7 +730,7 @@
 /turf/proc/Melt()
 	return ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 
-/atom/proc/set_adj_in_dir(direction, direction_flag, new_junction)
+/atom/proc/set_adj_in_dir(direction, direction_flag, list/smoothing_list, new_junction)
 	. = new_junction
 	var/smooth_border = (smooth & SMOOTH_BORDER)
 	var/smooth_obj = (smooth & SMOOTH_OBJ)
@@ -798,7 +798,7 @@
 	var/smooth_edge = (smooth & SMOOTH_EDGE)
 
 	for(var/direction as anything in GLOB.cardinals) //Cardinal case first.
-		new_junction = set_adj_in_dir(direction, direction, new_junction)
+		new_junction = set_adj_in_dir(direction, direction, smoothing_list, new_junction)
 
 	if(smooth_edge)
 		if(!isturf(src))
@@ -813,17 +813,17 @@
 
 	if(new_junction & NORTH_JUNCTION)
 		if(new_junction & WEST_JUNCTION)
-			new_junction = set_adj_in_dir(NORTHWEST, NORTHWEST_JUNCTION, new_junction)
+			new_junction = set_adj_in_dir(NORTHWEST, NORTHWEST_JUNCTION, smoothing_list, new_junction)
 
 		if(new_junction & EAST_JUNCTION)
-			new_junction = set_adj_in_dir(NORTHEAST, NORTHEAST_JUNCTION, new_junction)
+			new_junction = set_adj_in_dir(NORTHEAST, NORTHEAST_JUNCTION, smoothing_list, new_junction)
 
 	if(new_junction & SOUTH_JUNCTION)
 		if(new_junction & WEST_JUNCTION)
-			new_junction = set_adj_in_dir(SOUTHWEST, SOUTHWEST_JUNCTION, new_junction)
+			new_junction = set_adj_in_dir(SOUTHWEST, SOUTHWEST_JUNCTION, smoothing_list, new_junction)
 
 		if(new_junction & EAST_JUNCTION)
-			new_junction = set_adj_in_dir(SOUTHEAST, SOUTHEAST_JUNCTION, new_junction)
+			new_junction = set_adj_in_dir(SOUTHEAST, SOUTHEAST_JUNCTION, smoothing_list, new_junction)
 
 	set_smoothed_icon_state(new_junction)
 
