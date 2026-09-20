@@ -430,7 +430,7 @@
 
 /datum/action/cooldown/spell/miracle/ignition
 	name = "Ignition"
-	desc = "Ignites target, living or object."
+	desc = "Ignite an object."
 	fluff_desc = "The first gift to men, a sliver of Her radiance at fingertips of those devoted to Her wae of lyfe. Some sae it was Matthios who forced Astrata's hand in relinquishing such force to lowly mortals."
 	button_icon_state = "ignite"
 	sound = 'sound/items/firelight.ogg'
