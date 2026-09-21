@@ -302,7 +302,7 @@
 
 // A slightly worse strike, unique to shortswords
 /datum/intent/sword/strike/short
-	damfactor = 0.8
+	damfactor = 0.5
 
 /datum/intent/sword/chop
 	name = "chop"
