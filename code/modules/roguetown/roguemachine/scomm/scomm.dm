@@ -240,6 +240,10 @@
 	to_chat(user, span_warning("The RCOM has no rats to send - it can only receive messages."))
 	return
 
+/obj/structure/roguemachine/scomm/receive_only/attack_right(mob/user)
+	to_chat(user, span_warning("The RCOM has no rats to send - it can only receive messages."))
+	return
+
 /obj/structure/roguemachine/scomm/obj_break(damage_flag)
 	..()
 	calling?.say("Jabberline severed.", spans = list("info"))
