@@ -4,7 +4,7 @@
 
 /obj/structure/roguemachine/scomm
 	name = "SCOM"
-	desc = "The Supernatural Communication Optical Machine is a wonder of magic and technology, able to transmit and receive messages across long distance. Right-click for making private jabberline connections."
+	desc = "The Supernatural Communication Optical Machine is a wonder of magic and technology, able to transmit and receive messages across long distance. There's a button on the RIGHT for making private jabberline connections."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "scomm1"
 	density = FALSE
@@ -94,6 +94,13 @@
 				decrees_str += span_small("[i]. [GLOB.lord_decrees[i]]") + "\n"
 			decrees_str += "</details>"
 			. += decrees_str
+
+/obj/structure/roguemachine/scomm/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("SCOMs broadcast anything said into it into every other SCOM and RCOM across the realm, after a delay.")
+	. += span_info("Left-click the SCOM to mute it, preventing anything from being said or received. Left-click it again to unmute it.")
+	. += span_info("Middle-click the SCOM with a houndstone, crownstone or the Crown equipped to swap channels to the garrison SCOMline. Middle-click again to set it back.")
+	. += span_info("Right-click the SCOM to open a jabberline, opening a call between two SCOMs.")
 
 /obj/structure/roguemachine/scomm/Topic(href, href_list)
 	..()
