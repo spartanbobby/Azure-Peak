@@ -354,7 +354,6 @@
 	spell_requirements = SPELL_REQUIRES_HUMAN | SPELL_REQUIRES_SAME_Z | SPELL_REQUIRES_NO_MOVE
 
 	var/blood_price = 5
-	var/blood_vol_restore = 7.5 //30 every 2 seconds.
 	var/vol_per_skill = 1	//54 with legendary
 	var/delay = 0.5 SECONDS
 
@@ -376,6 +375,10 @@
 			to_chat(UH, span_warning("Their lyfeblood is at capacity. There is no need."))
 			return FALSE
 
+		if(target == UH)
+			to_chat(UH, span_warning("I cannot conjure lyfeblood within myself."))
+			return FALSE
+
 		if(HAS_TRAIT(target, TRAIT_PSYDONITE))
 			target.visible_message(span_info("[target] stirs for a moment, the miracle dissipates."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
 			owner.playsound_local(owner, 'sound/magic/PSY.ogg', 100, FALSE, -1)
@@ -386,17 +389,18 @@
 		playsound(UH, 'sound/magic/bloodheal_start.ogg', 100, TRUE)
 		var/user_skill = UH.get_skill_level(associated_skill)
 		var/user_informed = FALSE
+		var/blood_vol_restore = 3
 		switch(user_skill)	//Bleeding happens every life(), which is every 2 seconds. Multiply these numbers by 4 to get the "bleedrate" equivalent values.
 			if(SKILL_LEVEL_APPRENTICE)
-				blood_price = 3.75
+				blood_price = 3.75 // We pay 15 to restore 5
 			if(SKILL_LEVEL_JOURNEYMAN)
-				blood_price = 2.5
+				blood_price = 2.5 //10:6
 			if(SKILL_LEVEL_EXPERT)
-				blood_price = 2
+				blood_price = 2 //8:7
 			if(SKILL_LEVEL_MASTER)
-				blood_price = 1.625
+				blood_price = 1.625 //6.5:8
 			if(SKILL_LEVEL_LEGENDARY)
-				blood_price = 1.25
+				blood_price = 1.25 //5:9
 		if(user_skill > SKILL_LEVEL_NOVICE)
 			blood_vol_restore += vol_per_skill * user_skill
 		var/max_loops = round(UH.blood_volume / blood_price, 1) * 2	// x2 just in case the user is trying to fill themselves up while using it.
