@@ -1,0 +1,5 @@
+author: "KatTheFox"
+delete-after: True
+changes:
+  - bugfix: "Ochre arils are now functional."
+  - bugfix: "Ashen and ochre arils' downsides can no longer be entirely ignored if you're wearing plate, and they properly kill revenants now."
