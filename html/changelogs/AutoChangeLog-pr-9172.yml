@@ -1,0 +1,4 @@
+author: "nauticall"
+delete-after: True
+changes:
+  - image: "(Donor) Greatcoats now layer on top of most articles of clothing, similarly to the longcoat."
