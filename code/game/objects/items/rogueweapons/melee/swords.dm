@@ -1157,8 +1157,7 @@
 	possible_item_intents = list(
 		/datum/intent/sword/cut/short,
 		/datum/intent/sword/thrust/short,
-		/datum/intent/sword/chop/short,
-		/datum/intent/sword/strike/bad,
+		/datum/intent/sword/chop/short
 		)
 	icon_state = "eastshortsword"
 	sheathe_icon = "kodachi"
