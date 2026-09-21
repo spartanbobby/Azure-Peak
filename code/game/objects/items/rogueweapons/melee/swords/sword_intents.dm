@@ -300,6 +300,10 @@
 /datum/intent/sword/strike/bad
 	damfactor = 0.5
 
+// A slightly worse strike, unique to shortswords
+/datum/intent/sword/strike/short
+	damfactor = 0.8
+
 /datum/intent/sword/chop
 	name = "chop"
 	icon_state = "inchop"
