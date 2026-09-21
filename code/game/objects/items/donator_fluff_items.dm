@@ -1020,7 +1020,7 @@
 	name = "doublet"
 	desc = "A snug-fitting tunic, favored by Azurians during the chillier daes of autumn. It has been dyed with a pale, green tone."
 
-/obj/item/clothing/cloak/donator_greatcoat
+/obj/item/clothing/suit/roguetown/armor/donator_greatcoat
 	name = "greatcoat"
 	desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
 	duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
@@ -1033,14 +1033,17 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = FALSE
-	alternate_worn_layer = TABARD_LAYER
-	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_BACK_R
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK|ITEM_SLOT_BACK_R
 	flags_inv = HIDEBOOB
+	sewrepair = TRUE
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
 	var/flipped = FALSE
 
-/obj/item/clothing/cloak/donator_greatcoat/attack_right(mob/user)
+/obj/item/clothing/suit/roguetown/armor/donator_greatcoat/ComponentInitialize()
+	AddComponent(/datum/component/storage/concrete/roguetown/cloak)
+
+/obj/item/clothing/suit/roguetown/armor/donator_greatcoat/attack_right(mob/user)
 	if(!flipped)
 		icon_state += "alt"
 		flipped = TRUE
@@ -1050,18 +1053,18 @@
 		flipped = FALSE
 	user.regenerate_icons()
 
-/obj/item/clothing/cloak/donator_greatcoat/dyeable
+/obj/item/clothing/suit/roguetown/armor/donator_greatcoat/dyeable
 	name = "greatcoat"
 	icon_state = "dgreatcoat"
 	item_state = "dgreatcoat"
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/donator_greatcoat/dyeable/Initialize(mapload)
+/obj/item/clothing/suit/roguetown/armor/donator_greatcoat/dyeable/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/cloak/donator_greatcoat/dyeable/update_icon()
+/obj/item/clothing/suit/roguetown/armor/donator_greatcoat/dyeable/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -2880,6 +2883,38 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	color = null
 	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/suit/roguetown/shirt/dress/silkdress/donator_mortosasye_sunrisegown
+	name = "sunrise gown"
+	desc = "A beautiful gown that seems to shimmer with the light of a rising sun, almost abnormally radiant."
+	icon_state = "mortosasye_sunrisegown"
+	item_state = "mortosasye_sunrisegown"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	color = null
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/head/roguetown/crown/serpcrown/mortosuncrown
+	name = "sun crown"
+	article = null // prevents it becoming the the sun crown.
+	desc = "A far too extravagant crown made of gold, sporting a rontz at the center. The metal has been shaped to resemble sunrays."
+	replace_existing_roguemachine_crown = TRUE
+	icon_state = "mortosasye_suncrown"
+	item_state = "mortosasye_suncrown"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/circlet/donator_mortosasye_golddiadem
+	name = "gold diadem"
+	desc = "A simple diadem sporting a diamond-shape at the center, made of gold. It is a simple, yet elegant piece of jewelry - passed down through generations of the Xulu noble house."
+	icon_state = "mortosasye_golddiadem"
+	item_state = "mortosasye_golddiadem"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
 
 // RACOBIO
 /obj/item/rogueweapon/woodstaff/implement/grand/racobio
