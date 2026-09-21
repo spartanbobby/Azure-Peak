@@ -375,10 +375,6 @@
 			to_chat(UH, span_warning("Their lyfeblood is at capacity. There is no need."))
 			return FALSE
 
-		if(target == UH)
-			to_chat(UH, span_warning("I cannot conjure lyfeblood within myself."))
-			return FALSE
-
 		if(HAS_TRAIT(target, TRAIT_PSYDONITE))
 			target.visible_message(span_info("[target] stirs for a moment, the miracle dissipates."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
 			owner.playsound_local(owner, 'sound/magic/PSY.ogg', 100, FALSE, -1)
