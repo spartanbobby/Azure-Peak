@@ -37654,6 +37654,14 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods/grim/southwest)
+"eCM" = (
+/obj/machinery/light/rogue/campfire/densefire{
+	fueluse = 108000;
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/grim)
 "eCN" = (
 /obj/structure/stairs{
 	dir = 8
@@ -56604,9 +56612,11 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town/grim)
 "gVU" = (
-/obj/structure/bed/rogue/shit,
+/obj/structure/flora/rock/pile{
+	mouse_opacity = 0
+	},
 /turf/open/floor/rogue/naturalstone,
-/area/rogue/under/cave/grim)
+/area/rogue/indoors/cave/underhamlet)
 "gVZ" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -82112,7 +82122,11 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/licharena/grim)
 "jZi" = (
-/obj/structure/bed/rogue/shit,
+/obj/machinery/light/rogue/campfire/densefire{
+	fueluse = 108000;
+	pixel_x = 1;
+	pixel_y = 3
+	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cavewet/bogcaves/west)
 "jZk" = (
@@ -93708,14 +93722,6 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/magician)
-"lvp" = (
-/obj/machinery/light/rogue/campfire/densefire{
-	fueluse = 108000;
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/under/cavewet/bogcaves/west)
 "lvr" = (
 /obj/machinery/light/rogue/campfire/fireplace{
 	pixel_x = 32;
@@ -112219,6 +112225,10 @@
 /obj/item/natural/feather,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/dwarfin)
+"nLN" = (
+/obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/grim)
 "nLO" = (
 /obj/structure/rack/rogue,
 /obj/item/natural/whetstone{
@@ -135875,12 +135885,6 @@
 	icon_state = "vertw"
 	},
 /area/rogue/outdoors/beach/south/grim)
-"qCz" = (
-/obj/structure/flora/rock/pile{
-	mouse_opacity = 0
-	},
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/cave/underhamlet)
 "qCA" = (
 /obj/structure/rack/rogue/shelf/biggest{
 	opacity = 1
@@ -157045,6 +157049,10 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/town/keep/grim)
+"thR" = (
+/obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cavewet/bogcaves/west)
 "thV" = (
 /turf/open/water/river/flow/murk/deep,
 /area/rogue/under/cavewet/bogcaves/north)
@@ -164410,14 +164418,6 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/outdoors/town/roofs/grim)
-"uaB" = (
-/obj/machinery/light/rogue/campfire/densefire{
-	fueluse = 108000;
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/under/cave/grim)
 "uaD" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -179863,14 +179863,6 @@
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/woods/grim/southeast)
-"vQd" = (
-/obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
-/obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
-/obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
-/obj/item/roguegem/random,
-/obj/structure/closet/crate/chest/crate,
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/bog/south/grim/se)
 "vQe" = (
 /obj/structure/bars/passage{
 	max_integrity = 9999;
@@ -230681,7 +230673,7 @@ nzo
 nzo
 nzo
 nzo
-qCz
+gVU
 mTC
 mTC
 mTC
@@ -352155,8 +352147,8 @@ hsr
 hsr
 hsr
 mzQ
+thR
 jZi
-lvp
 mzQ
 hsr
 hsr
@@ -370515,8 +370507,8 @@ drY
 drY
 drY
 drY
-gVU
-uaB
+nLN
+eCM
 drY
 drY
 drY
@@ -442092,7 +442084,7 @@ wvm
 wvm
 wvm
 tEl
-vQd
+qnk
 doz
 wvm
 wvm
