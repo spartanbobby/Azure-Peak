@@ -170,7 +170,7 @@
 		to_chat(user, span_boldnotice("Only those of noble blood can inherit this house."))
 		return FALSE
 	if(require_wretch_trait && !HAS_TRAIT(user, TRAIT_ZURCH))
-		to_chat(user, span_boldnotice("Only those of noble blood can inherit this house."))
+		to_chat(user, span_boldnotice("Only a lowlyfe wretch can inherit this house."))
 		return FALSE
 	var/mob/living/carbon/human/human = user
 	if(human.received_resident_key)
