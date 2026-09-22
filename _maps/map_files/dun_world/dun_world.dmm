@@ -86851,7 +86851,7 @@
 /area/rogue/under/underdark/north)
 "pOc" = (
 /obj/structure/flora/roguetree/burnt{
-	name = "Nraggars gift-tree";
+	name = "Graggars gift-tree";
 	desc = "A burned husk of a tree. Decorated with organs and bones that have been crudely nailed to the trunk. The Darkstars symbols adorn the branches and fill you with unease."
 	},
 /obj/item/organ/stomach{
