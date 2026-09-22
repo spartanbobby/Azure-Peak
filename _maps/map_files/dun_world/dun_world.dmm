@@ -31565,6 +31565,11 @@
 /obj/structure/leyline/powerful,
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/bog/south)
+"fQw" = (
+/obj/structure/closet/dirthole/grave,
+/obj/structure/gravemarker,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/beach/forest/south)
 "fQx" = (
 /obj/structure/roguetent,
 /turf/open/floor/rogue/dirt/road,
@@ -33197,13 +33202,6 @@
 /obj/item/natural/stone,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
-"ggg" = (
-/obj/structure/gravemarker{
-	pixel_y = 1
-	},
-/obj/structure/closet/dirthole/grave,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/beach/forest/south)
 "ggi" = (
 /mob/living/carbon/human/species/skeleton/npc/mediumspread,
 /turf/open/floor/rogue/hexstone,
@@ -52863,6 +52861,15 @@
 /obj/structure/fermentation_keg,
 /turf/open/floor/rogue/twig,
 /area/rogue/under/town/basement)
+"jJu" = (
+/obj/structure/closet/dirthole/closed/loot{
+	dir = 1
+	},
+/obj/structure/gravemarker{
+	pixel_x = -20
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/beach/forest/south)
 "jJw" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/ingot/copper,
@@ -69026,6 +69033,13 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
+"mzZ" = (
+/obj/structure/closet/dirthole/grave,
+/obj/structure/gravemarker{
+	pixel_y = 1
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/beach/forest/south)
 "mAa" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/beach/north)
@@ -89502,11 +89516,6 @@
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/mountains/decap/gunduzirak/bossarena)
-"qlR" = (
-/obj/structure/gravemarker,
-/obj/structure/closet/dirthole/grave,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/beach/forest/south)
 "qma" = (
 /obj/structure/fluff/railing/fence{
 	dir = 4
@@ -445546,11 +445555,11 @@ fSI
 fSI
 aan
 kKe
-eTa
-eTa
+jJu
+jJu
 iBF
 eTa
-eTa
+jJu
 eTa
 kKe
 oal
@@ -446902,12 +446911,12 @@ fSI
 fSI
 fSI
 kKe
-ggg
+fSI
 eTa
 hYQ
 tRm
-eTa
-qlR
+fSI
+fSI
 kKe
 oal
 sNN
@@ -447358,8 +447367,8 @@ eTa
 eTa
 eTa
 eTa
-eTa
-eTa
+fSI
+fQw
 kKe
 oal
 oal
@@ -447807,7 +447816,7 @@ fSI
 oal
 kKe
 iBF
-eTa
+mzZ
 eVa
 eVa
 old
