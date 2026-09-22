@@ -24732,6 +24732,10 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/beach/forest/hamlet)
+"eEl" = (
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors/woods/northwest)
 "eEA" = (
 /obj/structure/fluff/railing/corner,
 /obj/machinery/light/rogue/torchholder/r,
@@ -54828,6 +54832,10 @@
 /obj/structure/fluff/railing/corner,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/beach/forest/north)
+"kbH" = (
+/obj/structure/wild_plant/nospread/manabloom,
+/turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors/woods/northwest)
 "kbO" = (
 /obj/structure/chair/wood/rogue,
 /obj/effect/decal/edge{
@@ -68757,6 +68765,9 @@
 /obj/effect/landmark/chimeric_calyx_spawner/fifteen,
 /turf/open/floor/rogue/dirt,
 /area/rogue/druidsgrove)
+"myj" = (
+/turf/open/floor/rogue/grasscold,
+/area/rogue/outdoors/woods/northwest)
 "mym" = (
 /obj/structure/stairs{
 	dir = 8
@@ -98612,6 +98623,9 @@
 /obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
+"rVX" = (
+/turf/open/floor/rogue/greenstone,
+/area/rogue/outdoors/woods/northwest)
 "rWe" = (
 /obj/structure/bed/rogue/inn{
 	dir = 1
@@ -99299,6 +99313,9 @@
 /obj/machinery/light/rogue/candle/floorcandle,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
+"scE" = (
+/turf/open/floor/rogue/greenstone/runed,
+/area/rogue/outdoors/woods/northwest)
 "scI" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/spawner/lootdrop/cheap_jewelry_spawner,
@@ -112441,6 +112458,10 @@
 /obj/structure/chair/bench/couchamagenta/r,
 /turf/open/floor/rogue/tile/harem2,
 /area/rogue/indoors/town/bath)
+"uyn" = (
+/obj/structure/well/fountain/mana,
+/turf/open/floor/rogue/greenstone,
+/area/rogue/outdoors/woods/northwest)
 "uyo" = (
 /obj/machinery/light/rogue/candle/r,
 /obj/item/millstone{
@@ -481010,7 +481031,7 @@ ogs
 ogs
 ogs
 ogs
-ogs
+hhS
 "}
 (6,1,4) = {"
 qlb
@@ -481462,7 +481483,7 @@ adl
 ogs
 ogs
 ogs
-ogs
+rFb
 "}
 (7,1,4) = {"
 qlb
@@ -520953,8 +520974,8 @@ hTb
 kSq
 kSq
 kSq
-bZo
-bZo
+eEl
+eEl
 bZo
 bZo
 bZo
@@ -521402,13 +521423,13 @@ cxA
 bZo
 kSq
 kSq
+myj
+kbH
+kbH
+myj
+kbH
+kbH
 kSq
-kSq
-bZo
-bZo
-bZo
-bZo
-bZo
 kSq
 kSq
 kSq
@@ -521854,13 +521875,13 @@ bZo
 bZo
 bZo
 kSq
-kSq
-kSq
-kSq
-bZo
-bZo
-bZo
-kSq
+kbH
+myj
+rVX
+scE
+rVX
+myj
+kbH
 kSq
 kSq
 kSq
@@ -522305,14 +522326,14 @@ aBB
 bZo
 bZo
 bZo
-bZo
-kSq
-kSq
-kSq
-kSq
-iZF
-kSq
-kSq
+eEl
+kbH
+myj
+scE
+uyn
+scE
+myj
+kbH
 kSq
 kSq
 kSq
@@ -522757,14 +522778,14 @@ aBB
 aBB
 aBB
 aBB
-bZo
-kSq
-kSq
-kSq
-kSq
-iZF
-iZF
-kSq
+eEl
+kbH
+myj
+rVX
+scE
+rVX
+myj
+kbH
 kSq
 ezz
 kSq
@@ -523210,13 +523231,13 @@ aBB
 aBB
 aBB
 aBB
-kSq
-kSq
-kSq
-kSq
-kSq
 iZF
-bZo
+kbH
+kbH
+myj
+kbH
+kbH
+kSq
 kSq
 kSq
 ezz
@@ -523663,8 +523684,8 @@ aBB
 aBB
 aBB
 aBB
-kSq
-kSq
+myj
+myj
 kSq
 kSq
 bZo
