@@ -16238,7 +16238,7 @@
 /area/rogue/under/cave/fishmandungeon)
 "dau" = (
 /obj/structure/fluff/railing/corner,
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
 "daw" = (
 /obj/structure/table/church{
@@ -41553,7 +41553,7 @@
 /area/rogue/under/cave/scarymaze)
 "hKv" = (
 /obj/structure/fluff/railing/corner/north_east,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
 "hKw" = (
 /obj/structure/stairs{
@@ -70634,6 +70634,7 @@
 /area/rogue/under/cave/his_vault/puzzle)
 "mRH" = (
 /obj/structure/fluff/railing/corner,
+/obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
 "mRO" = (
@@ -85108,6 +85109,10 @@
 "pxF" = (
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/rtfield)
+"pxK" = (
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/rtfield/abandonedhotsprings)
 "pxL" = (
 /obj/structure/glowshroom,
 /turf/open/water/swamp,
@@ -118975,6 +118980,10 @@
 /obj/machinery/light/rogue/firebowl/off,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
+"vHW" = (
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/woods/northwest)
 "vHZ" = (
 /obj/structure/chair/bench/couchablack/r,
 /turf/open/floor/rogue/tile/harem1,
@@ -408034,7 +408043,7 @@ eCO
 jYu
 eCO
 eCO
-jYu
+tPz
 eCO
 eCO
 aDU
@@ -408485,10 +408494,10 @@ bTS
 mAW
 jYu
 wal
-eCO
-jYu
-eCO
-aay
+tPz
+tPz
+tPz
+tPz
 aay
 aay
 aay
@@ -408938,10 +408947,10 @@ mAW
 lCD
 tPz
 tPz
-lCD
-lCD
-lCD
-lCD
+tPz
+tPz
+tPz
+tPz
 aay
 hdB
 hdB
@@ -523295,7 +523304,7 @@ aBB
 aBB
 aBB
 aBB
-aBB
+tgP
 aBB
 aBB
 aBB
@@ -523746,10 +523755,10 @@ aBB
 aBB
 aBB
 aBB
-aBB
-aBB
-aBB
-aBB
+tgP
+tgP
+tgP
+tgP
 sju
 sju
 sju
@@ -524198,11 +524207,11 @@ rzT
 rzT
 rzT
 hKv
-exn
+tgP
+xxa
+eEB
 ehI
-ehI
-ehI
-ehI
+pxK
 sju
 sju
 eLC
@@ -524655,7 +524664,7 @@ ehI
 ehI
 ehI
 ehI
-ehI
+pxK
 kfN
 rVK
 uIi
@@ -525554,10 +525563,10 @@ uRW
 uRW
 uRW
 mRH
-exn
-exn
-exn
-exn
+eEB
+ehI
+ehI
+xxa
 ehI
 ehI
 eYL
@@ -526892,7 +526901,7 @@ ffe
 ffe
 ffe
 ffe
-ffe
+vHW
 ffe
 ffe
 ffe
@@ -527793,7 +527802,7 @@ kSq
 kSq
 fHL
 qmK
-ffe
+vHW
 ffe
 ffe
 ffe
