@@ -385,18 +385,18 @@
 		playsound(UH, 'sound/magic/bloodheal_start.ogg', 100, TRUE)
 		var/user_skill = UH.get_skill_level(associated_skill)
 		var/user_informed = FALSE
-		var/blood_vol_restore = 3
+		var/blood_vol_restore = 7
 		switch(user_skill)	//Bleeding happens every life(), which is every 2 seconds. Multiply these numbers by 4 to get the "bleedrate" equivalent values.
 			if(SKILL_LEVEL_APPRENTICE)
-				blood_price = 3.75 // We pay 15 to restore 5
+				blood_price = 3.75 // We pay 15 to restore 9
 			if(SKILL_LEVEL_JOURNEYMAN)
-				blood_price = 2.5 //10:6
+				blood_price = 2.5 //10:10
 			if(SKILL_LEVEL_EXPERT)
-				blood_price = 2 //8:7
+				blood_price = 2 //8:11
 			if(SKILL_LEVEL_MASTER)
-				blood_price = 1.625 //6.5:8
+				blood_price = 1.625 //6.5:12
 			if(SKILL_LEVEL_LEGENDARY)
-				blood_price = 1.25 //5:9
+				blood_price = 1.25 //5:13
 		if(user_skill > SKILL_LEVEL_NOVICE)
 			blood_vol_restore += vol_per_skill * user_skill
 		var/max_loops = round(UH.blood_volume / blood_price, 1) * 2	// x2 just in case the user is trying to fill themselves up while using it.
