@@ -228,7 +228,7 @@
 	secondary_resource_cost = SPELLCOST_MIRACLE//Dunno it's not properly inhereting for some reason.
 
 	//invocations = list("By molten might and hammer's weight, in Malum’s flame, the earth shall quake!")Old Invocation
-	invocations = list("Let let my hammer fall in righteousness on the brows of heathens and miscreants!")
+	invocations = list("Let my hammer fall in righteousness on the brows of heathens and miscreants!")
 	invocation_type = INVOCATION_SHOUT
 
 	cooldown_time = 45 SECONDS

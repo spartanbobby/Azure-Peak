@@ -444,7 +444,9 @@
 				return
 			user.say("Let my walls stand, while families toil, armies march, and empires fall.")
 			if(!do_after(user, 5 SECONDS))
+				return
 			user.say("I am a Wallbuilder, and my walls will stand always as a shield against evil.")
+			if(!do_after(user, 5 SECONDS))
 				return
 			user.say("This I pray, that will the Forgefather grant.")
 			icon_state = "malum_active"
