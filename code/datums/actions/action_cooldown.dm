@@ -391,7 +391,7 @@
 			user.mind.AddSpell(new /datum/action/cooldown/spell/projectile/arcyne_lance)
 
 /proc/grant_poke_spell_zizo(mob/living/carbon/human/user) // antag-poke spells, balanced around John Zizoplate casting this without penalty. Or missionary adv w/ heals on top. Etc.
-	var/list/poke_options = list("Spitfire", "Arcyne Diagnosis + Arcyne Analyze", "Arc Bolt", "Greater Arcyne Bolt", "Arcyne Lance")
+	var/list/poke_options = list("Spitfire", "Arc Bolt", "Greater Arcyne Bolt", "Arcyne Lance", "Arcyne Diagnosis + Arcyne Analyze")
 	var/poke_choice = tgui_input_list(user, "Choose your cantrip.", "Arcyne Progress", poke_options)
 	if(!poke_choice || !user.mind)
 		return
