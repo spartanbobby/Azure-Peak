@@ -181,7 +181,7 @@
 		if(!pending_registrations[H.key])
 			to_chat(usr, span_warning("That registration link has expired."))
 			return
-		if(H.mind?.assigned_role != "Mercenary")
+		if(!role_matches(H, "Mercenary"))
 			to_chat(usr, span_warning("I am no longer a mercenary."))
 			pending_registrations -= H.key
 			return
@@ -218,7 +218,7 @@
 			to_chat(usr, span_warning("I am not registered with the mercenary statue network."))
 			pending_message_links -= H.key
 			return
-		if(H.mind?.assigned_role != "Mercenary")
+		if(!role_matches(H, "Mercenary"))
 			to_chat(usr, span_warning("I am no longer a mercenary."))
 			pending_message_links -= H.key
 			return
@@ -258,7 +258,7 @@
 			pending_broadcast_responses -= response_id
 			return
 
-		if(!responder.mind || responder.mind.assigned_role != "Mercenary")
+		if(!role_matches(responder, "Mercenary"))
 			to_chat(responder, span_warning("I am not a mercenary."))
 			return
 
