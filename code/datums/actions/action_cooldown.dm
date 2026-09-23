@@ -405,5 +405,5 @@
 		if("Arcyne Lance")
 			user.mind.AddSpell(new /datum/action/cooldown/spell/projectile/arcyne_lance)
 		if("Arcyne Diagnosis + Arcyne Analyze") //tradeoff frag power for utility power
-			user.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/zizo)
+			user.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular/zizo)
 			user.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/engineeranalyze/zizo)
