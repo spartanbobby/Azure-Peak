@@ -27874,6 +27874,10 @@
 	},
 /turf/open/floor/rogue/carpet,
 /area/rogue/under/town/basement/keep)
+"faF" = (
+/obj/item/restraints/legcuffs/beartrap/armed,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors/woods/south)
 "faJ" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = 8;
@@ -38446,6 +38450,9 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/rtfield)
+"gUo" = (
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/under/cavewet/bogcaves/south)
 "gUq" = (
 /obj/structure/hotspring/border/eleven,
 /turf/open/floor/rogue/grasscold,
@@ -69372,6 +69379,11 @@
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/inq/basement)
+"mju" = (
+/obj/structure/fluff/railing/wood/west,
+/obj/item/restraints/legcuffs/beartrap/armed,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors/woods/south)
 "mjw" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -89930,6 +89942,9 @@
 /obj/structure/bookcase/random/religion,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/his_vault)
+"pQe" = (
+/turf/closed/wall/mineral/rogue/stonebrick,
+/area/rogue/outdoors/woods/south)
 "pQi" = (
 /obj/structure/fermentation_keg,
 /turf/open/floor/rogue/cobble/mossy,
@@ -211294,7 +211309,7 @@ oBQ
 oBQ
 uZv
 uZv
-uZv
+gUo
 uZv
 uZv
 jPN
@@ -211746,7 +211761,7 @@ oBQ
 oBQ
 uZv
 uZv
-uZv
+gUo
 uZv
 uZv
 jPN
@@ -324743,14 +324758,14 @@ jaH
 jaH
 jSw
 kAz
-jyq
+pQe
 xZu
 xZu
 xZu
 xkl
 xkl
 jyq
-jyq
+wNU
 mQf
 jSw
 jSw
@@ -325198,7 +325213,7 @@ uhM
 hNt
 dlT
 dlT
-dlT
+mju
 xkl
 xkl
 dlT
@@ -325648,7 +325663,7 @@ gsg
 jSw
 jSw
 tOj
-vwa
+faF
 xkl
 xkl
 xkl
@@ -326551,14 +326566,14 @@ jSw
 jSw
 jSw
 uhM
-bXh
+pQe
 bXh
 ksq
 xkl
 xkl
 ksq
 ksq
-gLn
+pQe
 lcr
 rnU
 jaH
