@@ -9444,7 +9444,7 @@
 /area/rogue/under/cave/scarymaze)
 "bLz" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "bLC" = (
 /obj/structure/table/wood/poor,
@@ -12721,7 +12721,7 @@
 	dir = 4
 	},
 /obj/structure/fluff/railing/border,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods/northwest)
 "cqj" = (
 /obj/structure/table/wood/large_table/north_west,
@@ -17285,7 +17285,7 @@
 /area/rogue/indoors/town/garrison)
 "dhs" = (
 /obj/structure/bed/rogue/shit,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "dht" = (
 /obj/structure/table/wood/fancy/red,
@@ -17972,7 +17972,7 @@
 /area/rogue/under/cave/scarymaze)
 "dnw" = (
 /obj/structure/roguetent,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "dnA" = (
 /obj/structure/fluff/walldeco/painting/queen,
@@ -18767,7 +18767,7 @@
 /area/rogue/under/underdark/north)
 "duB" = (
 /obj/structure/spike_pit,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "duC" = (
 /obj/structure/fluff/walldeco/stone/bronze{
@@ -18935,7 +18935,7 @@
 "dvL" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border/east,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods/northwest)
 "dvN" = (
 /obj/structure/fluff/railing/border/east,
@@ -31143,7 +31143,7 @@
 	pixel_y = 10;
 	anchored = 1
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "fDD" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -66710,7 +66710,7 @@
 	pixel_x = -13;
 	pixel_y = -9
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "lLY" = (
 /obj/structure/table/vtable/v2,
@@ -90050,7 +90050,7 @@
 	pixel_x = 8;
 	pixel_y = -8
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "pRe" = (
 /obj/effect/landmark/latejoin,
@@ -96758,6 +96758,10 @@
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cavewet/bogcaves/west)
+"qZG" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/woods/northwest)
 "qZI" = (
 /turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/outdoors/woods/north)
@@ -102437,7 +102441,7 @@
 	pixel_x = 6;
 	anchored = 1
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "sai" = (
 /obj/machinery/light/rogue/torchholder/r,
@@ -113817,7 +113821,7 @@
 	dir = 4
 	},
 /obj/structure/fluff/railing/border/north,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods/northwest)
 "uaa" = (
 /obj/machinery/light/rogue/firebowl/stump,
@@ -115583,7 +115587,7 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /obj/effect/spawner/lootdrop/valuable_clutter_spawner,
 /obj/effect/spawner/lootdrop/general_loot_mid,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "uqy" = (
 /obj/structure/flora/roguegrass/maneater/real,
@@ -124297,7 +124301,7 @@
 /obj/structure/table/wood/folding,
 /obj/item/rogueweapon/huntingknife,
 /obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods/northwest)
 "vRP" = (
 /obj/structure/fluff/railing/corner/south_east,
@@ -133197,7 +133201,7 @@
 "xwe" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border/west,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods/northwest)
 "xwh" = (
 /obj/structure/mineral_door/wood/donjon/stone/highsecurity{
@@ -542625,7 +542629,7 @@ mwP
 bpY
 dnw
 bLz
-eIt
+qZG
 cpn
 sVZ
 wSv
@@ -543076,8 +543080,8 @@ fkz
 mwP
 mwP
 dnw
-bpY
-bpY
+kYl
+kYl
 xLU
 sVZ
 sVZ
@@ -543527,7 +543531,7 @@ qwk
 wSv
 mwP
 mwP
-bpY
+mwP
 cpn
 cpn
 wSv
@@ -543980,7 +543984,7 @@ wSv
 wSv
 mwP
 mwP
-bpY
+kYl
 mwP
 mwP
 wSv
@@ -544433,7 +544437,7 @@ wSv
 keY
 pRd
 duB
-bpY
+kYl
 mwP
 mwP
 bpY
@@ -544886,7 +544890,7 @@ qXW
 sag
 fDC
 vRN
-eIt
+qZG
 jMX
 bpY
 bpY
@@ -545337,8 +545341,8 @@ wSv
 bpY
 duB
 lLT
-bpY
-bpY
+kYl
+kYl
 jMX
 mwP
 mwP
@@ -545788,8 +545792,8 @@ wSv
 wSv
 bpY
 dBN
-eIt
-bpY
+qZG
+kYl
 xPy
 sVw
 mwP
