@@ -32707,6 +32707,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
+"fQQ" = (
+/obj/structure/flora/roguegrass/herb/random,
+/turf/open/floor/rogue/snowpatchy,
+/area/rogue/outdoors/beach/forest/south)
 "fQT" = (
 /obj/structure/table/wood/long_table/right,
 /obj/item/flowercrown/rosa,
@@ -104559,6 +104563,7 @@
 /area/rogue/outdoors/rtfield)
 "sqo" = (
 /obj/structure/fluff/railing/corner/south_west,
+/obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/beach/forest/south)
 "sqq" = (
@@ -541591,14 +541596,14 @@ toE
 eTa
 eTa
 eTa
-vCU
+fQQ
 vCU
 sqo
 fSI
 fSI
 fSI
-wAL
-wwP
+cuw
+iWC
 eTa
 eTa
 eTa
@@ -542040,19 +542045,19 @@ toE
 toE
 toE
 eTa
-eTa
-eTa
+aCA
+wwP
 vCU
 vCU
-wwP
+iWC
 fSI
 fSI
 fSI
 fSI
 wwP
-wwP
-wwP
-wwP
+iWC
+vhZ
+vhZ
 eTa
 eTa
 toE
@@ -542489,13 +542494,13 @@ toE
 toE
 eTa
 eTa
+iWC
+mBc
 wwP
 wwP
 wwP
 wwP
-wwP
-wwP
-wwP
+iWC
 fSI
 fSI
 fSI
@@ -542505,7 +542510,7 @@ fSI
 wwP
 wwP
 wwP
-wwP
+vhZ
 wwP
 wwP
 wwP
@@ -542940,11 +542945,11 @@ toE
 toE
 toE
 eTa
-wwP
-wwP
-wwP
-wwP
-wwP
+iWC
+vhZ
+vhZ
+iWC
+bbX
 fSI
 fSI
 fSI
@@ -543391,11 +543396,11 @@ toE
 toE
 toE
 vCU
-wwP
-wwP
-wwP
-wwP
-wwP
+iWC
+vhZ
+vhZ
+iWC
+iWC
 fSI
 fSI
 fSI
@@ -543845,7 +543850,7 @@ toE
 vCU
 vCU
 vCU
-wwP
+bbX
 wwP
 fSI
 fSI
@@ -543858,8 +543863,8 @@ flC
 flC
 vCU
 vCU
-wwP
-wwP
+iWC
+iWC
 wwP
 fSI
 fSI
@@ -544309,9 +544314,9 @@ xBW
 xBW
 xBW
 xBW
+fQQ
 vCU
-vCU
-wwP
+iWC
 vhZ
 wwP
 mki
