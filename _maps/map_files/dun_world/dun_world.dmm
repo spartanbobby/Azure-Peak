@@ -47133,6 +47133,11 @@
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/cave)
+"itB" = (
+/obj/structure/fluff/railing/wood/east,
+/obj/structure/fluff/railing/wood/north,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/town/roofs)
 "itD" = (
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/tile,
@@ -83796,6 +83801,10 @@
 	color = "#3b444b"
 	},
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
+"oLG" = (
+/obj/structure/fluff/railing/corner/north_east,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/town)
 "oLI" = (
 /obj/structure/table/wood/poor,
 /obj/item/folding_table_stored{
@@ -112134,9 +112143,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/under/cave/goblinfort)
-"tHe" = (
-/turf/closed/wall/mineral/rogue/decowood/vert,
-/area/rogue/outdoors/town/roofs)
 "tHl" = (
 /obj/structure/table/wood/long_table,
 /obj/item/kitchen/rollingpin{
@@ -131453,11 +131459,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains)
-"xbS" = (
-/obj/structure/fluff/railing/wood/east,
-/obj/structure/fluff/railing/wood/north,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/town)
 "xbT" = (
 /obj/item/rogueweapon/mace/warhammer{
 	pixel_x = 9;
@@ -410749,8 +410750,8 @@ bGf
 bGf
 bGf
 bGf
-tqj
-iGn
+bGf
+bGf
 uBc
 dra
 dra
@@ -411653,8 +411654,8 @@ bGf
 bGf
 bGf
 bGf
-bGf
-bzY
+tqj
+oLG
 cDX
 cDX
 bCd
@@ -412105,7 +412106,7 @@ bGf
 bGf
 bGf
 bGf
-bGf
+gPs
 mve
 uBc
 mJm
@@ -412164,7 +412165,7 @@ tMh
 ePb
 rKJ
 rKJ
-tHe
+kSK
 bGf
 kSK
 kSK
@@ -412557,7 +412558,7 @@ bGf
 bGf
 bGf
 bGf
-mPZ
+gPs
 aIq
 cDX
 xWk
@@ -413009,8 +413010,8 @@ bGf
 bGf
 bGf
 bGf
-bGf
-xbS
+gPs
+aIq
 kMS
 ajC
 dzM
@@ -413461,8 +413462,8 @@ bGf
 bGf
 bGf
 bGf
-bGf
-bGf
+gPs
+itB
 cDX
 eKH
 eKH
@@ -413913,9 +413914,9 @@ bGf
 bGf
 bGf
 bGf
-bGf
-bGf
-bGf
+mPZ
+pmE
+vVI
 bGf
 bGf
 bGf
