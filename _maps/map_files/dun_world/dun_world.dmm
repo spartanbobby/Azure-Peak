@@ -105804,7 +105804,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/woods/northwest)
 "sBG" = (
-/obj/structure/fluff/clock,
+/obj/structure/fluff/wallclock/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/woods)
 "sBI" = (
