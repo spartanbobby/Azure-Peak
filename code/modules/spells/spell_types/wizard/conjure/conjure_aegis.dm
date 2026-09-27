@@ -11,7 +11,7 @@
 	self_cast_possible = TRUE
 
 	primary_resource_type = SPELL_COST_ENERGY
-	primary_resource_cost = 150
+	primary_resource_cost = 100
 
 	invocations = list("Scutum Congrego!")
 	invocation_type = INVOCATION_SHOUT
