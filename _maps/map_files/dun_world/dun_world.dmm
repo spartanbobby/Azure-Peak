@@ -12949,6 +12949,7 @@
 	pixel_y = 6
 	},
 /obj/machinery/light/rogue/candle/r,
+/obj/structure/fluff/wallclock,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/tavern)
 "ctK" = (
@@ -117093,10 +117094,6 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/town/basement/keep)
-"uQq" = (
-/obj/structure/fluff/clock,
-/turf/open/floor/rogue/tile,
-/area/rogue/indoors/town/tavern)
 "uQu" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -282159,7 +282156,7 @@ tLs
 taS
 vgj
 taS
-uQq
+wzd
 wzd
 bxo
 ybl
