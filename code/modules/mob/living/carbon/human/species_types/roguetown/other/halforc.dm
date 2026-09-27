@@ -120,6 +120,7 @@
 		"Shatterhorn" = SKIN_COLOR_SHATTERHORN,
 		"Spirit Crusher" = SKIN_COLOR_SPIRITCRUSHER,
 		"Drakkyn Breaker" = SKIN_COLOR_DRAKKYN_BREAKER,
+		"Iron Splinter" = SKIN_COLOR_IRON_SPLINTER,
 		"Glass Crag" = SKIN_COLOR_GLASS_CRAG,
 		"Daemonscar" = SKIN_COLOR_DAEMONSCAR
 	)
