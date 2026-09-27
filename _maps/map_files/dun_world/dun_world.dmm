@@ -54748,8 +54748,7 @@
 /area/rogue/outdoors/bog/south)
 "jRs" = (
 /obj/effect/lily_petal/two,
-/obj/structure/flora/roguegrass,
-/turf/open/floor/rogue/grass,
+/turf/open/water/pond,
 /area/rogue/outdoors/town)
 "jRu" = (
 /obj/structure/hotspring/border/two,
@@ -72308,7 +72307,7 @@
 /area/rogue/druidsgrove)
 "mTO" = (
 /obj/structure/chair/bench/church/smallbench,
-/turf/open/floor/rogue/blocks,
+/turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
 "mTU" = (
 /turf/open/floor/rogue/cobble/mossy,
@@ -73251,8 +73250,8 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/under/cave)
 "ndB" = (
-/obj/effect/lily_petal/two,
-/turf/open/water/pond,
+/obj/structure/roguemachine/stockpile,
+/turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
 "ndD" = (
 /obj/structure/closet/crate/chest/crate,
@@ -83491,10 +83490,6 @@
 	icon_state = "plating2"
 	},
 /area/rogue/indoors)
-"oRU" = (
-/obj/structure/roguemachine/stockpile,
-/turf/open/floor/rogue/blocks,
-/area/rogue/outdoors/town)
 "oRV" = (
 /obj/structure/mineral_door/wood/donjon{
 	dir = 8;
@@ -109490,6 +109485,11 @@
 /obj/structure/trap/bomb,
 /turf/open/floor/rogue/woodturned/nosmooth,
 /area/rogue/outdoors/mountains)
+"tvT" = (
+/obj/effect/lily_petal/two,
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/town)
 "tvW" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -134584,6 +134584,10 @@
 "xWU" = (
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town)
+"xWV" = (
+/obj/structure/fluff/walldeco/customflag,
+/turf/closed/wall/mineral/rogue/stonebrick,
+/area/rogue/outdoors/town)
 "xWX" = (
 /obj/machinery/light/rogue/candle/blue/l{
 	pixel_x = 32
@@ -326522,7 +326526,7 @@ pWT
 njB
 xlA
 pWT
-jRs
+tvT
 xlA
 njB
 njB
@@ -326974,11 +326978,11 @@ exz
 njB
 pWT
 pJb
-ndB
+jRs
 dWH
 dWH
 pWT
-wax
+xWV
 mTO
 exD
 exD
@@ -327431,7 +327435,7 @@ pJb
 exz
 njB
 jpO
-kFq
+dmV
 exD
 exD
 njB
@@ -327880,10 +327884,10 @@ gOI
 cNC
 maZ
 pJb
-ndB
+jRs
 pWT
 wax
-oRU
+ndB
 exD
 exD
 pWT
@@ -328335,7 +328339,7 @@ pJb
 xlA
 njB
 jpO
-kFq
+dmV
 exD
 exD
 exD
@@ -328781,12 +328785,12 @@ oxL
 aFv
 pWT
 pWT
-ndB
+jRs
 pJb
 dWH
 exz
 njB
-wax
+xWV
 mTO
 exD
 exD
