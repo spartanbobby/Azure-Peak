@@ -1365,6 +1365,9 @@
 "anw" = (
 /obj/structure/fluff/walldeco/wantedposter/l,
 /obj/structure/chair/wood/rogue/chair3,
+/obj/structure/fluff/walldeco/sparrowflag{
+	pixel_y = 32
+	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
 "any" = (
@@ -1922,6 +1925,13 @@
 /obj/machinery/light/rogue/candle/blue,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/town/pestra_sanctum)
+"atp" = (
+/obj/machinery/light/rogue/candle/l,
+/obj/structure/stairs{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors/town/tavern)
 "att" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/ruinedwood/platform,
@@ -12941,13 +12951,12 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/inq)
 "ctI" = (
-/obj/structure/mineral_door/wood/donjon{
-	desc = "a large door. It seems big enough to fit a mount.";
-	locked = 1;
-	lockid = "merc";
-	name = "Mercenaries Guild"
+/obj/structure/table/wood/long_table/east,
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
 	},
-/turf/open/floor/rogue/concrete,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
 "ctK" = (
 /obj/item/grown/log/tree/small{
@@ -22344,6 +22353,16 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/minotaurcave)
+"edA" = (
+/obj/structure/mineral_door/wood/donjon{
+	desc = "a large door. It seems big enough to fit a mount.";
+	locked = 1;
+	lockid = "merc";
+	name = "Mercenaries Guild";
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/town/tavern)
 "edC" = (
 /obj/structure/fluff/psycross/copper,
 /turf/open/floor/rogue/naturalstone,
@@ -23334,7 +23353,9 @@
 /obj/item/storage/belt/rogue/pouch,
 /obj/item/natural/feather,
 /obj/item/rope/chain,
-/obj/structure/fluff/walldeco/rpainting/crown,
+/obj/structure/fluff/walldeco/rpainting{
+	pixel_y = 32
+	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/tavern)
 "enu" = (
@@ -34611,6 +34632,16 @@
 /obj/item/natural/bundle/fibers/full,
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/indoors/town/dwarfin)
+"gnA" = (
+/obj/structure/table/wood/poor,
+/obj/item/paper,
+/obj/item/paper{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/natural/feather,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town/tavern)
 "gnC" = (
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/wood/nosmooth,
@@ -52605,6 +52636,14 @@
 /obj/structure/curtain/red,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/manor)
+"jzh" = (
+/obj/structure/table/wood/long_table/mid,
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town/tavern)
 "jzk" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
@@ -56280,14 +56319,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
 "kfW" = (
-/obj/structure/table/wood/long_table/right,
-/obj/item/toy/cards/deck/syndicate{
-	pixel_y = 6
-	},
-/obj/structure/fluff/wallclock{
-	dir = 3
-	},
-/obj/machinery/light/rogue/candle/r,
+/obj/structure/fluff/clock,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/tavern)
 "kfZ" = (
@@ -57954,6 +57986,7 @@
 /obj/item/paper,
 /obj/item/paper,
 /obj/item/paper,
+/obj/item/natural/feather,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/tavern)
 "kwU" = (
@@ -67192,6 +67225,7 @@
 /obj/item/paper/scroll,
 /obj/item/paper/scroll,
 /obj/item/paper/scroll,
+/obj/item/natural/feather,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/tavern)
 "lXN" = (
@@ -89063,6 +89097,12 @@
 "pSg" = (
 /turf/closed/mineral/random/rogue,
 /area/rogue/outdoors/rtfield)
+"pSk" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors/town/tavern)
 "pSo" = (
 /mob/living/carbon/human/species/human/northern/deranged_knight/matthios,
 /turf/open/floor/rogue/carpet/lord/left,
@@ -95824,8 +95864,12 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/druidsgrove)
 "rcR" = (
-/obj/structure/table/wood/long_table/mid,
-/turf/open/floor/carpet/red,
+/obj/structure/table/wood/long_table/right,
+/obj/item/toy/cards/deck/syndicate{
+	pixel_y = 6
+	},
+/obj/machinery/light/rogue/candle/r,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/tavern)
 "rcU" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
@@ -117067,14 +117111,10 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/town/basement/keep)
 "uQq" = (
-/obj/structure/table/wood/long_table/east,
-/obj/item/paper,
-/obj/item/paper{
-	pixel_x = 4;
-	pixel_y = 4
+/obj/structure/roguemachine/talkstatue/mercenary{
+	pixel_x = -32
 	},
-/obj/item/natural/feather,
-/turf/open/floor/carpet/red,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
 "uQu" = (
 /obj/structure/chair/wood/rogue{
@@ -281209,10 +281249,11 @@ hie
 pvx
 xvy
 taS
-qVW
 kUG
-lUH
-taS
+kUG
+atp
+wzd
+wzd
 wzd
 nVq
 uYE
@@ -281220,7 +281261,6 @@ tlI
 hQS
 tHu
 taS
-njB
 njB
 cDX
 gyu
@@ -281661,10 +281701,11 @@ ihK
 pvx
 kkq
 taS
-rcR
-uQq
+qVW
 kUG
-taS
+pSk
+wzd
+wzd
 wzd
 wzd
 bxo
@@ -281672,7 +281713,6 @@ nqD
 fla
 gti
 taS
-njB
 pWT
 lKo
 pqo
@@ -282113,18 +282153,18 @@ qCg
 lhm
 taS
 taS
-rbu
-rbu
-rbu
-ezK
-wzd
+jzh
+ctI
+taS
+edA
+taS
+kfW
 wzd
 bxo
 ybl
 uai
 tlp
 taS
-njB
 pWT
 lKo
 jtR
@@ -282567,6 +282607,7 @@ taS
 anw
 rbu
 rbu
+uQq
 rbu
 taS
 nJQ
@@ -282576,7 +282617,6 @@ mwh
 mwh
 rQx
 taS
-pWT
 pWT
 cDX
 gyu
@@ -283015,8 +283055,9 @@ bVw
 nYQ
 pvg
 pvg
-taS
+btF
 nxE
+rbu
 rbu
 rbu
 rbu
@@ -283028,7 +283069,6 @@ kUG
 kUG
 gRo
 dJN
-pWT
 qyR
 lKo
 pqo
@@ -283467,20 +283507,20 @@ any
 kOg
 pvg
 pvg
-ctI
+sPX
 luL
 rbu
 lgl
 npA
+gnA
 taS
-kfW
+rcR
 asF
 tJT
 nPg
 vqr
 dJN
 dJN
-qyR
 qyR
 lKo
 jtR
@@ -283929,9 +283969,9 @@ taS
 taS
 taS
 taS
+taS
 dJN
 dJN
-qyR
 qyR
 qyR
 cDX
@@ -396481,7 +396521,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 gPs
 ewv
 dgv
@@ -396933,7 +396973,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 gPs
 ewv
 dgv
@@ -397385,7 +397425,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 gPs
 ewv
 dgv
@@ -397837,7 +397877,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 gPs
 ewv
 dgv
@@ -398289,7 +398329,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 gPs
 ewv
 dgv
@@ -398741,7 +398781,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 gPs
 ewv
 dgv
@@ -399192,7 +399232,7 @@ kSK
 kSK
 kSK
 kSK
-bGf
+kSK
 bGf
 gPs
 ewv
