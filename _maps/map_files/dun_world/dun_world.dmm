@@ -15155,8 +15155,11 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/fishmandungeon)
 "cNC" = (
-/obj/effect/lily_petal/two,
-/obj/structure/flora/roguegrass,
+/obj/structure/fluff/statue/femalestatue1{
+	color = "#e09dda";
+	name = "statue depicting Eora";
+	desc = "A masterfully carved statue of the goddess Eora. Beneath it, a plaque reads 'Live in HER LOVE, and know that she of the TEN ANGELS loved us most as a mortal would.'"
+	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "cND" = (
@@ -29106,6 +29109,12 @@
 /obj/structure/fermentation_keg/random/water,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/skeletoncrypt)
+"fnZ" = (
+/obj/structure/table/church,
+/obj/machinery/light/rogue/candle/floorcandle/alt/pink,
+/obj/effect/lily_petal/two,
+/turf/open/water/pond,
+/area/rogue/outdoors/town)
 "foa" = (
 /obj/structure/roguemachine/mail,
 /obj/structure/roguemachine/scomm/r{
@@ -39535,12 +39544,10 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/underdark/north)
 "hic" = (
-/obj/structure/fluff/statue/femalestatue1{
-	color = "#e09dda";
-	name = "statue depicting Eora";
-	desc = "A masterfully carved statue of the goddess Eora. Beneath it, a plaque reads 'Live in HER LOVE, and know that she of the TEN ANGELS loved us most as a mortal would.'"
-	},
-/turf/open/floor/rogue/grass,
+/obj/structure/table/church/end,
+/obj/machinery/light/rogue/candle/floorcandle/alt/pink,
+/obj/effect/lily_petal/two,
+/turf/open/water/pond,
 /area/rogue/outdoors/town)
 "hie" = (
 /turf/open/floor/rogue/hexstone,
@@ -83492,10 +83499,9 @@
 	},
 /area/rogue/indoors)
 "oRU" = (
-/obj/structure/table/church/end,
-/obj/machinery/light/rogue/candle/floorcandle/alt/pink,
 /obj/effect/lily_petal/two,
-/turf/open/water/pond,
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "oRV" = (
 /obj/structure/mineral_door/wood/donjon{
@@ -124289,12 +124295,6 @@
 /obj/item/natural/bone,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/taricheamanor)
-"wdO" = (
-/obj/structure/table/church,
-/obj/machinery/light/rogue/candle/floorcandle/alt/pink,
-/obj/effect/lily_petal/two,
-/turf/open/water/pond,
-/area/rogue/outdoors/town)
 "wdS" = (
 /obj/structure/flora/roguetree/burnt,
 /turf/open/floor/rogue/dirt,
@@ -326544,7 +326544,7 @@ pWT
 njB
 xlA
 pWT
-cNC
+oRU
 xlA
 njB
 njB
@@ -326998,7 +326998,7 @@ pJb
 ors
 dWH
 dWH
-pWT
+njB
 wax
 wax
 wax
@@ -327446,7 +327446,7 @@ bhJ
 vRQ
 jzk
 lmU
-wdO
+fnZ
 maZ
 pJb
 exz
@@ -327897,12 +327897,12 @@ bhJ
 cne
 fsF
 aKS
-hic
+cNC
 gOI
 maZ
 pJb
 ors
-pWT
+njB
 wax
 ndB
 eqd
@@ -328350,7 +328350,7 @@ bhJ
 jti
 pWT
 lmU
-oRU
+hic
 maZ
 pJb
 xlA
@@ -328806,7 +328806,7 @@ ors
 pJb
 dWH
 exz
-pWT
+njB
 wax
 wax
 wax
