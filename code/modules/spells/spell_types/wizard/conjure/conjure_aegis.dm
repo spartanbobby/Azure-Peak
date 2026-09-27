@@ -21,7 +21,7 @@
 	charge_swingdelay_type = SWINGDELAY_PENALTY
 	charge_slowdown = CHARGING_SLOWDOWN_HEAVY
 	charge_sound = 'sound/magic/charging.ogg'
-	cooldown_time = 120 SECONDS
+	cooldown_time = 5 SECONDS
 
 	associated_skill = /datum/skill/magic/arcane
 	spell_tier = 2
