@@ -194,6 +194,7 @@
 	antimagic_allowed = TRUE
 	miracle = TRUE
 	devotion_cost = 30
+	var/spell_max_vices = 3
 	var/aura_range = 1
 
 /obj/effect/proc_holder/spell/invoked/heart_on_sleeve/cast(list/targets, mob/living/carbon/user)
@@ -208,13 +209,17 @@
 
 	var/stat_multiplier = 1
 	var/effect_duration = 45 SECONDS
+	var/vices_covered = 0
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		for(var/datum/charflaw/addiction/vice in human_user.charflaws)
+			if (vices_covered >= spell_max_vices)
+				break
 			if(vice.sated)
 				effect_duration *= 2
 			else
 				stat_multiplier *= 2
+			vices_covered++
 
 	if(is_good_mood)
 		for(var/mob/living/nearby_soul in view(aura_range, user))
