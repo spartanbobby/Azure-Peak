@@ -15155,12 +15155,8 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/fishmandungeon)
 "cNC" = (
-/obj/structure/fluff/statue/femalestatue1{
-	color = "#e09dda";
-	name = "statue depicting Eora";
-	desc = "A masterfully carved statue of the goddess Eora. Beneath it, a plaque reads 'Live in HER LOVE, and know that she of the TEN ANGELS loved us most as a mortal would.'"
-	},
-/turf/open/floor/rogue/grass,
+/obj/structure/table/church/m,
+/turf/open/water/pond,
 /area/rogue/outdoors/town)
 "cND" = (
 /obj/effect/decal/cobbleedge{
@@ -29109,12 +29105,6 @@
 /obj/structure/fermentation_keg/random/water,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/skeletoncrypt)
-"fnZ" = (
-/obj/structure/table/church,
-/obj/machinery/light/rogue/candle/floorcandle/alt/pink,
-/obj/effect/lily_petal/two,
-/turf/open/water/pond,
-/area/rogue/outdoors/town)
 "foa" = (
 /obj/structure/roguemachine/mail,
 /obj/structure/roguemachine/scomm/r{
@@ -37422,8 +37412,12 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
 "gOI" = (
-/obj/structure/table/church/m,
-/turf/open/water/pond,
+/obj/structure/fluff/statue/femalestatue1{
+	color = "#e09dda";
+	name = "statue depicting Eora";
+	desc = "A masterfully carved statue of the goddess Eora. Beneath it, a plaque reads 'Live in HER LOVE, and know that she of the TEN ANGELS loved us most as a mortal would.'"
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "gOL" = (
 /obj/structure/roguerock,
@@ -39544,7 +39538,7 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/underdark/north)
 "hic" = (
-/obj/structure/table/church/end,
+/obj/structure/table/church,
 /obj/machinery/light/rogue/candle/floorcandle/alt/pink,
 /obj/effect/lily_petal/two,
 /turf/open/water/pond,
@@ -54753,10 +54747,9 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/bog/south)
 "jRs" = (
-/obj/structure/fluff/railing/corner{
-	dir = 6
-	},
-/turf/open/floor/rogue/cobble,
+/obj/effect/lily_petal/two,
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "jRu" = (
 /obj/structure/hotspring/border/two,
@@ -72314,10 +72307,8 @@
 /turf/open/floor/rogue/twig,
 /area/rogue/druidsgrove)
 "mTO" = (
-/obj/structure/fluff/railing/corner{
-	dir = 10
-	},
-/turf/open/floor/rogue/cobble,
+/obj/structure/chair/bench/church/smallbench,
+/turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
 "mTU" = (
 /turf/open/floor/rogue/cobble/mossy,
@@ -73260,8 +73251,8 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/under/cave)
 "ndB" = (
-/obj/structure/roguemachine/stockpile,
-/turf/open/floor/rogue/cobble,
+/obj/effect/lily_petal/two,
+/turf/open/water/pond,
 /area/rogue/outdoors/town)
 "ndD" = (
 /obj/structure/closet/crate/chest/crate,
@@ -80141,6 +80132,8 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/physician)
 "ors" = (
+/obj/structure/table/church/end,
+/obj/machinery/light/rogue/candle/floorcandle/alt/pink,
 /obj/effect/lily_petal/two,
 /turf/open/water/pond,
 /area/rogue/outdoors/town)
@@ -83499,9 +83492,8 @@
 	},
 /area/rogue/indoors)
 "oRU" = (
-/obj/effect/lily_petal/two,
-/obj/structure/flora/roguegrass,
-/turf/open/floor/rogue/grass,
+/obj/structure/roguemachine/stockpile,
+/turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
 "oRV" = (
 /obj/structure/mineral_door/wood/donjon{
@@ -109498,13 +109490,6 @@
 /obj/structure/trap/bomb,
 /turf/open/floor/rogue/woodturned/nosmooth,
 /area/rogue/outdoors/mountains)
-"tvT" = (
-/obj/structure/stairs/stone{
-	dir = 1
-	},
-/obj/structure/fluff/railing/border/west,
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/town)
 "tvW" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -134599,13 +134584,6 @@
 "xWU" = (
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town)
-"xWV" = (
-/obj/structure/stairs/stone{
-	dir = 1
-	},
-/obj/structure/fluff/railing/border/east,
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/town)
 "xWX" = (
 /obj/machinery/light/rogue/candle/blue/l{
 	pixel_x = 32
@@ -326097,7 +326075,7 @@ jzk
 njB
 fpx
 fpx
-exD
+uNE
 exD
 exD
 pWT
@@ -326544,12 +326522,12 @@ pWT
 njB
 xlA
 pWT
-oRU
+jRs
 xlA
 njB
 njB
-fpx
-uNE
+wax
+wax
 exD
 exD
 aFv
@@ -326993,15 +326971,15 @@ bhJ
 bhJ
 hPH
 exz
+njB
 pWT
 pJb
-ors
+ndB
 dWH
 dWH
-njB
+pWT
 wax
-wax
-wax
+mTO
 exD
 exD
 aFv
@@ -327445,15 +327423,15 @@ bhJ
 bhJ
 vRQ
 jzk
+pWT
 lmU
-fnZ
+hic
 maZ
 pJb
 exz
-pWT
+njB
 jpO
-mTO
-tvT
+kFq
 exD
 exD
 njB
@@ -327897,15 +327875,15 @@ bhJ
 cne
 fsF
 aKS
-cNC
+pWT
 gOI
+cNC
 maZ
 pJb
-ors
-njB
-wax
 ndB
-eqd
+pWT
+wax
+oRU
 exD
 exD
 pWT
@@ -328349,15 +328327,15 @@ bhJ
 bhJ
 jti
 pWT
+njB
 lmU
-hic
+ors
 maZ
 pJb
 xlA
-pWT
+njB
 jpO
-jRs
-xWV
+kFq
 exD
 exD
 exD
@@ -328802,14 +328780,14 @@ bhJ
 oxL
 aFv
 pWT
-ors
+pWT
+ndB
 pJb
 dWH
 exz
 njB
 wax
-wax
-wax
+mTO
 exD
 exD
 exD
@@ -329260,8 +329238,8 @@ xlA
 jzk
 xlA
 pWT
-fpx
-mZv
+wax
+wax
 exD
 exD
 aFv
@@ -329713,7 +329691,7 @@ njB
 pWT
 fpx
 exD
-exD
+mZv
 exD
 exD
 tqc
@@ -441809,8 +441787,8 @@ aBB
 aBB
 aBB
 aBB
-aBB
-aBB
+ier
+ier
 aBB
 aBB
 aBB
@@ -442260,7 +442238,7 @@ aBB
 aBB
 aBB
 aBB
-ier
+aBB
 ier
 ier
 aBB
@@ -442712,7 +442690,7 @@ aBB
 aBB
 aBB
 aBB
-ier
+aBB
 ier
 ier
 aBB
@@ -443164,7 +443142,7 @@ aBB
 aBB
 aBB
 aBB
-ier
+aBB
 ier
 ier
 aBB
@@ -443616,7 +443594,7 @@ aBB
 aBB
 aBB
 aBB
-ier
+aBB
 ier
 ier
 aBB
@@ -444068,7 +444046,7 @@ aBB
 aBB
 aBB
 aBB
-ier
+aBB
 ier
 ier
 aBB
@@ -444521,8 +444499,8 @@ aBB
 aBB
 aBB
 aBB
-aBB
-aBB
+ier
+ier
 aBB
 aBB
 aBB
