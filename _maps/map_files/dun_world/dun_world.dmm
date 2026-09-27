@@ -56262,6 +56262,10 @@
 "kfk" = (
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/town/basement)
+"kfl" = (
+/obj/effect/lily_petal/two,
+/turf/open/water/pond,
+/area/rogue/outdoors/town)
 "kfm" = (
 /obj/machinery/light/rogue/candle/blue/r,
 /turf/open/floor/rogue/tile,
@@ -83495,9 +83499,9 @@
 	},
 /area/rogue/indoors)
 "oRU" = (
-/obj/structure/flora/ausbushes/ppflowers,
+/obj/effect/lily_petal/two,
 /obj/structure/flora/roguegrass,
-/turf/open/floor/rogue/dirt,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "oRV" = (
 /obj/structure/mineral_door/wood/donjon{
@@ -326538,9 +326542,9 @@ cne
 jti
 pWT
 njB
-oRU
+xlA
 pJb
-jzk
+oRU
 xlA
 njB
 njB
@@ -326990,9 +326994,9 @@ bhJ
 hPH
 pWT
 exz
-pOT
 pJb
 pJb
+kfl
 dWH
 dWH
 wax
@@ -327441,7 +327445,7 @@ bhJ
 bhJ
 vRQ
 njB
-jzk
+kfl
 lmU
 hic
 maZ
@@ -328345,7 +328349,7 @@ bhJ
 bhJ
 jti
 jzk
-aFv
+pJb
 lmU
 ors
 maZ
@@ -328798,8 +328802,8 @@ bhJ
 oxL
 pMG
 aFv
-pOT
 pJb
+kfl
 pJb
 dWH
 exz
