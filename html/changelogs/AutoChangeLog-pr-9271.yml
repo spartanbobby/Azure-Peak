@@ -1,0 +1,4 @@
+author: "OrbisAnima"
+delete-after: True
+changes:
+  - balance: "Removes Zarum ability to ignore the health potion anti stacking system, It can no longer stack with other zarum types nor with regular reds, and produces odd water as the other health potions do when stacked."
