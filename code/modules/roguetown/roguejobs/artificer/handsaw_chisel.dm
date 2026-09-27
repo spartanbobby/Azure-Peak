@@ -147,6 +147,7 @@
 	grid_width = 64
 	grid_height = 64
 	already_assembled = TRUE
+	is_tool = TRUE
 
 	possible_item_intents = list(/datum/intent/hit)
 	gripped_intents = list(/datum/intent/chisel)
