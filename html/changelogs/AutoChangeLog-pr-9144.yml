@@ -1,4 +1,0 @@
-author: "Ryan180602"
-delete-after: True
-changes:
-  - balance: "Alt-grips now have a small do_after to swap through."
