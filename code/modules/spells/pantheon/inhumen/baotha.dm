@@ -178,7 +178,7 @@
 // T1 - polls the caster's mood and vice satiety before giving a buff. as you can tell by the typepath i had an entiurely different idea for this ubt whatever
 /obj/effect/proc_holder/spell/invoked/heart_on_sleeve
 	name = "Phentis / Melancholia"
-	desc = "Give myne soul to wild joy or vicious heartbreak. In a good mood, I and those around me find calm and clarity. When suffering from the world's ails, I alone benefit- with some drawbacks. Every sated vice doubles the duration; every unsated vice doubles every attribute change."
+	desc = "Give myne soul to wild joy or vicious heartbreak. In a good mood, I and those around me find calm and clarity. When suffering from the world's ails, I alone benefit- with some drawbacks. Every sated vice doubles the duration; every unsated vice doubles every attribute change. This works for up to three vices."
 	action_icon = 'icons/mob/actions/baothamiracles.dmi'
 	overlay_icon = 'icons/mob/actions/baothamiracles.dmi'
 	overlay_state = "powder"
