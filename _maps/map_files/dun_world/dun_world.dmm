@@ -8412,14 +8412,6 @@
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors)
-"bCO" = (
-/obj/structure/table/wood/long_table/mid,
-/obj/structure/bars{
-	icon_state = "barsbent";
-	layer = 2.81
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town/tavern)
 "bCP" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -12952,10 +12944,12 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/inq)
 "ctI" = (
-/obj/structure/roguemachine/talkstatue/mercenary{
-	pixel_x = -32
+/obj/structure/table/wood/long_table/right,
+/obj/item/toy/cards/deck/syndicate{
+	pixel_y = 6
 	},
-/turf/open/floor/rogue/ruinedwood/spiral,
+/obj/machinery/light/rogue/candle/r,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/tavern)
 "ctK" = (
 /obj/item/grown/log/tree/small{
@@ -22505,6 +22499,14 @@
 "efo" = (
 /turf/open/floor/rogue/tile/harem1,
 /area/rogue/indoors/town/bath)
+"efr" = (
+/obj/structure/table/wood/long_table/mid,
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town/tavern)
 "efw" = (
 /mob/living/carbon/human/species/skeleton/npc/medium,
 /turf/open/floor/rogue/dirt/road,
@@ -36758,12 +36760,6 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/inq)
-"gIQ" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/turf/open/floor/rogue/tile,
-/area/rogue/indoors/town/tavern)
 "gIT" = (
 /obj/effect/decal/mossy{
 	dir = 8
@@ -43428,16 +43424,6 @@
 /obj/structure/bars/tough,
 /turf/open/water/river/flow/north,
 /area/rogue/indoors/town/pestra_sanctum)
-"hUG" = (
-/obj/structure/table/wood/poor,
-/obj/item/paper,
-/obj/item/paper{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/natural/feather,
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town/tavern)
 "hUI" = (
 /obj/structure/table/wood/poor/alt,
 /obj/item/reagent_containers/food/snacks/rogue/meat/spider,
@@ -56306,12 +56292,10 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
 "kfW" = (
-/obj/structure/table/wood/long_table/right,
-/obj/item/toy/cards/deck/syndicate{
-	pixel_y = 6
+/obj/structure/roguemachine/talkstatue/mercenary{
+	pixel_x = -32
 	},
-/obj/machinery/light/rogue/candle/r,
-/turf/open/floor/rogue/tile,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
 "kfZ" = (
 /obj/structure/fluff/railing/border/west,
@@ -61228,6 +61212,13 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter)
+"kYK" = (
+/obj/machinery/light/rogue/candle/l,
+/obj/structure/stairs{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors/town/tavern)
 "kYL" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/cobble,
@@ -89476,14 +89467,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
-"pWq" = (
-/obj/structure/table/wood/long_table/east,
-/obj/structure/bars{
-	icon_state = "barsbent";
-	layer = 2.81
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town/tavern)
 "pWr" = (
 /obj/machinery/light/rogue/candle/l,
 /obj/structure/fluff/railing/border{
@@ -95857,7 +95840,6 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/druidsgrove)
 "rcR" = (
-/obj/machinery/light/rogue/candle/l,
 /obj/structure/stairs{
 	dir = 1
 	},
@@ -111091,6 +111073,14 @@
 /obj/structure/roguerock,
 /turf/open/water/swamp,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
+"tLs" = (
+/obj/structure/table/wood/long_table/east,
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town/tavern)
 "tLy" = (
 /obj/structure/chair/wood/rogue{
 	dir = 1
@@ -117104,14 +117094,8 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/town/basement/keep)
 "uQq" = (
-/obj/structure/mineral_door/wood/donjon{
-	desc = "a large door. It seems big enough to fit a mount.";
-	locked = 1;
-	lockid = "merc";
-	name = "Mercenaries Guild";
-	dir = 8
-	},
-/turf/open/floor/rogue/concrete,
+/obj/structure/fluff/clock,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/tavern)
 "uQu" = (
 /obj/structure/chair/wood/rogue{
@@ -117962,6 +117946,16 @@
 	},
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town/physician)
+"uXk" = (
+/obj/structure/table/wood/poor,
+/obj/item/paper,
+/obj/item/paper{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/natural/feather,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town/tavern)
 "uXl" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
@@ -118866,6 +118860,16 @@
 	},
 /turf/open/floor/rogue/metal/barograte/open,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
+"vgj" = (
+/obj/structure/mineral_door/wood/donjon{
+	desc = "a large door. It seems big enough to fit a mount.";
+	locked = 1;
+	lockid = "merc";
+	name = "Mercenaries Guild";
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/town/tavern)
 "vgm" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/cobble,
@@ -128082,10 +128086,6 @@
 	name = "Azurian Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town/tavern)
-"wPb" = (
-/obj/structure/fluff/clock,
-/turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/tavern)
 "wPc" = (
 /obj/structure/bookcase/random/archive,
@@ -281252,7 +281252,7 @@ xvy
 taS
 kUG
 kUG
-rcR
+kYK
 wzd
 wzd
 wzd
@@ -281704,7 +281704,7 @@ kkq
 taS
 qVW
 kUG
-gIQ
+rcR
 wzd
 wzd
 wzd
@@ -282154,12 +282154,12 @@ qCg
 lhm
 taS
 taS
-bCO
-pWq
+efr
+tLs
+taS
+vgj
 taS
 uQq
-taS
-wPb
 wzd
 bxo
 ybl
@@ -282608,7 +282608,7 @@ taS
 anw
 rbu
 rbu
-ctI
+kfW
 rbu
 taS
 nJQ
@@ -283050,8 +283050,8 @@ pvg
 pFq
 xdW
 xdW
-tSD
-taS
+xdW
+btF
 bVw
 nYQ
 pvg
@@ -283513,9 +283513,9 @@ luL
 rbu
 lgl
 npA
-hUG
+uXk
 taS
-kfW
+ctI
 asF
 tJT
 nPg
