@@ -21652,7 +21652,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "dRT" = (
 /obj/structure/table/wood/poor,
-/obj/machinery/light/rogue/candle/blue,
+/obj/machinery/light/rogue/candle,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
 "dRY" = (
@@ -130759,10 +130759,6 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield)
-"wOn" = (
-/obj/machinery/light/rogue/candle/weak/r,
-/turf/closed/mineral/random/rogue,
-/area/rogue/outdoors/mountains)
 "wOr" = (
 /obj/item/natural/rock,
 /turf/open/floor/rogue/dirt/road,
@@ -408066,11 +408062,11 @@ bGf
 bGf
 bGf
 bGf
-mPZ
-pmE
-pmE
-pmE
-vVI
+bGf
+bGf
+bGf
+bGf
+bGf
 bGf
 bGf
 bGf
@@ -431302,7 +431298,7 @@ tsB
 tsB
 tsB
 tsB
-wOn
+vvB
 uac
 tZr
 ibk
