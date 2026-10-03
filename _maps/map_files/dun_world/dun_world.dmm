@@ -74413,7 +74413,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/druidsgrove)
 "mZc" = (
-/turf/open/water/river,
+/turf/open/water/cleanshallow,
 /area/rogue/outdoors/woods/northwest)
 "mZd" = (
 /obj/structure/stairs/stone,
@@ -111724,6 +111724,11 @@
 	},
 /turf/open/floor/rogue/tile/brick,
 /area/rogue/indoors/town/bath)
+"tuH" = (
+/obj/structure/fluff/railing/wood/east,
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/shelter/woods)
 "tuJ" = (
 /obj/structure/roguerock,
 /turf/open/floor/rogue/dirt,
@@ -131941,6 +131946,14 @@
 "wXO" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/shelter/woods)
+"wXR" = (
+/obj/structure/table/wood/poor,
+/obj/machinery/light/rogue/torchholder/c{
+	dir = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/rogue/twig,
 /area/rogue/indoors/shelter/woods)
 "wYb" = (
 /obj/structure/mineral_door/wood{
@@ -492070,10 +492083,10 @@ aBB
 gVZ
 bbM
 apU
+tuH
 nWB
 nWB
-nWB
-mQO
+wXR
 apU
 cxA
 cxA
