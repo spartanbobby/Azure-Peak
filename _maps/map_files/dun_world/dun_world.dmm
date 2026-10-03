@@ -20194,6 +20194,7 @@
 /obj/structure/table/wood/poor,
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
+/obj/machinery/light/rogue/candle/r,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/shelter/woods)
 "dEu" = (
@@ -45976,6 +45977,7 @@
 /area/rogue/indoors/town/tavern)
 "ihR" = (
 /obj/machinery/gear_painter,
+/obj/machinery/light/rogue/candle/l,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/shelter/woods)
 "ihW" = (
@@ -98707,6 +98709,7 @@
 /area/rogue/under/town/sewer)
 "rjt" = (
 /obj/machinery/tanningrack,
+/obj/machinery/light/rogue/candle/r,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/woods)
 "rjx" = (
