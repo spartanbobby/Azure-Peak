@@ -33,7 +33,6 @@
 		"Bishop",\
 		"Martyr",\
 		"Templar",\
-		///"Druid",\ - Re-add these if we get "lite" antagonists that keep miracles
 		"Painter",\
 		"Keeper",\
 		"Inquisitor",\
