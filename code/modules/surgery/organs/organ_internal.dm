@@ -174,8 +174,6 @@
 	if(HAS_TRAIT(eater, TRAIT_ORGAN_EATER))
 		eat_effect = /datum/status_effect/buff/snackbuff
 		foodtype = RAW | MEAT
-	else if(HAS_TRAIT(eater, TRAIT_NASTY_EATER)) // can eat organs, but don't get the mood buff from it
-		foodtype = RAW | MEAT
 	else
 		eat_effect = initial(eat_effect)
 		foodtype = initial(foodtype)
