@@ -1098,6 +1098,8 @@
 	desc = "Psydonian prayers and Tennite smiths, working as one to craft a weapon to slay the Four. A heavy and large blade, favored by Saint Ravox, to lay \
 	waste to those who threaten His flock. The crossguard's psycross reflects even the faintest of Noc's light. You're the light - show them the way."
 	icon_state = "psybroadsword"
+	force = 25
+	force_wielded = 30
 	smeltresult = /obj/item/ingot/silverblessed
 	wdefense = 8
 	max_integrity = 350
