@@ -214,7 +214,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/beltpants
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	saiga_shoes = /obj/item/clothing/shoes/roguetown/horseshoes/steel
-	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
+	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve/goat
 	backr = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/scabbard/sheath/noble
