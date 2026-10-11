@@ -610,8 +610,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave/goblinfort)
 "afH" = (
-/obj/structure/closet/crate/drawer,
-/obj/structure/mirror,
+/obj/structure/closet/crate/roguecloset/inn,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town)
 "afK" = (
@@ -21662,6 +21661,19 @@
 	color = "#FFA3A3"
 	},
 /area/rogue/indoors/town/bath)
+"dOW" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/town)
 "dOY" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -56307,6 +56319,19 @@
 /obj/item/rogueweapon/sickle/bronze,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/physician)
+"jKL" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town)
 "jKO" = (
 /turf/closed/wall/mineral/rogue/tent{
 	dir = 4
@@ -57189,6 +57214,19 @@
 /obj/machinery/light/rogue/torchholder/hotspring/standing,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield/abandonedhotsprings)
+"jRw" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/town)
 "jRx" = (
 /turf/open/water/bath{
 	desc = "clear, lightly foamy water, perfect for dipping into after a long day."
@@ -69587,8 +69625,17 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "lUi" = (
-/obj/effect/decal/cobbleedge,
 /obj/structure/closet/crate/roguecloset/inn,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "lUj" = (
@@ -72377,6 +72424,7 @@
 "mrS" = (
 /obj/structure/chair/wood/rogue/chair3,
 /obj/machinery/light/rogue/candle/r,
+/obj/structure/mirror,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town)
 "mrV" = (
@@ -127877,6 +127925,15 @@
 /area/rogue/indoors/town/church/chapel)
 "vOE" = (
 /obj/structure/closet/crate/roguecloset,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "vOG" = (
@@ -135979,6 +136036,20 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/rooftop/green/north,
 /area/rogue/outdoors/town/roofs/keep)
+"xkF" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/machinery/light/rogue/candle/l,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/under/roguetown/tights/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town)
 "xkH" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
@@ -302068,7 +302139,7 @@ phl
 phl
 qCU
 kWm
-xcv
+pmF
 cDX
 cDX
 rZO
@@ -302519,9 +302590,9 @@ asY
 phl
 hAQ
 eEU
-dra
 ogj
-pSe
+dra
+jKL
 lKo
 rZO
 uBc
@@ -315173,7 +315244,7 @@ jdu
 jRz
 cDX
 cDX
-pSe
+jKL
 hTg
 eKH
 eKH
@@ -315624,7 +315695,7 @@ jdu
 jdu
 rVe
 afK
-mED
+piq
 cMj
 hTg
 aYx
@@ -408759,7 +408830,7 @@ aBB
 guo
 guo
 hdN
-piq
+jKL
 dra
 saX
 uBc
@@ -418247,7 +418318,7 @@ aBB
 uBc
 dra
 dra
-pSe
+jKL
 cDX
 cDX
 uBc
@@ -421888,7 +421959,7 @@ bGf
 uBc
 cMj
 cMj
-piq
+dOW
 cDX
 dra
 vSs
@@ -426394,7 +426465,7 @@ wVP
 nBr
 cMj
 cMj
-piq
+dOW
 uBc
 sqx
 bGf
@@ -433627,7 +433698,7 @@ uBc
 uBc
 cDX
 uBc
-piq
+dOW
 cMj
 dYU
 guo
@@ -437235,7 +437306,7 @@ aBB
 aBB
 aBB
 uBc
-xWU
+jKL
 xWU
 tSt
 aYx
@@ -438598,7 +438669,7 @@ aBB
 aBB
 guo
 uBc
-dra
+jKL
 dra
 dra
 jxg
@@ -443569,7 +443640,7 @@ iUr
 mYN
 wjj
 pSe
-pmF
+xkF
 uBc
 vOM
 iBM
@@ -532181,7 +532252,7 @@ bzY
 uBc
 nGa
 xWk
-bJF
+jRw
 uBc
 kSK
 kSK
