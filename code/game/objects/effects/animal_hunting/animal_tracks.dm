@@ -91,7 +91,10 @@
 		var/bonus = hunt_category?.preferred_areas[A.type]
 		if(bonus)
 			. += "<br><details><summary><span class='nicegreen'>Environmental Analysis</span></summary>"
-			. += span_info("The local terrain ([A.name]) increases discovery chances by <b>[bonus]%</b>.")
+			if(bonus > 0)
+				. += span_info("The local terrain ([A.name]) increases discovery chances by <b>[bonus]%</b>.")
+			else if (bonus < 0)
+				. += span_info("The local terrain ([A.name]) decreases discovery chances by <b>[abs(bonus)]%</b>.")
 			. += "</details>"
 
 /obj/effect/hunting_track/attack_right(mob/user)
