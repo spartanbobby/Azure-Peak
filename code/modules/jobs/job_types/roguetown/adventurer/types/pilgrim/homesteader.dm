@@ -159,7 +159,6 @@
 		H.mind.special_items["[pick("Good", "Bad", "Normal")] Day's Wine"] = /obj/item/reagent_containers/glass/bottle/rogue/wine
 		H.mind.special_items["Barber's Innocuous Bag"] = /obj/item/storage/belt/rogue/surgery_bag/full
 		H.mind.special_items["Trusty Pick"] = /obj/item/rogueweapon/pick/bronze
-		H.mind.special_items["Hoe"] = /obj/item/rogueweapon/hoe
 		H.mind.special_items["Tuneful Instrument"] = pick(subtypesof(/obj/item/rogue/instrument))
 		H.mind.special_items["Fishing Rod"] = /obj/item/fishingrod/crafted
 		H.mind.special_items["Pan for Frying"] = /obj/item/cooking/pan
