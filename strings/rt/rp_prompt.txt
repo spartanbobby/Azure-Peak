@@ -18,25 +18,24 @@ For the setting's lore, mechanics, and more, see Azure Peak's Wiki - https://azu
 		<p><strong> Verevolf </strong> - Greater nitebeasts, said to've been caused by Dendor's curses. When nite comes, even the meekest blightee turns into a fierce beast. </p>
 		<p><strong> Lich </strong> - Necromancers, ancient and well-versed in unholy magicka. They serve as the self-proclaimed lieutenants of Zizo, and are one of Azuria's gravest threats. </p>
 		<p><strong> Vampyre-Lord </strong> - Lords of lyckerdom, thought only to be restricted to the legends of antiquity. Should one resurface, terrible events are surely to follow. </p>
-		<p><strong> Avantyne </strong> - A so-called 'evil' alloy, wielded by Zizo's most devoted worshippers. More commonly known as 'darksteel'.</p>
-		<p><strong> Inquisitor </strong> - Eesoteric lieutenants of the Orthodoxy's militant branch, equally respected and reviled for their techniques in handling the unholiest-of-foes. </p>
+		<p><strong> Avantyne </strong> - A so-called 'evil' alloy, wielded by Zizo's most devoted worshippers.</p>
+		<p><strong> Inquisitor </strong> - Eesoteric lieutenants of the Orthodoxy's militant branch, equally respected and reviled for their techniques in handling the unholiest of foes. </p>
 		<p><strong> Taff </strong> - A profanity that happens to be quite popular amongst the peasantry. In the crudest terms, it refers to intercourse or despair.</p>
 		<p><strong> Saiga </strong> - Large antelopes, and Psydonia's most popular choice for cavalrymen and travelers. Analogous to the far-rarer horse. </p>
-		<p><strong> Fogbeast </strong> - Horses. A rarely-seen alternative to the Saiga, due to its regional exclusivity to a few specific plains in Psydonia. </p>
-		<p><strong> Red </strong> - A healing potion - specifically, the regenerative juices inside. Additionally known as 'lifeblood'.  </p>
+		<p><strong> Fogbeast </strong> - Horses, in our world. A rarely-seen alternative to the Saiga, due to its regional exclusivity to a few specific places in Psydonia. </p>
+		<p><strong> Red </strong> - A healing potion - specifically, the regenerative juices inside. Additionally known as 'lyfeblood'.  </p>
 		<p><strong> Blue </strong> - A fatigue potion - or, rather, the energy-boosting juices inside. Additionally known as 'manna'. </p>
-		<p><strong> Cackleberry </strong> - Eggs. The favored pronunciation amongst the peasantry and antiquated. Doubles as an allusion to one's lowest-hanging fruits. </p>
 		<p><strong> Mammon </strong> - Currency. A copper zenny is one mammon, a silver ziliquae is five mammons, and a gold zenar is ten mammons. </p>
 		<p><strong> Scom </strong> - A rous-powered communication machine. Also functions as a verb, when used to describe 'calling' or 'contacting' someone. </p>
 		<p><strong> Meister </strong> - A coinage-machine that - with the cost of a bloodied finger - allows one to access their personal reserve of mammons. </p>
-		<p><strong> Nervemaster </strong> - The nexus that all coinage-machines are connected to. It can both deposit-and-tax mammons from all personal reserves.</p>
-		<p><strong> Vomitorium </strong> - A twin-throated chute that trails all the way to a city's stockpile. It both eats-and-vomits mammons and materials.</p>
+		<p><strong> Nervemaster </strong> - The nexus that all coinage-machines are connected to. It can both deposit and tax mammons from all personal reserves. Said to be a machine originating from the Celestial Era. Few knows how to build and maintain them.</p>
+		<p><strong> Vomitorium </strong> - A twin-throated chute that trails all the way to a city's stockpile. It both eats and vomits mammons and materials. Maintained by Artificers who claims their art dates to the Celestial Empire.</p>
 		<p><strong> Silverface </strong> - Toggleable vendors, drawing from the stockpile of local businesses. Far more expensive, yet quicker, than commissions.</p>
-		<p><strong> Excidium </strong> - The leyline of bounty-hunters: a machine that both tracks and redeems local bounties for a sum of coinage.</p>
+		<p><strong> Excidium </strong> - The leyline of bounty-hunters: a machine that both tracks and redeems local bounties for a sum of coinage. Said to be made by radical Ravoxian.</p>
 		<p><strong> Lampternball </strong> - A popular sport, where one maneuvers a rounded lamptern into either a hoop, goal, or a blaggard's face.</p>
 		<p><strong> Blastpowder </strong> - An alchemic enigma, capable of erupting with tremendous power at the lightest spark. Additionally known as 'blastsand'.</p>
 		<p><strong> PR </strong> - The previous calender-era, lasting from the beginning of recorded history to the Comet Syon's impact - and Psydon's absence. </p>
-		<p><strong> AP </strong> - The current calender-era, which started after the end of Psydonic supremacy. The current date, as mentioned, is 1513 AP. </p>
+		<p><strong> AP </strong> - After Psydon, The current calender-era, which started after the end of Psydonic supremacy. The current date, as mentioned, is 1513 AP. </p>
 		<br>
 	</details>
 	<br><br>
