@@ -346,7 +346,7 @@
 /obj/item/bodypart/r_arm/drop_limb(special)
 	var/mob/living/carbon/C = owner
 	. = ..()
-	if(isooze(C))
+	if(isooze(C) && !is_prosthetic_limb())
 		qdel(src)
 	if(C && !special)
 		if(C.handcuffed)
@@ -367,7 +367,7 @@
 /obj/item/bodypart/l_arm/drop_limb(special)
 	var/mob/living/carbon/C = owner
 	. = ..()
-	if(isooze(C))
+	if(isooze(C) && !is_prosthetic_limb())
 		qdel(src)
 	if(C && !special)
 		if(C.handcuffed)
@@ -387,7 +387,7 @@
 /obj/item/bodypart/r_leg/drop_limb(special)
 	var/mob/living/carbon/C = owner
 	. = ..()
-	if(isooze(C))
+	if(isooze(C) && !is_prosthetic_limb())
 		qdel(src)
 	if(C && !special)
 		if(C.legcuffed)
@@ -403,7 +403,7 @@
 /obj/item/bodypart/l_leg/drop_limb(special) //copypasta
 	var/mob/living/carbon/C = owner
 	. = ..()
-	if(isooze(C))
+	if(isooze(C) && !is_prosthetic_limb())
 		qdel(src)
 	if(C && !special)
 		if(C.legcuffed)
