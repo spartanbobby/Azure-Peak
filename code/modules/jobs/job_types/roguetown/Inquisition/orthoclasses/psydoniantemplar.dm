@@ -110,7 +110,7 @@
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/tower/metal, SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 		if("Psydonic Greatsword")
-			H.put_in_hands(new /obj/item/rogueweapon/greatsword/psygsword(H))
+			H.put_in_hands(new /obj/item/rogueweapon/greatsword/silver/psy(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap(H), SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 		if("Psydonic Executioner Sword")
