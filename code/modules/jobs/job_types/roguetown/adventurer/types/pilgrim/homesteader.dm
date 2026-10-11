@@ -154,7 +154,7 @@
 	if(H.mind)
 		H.mind.special_items["Hammer"] = /obj/item/rogueweapon/hammer/steel
 		H.mind.special_items["Sheathe"] = /obj/item/rogueweapon/scabbard/sheath
-		H.mind.special_items["Hunting Knife"] = /obj/item/rogueweapon/huntingknife
+		H.mind.special_items["Laborer's Knife"] = /obj/item/rogueweapon/huntingknife/throwingknife/triumph
 		H.mind.special_items["Woodcutter's Axe"] = /obj/item/rogueweapon/stoneaxe/woodcut/steel/woodcutter
 		H.mind.special_items["[pick("Good", "Bad", "Normal")] Day's Wine"] = /obj/item/reagent_containers/glass/bottle/rogue/wine
 		H.mind.special_items["Barber's Innocuous Bag"] = /obj/item/storage/belt/rogue/surgery_bag/full
