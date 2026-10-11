@@ -26,9 +26,9 @@
 	/// The category this hunt belongs to
 	var/datum/hunting_category/hunt_category
 	/// Total tracks to find before the animal spawns (this is always 1 higher than the number)
-	var/max_trail_depth = 6
+	var/max_trail_depth = 5
 	/// Min trail depth as set by skill bonus.
-	var/min_trail_depth = 4
+	var/min_trail_depth = 3
 	/// Category boosted by user.
 	var/datum/hunting_category/preferred_hunt
 	/// Hunting map influences
