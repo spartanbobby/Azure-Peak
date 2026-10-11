@@ -7667,6 +7667,11 @@
 /mob/living/carbon/human/species/skeleton/npc/no_equipment,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cavewet/bogcaves/north)
+"brY" = (
+/obj/structure/fluff/railing/corner/south_east,
+/obj/structure/foxpelt,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town)
 "bsb" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread";
@@ -28410,7 +28415,7 @@
 /area/rogue/indoors/shelter/woods)
 "eVV" = (
 /obj/structure/fluff/wallclock/l,
-/turf/open/floor/carpet/royalblack,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "eVZ" = (
 /obj/structure/stairs{
@@ -128988,11 +128993,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/bath)
-"vYI" = (
-/obj/structure/table/wood/poor,
-/obj/machinery/light/rogue/candle/l,
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/town)
 "vYN" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grassred,
@@ -293123,7 +293123,7 @@ lZP
 dra
 dra
 qVA
-dra
+mYN
 uBc
 exD
 fpx
@@ -303512,7 +303512,7 @@ dra
 dra
 saX
 ltr
-nuw
+brY
 uBc
 quW
 nWM
@@ -430532,9 +430532,9 @@ aBB
 cDX
 cDX
 eVV
-mED
-vYI
-mED
+kWm
+xcv
+kWm
 uBc
 eDg
 oWm
@@ -430983,7 +430983,7 @@ aBB
 aBB
 cDX
 iTW
-cMj
+dra
 cMj
 cMj
 mED
@@ -431435,7 +431435,7 @@ aBB
 aBB
 uBc
 kdy
-fLR
+qZZ
 cMj
 cMj
 cMj
@@ -431888,9 +431888,9 @@ aBB
 uBc
 cEb
 qZZ
-cMj
-bIp
-cMj
+dra
+qVA
+dra
 uBc
 hSy
 nwm
@@ -432339,8 +432339,8 @@ aBB
 aBB
 uBc
 cEb
-qZZ
-dra
+fLR
+cMj
 cDX
 ioq
 cDX
@@ -432791,8 +432791,8 @@ aBB
 aBB
 uBc
 hal
-qZZ
-pSe
+fLR
+piq
 uBc
 dra
 hoX
@@ -433243,8 +433243,8 @@ aBB
 aBB
 cDX
 bsC
-dra
-pSe
+cMj
+piq
 uBc
 cMj
 cMj
@@ -438218,7 +438218,7 @@ aBB
 aBB
 uBc
 pmF
-dra
+mYN
 tyO
 uBc
 qaH
