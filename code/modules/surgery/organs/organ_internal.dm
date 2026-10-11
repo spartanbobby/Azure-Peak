@@ -171,7 +171,7 @@
 	var/obj/item/organ/organ_inside
 
 /obj/item/reagent_containers/food/snacks/organ/On_Consume(mob/living/eater)		//Graggarites looove eating organs, they loooove eating organs!
-	if(HAS_TRAIT(eater, TRAIT_ORGAN_EATER))
+	if(HAS_TRAIT(eater, TRAIT_ORGAN_EATER) && HAS_TRAIT(eater, TRAIT_NASTY_EATER))
 		eat_effect = /datum/status_effect/buff/snackbuff
 		foodtype = RAW | MEAT
 	else
