@@ -33,3 +33,7 @@
 		else
 			message = "The sun quickly pales underneath a blanket of strangely shaped clouds. The bell of a saiga is followed by the scream of a hunter."
 	to_world("<b><span class='span_danger'><span class='big'>[message]</span></span></b>")
+	for(var/mob/M in GLOB.player_list)
+		if (!M.can_hear())
+			return
+		M.playsound_local(M, 'sound/misc/evilevent.ogg', 100)
