@@ -4,6 +4,7 @@
 	req_table = TRUE
 	verbage_simple = "write"
 	skillcraft = /datum/skill/misc/reading
+	xp_modifier = 0
 	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/reading/goat_map
