@@ -7594,6 +7594,13 @@
 "brp" = (
 /turf/open/floor/rogue/church,
 /area/rogue/under/underdark/north)
+"brq" = (
+/obj/effect/decal/carpet/square/black{
+	pixel_x = 19;
+	pixel_y = 24
+	},
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/town)
 "brs" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/reagent_containers/glass/bowl,
@@ -135368,6 +135375,10 @@
 "xcH" = (
 /turf/closed/wall/mineral/rogue/pipe/corners/one,
 /area/rogue/under/cave/dungeon1/gethsmane)
+"xcK" = (
+/obj/structure/giantfur/small,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town)
 "xcP" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -288694,7 +288705,7 @@ ueu
 dra
 jGx
 iBM
-iBM
+brq
 niE
 xeQ
 exD
@@ -403500,7 +403511,7 @@ loq
 nBe
 qZZ
 dra
-dra
+kWm
 uBc
 mCH
 iBM
@@ -403951,8 +403962,8 @@ uBc
 wCX
 cDX
 vEE
-cMj
-cMj
+dra
+xcK
 uBc
 kkB
 iBM
@@ -404403,8 +404414,8 @@ uBc
 wCX
 qZZ
 dra
-cMj
-cMj
+dra
+dra
 uBc
 kkB
 iBM
@@ -404855,8 +404866,8 @@ uBc
 qMK
 dra
 dra
-bIp
-cMj
+qVA
+dra
 jGx
 iBM
 iBM
