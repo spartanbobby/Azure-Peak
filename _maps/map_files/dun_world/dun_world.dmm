@@ -74120,9 +74120,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/rtfield/eora)
-"mHA" = (
-/turf/open/water/pond,
-/area/rogue/indoors/town/bath)
 "mHJ" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
@@ -78997,7 +78994,7 @@
 /area/rogue/outdoors/exposed/town/keep)
 "nCL" = (
 /obj/machinery/light/rogue/candle/r,
-/turf/open/water/pond,
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath)
 "nCM" = (
 /obj/machinery/light/rogue/candle/r,
@@ -165760,8 +165757,8 @@ iSS
 alP
 jTs
 tIx
-mHA
-mHA
+haH
+haH
 nXU
 bhJ
 dIV
@@ -166211,9 +166208,9 @@ pJv
 mar
 iSS
 kKx
-mHA
+haH
 nCL
-mHA
+haH
 hyt
 bhJ
 dIV
