@@ -2203,7 +2203,7 @@
 /area/rogue/indoors/town/tavern)
 "avg" = (
 /obj/structure/roguemachine/stockpile,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "avm" = (
 /obj/structure/flora/roguetree/burnt,
@@ -16211,6 +16211,7 @@
 /obj/machinery/light/rogue/torchholder/l{
 	dir = 8
 	},
+/obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "cRp" = (
@@ -61161,6 +61162,13 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/mountains/decap/banditcamp)
+"kAL" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/obj/machinery/light/rogue/candle/l,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/town)
 "kAO" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/underdark/north)
@@ -77589,9 +77597,6 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/underdark/north)
-"noC" = (
-/turf/closed/wall/mineral/rogue/wood,
-/area/rogue/indoors)
 "noD" = (
 /obj/item/roguekey{
 	icon_state = "brownkey";
@@ -81619,9 +81624,6 @@
 /obj/structure/curtain/red,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/indoors/town/manor)
-"nYk" = (
-/turf/closed/wall/mineral/rogue/wooddark/vertical,
-/area/rogue/outdoors/rtfield)
 "nYn" = (
 /obj/structure/ladder,
 /obj/machinery/light/rogue/candle,
@@ -92131,7 +92133,7 @@
 "pJT" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/rtfield)
+/area/rogue/indoors/town)
 "pJV" = (
 /obj/structure/table/wood/poor,
 /obj/item/candle/silver/lit,
@@ -132054,6 +132056,13 @@
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
+"wyb" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/obj/machinery/light/rogue/candle/r,
+/turf/open/floor/rogue/grass,
+/area/rogue/indoors/town)
 "wye" = (
 /obj/structure/mineral_door/wood/fancywood{
 	locked = 1;
@@ -140826,9 +140835,6 @@
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/under/cave/taricheamanor)
-"xZb" = (
-/turf/closed/wall/mineral/rogue/wooddark/horizontal,
-/area/rogue/outdoors/rtfield)
 "xZf" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/manor)
@@ -286969,9 +286975,9 @@ jhP
 pWT
 pWT
 pWT
-pWT
 njB
-pWT
+njB
+njB
 fpx
 pWT
 uBc
@@ -287420,8 +287426,8 @@ bhJ
 jhP
 pWT
 pWT
-pWT
-pWT
+njB
+njB
 njB
 pWT
 exD
@@ -287870,11 +287876,11 @@ bhJ
 bhJ
 bhJ
 jhP
-lUe
+fpx
 njB
 njB
 cRm
-pWT
+njB
 pWT
 fpx
 fpx
@@ -288321,12 +288327,12 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-tAW
+fpx
 aFv
-noC
-noC
-noC
+bwv
+xWY
+xWY
+bwv
 fpx
 fpx
 fpx
@@ -288773,10 +288779,10 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
 kkv
-aFv
-noC
+kkv
+jLU
+hRZ
 hRZ
 sph
 fpx
@@ -289224,11 +289230,11 @@ bhJ
 bhJ
 bhJ
 miF
-bhJ
-bhJ
+fpx
 kkv
-aFv
-noC
+kkv
+jLU
+hRZ
 hRZ
 sph
 fpx
@@ -289676,15 +289682,15 @@ bhJ
 bhJ
 bhJ
 miF
-miF
-bhJ
-bhJ
 fpx
-noC
-noC
-noC
+kkv
+kkv
+bwv
+xWY
+xWY
+bwv
 avg
-rcz
+fpx
 fpx
 cDX
 cDX
@@ -290128,15 +290134,15 @@ bhJ
 bhJ
 bhJ
 qHj
-qHj
-miF
-bhJ
+fpx
+fpx
+kkv
 pWT
 pWT
 rqn
-pWT
+njB
 rII
-qyR
+fpx
 fpx
 cDX
 cDX
@@ -290581,7 +290587,7 @@ bhJ
 bhJ
 qHj
 qHj
-miF
+fpx
 fpx
 fpx
 njB
@@ -302732,10 +302738,10 @@ ujm
 ujm
 ujm
 ujm
-sPF
-xZb
-xZb
-sPF
+cDX
+gyu
+gyu
+cDX
 rZO
 rZO
 dCO
@@ -303184,9 +303190,9 @@ ujm
 ujm
 ujm
 ujm
-nYk
-ebU
-ebU
+lKo
+bzY
+bzY
 pJT
 rZO
 rZO
@@ -303636,9 +303642,9 @@ ujm
 ujm
 lRD
 quW
-nYk
-ebU
-ebU
+lKo
+bzY
+bzY
 pJT
 rZO
 rZO
@@ -304088,10 +304094,10 @@ ujm
 quW
 quW
 sNZ
-sPF
-xZb
-xZb
-sPF
+cDX
+gyu
+gyu
+cDX
 nDe
 rZO
 rZO
@@ -314934,11 +314940,11 @@ eDq
 asY
 tyb
 asY
-quW
-seL
-rZO
-rZO
-rZO
+sNZ
+cDX
+gyu
+gyu
+cDX
 seL
 seL
 sNZ
@@ -315386,11 +315392,11 @@ eDq
 asY
 asY
 asY
-seL
-seL
-rZO
-rZO
-rZO
+sNZ
+kAL
+bzY
+bzY
+lKo
 rZO
 seL
 sNZ
@@ -315838,11 +315844,11 @@ iZn
 asY
 asY
 asY
-seL
 sNZ
-sNZ
-quW
-rZO
+wyb
+bzY
+bzY
+lKo
 rZO
 rZO
 sNZ
@@ -316290,11 +316296,11 @@ dpy
 asY
 asY
 asY
-asY
 sNZ
-quW
-sNZ
-sNZ
+cDX
+gyu
+gyu
+cDX
 sNZ
 rZO
 rZO
@@ -403582,7 +403588,7 @@ seL
 sNZ
 quW
 seL
-sNZ
+bGf
 bGf
 bGf
 kSK
@@ -404034,7 +404040,7 @@ sNZ
 quW
 quW
 sNZ
-sNZ
+bGf
 bGf
 bGf
 kSK
@@ -404485,8 +404491,8 @@ bsL
 sNZ
 sNZ
 sNZ
-sNZ
-sNZ
+bGf
+bGf
 bGf
 bGf
 kSK
@@ -404937,9 +404943,9 @@ bsL
 sNZ
 sNZ
 sNZ
-sNZ
-sNZ
-sNZ
+bGf
+bGf
+bGf
 bGf
 kSK
 kSK
@@ -405389,9 +405395,9 @@ bsL
 sNZ
 sNZ
 sNZ
-sNZ
-sNZ
-sNZ
+bGf
+bGf
+bGf
 bGf
 bGf
 bGf
@@ -405842,7 +405848,7 @@ sNZ
 sNZ
 sNZ
 sNZ
-sNZ
+bGf
 bGf
 bGf
 bGf
@@ -413047,7 +413053,7 @@ oGI
 oGI
 oGI
 oGI
-oGI
+flX
 flX
 vvB
 aBB
@@ -413498,9 +413504,9 @@ oGI
 oGI
 oGI
 oGI
-oGI
-oGI
-oGI
+flX
+flX
+flX
 vvB
 vvB
 aBB
@@ -430196,10 +430202,10 @@ yjL
 aBB
 aBB
 aBB
-aBB
-aBB
-aBB
-aBB
+nRO
+nRO
+nRO
+nRO
 aBB
 aBB
 aBB
@@ -430648,10 +430654,10 @@ yjL
 aBB
 aBB
 aBB
-aBB
-aBB
-aBB
-aBB
+nRO
+nRO
+nRO
+nRO
 aBB
 aBB
 aBB
@@ -431100,10 +431106,10 @@ yjL
 aBB
 aBB
 aBB
-aBB
-aBB
-aBB
-aBB
+nRO
+nRO
+nRO
+nRO
 aBB
 aBB
 aBB
@@ -431552,10 +431558,10 @@ yjL
 aBB
 aBB
 aBB
-aBB
-aBB
-aBB
-aBB
+nRO
+nRO
+nRO
+nRO
 aBB
 aBB
 aBB
