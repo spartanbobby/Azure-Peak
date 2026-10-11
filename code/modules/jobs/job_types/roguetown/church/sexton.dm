@@ -136,7 +136,7 @@
 /datum/outfit/job/roguetown/sexton/gravetender/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	head = /obj/item/clothing/head/roguetown/inq/gravehat
+	head = /obj/item/clothing/head/roguetown/inqhat/gravehat
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/gravecoat
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves
