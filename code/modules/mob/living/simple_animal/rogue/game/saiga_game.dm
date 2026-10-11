@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/game
 	name = "fatty saiga"
-	desc = "Some saiga have foregone the same development as their brethren. Born with lanky legs and an insatiable appetite, these saigas cultivate a great wealth of fatty muscle tissue. This makes them slow, instead they've learned how to hide themselves in unexpected places, avoiding predators thusly."
-	move_to_delay = 8
+	desc = "Some saiga haven't foregone the same development as their brethren. Born with lanky legs and an insatiable appetite, these saigas cultivate a great wealth of fatty muscle tissue. This makes them slow, instead they've learned how to hide themselves in unexpected places, avoiding predators thusly."
+	move_base_delay = MOVEMENT_DELAY_CRAWLING
 	STASPD = 5
 	icon_state = "fatty"
 	icon_living = "fatty"
