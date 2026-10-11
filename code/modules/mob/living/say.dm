@@ -455,11 +455,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			continue
 		listening |= observer
 		admin_listeners[observer] = TRUE
-	if(do_ghost_protection) // don't loop over the whole listening list unless we really have to
-		for(var/mob/dead/observer/ghost in listening) // a necessary evil so ghosts don't show up in the seen log
-			if(ghost.bypasses_ghost_protection())
-				continue
-			listening -= ghost
 	log_seen(src, null, listening, message, SEEN_LOG_SAY)
 
 	var/eavesdropping
