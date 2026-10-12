@@ -329,6 +329,7 @@
 				add_verb(recipient, /mob/living/carbon/human/proc/alterego_swap)
 				recipient.AddComponent(/datum/component/alter_ego)
 
+// Grim fandango
 /datum/virtue/utility/granary
 	name = "Cunning Provisioner"
 	added_traits = list(TRAIT_HOMESTEAD_EXPERT)
