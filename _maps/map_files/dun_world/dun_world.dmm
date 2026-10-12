@@ -35106,10 +35106,8 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/underdark/north)
 "gbu" = (
-/obj/structure/fluff/sign{
-	name = "FOR MENDICANTS"
-	},
-/turf/open/floor/rogue/concrete,
+/obj/item/herbseed/rosa,
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/town/church/basement)
 "gbz" = (
 /obj/structure/bars/pipe{
@@ -42475,10 +42473,7 @@
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/indoors/town/garrison)
 "hrJ" = (
-/obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/gloves/roguetown/cloth,
-/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
-/turf/open/floor/rogue/concrete,
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/town/church/basement)
 "hrK" = (
 /obj/structure/bars/pipe{
@@ -49745,6 +49740,13 @@
 	dir = 1
 	},
 /obj/structure/rack/rogue/shelf,
+/obj/item/reagent_containers/glass/mortar{
+	pixel_y = 35
+	},
+/obj/item/pestle{
+	pixel_y = 36;
+	pixel_x = -9
+	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/basement)
 "iDR" = (
@@ -84124,11 +84126,6 @@
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
-"osP" = (
-/obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/under/roguetown/tights,
-/turf/open/floor/rogue/concrete,
-/area/rogue/indoors/town/church/basement)
 "osR" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/cobble,
@@ -92064,6 +92061,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
+"pHq" = (
+/obj/item/herbseed/matricaria,
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/town/church/basement)
 "pHr" = (
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/grass,
@@ -103667,10 +103668,6 @@
 "rEw" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/indoors/town/magician)
-"rEx" = (
-/obj/structure/rack/rogue/shelf/biggest,
-/turf/open/floor/rogue/concrete,
-/area/rogue/indoors/town/church/basement)
 "rEz" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/table/wood/folding,
@@ -112410,12 +112407,6 @@
 /obj/item/roguecoin/copper/pile,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
-"tbS" = (
-/obj/structure/rack/rogue/shelf/biggest,
-/obj/item/bedroll,
-/obj/item/storage/backpack/rogue/satchel,
-/turf/open/floor/rogue/concrete,
-/area/rogue/indoors/town/church/basement)
 "tbU" = (
 /obj/structure/bars/passage/shutter{
 	redstone_id = "dragonexit"
@@ -113550,15 +113541,7 @@
 /area/rogue/indoors/town)
 "tlE" = (
 /obj/machinery/light/rogue/candle/r,
-/obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/tunic/blue{
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/roguetown/shirt/undershirt{
-	pixel_y = -5;
-	pixel_x = 5
-	},
-/turf/open/floor/rogue/concrete,
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/town/church/basement)
 "tlI" = (
 /obj/structure/chair/wood/rogue/chair3{
@@ -177104,8 +177087,8 @@ boz
 vnl
 hAl
 hdb
-rEx
-mbC
+hrJ
+hrJ
 gbu
 llO
 lFq
@@ -177556,8 +177539,8 @@ qLb
 ouM
 aHp
 hdb
-rEx
-mbC
+hrJ
+hrJ
 hrJ
 llO
 xQf
@@ -178008,9 +177991,9 @@ boz
 vnl
 sJv
 hdb
-mbC
-mbC
-tbS
+pHq
+hrJ
+hrJ
 llO
 hWQ
 xXi
@@ -178460,9 +178443,9 @@ oDt
 edE
 oDt
 fnK
-rEx
-mbC
-osP
+hrJ
+hrJ
+hrJ
 llO
 pht
 iXM
@@ -178912,8 +178895,8 @@ llO
 jOq
 llO
 iDM
-rEx
-mbC
+hrJ
+hMK
 tlE
 llO
 llO
