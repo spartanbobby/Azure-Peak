@@ -32396,6 +32396,10 @@
 "fCW" = (
 /turf/open/floor/carpet/stellar,
 /area/rogue/under/town/basement/keep)
+"fDc" = (
+/obj/structure/fluff/railing/corner,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/town)
 "fDl" = (
 /turf/open/floor/rogue/rooftop/west,
 /area/rogue/under/underdark)
@@ -61261,6 +61265,7 @@
 	dir = 1
 	},
 /obj/machinery/light/rogue/candle/l,
+/obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/town)
 "kAO" = (
@@ -79079,6 +79084,10 @@
 /obj/item/alch/salvia,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield/eora)
+"nBg" = (
+/obj/structure/fluff/railing/corner,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cavewet/bogcaves/south)
 "nBo" = (
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/garrison)
@@ -84289,6 +84298,13 @@
 	opacity = 0
 	},
 /area/rogue/outdoors/mountains)
+"ouX" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border/east,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cavewet/bogcaves/south)
 "ovb" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/table/wood/poor,
@@ -119389,6 +119405,7 @@
 /obj/structure/stairs{
 	dir = 1
 	},
+/obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cavewet/bogcaves/south)
 "ulM" = (
@@ -120242,6 +120259,10 @@
 "utw" = (
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
+"utA" = (
+/obj/structure/fluff/railing/corner/north_east,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cavewet/bogcaves/south)
 "utB" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/under/cavewet/bogcaves/south)
@@ -132233,6 +132254,7 @@
 	dir = 1
 	},
 /obj/machinery/light/rogue/candle/r,
+/obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/town)
 "wye" = (
@@ -199842,7 +199864,7 @@ fVm
 jPN
 qVG
 qVG
-fVm
+utA
 fVm
 jPN
 bKq
@@ -200294,7 +200316,7 @@ fVm
 jPN
 qVG
 ulH
-fVm
+nBg
 fVm
 fVm
 jPN
@@ -200745,8 +200767,8 @@ fVm
 jPN
 jPN
 qVG
-ulH
-fVm
+ouX
+utA
 fVm
 fVm
 fVm
@@ -201198,7 +201220,7 @@ jPN
 bKq
 qVG
 qVG
-fVm
+nBg
 plu
 plu
 wHu
@@ -315554,7 +315576,7 @@ asY
 asY
 rZO
 kAL
-bzY
+fDc
 bzY
 lKo
 rZO
@@ -316006,7 +316028,7 @@ asY
 rZO
 rZO
 wyb
-bzY
+scP
 bzY
 lKo
 rZO
