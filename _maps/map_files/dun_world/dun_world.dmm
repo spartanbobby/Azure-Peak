@@ -30320,6 +30320,7 @@
 /area/rogue/indoors/town/tavern)
 "flb" = (
 /obj/machinery/light/rogue/torchholder/l,
+/obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "flc" = (
@@ -128831,7 +128832,7 @@
 	dir = 4;
 	name = "DOCKS - EAST"
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town)
 "vTP" = (
 /obj/structure/flora/roguegrass,
@@ -312438,7 +312439,7 @@ mHZ
 iBM
 kVE
 mHZ
-iBM
+hcT
 pvy
 sNZ
 sNZ
@@ -331901,9 +331902,9 @@ exD
 exD
 exD
 exD
-gZB
-pWT
-pWT
+aFv
+mWD
+jhP
 tef
 tef
 ijo
@@ -332354,8 +332355,8 @@ exD
 pWT
 pWT
 pWT
-gZB
-pWT
+aFv
+mWD
 ebU
 ebU
 ebU
@@ -332802,11 +332803,11 @@ exD
 exD
 exD
 vTL
+aFv
 pWT
+mWD
 pWT
-pWT
-pWT
-gZB
+njB
 ebU
 ebU
 ebU
@@ -333253,12 +333254,12 @@ tTE
 exD
 exD
 aFv
+aFv
 pWT
-pWT
-pWT
-pWT
-pWT
-gZB
+mWD
+jhP
+njB
+njB
 ebU
 ebU
 ebU
@@ -333704,12 +333705,12 @@ oCQ
 dmV
 exD
 exD
+jhP
 njB
-pWT
-pWT
-pWT
-pWT
-pWT
+njB
+jhP
+jhP
+njB
 ebU
 ebU
 ebU
@@ -334156,10 +334157,10 @@ cil
 vAE
 exD
 exD
-pWT
-pWT
-pWT
-pWT
+jhP
+jhP
+njB
+njB
 pWT
 ebU
 ebU
@@ -334609,7 +334610,7 @@ dmV
 exD
 exD
 exD
-hKL
+jhP
 ebU
 ebU
 ebU
