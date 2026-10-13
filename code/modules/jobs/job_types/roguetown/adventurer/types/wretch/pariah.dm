@@ -123,7 +123,7 @@
 		H.mind.AddSpell(new /datum/action/cooldown/spell/mending)
 
 	var/helmets = list(
-		"Woad Elven Helm"		= /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm,
+		"Woad Elven Helm"			= /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm,
 		"Woad Elven Barbute"		= /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/light,
 		"Elven Barbute"				= /obj/item/clothing/head/roguetown/helmet/elvenbarbute/blackoak,
 		"Winged Elven Barbute"		= /obj/item/clothing/head/roguetown/helmet/elvenbarbute/winged/blackoak,
