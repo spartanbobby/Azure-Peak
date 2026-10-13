@@ -215,7 +215,7 @@
 		var/mob/M = loc
 		if(M.get_skill_level(/datum/skill/craft/engineering) >= twirly)
 			return 0
-	return twirly
+	return INFINITY //hacky, but you can only twirl with expert engineering
 
 /obj/item/rogueweapon/contraption/linker/master
 	name = "Guild Master's Wrench"
