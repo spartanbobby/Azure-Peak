@@ -1345,4 +1345,4 @@
 /datum/loadout_item/donator/yoshi_estoc
 	name = "Donator Kit - Xylixian Estoc"
 	path = /obj/item/enchantingkit/weapon/yoshi_estoc
-	ckeywhitelist = list("limetease", "yosheh_3")
+	ckeywhitelist = list("limetease", "Yosheh_3")
