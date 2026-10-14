@@ -1,4 +1,4 @@
 author: "Ryan180602"
 delete-after: True
 changes:
-  - bugfix: "minor icon opts"
+  - rscadd: "add ckeys to certain donor items"
