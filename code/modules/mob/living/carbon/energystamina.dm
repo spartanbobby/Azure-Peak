@@ -105,7 +105,7 @@
 
 	var/true_added = added
 	if(added > 0)
-		if(HAS_TRAIT(src, TRAIT_FORTITUDE_DES_RIDER))
+		if(HAS_TRAIT(src, TRAIT_MOMENTUM_RIDER))
 			added = added * 0.5
 		else if(HAS_TRAIT(src, TRAIT_FORTITUDE))
 			added = added * 0.85
