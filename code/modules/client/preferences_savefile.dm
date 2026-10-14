@@ -645,6 +645,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["song_artist"]			>> song_artist
 	S["song_title"]				>> song_title
 	S["nsfwflavortext"]			>> nsfwflavortext
+	S["show_nsfw_clothed"]		>> show_nsfw_clothed
 	S["erpprefs"]				>> erpprefs
 
 	S["preset_bounty_enabled"]			>> preset_bounty_enabled
@@ -954,6 +955,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["body_size"] , features["body_size"])
 	WRITE_FILE(S["body_build"] , features["body_build"])
 	WRITE_FILE(S["nsfwflavortext"] , html_decode(nsfwflavortext))
+	WRITE_FILE(S["show_nsfw_clothed"], show_nsfw_clothed)
 	WRITE_FILE(S["erpprefs"] , html_decode(erpprefs))
 	WRITE_FILE(S["img_gallery"] , img_gallery)
 	WRITE_FILE(S["nsfw_img_gallery"] , nsfw_img_gallery)
