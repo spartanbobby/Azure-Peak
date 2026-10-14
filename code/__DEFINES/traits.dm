@@ -625,6 +625,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_BLACKBAGGER = span_info("I've been trained to properly abduct individuals through the use of seizing garrotes and blackbags."),
 	TRAIT_LYCANRESILENCE = span_info("Dendor's fury flows through my veins, my wounds regenerate over time..."),
 	TRAIT_FORTITUDE = span_info("The typical drain I feel from day to day life is lessened, my athleticism greater."),
+	TRAIT_MOMENTUM_RIDER = span_info("Momentum lessens the stamina drain I feel from exertion."),
 	TRAIT_DEPRAVED = span_info("The languid scent of Her debauchery is known to me."),
 	TRAIT_SILVER_BLESSED = span_info("I have been baptized in fire. Blessed silverdust flows through my blood, protecting me from both vampyrism and lycanthropy."),
 	TRAIT_UNLYCKERABLE = span_info("My kind cannot bear the Sun curse for it already has another."),
@@ -1012,6 +1013,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 // unique trait sources, still defines
 #define TRAIT_FORTITUDE "Fortitude"
+#define TRAIT_MOMENTUM_RIDER "Momentum_Adrenaline"
 #define EYES_COVERED "eyes_covered"
 #define SCRYING_ORB "scrying-orb"
 #define REVERSE_BEAR_TRAP_TRAIT "reverse-bear-trap"
