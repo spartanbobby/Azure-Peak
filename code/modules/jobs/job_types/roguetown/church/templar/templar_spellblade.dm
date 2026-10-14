@@ -147,7 +147,6 @@
 					granted_weapon = new /obj/item/rogueweapon/spear/naginata(H)
 					qdel(H.get_item_by_slot(SLOT_BACK_R))
 					H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap(H), SLOT_BACK_R, TRUE)
-			H.put_in_hands(granted_weapon)
 		if("macebearer")
 			var/mace_weapons = list("Steel Mace", "Steel Warhammer", "Grand Mace", "Battle Axe", "Steel Greataxe")
 			var/mace_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in mace_weapons
@@ -167,5 +166,5 @@
 					qdel(H.get_item_by_slot(SLOT_BACK_R))
 					H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap(H), SLOT_BACK_R, TRUE)
 	if(granted_weapon)
-		H.equip_to_appropriate_slot(granted_weapon)
+		H.put_in_hands(granted_weapon)
 		H.adjust_skillrank_up_to(granted_weapon.associated_skill, SKILL_LEVEL_EXPERT, TRUE)

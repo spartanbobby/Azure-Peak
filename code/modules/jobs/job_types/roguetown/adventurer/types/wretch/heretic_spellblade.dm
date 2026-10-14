@@ -80,6 +80,7 @@
 
 	// used to handle skill assignment automatically
 	var/obj/item/rogueweapon/granted_weapon = null
+	backr = /obj/item/rogueweapon/shield/heater
 	switch(spellblade_chant_selected)
 		if("blade")
 			var/list/weapons = list("Kriegmesser", "Longsword", "Rapier", "Sabre", "Steel Arming Sword", "Steel Greatsword", "Steel Dagger")
@@ -180,8 +181,6 @@
 			var/helmchoice = input(H, "Choose your Helm.", "LIGHT SHINES THROUGH") as anything in helmets
 			if(helmchoice != "None")
 				head = helmets[helmchoice]
-	backr = /obj/item/rogueweapon/shield/heater
-
 	// Patron-specific bonuses
 	H.cmode_music = 'sound/music/combat_heretic.ogg'
 	switch(H.patron?.type)
