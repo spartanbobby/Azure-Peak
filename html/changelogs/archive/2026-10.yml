@@ -621,3 +621,28 @@
   - rscadd: Added a donor xylixian estoc for _._yoshi
   borneblood:
   - bugfix: Sheaths work as intended on your wrist slot now.
+2026-10-14:
+  Ketrai:
+  - balance: Crafting now has escalating odds.
+  - balance: Crafting bonus per int slightly reduced due to escalating odds.
+  - balance: Experts, masters, and legendary craftspeople now get expertise bonus
+      to crafting.
+  - balance: Malumites now get a trait that improves the rate at which crafting odds
+      escalate.
+  - balance: There is now a chance to fail crafting when below the required skill
+      level. This can only start to occur once every 10 failed attempts.
+  Lamasmaster:
+  - rscadd: Fleshsculpting miracle from Ratwood as new Pestran T3
+  Ryan180602:
+  - bugfix: minor icon opts
+  WeNeedMorePhoron:
+  - rscadd: Blockade Surcharge is now completely waived below 40 active players
+  - rscadd: Blockade Surcharge is now halved below 80 active players
+  - rscadd: Armor that are repaired by armorsmithing, or need medium AC training,
+      and is not heavy armor are classified as medium armor as far as the navigator
+      is concerned. Grenzelhoft and Kazengun will demand them for now.
+  azurexautyr-arch:
+  - bugfix: fixed a few things with ckey
+  zeskorion:
+  - rscadd: wrenches can be twirled with expert Engineering
+  - rscdel: Removes demlish from wrench and bogbark clubs, again
