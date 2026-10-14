@@ -6594,6 +6594,18 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/mountains/decap/minotaurfort)
+"biq" = (
+/obj/structure/rack/rogue/shelf,
+/obj/item/storage/roguebag{
+	pixel_y = 17;
+	pixel_x = -3
+	},
+/obj/item/storage/roguebag{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "bis" = (
 /obj/structure/closet/crate/coffin,
 /obj/item/storage/belt/rogue/pouch/coins/mid,
@@ -10654,6 +10666,10 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/chapel)
+"bRf" = (
+/obj/structure/rack/rogue/shelf,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "bRj" = (
 /obj/structure/table/wood/long_table,
 /obj/machinery/light/rogue/candle{
@@ -61047,6 +61063,12 @@
 	color = "#3b444b"
 	},
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
+"kBo" = (
+/obj/structure/closet/crate/chest/wicker,
+/obj/item/clothing/head/roguetown/helmet/kettle/iron,
+/obj/item/rogueweapon/sword/short/messer/iron,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "kBu" = (
 /turf/open/floor/rogue/rooftop/green/corner1/dirnine,
 /area/rogue/outdoors/town/roofs)
@@ -124939,6 +124961,14 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/ocean,
 /area/rogue/outdoors/beach/north)
+"viF" = (
+/obj/item/natural/bundle/cloth/roll,
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/natural/bundle/cloth/bandage/full,
+/obj/item/natural/bundle/fibers/full,
+/obj/item/natural/bundle/fibers/full,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "viG" = (
 /obj/structure/table/wood/map,
 /obj/item/cooking/platter/silver,
@@ -135349,6 +135379,11 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/town/sewer)
+"wYq" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/clothing/suit/roguetown/armor/gambeson,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "wYt" = (
 /obj/structure/rack/rogue/shelf/big{
 	pixel_y = 18
@@ -393976,10 +394011,10 @@ qwK
 qwK
 qwK
 qwK
-qwK
-qwK
-qwK
-qwK
+qqN
+qqN
+qqN
+qqN
 qwK
 qwK
 qwK
@@ -394428,11 +394463,11 @@ qwK
 qwK
 qwK
 qwK
-qwK
-qwK
-qwK
-qwK
-qwK
+qqN
+viF
+wYq
+qqN
+qqN
 qwK
 qwK
 qwK
@@ -394880,11 +394915,11 @@ qwK
 qwK
 qwK
 qwK
-qwK
-qwK
-qwK
-qwK
-qwK
+qqN
+bRf
+jdu
+jdu
+qqN
 vvB
 qwK
 qwK
@@ -395332,11 +395367,11 @@ qwK
 qwK
 qwK
 qwK
-qwK
-qwK
-qwK
-qwK
-qwK
+qqN
+biq
+jdu
+kBo
+qqN
 vvB
 qwK
 qwK
@@ -395786,7 +395821,7 @@ qqN
 qqN
 qqN
 qqN
-qqN
+lnO
 qqN
 qqN
 qqN
