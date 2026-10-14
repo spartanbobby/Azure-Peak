@@ -1355,6 +1355,7 @@
 	name = "Donator Item - iron plate corslet morphkit"
 	path = /obj/item/enchantingkit/triumph_armorkini_iron
 	ckeywhitelist = list("boemanerds", "bulaven")
+
 /datum/loadout_item/donator/yoshi_estoc
 	name = "Donator Kit - Xylixian Estoc"
 	path = /obj/item/enchantingkit/weapon/yoshi_estoc
