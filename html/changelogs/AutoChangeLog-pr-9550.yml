@@ -1,0 +1,5 @@
+author: "zeskorion"
+delete-after: True
+changes:
+  - rscadd: "wrenches can be twirled with expert Engineering"
+  - rscdel: "Removes demlish from wrench and bogbark clubs, again"
