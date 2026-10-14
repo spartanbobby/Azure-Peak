@@ -39838,7 +39838,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town/roofs)
 "gVy" = (
-/obj/structure/bookcase/random/archive,
+/obj/machinery/gear_painter,
 /obj/machinery/light/rogue/candle/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
