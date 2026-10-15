@@ -60260,6 +60260,12 @@
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/town/bath)
+"ksx" = (
+/obj/machinery/light/rogue/torchholder{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "ksA" = (
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/cobble,
@@ -72013,6 +72019,7 @@
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
 	},
+/obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield)
 "mlM" = (
@@ -130064,6 +130071,7 @@
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
 	},
+/obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/rtfield)
 "wbf" = (
@@ -325158,7 +325166,7 @@ asY
 asY
 asY
 asY
-sNZ
+ksx
 oSU
 flT
 vmB
@@ -325611,7 +325619,7 @@ asY
 asY
 asY
 asY
-asY
+mDp
 asY
 asY
 asY
@@ -426518,7 +426526,7 @@ vxe
 vxe
 vxe
 vxe
-vxe
+drF
 iVE
 tGl
 wSp
@@ -426970,8 +426978,8 @@ rOa
 dbc
 ieF
 vxe
-vxe
 xri
+iWa
 aDk
 iWa
 cgP
@@ -427422,7 +427430,7 @@ ibw
 rvu
 rvu
 vxe
-vxe
+drF
 tGl
 tGl
 iWa
@@ -536332,11 +536340,11 @@ bGf
 bGf
 bGf
 bGf
-bGf
-bGf
-bGf
-bGf
-bGf
+ddY
+ddY
+ddY
+ddY
+ddY
 bGf
 bGf
 bGf
