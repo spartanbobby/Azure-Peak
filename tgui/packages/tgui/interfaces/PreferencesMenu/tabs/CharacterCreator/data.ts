@@ -286,8 +286,6 @@ export type IdentityData = {
   charflaws: CharFlaw[]; // look at constant.MAX_VICES
   has_averse: BooleanLike;
   averse_chosen_faction: string;
-  has_badsight: BooleanLike;
-  badsight_chosen_glasses: string;
 };
 
 export type VirtueWithMetadata = {
@@ -326,6 +324,8 @@ export type CharFlaw = {
   name: string;
   type: Path;
   warning: BooleanLike;
+  max_choices: number;
+  picked_choices: { index: number; choice: string }[];
 };
 
 // --------------- VillainData ---------------

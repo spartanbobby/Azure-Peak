@@ -21,13 +21,6 @@ GLOBAL_LIST_INIT(averse_factions, list(
 	"Everyone" = (COURTIERS | NOBLEMEN | INQUISITION | BURGHERS | ATC | RETINUE | GARRISON | CHURCHMEN | PEASANTS | WANDERERS | SIDEFOLK | ANTAGONIST)
 ))
 
-GLOBAL_LIST_INIT(badsight_glasses, list(
-	"Spectacles" = /obj/item/clothing/mask/rogue/spectacles,
-	"Thin Spectacles" = /obj/item/clothing/mask/rogue/spectacles/thin,
-	"Fancy Spectacles" = /obj/item/clothing/mask/rogue/spectacles/fancy,
-	"Fancy Tinted Spectacles" = /obj/item/clothing/mask/rogue/spectacles/fancy/dark,
-))
-
 /datum/charflaw
 	abstract_type = /datum/charflaw
 	var/name
@@ -39,6 +32,12 @@ GLOBAL_LIST_INIT(badsight_glasses, list(
 	/// Intended for addiction types only.
 	var/voyeur_descriptor
 	var/list/restricted_species = list()
+	var/max_choices = 0
+	var/list/extra_choices = list()
+
+/datum/charflaw/proc/get_picked_choices(mob/user)
+	var/list/all_choices = user?.client?.prefs?.charflaw_choices
+	return LAZYACCESS(all_choices, type)
 
 /// Constant UI data for TGUI to display these in the prefs menu
 /datum/charflaw/proc/constant_ui_data()
@@ -151,6 +150,15 @@ GLOBAL_LIST_INIT(badsight_glasses, list(
 	name = "Bad Eyesight"
 	desc = "I need spectacles to see normally from my years spent reading books."
 	ui_fa_icon = "glasses"
+	max_choices = 1
+	extra_choices = list(
+		"Spectacles" = /obj/item/clothing/mask/rogue/spectacles,
+		"Thin Spectacles" = /obj/item/clothing/mask/rogue/spectacles/thin,
+		"Fancy Spectacles" = /obj/item/clothing/mask/rogue/spectacles/fancy,
+		"Fancy Tinted Spectacles" = /obj/item/clothing/mask/rogue/spectacles/fancy/dark,
+		"Silver Monocle" = /obj/item/clothing/mask/rogue/spectacles/monocle,
+		"Smokey Onyxa Spectacles" = /obj/item/clothing/mask/rogue/spectacles/sglasses,
+	)
 
 /datum/charflaw/badsight/flaw_on_life(mob/user)
 	if(!ishuman(user))
@@ -188,9 +196,8 @@ GLOBAL_LIST_INIT(badsight_glasses, list(
 	..()
 	if(!ishuman(user))
 		return
-	var/mob/living/carbon/human/H = user
 	// we don't seem to have a mind when on_mob_creation fires, so set up a timer to check when we probably will
-	addtimer(CALLBACK(src, PROC_REF(apply_reading_skill), H), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(apply_reading_skill), user), 5 SECONDS)
 
 /datum/charflaw/badsight/proc/apply_reading_skill(mob/living/carbon/human/H)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
@@ -200,7 +207,10 @@ GLOBAL_LIST_INIT(badsight_glasses, list(
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
-	var/glasses_type = GLOB.badsight_glasses[user.client?.prefs?.badsight_chosen_glasses] || /obj/item/clothing/mask/rogue/spectacles
+	var/glasses_type = /obj/item/clothing/mask/rogue/spectacles
+	var/list/picked = get_picked_choices(user)
+	if(length(picked))
+		glasses_type = extra_choices[picked[1]] || glasses_type
 	if(!H.wear_mask)
 		H.equip_to_slot_or_del(new glasses_type(H), SLOT_WEAR_MASK)
 	else
@@ -411,6 +421,7 @@ GLOBAL_LIST_INIT(badsight_glasses, list(
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		ADD_TRAIT(H, TRAIT_ARMOR_BREAK, TRAIT_GENERIC)
+
 /datum/charflaw/hunted
 	name = "Hunted"
 	desc = "Something in my past has made me a target. I'm always looking over my shoulder.	\

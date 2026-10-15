@@ -775,20 +775,50 @@ export const QuirkEntry = (props: { entry: QuirkWithMetadata }) => {
 
 export const SubtabIdentityCardVices = () => {
   const { act, data } = useBackendStrict<IdentityData>();
-  const { charflaws, has_averse, averse_chosen_faction, has_badsight, badsight_chosen_glasses } = data;
+  const { charflaws, has_averse, averse_chosen_faction } = data;
   const [, setPopupId] = usePopupId();
 
   return (
     <Section title="Vices" className="PreferencesMenu__Section__Vices">
       {charflaws.map((flaw) => (
-        <Button
-          key={flaw.type}
-          fluid
-          onClick={() => act('toggle_charflaw', { flaw: flaw.type })}
-        >
-          {flaw.name}
-          {flaw.warning ? ' (Requires Extra Vice!)' : null}
-        </Button>
+        <Box key={flaw.type}>
+          <Button
+            fluid
+            onClick={() => act('toggle_charflaw', { flaw: flaw.type })}
+          >
+            {flaw.name}
+            {flaw.warning ? ' (Requires Extra Vice!)' : null}
+          </Button>
+          {flaw.picked_choices.map((choice) => (
+            <Button
+              key={choice.choice}
+              fluid
+              ml={2}
+              mt={1}
+              onClick={() =>
+                act('charflaw_subchoice', {
+                  flaw: flaw.type,
+                  task: 'remove',
+                  index: choice.index,
+                })
+              }
+            >
+              {choice.choice}
+            </Button>
+          ))}
+          {flaw.picked_choices.length < flaw.max_choices ? (
+            <Button
+              fluid
+              ml={2}
+              mt={1}
+              onClick={() =>
+                act('charflaw_subchoice', { flaw: flaw.type, task: 'add' })
+              }
+            >
+              Pick Option
+            </Button>
+          ) : null}
+        </Box>
       ))}
       <Button fluid icon="bars" ml={4} onClick={() => setPopupId('CharFlaw')}>
         Open Menu
@@ -798,15 +828,6 @@ export const SubtabIdentityCardVices = () => {
           <LabeledGridList.Item label="Loathed Group">
             <Button fluid mt={2} onClick={() => act('charflaw_averse_choice')}>
               {averse_chosen_faction}
-            </Button>
-          </LabeledGridList.Item>
-        </LabeledGridList>
-      ) : null}
-      {has_badsight ? (
-        <LabeledGridList>
-          <LabeledGridList.Item label="Spectacles">
-            <Button fluid mt={2} onClick={() => act('charflaw_badsight_choice')}>
-              {badsight_chosen_glasses}
             </Button>
           </LabeledGridList.Item>
         </LabeledGridList>
