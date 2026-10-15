@@ -16333,7 +16333,7 @@
 /area/rogue/under/cave/mazedungeon)
 "cRl" = (
 /obj/structure/lever/wall{
-	redstone_id = "War_north";
+	redstone_id = "War_east";
 	dir = 4;
 	pixel_y = -26;
 	pixel_x = -9
