@@ -1189,6 +1189,7 @@ There are several things that need to be remembered:
 	remove_overlay(CLOAK_LAYER)
 	remove_overlay(CLOAK_BEHIND_LAYER)
 	remove_overlay(TABARD_LAYER)
+	remove_overlay(UNDER_ARMOR_LAYER)
 
 	var/obj/item/bodypart/taur/taur = get_taur_tail()
 	var/icon/c_mask = taur?.clip_mask
@@ -1231,7 +1232,13 @@ There are several things that need to be remembered:
 				overlays_standing[TABARD_LAYER] = taur_tabard_layers ? (list(cloak_overlay) + taur_tabard_layers) : cloak_overlay
 			if(cloak.alternate_worn_layer == CLOAK_BEHIND_LAYER)
 				overlays_standing[CLOAK_BEHIND_LAYER] = cloak_overlay
-			if(!cloak.alternate_worn_layer || cloak.alternate_worn_layer == UNDER_ARMOR_LAYER)
+			if(cloak.alternate_worn_layer == UNDER_ARMOR_LAYER)
+				var/list/taur_tabard_layers = build_taur_tabard_overlay(taur, cloak)
+				if(taur_tabard_layers)
+					overlays_standing[UNDER_ARMOR_LAYER] = list(cloak_overlay) + taur_tabard_layers
+				else
+					cloaklays += cloak_overlay
+			else if(!cloak.alternate_worn_layer)
 				cloaklays += cloak_overlay
 
 			//add sleeve overlays, then offset
@@ -1306,6 +1313,7 @@ There are several things that need to be remembered:
 	update_inv_armor() //fixboob
 	apply_overlay(TABARD_LAYER)
 	apply_overlay(CLOAK_BEHIND_LAYER)
+	apply_overlay(UNDER_ARMOR_LAYER)
 	apply_overlay(CLOAK_LAYER)
 
 /mob/living/carbon/human/update_inv_shirt()

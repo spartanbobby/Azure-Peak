@@ -82,6 +82,7 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	material_category = ARMOR_MAT_CHAINMAIL
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_STEEL
+	sewrepair = FALSE
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 
@@ -108,6 +109,7 @@
 	armor_class = ARMOR_CLASS_HEAVY
 	material_category = ARMOR_MAT_PLATE
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
+	sewrepair = FALSE
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 
