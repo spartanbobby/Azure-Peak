@@ -1895,6 +1895,11 @@
 /obj/structure/hotspring/border/five,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
+"arZ" = (
+/obj/structure/flora/roguegrass,
+/obj/structure/flora/newtree,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "asc" = (
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
@@ -11711,6 +11716,12 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/cave/dungeon1/gethsmane)
+"cbE" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "cbI" = (
 /obj/structure/table/wood/poor,
 /obj/item/lockpick,
@@ -31193,6 +31204,10 @@
 	},
 /turf/open/floor/rogue/underworld/space/sparkle_quiet/dense,
 /area/rogue/under/cave/menageriedeep)
+"fso" = (
+/obj/effect/decal/cobbleedge,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors/rtfield)
 "fsv" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/grass,
@@ -59541,6 +59556,12 @@
 /obj/structure/table/wood/large_table/south_west,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/his_vault)
+"kkY" = (
+/obj/effect/decal/cobbleedge{
+	dir = 6
+	},
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors/rtfield)
 "klb" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur/axe,
 /turf/open/floor/rogue/dirt/road,
@@ -105954,6 +105975,13 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/rooftop/green,
 /area/rogue/outdoors/town/roofs)
+"rVW" = (
+/obj/structure/ladder,
+/obj/effect/decal/cobbleedge{
+	dir = 8
+	},
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors/rtfield)
 "rVZ" = (
 /obj/structure/flora/newtree,
 /obj/structure/chair/stool/rogue,
@@ -118523,6 +118551,13 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
+"tZN" = (
+/obj/structure/fluff/railing/border/north,
+/obj/effect/decal/cobbleedge{
+	dir = 8
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "tZW" = (
 /obj/machinery/light/rogue/firebowl/church,
 /turf/open/floor/rogue/greenstone,
@@ -125375,6 +125410,13 @@
 /obj/effect/spawner/lootdrop/potion_poisons,
 /turf/open/floor/carpet/red,
 /area/rogue/under/cave/goblinfort)
+"vjT" = (
+/obj/effect/decal/cobbleedge{
+	dir = 9;
+	pixel_x = 3
+	},
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors/rtfield)
 "vjY" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave/southern)
@@ -128771,6 +128813,17 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/cave/southern)
+"vOs" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 6
+	},
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors/rtfield)
 "vOu" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -129472,7 +129525,8 @@
 /area/rogue/under/cave/menageriedungeon)
 "vUz" = (
 /obj/structure/fluff/railing/corner,
-/turf/open/floor/rogue/grass,
+/obj/structure/flora/roguegrass,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/rtfield)
 "vUA" = (
 /obj/item/natural/stone,
@@ -322133,7 +322187,7 @@ qUj
 sYO
 vUD
 uQi
-pvy
+tZN
 cDX
 cDX
 dra
@@ -323037,7 +323091,7 @@ jdu
 jdu
 lPS
 guo
-sNZ
+fso
 uBc
 fAT
 dra
@@ -323489,7 +323543,7 @@ gHi
 cBD
 guo
 guo
-sNZ
+kkY
 cDX
 wzW
 dra
@@ -323940,8 +323994,8 @@ uBc
 uBc
 uBc
 cDX
-sNZ
-sNZ
+vjT
+rVW
 uBc
 gKW
 dra
@@ -324390,9 +324444,9 @@ lHQ
 eTn
 quW
 quW
-seL
-sNZ
-sNZ
+cbE
+oKZ
+vOs
 guo
 guo
 rJJ
@@ -324841,10 +324895,10 @@ rgw
 exD
 exD
 nut
-quW
+arZ
 sNZ
-sNZ
-sNZ
+cbE
+oKZ
 guo
 nbW
 gEN
@@ -325296,7 +325350,7 @@ exD
 yhF
 quW
 sNZ
-fzO
+cbE
 guo
 guo
 dYw
@@ -325749,7 +325803,7 @@ nut
 hmZ
 sNZ
 sNZ
-sNZ
+fzO
 cDX
 cDX
 uBc
