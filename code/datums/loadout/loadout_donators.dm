@@ -1349,4 +1349,4 @@
 /datum/loadout_item/donator/yoshi_estoc
 	name = "Donator Kit - Xylixian Estoc"
 	path = /obj/item/enchantingkit/weapon/yoshi_estoc
-	ckeywhitelist = list("limetease", "Yosheh_3")
+	ckeywhitelist = list("limetease", "yosheh3") //yosheh3's ckey is Yosheh_3, but in the logic check its checking against yosheh3 so this is a workaround.
