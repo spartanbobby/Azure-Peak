@@ -29,7 +29,7 @@
 		"Golden Scabbard" = /obj/item/rogueweapon/scabbard/sword/royal,							//Decorated Scabbard, Golden
 		"Golden Sheath" = /obj/item/rogueweapon/scabbard/sheath/royal,								//Decorated Sheath, Golden
 		"Golden Dorpel Ring" = /obj/item/clothing/ring/diamond/triumph								//Golden Dorpel Ring, Ornate
-		"Jade Circlet"	= /obj/item/clothing/head/roguetown/circlet/carvedgem/jade,                 //Gem Circlets, same as noble adventurer
+		"Jade Circlet"	= /obj/item/clothing/head/roguetown/circlet/carvedgem/jade,					//Gem Circlets, same as noble adventurer
 		"Amber Circlet"	= /obj/item/clothing/head/roguetown/circlet/carvedgem/amber,
 		"Shell Circlet"	= /obj/item/clothing/head/roguetown/circlet/carvedgem/shell,
 		"Rosestone Circlet"	= /obj/item/clothing/head/roguetown/circlet/carvedgem/rose,
