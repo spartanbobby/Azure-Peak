@@ -19158,6 +19158,13 @@
 /obj/item/reagent_containers/food/snacks/fish/salmon,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/beach/north)
+"dqL" = (
+/obj/structure/fluff/railing/wood/west,
+/obj/machinery/light/rogue/torchholder{
+	dir = 1
+	},
+/turf/open/floor/rogue/twig,
+/area/rogue/outdoors/mountains)
 "dqN" = (
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/beach/forest/south)
@@ -81142,10 +81149,6 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
-"nSn" = (
-/obj/machinery/light/rogue/candle/off,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/shelter/woods)
 "nSq" = (
 /obj/structure/roguemachine/vendor{
 	keycontrol = "towner_blacksmith"
@@ -113364,6 +113367,10 @@
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/beach/forest/north)
+"thq" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/shelter/woods)
 "thr" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
@@ -116985,6 +116992,10 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
+"tMk" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/shelter/woods)
 "tMn" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/fluff/railing/corner/south_west,
@@ -118704,6 +118715,10 @@
 "ubJ" = (
 /turf/closed/wall/mineral/rogue/stone/window,
 /area/rogue/outdoors/mountains/decap/gunduzirak)
+"ubK" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/rtfield)
 "ubM" = (
 /obj/structure/table/wood/poor,
 /obj/item/natural/bundle/cloth/bandage/full,
@@ -122517,6 +122532,10 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/underdark/south)
+"uKn" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/shelter/woods)
 "uKo" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/transparent/openspace,
@@ -130865,6 +130884,11 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/underdark/north)
+"whN" = (
+/obj/structure/fluff/railing/wood,
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/twig,
+/area/rogue/outdoors/mountains)
 "whO" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/cobblerock,
@@ -135078,6 +135102,14 @@
 /obj/machinery/light/roguestreet/midlamp,
 /turf/open/floor/rogue/metal/barograte/open,
 /area/rogue/under/underdark/south)
+"wSV" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/rtfield)
 "wSY" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -311162,6 +311194,7 @@ sNZ
 ujm
 ujm
 ujm
+ujm
 asY
 asY
 asY
@@ -311173,8 +311206,7 @@ asY
 asY
 asY
 asY
-asY
-sNZ
+wxw
 sNZ
 jMU
 nsV
@@ -311614,7 +311646,7 @@ sNZ
 ujm
 ujm
 ujm
-asY
+uSw
 asY
 asY
 asY
@@ -312523,7 +312555,7 @@ asY
 iLY
 asY
 asY
-hjw
+gRL
 quW
 seL
 seL
@@ -313423,7 +313455,7 @@ dpy
 dpy
 dpy
 dpy
-asY
+ubK
 asY
 asY
 bsL
@@ -317488,7 +317520,7 @@ rlV
 apU
 cjb
 cjb
-gBd
+tMk
 dpy
 dpy
 asY
@@ -317943,7 +317975,7 @@ oVB
 gBd
 kiy
 dpy
-asY
+ubK
 asY
 rZO
 asY
@@ -332398,7 +332430,7 @@ bxe
 bWg
 mko
 dpy
-brS
+wSV
 brS
 brS
 dpy
@@ -426423,7 +426455,7 @@ aBB
 qwK
 qwK
 qwK
-aBB
+qwK
 aBB
 aBB
 aBB
@@ -428680,7 +428712,7 @@ aBB
 aBB
 aBB
 uJd
-gBd
+tMk
 gBd
 gBd
 uJd
@@ -432737,7 +432769,7 @@ aBB
 aBB
 dpy
 dpy
-nSn
+uKn
 dpy
 dpy
 jbH
@@ -432749,7 +432781,7 @@ jbH
 jbH
 dpy
 dpy
-nSn
+gBd
 dpy
 dpy
 aBB
@@ -433200,7 +433232,7 @@ gLt
 gLt
 gLt
 tvG
-gBd
+thq
 gBd
 kiy
 uJd
@@ -442684,7 +442716,7 @@ per
 gLt
 lxv
 tLK
-tLK
+dqL
 rep
 yjL
 aBB
@@ -443137,7 +443169,7 @@ gLt
 nhn
 qrG
 tWF
-son
+whN
 yjL
 aBB
 aBB
@@ -447674,7 +447706,7 @@ cki
 cki
 dpy
 dpy
-gBd
+uKn
 dpy
 dpy
 aBB
@@ -541684,7 +541716,7 @@ aBB
 sju
 sju
 sju
-aBB
+sju
 aBB
 aBB
 aBB
