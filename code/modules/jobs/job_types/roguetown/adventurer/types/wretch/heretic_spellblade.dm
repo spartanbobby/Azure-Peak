@@ -167,13 +167,13 @@
 				"Bucket Helmet"			= /obj/item/clothing/head/roguetown/helmet/heavy/bucket,
 				"Knight Helmet"			= /obj/item/clothing/head/roguetown/helmet/heavy/knight,
 				"Armet"					= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet,
-				"Snouted Armet"					= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet/snouted,
+				"Snouted Armet"			= /obj/item/clothing/head/roguetown/helmet/heavy/knight/armet/snouted,
 				"Visored Sallet"		= /obj/item/clothing/head/roguetown/helmet/sallet/visored,
-				"Snouted Visored Sallet"		= /obj/item/clothing/head/roguetown/helmet/sallet/visored/snouted,
+				"Snouted Visored Sallet"= /obj/item/clothing/head/roguetown/helmet/sallet/visored/snouted,
 				"Klappvisier Bascinet"	= /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 				"Hounskull Bascinet"	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull,
 				"Slitted Kettle"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle,
-				"Volfskulle Bascinet"		= /obj/item/clothing/head/roguetown/helmet/heavy/volfplate,
+				"Volfskulle Bascinet"	= /obj/item/clothing/head/roguetown/helmet/heavy/volfplate,
 				"None"
 			)
 			if(istype(H.patron, /datum/patron/divine/noc))
