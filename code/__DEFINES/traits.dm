@@ -1015,7 +1015,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 // unique trait sources, still defines
 #define TRAIT_FORTITUDE "Fortitude"
-#define TRAIT_MOMENTUM_RIDER "Momentum_Adrenaline"
+#define TRAIT_MOMENTUM_RIDER "Momentum Adrenaline"
 #define EYES_COVERED "eyes_covered"
 #define SCRYING_ORB "scrying-orb"
 #define REVERSE_BEAR_TRAP_TRAIT "reverse-bear-trap"
