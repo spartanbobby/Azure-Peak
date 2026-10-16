@@ -122,7 +122,7 @@
 
 			if(choice == "Upload New Song")
 				if(lastfilechange && world.time < lastfilechange + 3 MINUTES)
-					to_chat(user, span_warning("Upload is on cooldown, wait [max(0, ceil((lastfilechange + 3 MINUTES - world.time) / 10))] seconds."))
+					to_chat(user, span_warning("It is not ready yet, wait [max(0, ceil((lastfilechange + 3 MINUTES - world.time) / 10))] seconds."))
 					user.playsound_local(user, 'sound/misc/beep.ogg', 100, FALSE)
 					return
 				var/newfile = music_upload(user, src)
