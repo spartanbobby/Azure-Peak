@@ -87,10 +87,12 @@
 /obj/item/clothing/gloves/roguetown/knuckles/equipped(mob/user, slot)
 	. = ..()
 	if(slot == SLOT_GLOVES)
+		to_chat(user, span_warning("The [src] strengthen my fists, but fully hinders my ability to wield weapons!"))
 		ADD_TRAIT(user, TRAIT_WEAPONLESS, REF(src))
 
 /obj/item/clothing/gloves/roguetown/knuckles/dropped(mob/user)
 	. = ..()
+	to_chat(user, span_warning("My fingers feel lithe and dexterous enough to wield weapons again."))
 	REMOVE_TRAIT(user, TRAIT_WEAPONLESS, REF(src))
 
 /obj/item/clothing/gloves/roguetown/knuckles/bronze
