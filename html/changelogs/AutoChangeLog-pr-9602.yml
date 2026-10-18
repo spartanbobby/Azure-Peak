@@ -1,0 +1,4 @@
+author: "borneblood"
+delete-after: True
+changes:
+  - rscadd: "Equipping knuckledusters informs you're now unable to wield weapons."
