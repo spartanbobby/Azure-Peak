@@ -135423,10 +135423,6 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/spider)
-"wRU" = (
-/obj/structure/decorativeladder,
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town)
 "wRV" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
 /area/rogue/indoors/cave)
@@ -396241,7 +396237,7 @@ bGf
 bGf
 bGf
 uBc
-wRU
+wjj
 qwu
 nBG
 pRp
@@ -511502,7 +511498,7 @@ bGf
 bGf
 bGf
 uBc
-wRU
+wjj
 dra
 dra
 bSR
