@@ -1,0 +1,5 @@
+author: "radarseas"
+delete-after: True
+changes:
+  - code_imp: "Lore stuff, summoned skeletons are no longer animated by Avantyne strings (What?), but instead Enochian magicka."
+  - balance: "conjured cleric dagger skeletons no longer have Avantyne daggers. Those are now exclusive to heretic spies and zpellblades if they spec into daggers. - its barely much force reduction tbh."
