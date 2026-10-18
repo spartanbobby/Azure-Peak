@@ -1,8 +1,0 @@
-author: "KatTheFox"
-delete-after: True
-changes:
-  - balance: "Mage utility pool costs have been refactored. Powerful spells like mending and campfire are now 3 points; fluff spells like water bolt and magician's stone are 1 point; in-between spells like message and darkvision are 2 points."
-  - balance: "Hearthcraft and exowardry minor aspects have been merged. Hex minor aspect now also gets read omen for flavor."
-  - balance: "Displacement and Illusion have been merged into one general-evasion minor, so they can't be stacked. Point buy, 3pts, phase is 3, invis 2, then 1pt waterbolt/light/nondetection."
-  - balance: "Utility point allotments increased a bit across the board; in general, this means you'll be able to take your old loadout, unless you relied heavily on the \"meta\" of mending+campfire+mindlink. This also applies to arcpot, which gives 4pts instead of 3."
-  - balance: "Arcyne Potential now grants 1 util point to roles with combat trait so it's not entirely useless. With the spell values now properly balanced, this gives them access to exclusively flavor-pick spells like water bolt and fetch, rather than being a free create campfire."
