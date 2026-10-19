@@ -1373,5 +1373,5 @@
 
 /datum/loadout_item/donator/limeastratahelm
 	name = "Donator Item - Astratan Helmet"
-	path = /obj/item/clothing/head/roguetown/helmet/heavy/astratahelm/limeastratahelm
+	path = /obj/item/enchantingkit/limeastratahelm
 	ckeywhitelist = list("limetease")
