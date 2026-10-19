@@ -88756,6 +88756,11 @@
 /obj/effect/landmark/quest_spawner/generic,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/beach/forest/north)
+"oWL" = (
+/obj/structure/fluff/railing/wood/east,
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/town)
 "oWM" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/dirt/road,
@@ -103268,6 +103273,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border/east,
+/obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "rsP" = (
@@ -312412,7 +312418,7 @@ pQi
 qfA
 sBN
 rcz
-pWT
+pWp
 exD
 exD
 exD
@@ -315500,7 +315506,7 @@ asY
 asY
 asY
 asY
-bsL
+gRL
 dpy
 dpy
 dpy
@@ -316935,7 +316941,7 @@ exD
 exD
 exD
 exD
-fpx
+xzx
 qms
 khy
 khy
@@ -320547,7 +320553,7 @@ jdu
 jdu
 guo
 guo
-fpx
+xzx
 exD
 exD
 exD
@@ -330038,7 +330044,7 @@ btK
 btK
 jKn
 cDX
-pWT
+pWp
 exD
 exD
 exD
@@ -330489,7 +330495,7 @@ flT
 iBM
 iBM
 iBM
-hcT
+jJS
 pdm
 exD
 exD
@@ -331842,7 +331848,7 @@ uBc
 uBc
 cDX
 cDX
-jML
+oWL
 iLK
 jNl
 cDX
