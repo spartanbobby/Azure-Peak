@@ -16467,6 +16467,11 @@
 /obj/structure/fluff/walldeco/wantedposter,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town/garrison)
+"cOZ" = (
+/obj/structure/stairs,
+/obj/structure/fluff/railing/border/east,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/cave)
 "cPd" = (
 /obj/structure/bars/pipe,
 /turf/closed/wall/mineral/rogue/pipe/line,
@@ -28122,6 +28127,10 @@
 /obj/item/clothing/head/roguetown/helmet/kettle/iron,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
+"eOR" = (
+/obj/structure/fluff/railing/corner/south_east,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/cave)
 "eOY" = (
 /obj/structure/bars,
 /turf/open/floor/rogue/concrete,
@@ -69010,6 +69019,11 @@
 "lFq" = (
 /turf/closed/wall/mineral/rogue/decostone/cand,
 /area/rogue/indoors/town/church/basement)
+"lFt" = (
+/obj/structure/stairs,
+/obj/structure/fluff/railing/border/east,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/indoors)
 "lFu" = (
 /obj/structure/fluff/railing/border,
 /obj/effect/decal/edge{
@@ -88800,6 +88814,10 @@
 /obj/structure/fermentation_keg/water,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/garrison)
+"oWW" = (
+/obj/structure/fluff/railing/corner/south_east,
+/turf/open/transparent/openspace,
+/area/rogue/indoors)
 "oWX" = (
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/grass,
@@ -106876,6 +106894,10 @@
 /obj/effect/spawner/lootdrop/iron_copper_weapon_spawner,
 /turf/open/floor/rogue/blocks/green,
 /area/rogue/under/town/sewer)
+"rVz" = (
+/obj/structure/fluff/railing/corner/south_west,
+/turf/open/transparent/openspace,
+/area/rogue/indoors)
 "rVA" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f"
@@ -109142,6 +109164,7 @@
 /area/rogue/under/cave)
 "sph" = (
 /obj/structure/stairs,
+/obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
 "spi" = (
@@ -143598,6 +143621,7 @@
 /area/rogue/under/cave/his_vault)
 "yfB" = (
 /obj/structure/stairs,
+/obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave)
 "yfE" = (
@@ -174998,7 +175022,7 @@ tum
 htN
 htN
 htN
-htN
+eOR
 seg
 seg
 ogs
@@ -175450,7 +175474,7 @@ htN
 uEJ
 htN
 htN
-htN
+xra
 yfB
 seg
 ogs
@@ -175902,8 +175926,8 @@ htN
 exB
 htN
 htN
-htN
-yfB
+eOR
+cOZ
 seg
 ogs
 miF
@@ -176354,7 +176378,7 @@ htN
 uEJ
 htN
 htN
-htN
+xra
 seg
 seg
 ogs
@@ -290712,7 +290736,7 @@ kkv
 kkv
 jLU
 hRZ
-hRZ
+rVz
 sph
 fpx
 fpx
@@ -291164,8 +291188,8 @@ kkv
 kkv
 jLU
 hRZ
-hRZ
-sph
+oWW
+lFt
 fpx
 fpx
 fpx
