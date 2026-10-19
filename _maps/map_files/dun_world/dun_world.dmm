@@ -2902,6 +2902,14 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/beach)
+"aBp" = (
+/obj/structure/fluff/railing/wood/east,
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "aBu" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/mirespider,
 /obj/effect/landmark/quest_spawner/generic,
@@ -6310,6 +6318,16 @@
 /obj/structure/mineral_door/wood/window,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors)
+"bem" = (
+/obj/structure/fluff/railing/fence{
+	dir = 4
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "beo" = (
 /obj/structure/table/wood/long_table,
 /obj/item/reagent_containers/glass/cup/wooden{
@@ -9334,6 +9352,12 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/church/chapel)
+"bFG" = (
+/obj/effect/decal/cobbleedge{
+	dir = 4
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "bFH" = (
 /obj/structure/table/wood/long_table,
 /obj/item/rogueweapon/huntingknife/scissors,
@@ -11392,14 +11416,6 @@
 /obj/effect/landmark/start/sieges,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave)
-"bWq" = (
-/obj/structure/fluff/railing/wood,
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-e"
-	},
-/turf/open/floor/rogue/wood,
-/area/rogue/outdoors/town/roofs)
 "bWs" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/twig,
@@ -13247,6 +13263,15 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/shelter/bog/bogmanfort)
+"cnD" = (
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 4
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "cnE" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/effect/decal/cleanable/blood/drip{
@@ -20979,15 +21004,6 @@
 	},
 /turf/open/water/ocean/deep,
 /area/rogue/outdoors/beach)
-"dDA" = (
-/obj/structure/fluff/railing/fence{
-	dir = 1
-	},
-/obj/structure/fluff/railing/fence{
-	dir = 8
-	},
-/turf/open/floor/rogue/wood,
-/area/rogue/outdoors/mountains)
 "dDE" = (
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/cobblerock,
@@ -21991,6 +22007,12 @@
 /obj/item/book/rogue/tales1,
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/rogue/indoors/town/manor)
+"dNl" = (
+/obj/effect/decal/cobbleedge{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/town/roofs)
 "dNn" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -33942,6 +33964,13 @@
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/beach)
+"fMS" = (
+/obj/structure/fluff/railing/wood/east,
+/obj/effect/decal/cobbleedge{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "fMT" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/snowpatchy,
@@ -59870,6 +59899,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/manor)
+"kfP" = (
+/obj/structure/fluff/railing/wood/east,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/mountains)
 "kfR" = (
 /obj/structure/closet/crate/roguecloset,
 /turf/open/floor/rogue/tile/brownbrick,
@@ -61226,6 +61259,16 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/mountains)
+"ktM" = (
+/obj/structure/fluff/railing/wood/west{
+	pixel_y = -1
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/rogue/wood,
 /area/rogue/outdoors/mountains)
 "ktO" = (
 /obj/structure/rack/rogue,
@@ -74368,6 +74411,13 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/blocks/green,
 /area/rogue/under/town/sewer)
+"mzP" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "mzQ" = (
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/shelter/bog/bogmanfort)
@@ -90962,6 +91012,13 @@
 /mob/living/carbon/human/species/orc/npc/footsoldier,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/his_vault)
+"ppq" = (
+/obj/structure/fluff/railing/wood/west,
+/obj/effect/decal/cobbleedge{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/town/roofs)
 "pps" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -111408,16 +111465,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/underdark)
-"sIh" = (
-/obj/structure/fluff/railing/fence{
-	dir = 1
-	},
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-e"
-	},
-/turf/open/floor/rogue/wood,
-/area/rogue/outdoors/town/roofs)
 "sIj" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f"
@@ -112389,6 +112436,13 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/indoors/inq/embassy)
+"sQK" = (
+/obj/structure/fluff/railing/wood,
+/obj/effect/decal/cobbleedge{
+	dir = 4
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "sQL" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/chair/stool/rogue{
@@ -116697,6 +116751,15 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town)
+"tAY" = (
+/obj/structure/fluff/railing/fence{
+	dir = 8
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "tBa" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -122045,6 +122108,12 @@
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/chapel)
+"uxB" = (
+/obj/structure/fluff/railing/fence{
+	dir = 8
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/mountains)
 "uxK" = (
 /obj/structure/fluff/wallclock,
 /turf/open/floor/carpet/royalblack,
@@ -122813,6 +122882,16 @@
 "uDs" = (
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/church/chapel)
+"uDy" = (
+/obj/structure/fluff/railing/fence{
+	dir = 8
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/mountains)
 "uDD" = (
 /obj/structure/pillory/reinforced,
 /turf/open/floor/rogue/cobble,
@@ -135342,6 +135421,15 @@
 /obj/structure/table/wood/poor,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/shelter/woods)
+"wMy" = (
+/obj/structure/fluff/railing/fence{
+	dir = 4
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/outdoors/town/roofs)
 "wMA" = (
 /obj/structure/flora/rock/jungle,
 /turf/open/floor/rogue/dirt/road,
@@ -419472,9 +419560,9 @@ bGf
 bGf
 bGf
 bGf
-gZr
-aUO
-vhy
+svp
+iEn
+nDM
 bsh
 bGf
 bGf
@@ -419924,9 +420012,9 @@ bGf
 bGf
 bGf
 bGf
-gZr
-aUO
-vhy
+svp
+iEn
+nDM
 bsh
 bGf
 bGf
@@ -420376,9 +420464,9 @@ bGf
 bGf
 bGf
 bGf
-sIh
+svp
 iEn
-bWq
+nDM
 bsh
 bGf
 bGf
@@ -424452,7 +424540,7 @@ fPh
 fPh
 fPh
 fPh
-fPh
+ppq
 phl
 phl
 jdu
@@ -424904,7 +424992,7 @@ aUO
 aUO
 aUO
 aUO
-aUO
+dNl
 gny
 phz
 jdu
@@ -425356,7 +425444,7 @@ jBx
 jBx
 jBx
 jBx
-jBx
+wMy
 phl
 phl
 jdu
@@ -431126,9 +431214,9 @@ aBB
 aBB
 aBB
 qFM
-per
-gLt
-nXu
+cnD
+bFG
+sQK
 yjL
 aBB
 aBB
@@ -432934,9 +433022,9 @@ aBB
 cQA
 rzT
 bOH
-per
-gLt
-nXu
+dfR
+jRd
+vJB
 yjL
 aBB
 aBB
@@ -433384,8 +433472,8 @@ rzT
 rzT
 rzT
 yic
-dDA
-jFo
+gvs
+uxB
 dpy
 xtO
 dpy
@@ -433830,13 +433918,13 @@ dpy
 aeC
 dpy
 dpy
+uDy
 jFo
 jFo
 jFo
 jFo
-jFo
-jFo
-gLt
+tAY
+lXa
 dpy
 dpy
 gBd
@@ -434282,13 +434370,13 @@ gBd
 gBd
 gBd
 xtO
+mzP
 gLt
 gLt
 gLt
 gLt
-gLt
-gLt
-gLt
+coZ
+lXa
 xtO
 kYC
 gBd
@@ -434734,13 +434822,13 @@ dpy
 gBd
 dpy
 dpy
+aBp
 qFk
 qFk
 qFk
 qFk
-qFk
-qFk
-qFk
+fMS
+kfP
 dpy
 dpy
 gBd
@@ -435634,9 +435722,9 @@ aBB
 aBB
 aBB
 qFM
-per
-gLt
-nXu
+cnD
+bFG
+sQK
 yjL
 aBB
 aBB
@@ -448749,7 +448837,7 @@ mpv
 eaj
 ulP
 dpy
-ajz
+ktM
 ajz
 qQX
 gBd
@@ -448761,7 +448849,7 @@ ajz
 ajz
 ajz
 ajz
-ajz
+qQX
 dpy
 dpy
 aeC
@@ -449201,7 +449289,7 @@ mpv
 sMg
 bJb
 xtO
-gLt
+mzP
 gLt
 coZ
 gBd
@@ -449213,7 +449301,7 @@ oJW
 gLt
 gLt
 gLt
-gLt
+coZ
 xtO
 gBd
 gBd
@@ -449653,7 +449741,7 @@ hXN
 dpy
 dpy
 dpy
-oqY
+bem
 oqY
 eAS
 dpy
@@ -449665,7 +449753,7 @@ wxg
 wxg
 oqY
 oqY
-oqY
+eAS
 dpy
 dpy
 gBd
