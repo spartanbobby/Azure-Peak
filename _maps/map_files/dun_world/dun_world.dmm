@@ -90130,6 +90130,10 @@
 "phD" = (
 /obj/structure/mineral_door/wood/deadbolt/shutter,
 /obj/structure/table/wood,
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
+	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/tavern)
 "phF" = (
@@ -94822,6 +94826,10 @@
 /obj/structure/table/wood,
 /obj/structure/mineral_door/wood/deadbolt/shutter{
 	dir = 2
+	},
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/tavern)
@@ -133270,6 +133278,10 @@
 	dir = 4
 	},
 /obj/structure/table/wood/long_table/mid,
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement)
 "wrX" = (
