@@ -259,13 +259,8 @@
 	name = "Psydonic Gothic Armor' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to make a Psydonic Cuirass appear like a Gothic Cuirass, instead of the more ornate design present in the \
 	'Gothic Steel Armor' morphing elixir."
-	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate		= /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/donator_ornate,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate		= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate/donator_ornate,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/ornate		= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/ornate/donator_ornate,
-		/obj/item/clothing/suit/roguetown/armor/plate/fluted/ornate				= /obj/item/clothing/suit/roguetown/armor/plate/fluted/ornate/donator_ornate
-	)
-	result_item = null
+	target_items = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate)
+	result_item = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate/donator_ornate
 	exact_type = TRUE
 	custom_name = TRUE
 
