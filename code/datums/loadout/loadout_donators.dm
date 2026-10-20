@@ -1374,5 +1374,10 @@
 
 /datum/loadout_item/donator/limeastratahelm
 	name = "Donator Item - Astratan Helmet"
-	path = /obj/item/clothing/head/roguetown/helmet/heavy/astratahelm/limeastratahelm
+	path = /obj/item/enchantingkit/limeastratahelm
 	ckeywhitelist = list("limetease")
+
+/datum/loadout_item/donator/guidress
+	name = "Donator Item - Gilded Dress"
+	path = /obj/item/clothing/cloak/poncho/guidress
+	ckeywhitelist = list("guimontag", "limetease")
