@@ -1370,7 +1370,6 @@
 /datum/loadout_item/donator/limetabard
 	name = "Donator Item - Leathery Tabard"
 	path = /obj/item/clothing/cloak/tabard/limetabard
-	ckeywhitelist = list("limetease")
 
 /datum/loadout_item/donator/limeastratahelm
 	name = "Donator Item - Astratan Helmet"
