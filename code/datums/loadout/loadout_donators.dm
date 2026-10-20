@@ -1379,3 +1379,8 @@
 	name = "Donator Item - Astratan Helmet"
 	path = /obj/item/enchantingkit/limeastratahelm
 	ckeywhitelist = list("limetease")
+
+/datum/loadout_item/donator/guidress
+	name = "Donator Item - Gilded Dress"
+	path = /obj/item/clothing/cloak/poncho/guidress
+	ckeywhitelist = list("guimontag", "limetease")

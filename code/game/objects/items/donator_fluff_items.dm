@@ -4870,3 +4870,28 @@ As Excaliber."
 		'sound/items/visor.ogg', \
 		null, \
 		UPD_HEAD)
+
+// LIMETEASE
+/obj/item/clothing/cloak/poncho/guidress
+	name = "Leathery Tabard"
+	desc = "A warm tabard that's snatched at the waist, inside that leathery coffin is ."
+	icon_state = "guidress"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/cloak/poncho/guidress/equipped(mob/user, slot)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		var/obj/item/organ/breasts/B = H.getorganslot(ORGAN_SLOT_BREASTS)
+
+		if(B && B.breast_size == 3)
+			flags_inv &= ~HIDEBOOB
+			boobed = TRUE
+			boobed_detail = TRUE
+		else
+			flags_inv |= HIDEBOOB
+			boobed = FALSE
+			boobed_detail = FALSE
+
+		H.update_inv_wear_suit()
